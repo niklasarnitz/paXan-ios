@@ -41,11 +41,11 @@
             </objects>
             <point key="canvasLocation" x="1866.6666666666667" y="7.3660714285714279"/>
         </scene>
-        <!--Main paXan-->
+        <!--Mein paXan-->
         <scene sceneID="8Zn-E9-Z3l">
             <objects>
                 <viewController id="VFG-JX-tSy" customClass="MeinPaxAnViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Main paXan" id="Grk-R4-Fis"/>
+                    <navigationItem key="navigationItem" title="Mein paXan" id="Grk-R4-Fis"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2M-GK-5EQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,7 +168,6 @@
         <!--Lexikon-->
         <scene sceneID="yba-Yy-1Zt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VOE-90-Lc9" sceneMemberID="firstResponder"/>
                 <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="1H1-05-Qdb" userLabel="Lexikon" customClass="LexikonTableViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9h7-sz-LuF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -202,6 +201,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Lexikon" id="cca-UI-ED4"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOE-90-Lc9" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3536" y="7"/>
         </scene>
