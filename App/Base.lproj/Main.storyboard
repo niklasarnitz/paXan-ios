@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TK4-6J-W1A">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BXv-Ll-kuq">
+            <objects>
+                <tabBarController id="TK4-6J-W1A" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WSu-58-Cdr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="ecGreen"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="a26-5A-4iS" kind="relationship" relationship="viewControllers" id="697-fo-zAo"/>
+                        <segue destination="z9N-pl-430" kind="relationship" relationship="viewControllers" id="Ik6-zx-AeM"/>
+                        <segue destination="zYI-PA-0bl" kind="relationship" relationship="viewControllers" id="t0y-0o-KXw"/>
+                        <segue destination="U3x-aA-fQd" kind="relationship" relationship="viewControllers" id="ctF-V6-rNt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9i-f3-46k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="-368"/>
+        </scene>
+        <!--Karte-->
+        <scene sceneID="yeM-fb-G5G">
+            <objects>
+                <viewController id="cZ9-rK-hMK" customClass="MapViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Karte" id="LeJ-sE-WZd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qzv-ca-xEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866.6666666666667" y="7.3660714285714279"/>
+        </scene>
+        <!--Main paXan-->
+        <scene sceneID="8Zn-E9-Z3l">
+            <objects>
+                <viewController id="VFG-JX-tSy" customClass="MeinPaxAnViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Main paXan" id="Grk-R4-Fis"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S2M-GK-5EQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866.6666666666667" y="-667.63392857142856"/>
+        </scene>
+        <!--Seminarplan-->
+        <scene sceneID="KZR-eb-5Q7">
+            <objects>
+                <viewController id="KAG-tV-8DW" customClass="SeminarPlanViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Seminarplan" id="lgw-8Q-DuY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XwC-BP-P4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3536.2318840579715" y="-668.30357142857144"/>
+        </scene>
+        <!--Mein paXan-->
+        <scene sceneID="sRN-rE-0Gg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a26-5A-4iS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mein paXan" image="userMale" id="eTw-CB-Ogc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="7ZU-3V-Dc3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="ecGreen"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VFG-JX-tSy" kind="relationship" relationship="rootViewController" id="J2C-Dw-QsS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIt-br-z45" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956.52173913043487" y="-667.63392857142856"/>
+        </scene>
+        <!--Seminarplan-->
+        <scene sceneID="bxz-Wl-MXV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z9N-pl-430" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Seminarplan" image="timetable" id="A6b-tR-pyL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="GhM-cX-hKT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="ecGreen"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KAG-tV-8DW" kind="relationship" relationship="rootViewController" id="kII-tO-hKj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="02k-kA-dm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2626.0869565217395" y="-668.30357142857144"/>
+        </scene>
+        <!--Karte-->
+        <scene sceneID="PMF-EY-GeF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zYI-PA-0bl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Karte" image="mapMarker" id="Rp1-vb-ato"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="zYo-BH-RfM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="ecGreen"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cZ9-rK-hMK" kind="relationship" relationship="rootViewController" id="6HM-Ye-Aku"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mji-cr-Hbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956.52173913043487" y="7.3660714285714279"/>
+        </scene>
+        <!--Lexikon-->
+        <scene sceneID="8st-aS-e2U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U3x-aA-fQd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lexikon" image="userManual" id="4RO-mo-Vbv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dez-Y0-ykA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="ecGreen"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1H1-05-Qdb" kind="relationship" relationship="rootViewController" id="4N3-p9-xmh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Di7-af-Ryd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2626.0869565217395" y="6.6964285714285712"/>
+        </scene>
+        <!--Lexikon-->
+        <scene sceneID="yba-Yy-1Zt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOE-90-Lc9" sceneMemberID="firstResponder"/>
+                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="1H1-05-Qdb" userLabel="Lexikon" customClass="LexikonTableViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9h7-sz-LuF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lexikonCell" textLabel="wez-nh-lgw" style="IBUITableViewCellStyleDefault" id="CV0-hw-G06">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CV0-hw-G06" id="xZJ-TT-ssY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wez-nh-lgw">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="1H1-05-Qdb" id="pew-ZK-wk2"/>
+                            <outlet property="delegate" destination="1H1-05-Qdb" id="XTh-hV-3On"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lexikon" id="cca-UI-ED4"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="3536" y="7"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mapMarker" width="30" height="30"/>
+        <image name="timetable" width="30" height="30"/>
+        <image name="userMale" width="30" height="30"/>
+        <image name="userManual" width="30" height="30"/>
+        <namedColor name="ecGreen">
+            <color red="0.68235294117647061" green="0.79607843137254897" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

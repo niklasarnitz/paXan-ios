@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SeminarPlanViewController.swift
 //  paXan
 //
 //  Created by Niklas Arnitz on 26.08.19.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class SeminarPlanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        view.backgroundColor = .white
     }
-
-
 }
-
