@@ -1,11 +1,7 @@
-//
-//  InteractiveSheetViewController.swift
-//  paXan
-//
-//  Created by Niklas Arnitz on 31.08.19.
-//  Copyright © 2019 SWDEC. All rights reserved.
-//
+// swiftlint:disable file_header
+// Copyright © 2019 SWDEC. All rights reserved.
 
+import SnapKit
 import UIKit
 
 class InteractiveSheetViewController: UIViewController, UIScrollViewDelegate {
@@ -41,7 +37,7 @@ class InteractiveSheetViewController: UIViewController, UIScrollViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         dragView.transform = .identity
-        setWillDismiss(false)
+        setWillDismiss(false, isHaptic: false)
     }
 
     // MARK: - Lifecycle
@@ -68,7 +64,7 @@ class InteractiveSheetViewController: UIViewController, UIScrollViewDelegate {
             maker.bottom.equalToSuperview()
         }
 
-        dragView.backgroundColor = .white
+        dragView.backgroundColor = Colors.background
         dragView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         dragView.layer.cornerRadius = 15
         Style.addShadow(to: dragView)
@@ -76,7 +72,7 @@ class InteractiveSheetViewController: UIViewController, UIScrollViewDelegate {
 
     private func configureContainer() {
         dragView.addSubview(containerView)
-        containerView.backgroundColor = .white
+        containerView.backgroundColor = Colors.background
         containerView.bindEdgesToSuperview()
         containerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         containerView.layer.cornerRadius = 15
@@ -85,7 +81,7 @@ class InteractiveSheetViewController: UIViewController, UIScrollViewDelegate {
 
     private func configureHandleView() {
         let handleView = UIView(frame: .zero)
-        handleView.backgroundColor = .white
+        handleView.backgroundColor = Colors.secondaryBackground
         handleView.clipsToBounds = true
         handleView.layer.cornerRadius = handleSize.height / 2
 
@@ -102,6 +98,7 @@ class InteractiveSheetViewController: UIViewController, UIScrollViewDelegate {
     // MARK: ViewController insertion and removal
     private func insertViewCtrl() {
         viewCtrl.additionalSafeAreaInsets = UIEdgeInsets(top: 34, left: 0, bottom: 0, right: 0)
+
         addChild(viewCtrl)
         viewCtrl.view.frame = containerView.frame
         containerView.addSubview(viewCtrl.view)
@@ -148,14 +145,18 @@ class InteractiveSheetViewController: UIViewController, UIScrollViewDelegate {
         let halfHeight = view.bounds.height / 2
         let offset = dragView.frame.minY
         let wouldDismiss = offset > halfHeight * 0.8
-        setWillDismiss(wouldDismiss && isDismissable)
+        setWillDismiss(wouldDismiss && isDismissable, isHaptic: true)
 
         dragView.transform = CGAffineTransform(translationX: 0, y: translation)
     }
 
-    private func setWillDismiss(_ value: Bool) {
+    private func setWillDismiss(_ value: Bool, isHaptic: Bool) {
         guard value != willDismiss else { return }
         willDismiss = value
+
+        if isHaptic {
+            HapticFeedbackManager.shared.generateSelection()
+        }
     }
 
     // MARK: ScrollViewDelegate

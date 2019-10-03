@@ -1,24 +1,42 @@
-//
-//  MapViewController.swift
-//  paXan
-//
-//  Created by Niklas Arnitz on 26.08.19.
-//  Copyright © 2019 SWDEC. All rights reserved.
-//
+// swiftlint:disable number_separator opening_brace file_header
+// Copyright © 2019 SWDEC. All rights reserved.
 
-import UIKit
 import MapKit
+import UIKit
 
 class MapViewController: UIViewController {
+    private let initialLocation = CLLocation(latitude: 48.796355, longitude: 8.503494)
+    private let regionRadius: CLLocationDistance = 100
     private lazy var mapView: MKMapView = {
         let mapView = MKMapView()
         return mapView
     }()
 
+    private let annotations: [MKPointAnnotation] = [
+        {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: 48.796355, longitude: 8.503494)
+            annotation.title = "EC-FSZ"
+            annotation.subtitle = "Hauptveranstaltungsort"
+            return annotation
+        }()
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
+
+        // TODO: Fix the navigatiobar on iOS 13. This is only a hotfix
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.backgroundColor = Colors.ecGreen
+            super.navigationController?.navigationBar.standardAppearance = navBarAppearance
+            super.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        }
 
         setupMapView()
     }
@@ -31,5 +49,18 @@ class MapViewController: UIViewController {
             make.trailing.equalToSuperview()
             make.leading.equalToSuperview()
         }
+        centerMapOnLocation(location: initialLocation)
+        annotations.forEach { annotation in
+            mapView.addAnnotation(annotation)
+        }
+    }
+
+    private func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(
+            center: location.coordinate,
+            latitudinalMeters: regionRadius,
+            longitudinalMeters: regionRadius
+        )
+        mapView.setRegion(coordinateRegion, animated: true)
     }
 }

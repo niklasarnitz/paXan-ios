@@ -1,10 +1,5 @@
-//
-//  Style.swift
-//  paXan
-//
-//  Created by Niklas Arnitz on 31.08.19.
-//  Copyright © 2019 SWDEC. All rights reserved.
-//
+// swiftlint:disable file_header
+// Copyright © 2019 SWDEC. All rights reserved.
 
 import UIKit
 

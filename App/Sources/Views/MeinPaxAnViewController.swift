@@ -1,10 +1,5 @@
-//
-//  MeinPaxAnViewController.swift
-//  paXan
-//
-//  Created by Niklas Arnitz on 26.08.19.
-//  Copyright © 2019 SWDEC. All rights reserved.
-//
+// swiftlint:disable file_header
+// Copyright © 2019 SWDEC. All rights reserved.
 
 import UIKit
 
@@ -30,7 +25,7 @@ class MeinPaxAnViewController: UIViewController {
 
     private lazy var daysUntilPaXanLabel: UILabel = {
         let label = UILabel()
-        label.text = "paXan startet in x Tagen!😍\nDann kannst du\ndie App benutzen😉"
+        label.text = "paXan startet in x Tagen!\nDann kannst du\ndie App benutzen."
         label.numberOfLines = 3
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .title3)
@@ -41,6 +36,17 @@ class MeinPaxAnViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .white
+
+        // TODO: Fix the navigatiobar on iOS 13. This is only a hotfix
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.backgroundColor = Colors.ecGreen
+            super.navigationController?.navigationBar.standardAppearance = navBarAppearance
+            super.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        }
 
         setupScrollView()
         setupUserImageView()

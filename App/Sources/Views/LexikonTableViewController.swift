@@ -1,39 +1,29 @@
-//
-//  LexikonTableViewController.swift
-//  paXan
-//
-//  Created by Niklas Arnitz on 31.08.19.
-//  Copyright © 2019 SWDEC. All rights reserved.
-//
+// swiftlint:disable file_header
+// Copyright © 2019 SWDEC. All rights reserved.
 
 import MapKit
 import UIKit
 
 class LexikonTableViewController: UITableViewController {
-    private var detailViewController: LexikonDetailViewController? = nil
-
-    private var data: [LexikonEntry?] =
-                            [
-        LexikonEntry(
-            title: "paXan",
-            description: "paXan ist ein Mitarbeiterkongress des SWDEC"
-        ),
-        LexikonEntry(
-            title: "Jesus",
-            description: "Gottes Sohn, Retter aller, welche an ihn glauben"
-        ),
-        LexikonEntry(
-            title: "SWDEC",
-            description: "Der SWDEC ist ein Unterverband der Weltweiten EC-Bewegung.\nEs is ein Verband christlicher Jugendarbeiten, bei denen Jesus Christus im Mittelpunkt des Lebens der Mitglieder und der Gemeinden steht.\nDer SWDEC arbeitet ebenfalls eng mit den Liebenzeller Gemeinschaften und der Evangelischen Landeskirche zusammen."
-        )
-    ]
+    private var detailViewController: LexikonDetailViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // TODO: Fix the navigatiobar on iOS 13. This is only a hotfix
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.backgroundColor = Colors.ecGreen
+            super.navigationController?.navigationBar.standardAppearance = navBarAppearance
+            super.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        }
+
         if let split = splitViewController {
             let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? LexikonDetailViewController
+            detailViewController = (controllers[controllers.count - 1] as! UINavigationController).topViewController as? LexikonDetailViewController
         }
     }
 
@@ -48,7 +38,7 @@ class LexikonTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return lexikonEntries.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,7 +53,7 @@ class LexikonTableViewController: UITableViewController {
             make.size.equalTo(cell.bounds.height - 20)
         }
 
-        let lexikonEntryData = data[indexPath.row]
+        let lexikonEntryData = lexikonEntries[indexPath.row]
         cell.textLabel!.text = lexikonEntryData?.title
 
         cell.imageView?.image = Images.userManual
@@ -73,8 +63,9 @@ class LexikonTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailData = data[indexPath.row]
-        let sheetViewController = InteractiveSheetViewController(containing: LexikonDetailViewController(detailData?.title ?? "", detailData!.description)!)
-        present(sheetViewController, animated: true)
+        let detailData = lexikonEntries[indexPath.row]
+        let sheetViewCtrl = InteractiveSheetViewController(containing: LexikonDetailViewController(detailData!.title, detailData!.description)!)
+        present(sheetViewCtrl, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

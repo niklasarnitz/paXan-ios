@@ -1,10 +1,4 @@
-//
-//  Assets.swift
-//  paXan
-//
-//  Created by Niklas Arnitz on 27.08.19.
-//  Copyright © 2019 SWDEC. All rights reserved.
-//
+// Copyright © 2019 SWDEC. All rights reserved.
 
 #if os(OSX)
     import AppKit.NSImage
@@ -19,8 +13,18 @@ internal typealias Images = Asset.Images
 
 internal enum Asset {
     internal enum Colors {
+        // MARK: - Branding
         internal static let ecGreen = UIColor(named: "ecGreen", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
         internal static let ecRed = UIColor(named: "ecRed", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+
+        // MARK: - Text
+        internal static let body = UIColor(named: "body", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let bodyDescription = UIColor(named: "bodyDescription", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let bodyHighlight = UIColor(named: "bodyHighlight", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let caption = UIColor(named: "caption", in: Bundle(for: BundleToken.self), compatibleWith: nil)
+        internal static let shadow = UIColor(named: "shadow", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let background = UIColor(named: "background", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let secondaryBackground = UIColor(named: "secondaryBackground", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     }
 
     internal enum Images {

@@ -1,26 +1,22 @@
-//
-//  LexikonDetailViewController.swift
-//  paXan
-//
-//  Created by Niklas Arnitz on 31.08.19.
-//  Copyright © 2019 SWDEC. All rights reserved.
-//
+// swiftlint:disable file_header
+// Copyright © 2019 SWDEC. All rights reserved.
 
 import UIKit
 
 class LexikonDetailViewController: UIViewController {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = Colors.shadow
         label.font = .preferredFont(forTextStyle: .largeTitle)
         return label
     }()
 
     private lazy var descriptionTextView: UITextView = {
         let textView = UITextView()
-        textView.layer.borderColor = UIColor.black.cgColor
+        textView.layer.borderColor = Colors.body.cgColor
         textView.layer.borderWidth = 1
         textView.layer.cornerRadius = 5
+        textView.layer.opacity = 15
         textView.isEditable = false
         return textView
     }()
@@ -32,16 +28,16 @@ class LexikonDetailViewController: UIViewController {
         self.descriptionTextView.text = description
     }
 
+    @available(*, unavailable)
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTitleLabel()
         setupDescriptionTextView()
-    }
-
-    @available(*, unavailable)
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
     private func setupTitleLabel() {
@@ -60,6 +56,5 @@ class LexikonDetailViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-20)
             make.bottom.equalTo(super.view.snp.bottomMargin).offset(-20)
         }
-
     }
 }
