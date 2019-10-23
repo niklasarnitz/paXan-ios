@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E8611E67BA94825964453FA /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538967131DCEEECEA70FB8BA /* SnapKit.framework */; };
+		853CC15E2360BF8900A3F4F3 /* DefaultsKeysExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */; };
 		85866CCB23151F5600B408E9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85866CCA23151F5600B408E9 /* Assets.swift */; };
 		85866CD123154E6300B408E9 /* LexikonEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85866CD023154E6300B408E9 /* LexikonEntry.swift */; };
 		85939C01231406A50009A009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85939C00231406A50009A009 /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		538967131DCEEECEA70FB8BA /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapKit.framework; path = Dependencies/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeysExtension.swift; sourceTree = "<group>"; };
 		85866CCA23151F5600B408E9 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		85866CD023154E6300B408E9 /* LexikonEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonEntry.swift; sourceTree = "<group>"; };
 		85939BFD231406A50009A009 /* paXan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paXan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +59,7 @@
 		85E3F2F5231409F000E6B845 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeinPaxAnViewController.swift; sourceTree = "<group>"; };
 		85E3F38923142B2A00E6B845 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
-		A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
+		A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */,
+				853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */,
 				85E3F2F823140AAA00E6B845 /* MeinPaxAnViewController.swift in Sources */,
 				85AAD03E231ACC0400C0F813 /* InteractiveSheetViewController.swift in Sources */,
+				853CC15E2360BF8900A3F4F3 /* DefaultsKeysExtension.swift in Sources */,
 				85D4B419231E8E690010E55F /* HapticFeedbackManager.swift in Sources */,
 				85A3F82A23463D4D006A9473 /* LexikonEntries.swift in Sources */,
 				85866CD123154E6300B408E9 /* LexikonEntry.swift in Sources */,

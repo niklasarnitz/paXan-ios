@@ -1,4 +1,4 @@
-// swiftlint:disable line_length file_header
+// swiftlint:disable line_length
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import UIKit

@@ -1,4 +1,3 @@
-// swiftlint:disable file_header too_much_indentation
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import MapKit
@@ -111,22 +110,23 @@ class SeminarPlanViewController: UIViewController {
 
     private func showMap(_ seminar: Seminar) {
         let mapView = MKMapView()
-        mapView.addAnnotation({
-                let annotation = MKPointAnnotation()
-                annotation.title = seminar.title
-                annotation.subtitle = seminar.description
-                annotation.coordinate = seminar.location
-                return annotation
-            }()
-        )
-        let viewCtrl = UIViewController()
-        viewCtrl.view.addSubview(mapView)
+        let seminarAnnotation = MKPointAnnotation()
+        seminarAnnotation.title = seminar.title
+        seminarAnnotation.subtitle = seminar.description
+        seminarAnnotation.coordinate = seminar.location
+
+        mapView.addAnnotation(seminarAnnotation)
+
+        let viewController = UIViewController()
+
+        viewController.view.addSubview(mapView)
+
         mapView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.bottom.equalToSuperview()
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
         }
-        present(InteractiveSheetViewController(containing: viewCtrl), animated: true)
+        present(InteractiveSheetViewController(containing: viewController), animated: true)
     }
 }

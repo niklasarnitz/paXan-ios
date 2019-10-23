@@ -1,4 +1,3 @@
-// swiftlint:disable file_header
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import UIKit

@@ -1,4 +1,4 @@
-// swiftlint:disable number_separator opening_brace file_header
+//swiftlint:disable number_separator opening_brace
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import MapKit
@@ -18,6 +18,13 @@ class MapViewController: UIViewController {
             annotation.coordinate = CLLocationCoordinate2D(latitude: 48.796355, longitude: 8.503494)
             annotation.title = "EC-FSZ"
             annotation.subtitle = "Hauptveranstaltungsort"
+            return annotation
+        }(),
+        {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: 48.796360, longitude: 8.503494)
+            annotation.title = "EC-FSZ2"
+            annotation.subtitle = "Hauptveranstaltungsort2"
             return annotation
         }()
     ]

@@ -82,7 +82,7 @@ explicit_type_interface:
     - local
 
 file_header:
-  required_pattern: \/\/ Copyright © \d{4} Jamit Labs GmbH\. All rights reserved\.
+  required_pattern: \/\/ Copyright © \d{4} SWDEC\. All rights reserved\.
 
 file_name:
   suffix_pattern: "Extensions?|\\+.*"
@@ -387,9 +387,9 @@ custom_rules:
     severity: warning
   view_controller_variable_naming:
     included: ".*.swift"
-    regex: '(?:let|var) +\w*(?:vc|VC|Vc|viewC|viewController|ViewController) *='
+    regex: '(?:let|var) +\w*(?:vc|VC|Vc|viewC|ViewCtrl) *='
     name: "View Controller Variable Naming"
-    message: "Always name your view controller variables with the suffix `ViewCtrl`."
+    message: "Always name your view controller variables with the suffix `ViewController`."
     severity: warning
   whitespace_around_range_operators:
     included: ".*.swift"

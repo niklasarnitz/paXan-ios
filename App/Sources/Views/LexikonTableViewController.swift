@@ -1,4 +1,3 @@
-// swiftlint:disable file_header
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import MapKit
@@ -64,8 +63,8 @@ class LexikonTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailData = lexikonEntries[indexPath.row]
-        let sheetViewCtrl = InteractiveSheetViewController(containing: LexikonDetailViewController(detailData!.title, detailData!.description)!)
-        present(sheetViewCtrl, animated: true)
+        let sheetViewController = InteractiveSheetViewController(containing: LexikonDetailViewController(detailData!.title, detailData!.description)!)
+        present(sheetViewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
