@@ -1,3 +1,4 @@
+// swiftlint:disable dynamic_storyboard_reference
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import SwiftyUserDefaults
@@ -11,15 +12,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         /// Launch Setup Assistant if app is launched the first time
-        switch Defaults.launchCount {
-        case 0:
-            // Launch Setup Assistant
-            print("First Launch!")
-
-        default:
-            // Launch app, do nothing
-            Defaults.launchCount += 1
+        if Defaults.didLaunchBefore {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateInitialViewController()
+            self.window?.rootViewController = initialViewController
+        } else {
+            if let window = self.window {
+                window.rootViewController = SetupPageViewController()
+            }
+            Defaults.didLaunchBefore = true
         }
+
+        self.window?.makeKeyAndVisible()
 
         return true
     }

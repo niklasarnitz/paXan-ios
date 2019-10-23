@@ -5,7 +5,6 @@ import UIKit
 class LexikonDetailViewController: UIViewController {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Colors.shadow
         label.font = .preferredFont(forTextStyle: .largeTitle)
         return label
     }()
@@ -34,6 +33,12 @@ class LexikonDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemBackground
+        } else {
+            view.backgroundColor = .white
+        }
 
         setupTitleLabel()
         setupDescriptionTextView()

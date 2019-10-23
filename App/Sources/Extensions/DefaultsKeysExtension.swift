@@ -4,5 +4,5 @@ import SwiftyUserDefaults
 
 extension DefaultsKeys {
     var username: DefaultsKey<String?> { return .init("username") }
-    var launchCount: DefaultsKey<Int> { return .init("launchCount", defaultValue: 0) }
+    var didLaunchBefore: DefaultsKey<Bool> { return .init("didLaunchBefore", defaultValue: false) }
 }
