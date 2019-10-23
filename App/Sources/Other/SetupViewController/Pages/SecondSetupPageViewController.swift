@@ -1,5 +1,6 @@
 // Copyright © 2019 SWDEC. All rights reserved.
 
+import SwiftyUserDefaults
 import UIKit
 
 class SecondSetupPageViewController: UIViewController {
@@ -124,6 +125,8 @@ class SecondSetupPageViewController: UIViewController {
     }
 
     @objc func goToNextPage(_ button: UIButton) {
+        Defaults.username = nameTextField.text
+
         let viewController = ThirdSetupPageViewController()
         viewController.modalPresentationStyle = .fullScreen
         viewController.modalTransitionStyle = .flipHorizontal
