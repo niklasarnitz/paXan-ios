@@ -29,6 +29,7 @@
 		85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F5231409F000E6B845 /* MapViewController.swift */; };
 		85E3F2F823140AAA00E6B845 /* MeinPaxAnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */; };
 		85E3F38A23142B2A00E6B845 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 85E3F38923142B2A00E6B845 /* swiftgen.yml */; };
+		CD3C8019640CC56CA601F0EA /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		85E3F2F5231409F000E6B845 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeinPaxAnViewController.swift; sourceTree = "<group>"; };
 		85E3F38923142B2A00E6B845 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
+		A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8611E67BA94825964453FA /* SnapKit.framework in Frameworks */,
+				CD3C8019640CC56CA601F0EA /* SwiftyUserDefaults.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				538967131DCEEECEA70FB8BA /* SnapKit.framework */,
+				A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */,
 			);
 			name = paXan;
 			sourceTree = "<group>";
@@ -346,10 +350,12 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Dependencies/iOS/SnapKit.framework",
+				"$(SRCROOT)/Dependencies/iOS/SwiftyUserDefaults.framework",
 			);
 			name = Accio;
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyUserDefaults.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

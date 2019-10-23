@@ -9,6 +9,15 @@
           "revision": "d458564516e5676af9c70b4f4b2a9178294f1bc6",
           "version": "5.0.1"
         }
+      },
+      {
+        "package": "SwiftyUserDefaults",
+        "repositoryURL": "git@github.com:sunshinejr/SwiftyUserDefaults.git",
+        "state": {
+          "branch": null,
+          "revision": "dbd126b8957fc5af94d1ed5443f8f4b9405356ee",
+          "version": "5.0.0-beta.5"
+        }
       }
     ]
   },
