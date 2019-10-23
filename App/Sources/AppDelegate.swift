@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
 
         /// Launch Setup Assistant if app is launched the first time
-        Defaults.didLaunchBefore = false
+//        Defaults.didLaunchBefore = false
         if Defaults.didLaunchBefore {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let initialViewController = storyboard.instantiateInitialViewController()

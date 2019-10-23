@@ -38,14 +38,6 @@ class ThirdSetupPageViewController: UIViewController {
         return button
     }()
 
-    private lazy var heimatkundeTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "#heimatkunde"
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .white
-        return label
-    }()
-
     private lazy var heimatlosTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "#heimatlos"
@@ -62,33 +54,14 @@ class ThirdSetupPageViewController: UIViewController {
         return label
     }()
 
-    private lazy var heimwegTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "#heimweg"
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .white
-        return label
-    }()
-
-    private lazy var heimatgeberTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "#heimatgeber"
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .white
-        return label
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
         setupTitleLabel()
         setupSubTitleLabel()
-        setupHeimatKundeTitleLabel()
         setupHeimatlosTitleLabel()
         setupHeimwehTitleLabel()
-        setupHeimwegTitleLabel()
-        setupHeimatgeberTitleLabel()
         setupContinueButton()
     }
 
@@ -116,20 +89,12 @@ class ThirdSetupPageViewController: UIViewController {
         }
     }
 
-    private func setupHeimatKundeTitleLabel() {
-        view.addSubview(heimatkundeTitleLabel)
-        heimatkundeTitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(subTitleLabel.snp.bottomMargin).offset(25)
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(25)
-        }
-    }
     private func setupHeimatlosTitleLabel() {
         view.addSubview(heimatlosTitleLabel)
         heimatlosTitleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(25)
             make.trailing.equalToSuperview().offset(25)
-            make.top.equalTo(heimatkundeTitleLabel.snp.bottomMargin).offset(25)
+            make.top.equalTo(subTitleLabel.snp.bottomMargin).offset(25)
         }
     }
     private func setupHeimwehTitleLabel() {
@@ -138,22 +103,6 @@ class ThirdSetupPageViewController: UIViewController {
             make.leading.equalToSuperview().offset(25)
             make.trailing.equalToSuperview().offset(25)
             make.top.equalTo(heimatlosTitleLabel.snp.bottomMargin).offset(25)
-        }
-    }
-    private func setupHeimwegTitleLabel() {
-        view.addSubview(heimwegTitleLabel)
-        heimwegTitleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(25)
-            make.top.equalTo(heimwehTitleLabel.snp.bottomMargin).offset(25)
-        }
-    }
-    private func setupHeimatgeberTitleLabel() {
-        view.addSubview(heimatgeberTitleLabel)
-        heimatgeberTitleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(25)
-            make.top.equalTo(heimatgeberTitleLabel.snp.bottomMargin).offset(25)
         }
     }
 

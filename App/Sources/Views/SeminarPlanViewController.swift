@@ -4,14 +4,6 @@ import MapKit
 import UIKit
 
 class SeminarPlanViewController: UIViewController {
-    private lazy var heimatkundeTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "#heimatkunde"
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.textColor = Colors.ecGreen
-        return label
-    }()
-
     private lazy var heimatlosTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "#heimatlos"
@@ -23,22 +15,6 @@ class SeminarPlanViewController: UIViewController {
     private lazy var heimwehTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "#heimweh"
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.textColor = Colors.ecGreen
-        return label
-    }()
-
-    private lazy var heimwegTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "#heimweg"
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.textColor = Colors.ecGreen
-        return label
-    }()
-
-    private lazy var heimatgeberTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "#heimatgeber"
         label.font = .preferredFont(forTextStyle: .largeTitle)
         label.textColor = Colors.ecGreen
         return label
@@ -64,27 +40,16 @@ class SeminarPlanViewController: UIViewController {
             super.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
         }
 
-        setupHeimatKundeTitleLabel()
         setupHeimatlosTitleLabel()
         setupHeimwehTitleLabel()
-        setupHeimwegTitleLabel()
-        setupHeimatgeberTitleLabel()
     }
 
-    private func setupHeimatKundeTitleLabel() {
-        view.addSubview(heimatkundeTitleLabel)
-        heimatkundeTitleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(25)
-            make.top.equalTo(super.view.snp.topMargin).offset(25)
-        }
-    }
     private func setupHeimatlosTitleLabel() {
         view.addSubview(heimatlosTitleLabel)
         heimatlosTitleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(25)
             make.trailing.equalToSuperview().offset(25)
-            make.top.equalTo(heimatkundeTitleLabel.snp.bottomMargin).offset(25)
+            make.top.equalToSuperview().offset(25)
         }
     }
     private func setupHeimwehTitleLabel() {
@@ -93,22 +58,6 @@ class SeminarPlanViewController: UIViewController {
             make.leading.equalToSuperview().offset(25)
             make.trailing.equalToSuperview().offset(25)
             make.top.equalTo(heimatlosTitleLabel.snp.bottomMargin).offset(25)
-        }
-    }
-    private func setupHeimwegTitleLabel() {
-        view.addSubview(heimwegTitleLabel)
-        heimwegTitleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(25)
-            make.top.equalTo(heimwehTitleLabel.snp.bottomMargin).offset(25)
-        }
-    }
-    private func setupHeimatgeberTitleLabel() {
-        view.addSubview(heimatgeberTitleLabel)
-        heimatgeberTitleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(25)
-            make.top.equalTo(heimatgeberTitleLabel.snp.bottomMargin).offset(25)
         }
     }
 
