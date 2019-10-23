@@ -31,7 +31,7 @@ internal enum Asset {
   }
   internal enum Images {
     internal static let chevronRight = ImageAsset(name: "chevronRight")
-    internal static let ecLogoWhite = ImageAsset(name: "ecLogoWhite")
+    internal static let ecLogo = ImageAsset(name: "ecLogo")
     internal static let mapMarker = ImageAsset(name: "mapMarker")
     internal static let timetable = ImageAsset(name: "timetable")
     internal static let userMale = ImageAsset(name: "userMale")
