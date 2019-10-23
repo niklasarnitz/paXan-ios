@@ -1,5 +1,6 @@
 // Copyright © 2019 SWDEC. All rights reserved.
 
+import SwiftyUserDefaults
 import UIKit
 
 class MeinPaxAnViewController: UIViewController {
@@ -10,7 +11,7 @@ class MeinPaxAnViewController: UIViewController {
 
     private lazy var helloLabel: UILabel = {
         let label = UILabel()
-        label.text = "Hallo, Niklas!"
+        label.text = "Hallo, \(Defaults.username ?? "Error")"
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         return label
     }()
