@@ -9,6 +9,7 @@ class FinalSetupPageViewController: UIViewController {
         label.text = finalPageTitle
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         label.textColor = .white
+        label.textAlignment = .center
         label.numberOfLines = 0
         return label
     }()
