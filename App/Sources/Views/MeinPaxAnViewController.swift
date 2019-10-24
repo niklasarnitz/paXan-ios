@@ -1,6 +1,6 @@
-// swiftlint:disable file_header
 // Copyright © 2019 SWDEC. All rights reserved.
 
+import SwiftyUserDefaults
 import UIKit
 
 class MeinPaxAnViewController: UIViewController {
@@ -11,8 +11,7 @@ class MeinPaxAnViewController: UIViewController {
 
     private lazy var helloLabel: UILabel = {
         let label = UILabel()
-        label.text = "Hallo, Niklas!"
-        label.textColor = .black
+        label.text = "Hallo, \(Defaults.username ?? "Error")"
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         return label
     }()
@@ -35,9 +34,13 @@ class MeinPaxAnViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemBackground
+        } else {
+            view.backgroundColor = .white
+        }
 
-        // TODO: Fix the navigatiobar on iOS 13. This is only a hotfix
+        // TODO: Fix the navigationbar on iOS 13. This is only a hotfix
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()

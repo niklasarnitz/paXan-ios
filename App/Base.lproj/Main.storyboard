@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar-->
         <scene sceneID="BXv-Ll-kuq">
             <objects>
-                <tabBarController id="TK4-6J-W1A" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MeinPaxanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TK4-6J-W1A" customClass="MainTabBar" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WSu-58-Cdr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -189,7 +189,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableViewCell>
                         </prototypes>
                         <sections/>

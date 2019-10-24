@@ -1,4 +1,3 @@
-// swiftlint:disable file_header too_much_indentation
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import Foundation

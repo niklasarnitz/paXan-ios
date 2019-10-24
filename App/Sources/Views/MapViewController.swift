@@ -1,4 +1,4 @@
-// swiftlint:disable number_separator opening_brace file_header
+//swiftlint:disable number_separator opening_brace
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import MapKit
@@ -19,13 +19,24 @@ class MapViewController: UIViewController {
             annotation.title = "EC-FSZ"
             annotation.subtitle = "Hauptveranstaltungsort"
             return annotation
+        }(),
+        {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: 48.796360, longitude: 8.503494)
+            annotation.title = "EC-FSZ2"
+            annotation.subtitle = "Hauptveranstaltungsort2"
+            return annotation
         }()
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemBackground
+        } else {
+            view.backgroundColor = .white
+        }
 
         // TODO: Fix the navigatiobar on iOS 13. This is only a hotfix
         if #available(iOS 13.0, *) {

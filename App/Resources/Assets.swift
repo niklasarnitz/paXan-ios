@@ -28,7 +28,8 @@ internal enum Asset {
     }
 
     internal enum Images {
-        internal static let ecLogoWhite = UIImage(named: "ecLogoWhite", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let ecLogo = UIImage(named: "ecLogo", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let upDownArrow = UIImage(named: "upDownArrow", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
         internal static let mapMarker = UIImage(named: "mapMarker", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
         internal static let timetable = UIImage(named: "timetable", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
         internal static let userMale = UIImage(named: "userMale", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
