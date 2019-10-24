@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		538967131DCEEECEA70FB8BA /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapKit.framework; path = Dependencies/iOS/SnapKit.framework; sourceTree = "<group>"; };
-		69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Dependencies/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
+		69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Dependencies/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
 		853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeysExtension.swift; sourceTree = "<group>"; };
 		853CC1632360C6DF00A3F4F3 /* SetupAssistantPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAssistantPages.swift; sourceTree = "<group>"; };
 		853CC1652360CB1C00A3F4F3 /* FirstSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSetupPageViewController.swift; sourceTree = "<group>"; };
@@ -581,6 +581,7 @@
 					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -603,6 +604,7 @@
 					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
