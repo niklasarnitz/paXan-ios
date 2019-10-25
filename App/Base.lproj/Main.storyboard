@@ -23,6 +23,7 @@
                         <segue destination="z9N-pl-430" kind="relationship" relationship="viewControllers" id="Ik6-zx-AeM"/>
                         <segue destination="zYI-PA-0bl" kind="relationship" relationship="viewControllers" id="t0y-0o-KXw"/>
                         <segue destination="U3x-aA-fQd" kind="relationship" relationship="viewControllers" id="ctF-V6-rNt"/>
+                        <segue destination="s7n-cc-KcJ" kind="relationship" relationship="viewControllers" id="KnX-La-600"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9i-f3-46k" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -59,6 +60,16 @@
             </objects>
             <point key="canvasLocation" x="3536.2318840579715" y="-668.30357142857144"/>
         </scene>
+        <!--Infos-->
+        <scene sceneID="eMa-BU-5WU">
+            <objects>
+                <viewController id="obc-QA-RO0" customClass="AboutViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Infos" id="Y9p-mK-wd1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CvR-1q-Cw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5339.130434782609" y="-668.30357142857144"/>
+        </scene>
         <!--Mein paXan-->
         <scene sceneID="sRN-rE-0Gg">
             <objects>
@@ -68,6 +79,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="7ZU-3V-Dc3">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="ecGreen"/>
                         <color key="barTintColor" name="ecGreen"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,6 +106,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="GhM-cX-hKT">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="ecGreen"/>
                         <color key="barTintColor" name="ecGreen"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -120,6 +133,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="zYo-BH-RfM">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="ecGreen"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" name="ecGreen"/>
                         <textAttributes key="titleTextAttributes">
@@ -147,6 +161,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dez-Y0-ykA">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="ecGreen"/>
                         <color key="barTintColor" name="ecGreen"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -204,8 +219,30 @@
             </objects>
             <point key="canvasLocation" x="3536" y="7"/>
         </scene>
+        <!--Infos-->
+        <scene sceneID="9aF-R2-728">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s7n-cc-KcJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Infos" image="info.circle" catalog="system" id="SQl-hg-PCQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gr4-MP-PCu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="ecGreen"/>
+                        <color key="barTintColor" name="ecGreen"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="obc-QA-RO0" kind="relationship" relationship="rootViewController" id="i4w-rG-2xl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAp-VT-caE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4428.985507246377" y="-668.30357142857144"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
         <image name="mapMarker" width="30" height="30"/>
         <image name="timetable" width="30" height="30"/>
         <image name="userMale" width="30" height="30"/>

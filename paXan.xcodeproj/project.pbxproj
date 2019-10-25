@@ -33,6 +33,7 @@
 		85AAD040231ACC7600C0F813 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD03F231ACC7600C0F813 /* Style.swift */; };
 		85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */; };
 		85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */; };
+		85C483B72362FDAD001C6FD8 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C483B62362FDAD001C6FD8 /* AboutViewController.swift */; };
 		85D4B419231E8E690010E55F /* HapticFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4B418231E8E690010E55F /* HapticFeedbackManager.swift */; };
 		85E3F2F42314099D00E6B845 /* SeminarPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */; };
 		85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F5231409F000E6B845 /* MapViewController.swift */; };
@@ -72,6 +73,7 @@
 		85AAD03F231ACC7600C0F813 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonDetailViewController.swift; sourceTree = "<group>"; };
+		85C483B62362FDAD001C6FD8 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		85D4B418231E8E690010E55F /* HapticFeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackManager.swift; sourceTree = "<group>"; };
 		85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarPlanViewController.swift; sourceTree = "<group>"; };
 		85E3F2F5231409F000E6B845 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				855138BA2321901000538CE9 /* Generated */,
 				85939C122314073C0009A009 /* Sources */,
 				85E3F39023142BBE00E6B845 /* Resources */,
+				85939C00231406A50009A009 /* AppDelegate.swift */,
 				85939C04231406A50009A009 /* Main.storyboard */,
 				85939C09231406A60009A009 /* LaunchScreen.storyboard */,
 				85939C0C231406A60009A009 /* Info.plist */,
@@ -195,7 +198,6 @@
 			children = (
 				85AAD041231ACCA800C0F813 /* Extensions */,
 				85AAD03B231ACBF100C0F813 /* Global */,
-				85939C00231406A50009A009 /* AppDelegate.swift */,
 				85866CD223154E6600B408E9 /* Models */,
 				85939C13231407450009A009 /* Views */,
 				85AAD044231ACD2C00C0F813 /* Other */,
@@ -211,6 +213,7 @@
 				85E3F2F5231409F000E6B845 /* MapViewController.swift */,
 				85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */,
 				853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */,
+				85C483B62362FDAD001C6FD8 /* AboutViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				85E3F2F42314099D00E6B845 /* SeminarPlanViewController.swift in Sources */,
 				853CC1642360C6DF00A3F4F3 /* SetupAssistantPages.swift in Sources */,
 				85AAD040231ACC7600C0F813 /* Style.swift in Sources */,
+				85C483B72362FDAD001C6FD8 /* AboutViewController.swift in Sources */,
 				853CC16E2360CD7C00A3F4F3 /* MainTabBar.swift in Sources */,
 				85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */,
 				85E3F2F823140AAA00E6B845 /* MeinPaxAnViewController.swift in Sources */,
