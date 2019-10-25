@@ -92,7 +92,7 @@ class FirstSetupPageViewController: UIViewController {
 
         continueButton.snp.makeConstraints { make in
             make.height.equalTo(40)
-            make.bottom.equalToSuperview().offset(-45)
+            make.bottom.equalToSuperview().offset(-50)
             make.leading.equalToSuperview().offset(26)
             make.trailing.equalToSuperview().offset(-26)
         }
@@ -102,6 +102,7 @@ class FirstSetupPageViewController: UIViewController {
 
     @objc func goToNextPage(_ button: UIButton) {
         button.pulsate()
+
         let viewController = SecondSetupPageViewController()
         viewController.modalPresentationStyle = .fullScreen
         viewController.modalTransitionStyle = .flipHorizontal

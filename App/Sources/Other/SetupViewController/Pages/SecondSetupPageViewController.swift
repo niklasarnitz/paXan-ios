@@ -120,7 +120,7 @@ class SecondSetupPageViewController: UIViewController {
 
         continueButton.snp.makeConstraints { make in
             make.height.equalTo(40)
-            make.bottom.equalToSuperview().offset(-45)
+            make.bottom.equalToSuperview().offset(-50)
             make.leading.equalToSuperview().offset(26)
             make.trailing.equalToSuperview().offset(-26)
         }

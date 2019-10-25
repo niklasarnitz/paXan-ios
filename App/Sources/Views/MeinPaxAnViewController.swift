@@ -24,7 +24,7 @@ class MeinPaxAnViewController: UIViewController {
 
     private lazy var daysUntilPaXanLabel: UILabel = {
         let label = UILabel()
-        label.text = "paXan startet bald!\nDann kannst du\ndie App benutzen."
+        label.text = meinPaXanCaption
         label.numberOfLines = 3
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .title3)

@@ -4,6 +4,7 @@ import SnapKit
 import UIKit
 
 extension UIView {
+    /// This function Binds the Edges of the View to the Superview
     public func bindEdgesToSuperview(insets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)) {
         translatesAutoresizingMaskIntoConstraints = false
 

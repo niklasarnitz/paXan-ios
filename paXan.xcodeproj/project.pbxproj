@@ -17,7 +17,7 @@
 		853CC16A2360CB4800A3F4F3 /* ThirdSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC1692360CB4800A3F4F3 /* ThirdSetupPageViewController.swift */; };
 		853CC16C2360CB6300A3F4F3 /* FinalSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC16B2360CB6300A3F4F3 /* FinalSetupPageViewController.swift */; };
 		853CC16E2360CD7C00A3F4F3 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */; };
-		853CC1702360DB2700A3F4F3 /* SetupPagesStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC16F2360DB2700A3F4F3 /* SetupPagesStrings.swift */; };
+		853CC1702360DB2700A3F4F3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC16F2360DB2700A3F4F3 /* Strings.swift */; };
 		85866CCB23151F5600B408E9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85866CCA23151F5600B408E9 /* Assets.swift */; };
 		85866CD123154E6300B408E9 /* LexikonEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85866CD023154E6300B408E9 /* LexikonEntry.swift */; };
 		85939C01231406A50009A009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85939C00231406A50009A009 /* AppDelegate.swift */; };
@@ -55,7 +55,7 @@
 		853CC1692360CB4800A3F4F3 /* ThirdSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSetupPageViewController.swift; sourceTree = "<group>"; };
 		853CC16B2360CB6300A3F4F3 /* FinalSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalSetupPageViewController.swift; sourceTree = "<group>"; };
 		853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
-		853CC16F2360DB2700A3F4F3 /* SetupPagesStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPagesStrings.swift; sourceTree = "<group>"; };
+		853CC16F2360DB2700A3F4F3 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		85866CCA23151F5600B408E9 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		85866CD023154E6300B408E9 /* LexikonEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonEntry.swift; sourceTree = "<group>"; };
 		85939BFD231406A50009A009 /* paXan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paXan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,6 +226,7 @@
 				853CC1632360C6DF00A3F4F3 /* SetupAssistantPages.swift */,
 				853CC16F2360DB2700A3F4F3 /* SetupPagesStrings.swift */,
 				85257B3A2362D12F00E84CC5 /* Data.json */,
+				853CC16F2360DB2700A3F4F3 /* Strings.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -434,7 +435,7 @@
 				85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */,
 				85866CCB23151F5600B408E9 /* Assets.swift in Sources */,
 				85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */,
-				853CC1702360DB2700A3F4F3 /* SetupPagesStrings.swift in Sources */,
+				853CC1702360DB2700A3F4F3 /* Strings.swift in Sources */,
 				85AAD03A231ABCC900C0F813 /* LexikonTableViewController.swift in Sources */,
 				853CC1682360CB3E00A3F4F3 /* SecondSetupPageViewController.swift in Sources */,
 			);

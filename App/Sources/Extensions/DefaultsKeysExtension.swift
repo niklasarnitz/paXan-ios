@@ -4,6 +4,7 @@ import SwiftyUserDefaults
 
 extension DefaultsKeys {
     var username: DefaultsKey<String?> { return .init("username") }
+
     var didLaunchBefore: DefaultsKey<Bool> { return .init("didLaunchBefore", defaultValue: false) }
 
     var seminarOne: DefaultsKey<String> { return .init("seminarOne", defaultValue: "") }

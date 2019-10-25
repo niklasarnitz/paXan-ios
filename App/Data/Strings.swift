@@ -2,6 +2,7 @@
 
 import Foundation
 
+// MARK: Setup Pages Strings
 let firstPageTitle: String = "Willkommen in\nder paXan App!"
 
 let firstPageSubtitle: String = "Cool, dass du da bist!\nIm Namen des SWDEC heißen wir dich herzlich Willkommen zu paXan 2020!"
@@ -29,3 +30,7 @@ let finalPageTitle: String = "Und jetzt...\nViel Spaß bei paXan!"
 let finalPageSubtitle: String = "In der App findest du alles, was du früher in deinem Kongressheft gefunden hast."
 
 let setupFinishButtonTitle: String = "Fertig"
+
+// MARK: Mein paXan Strings
+
+let meinPaXanCaption: String = "paXan startet bald!\nDann kannst du\ndie App benutzen."

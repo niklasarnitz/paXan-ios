@@ -223,7 +223,7 @@
         <scene sceneID="9aF-R2-728">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s7n-cc-KcJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Infos" image="info.circle" catalog="system" id="SQl-hg-PCQ"/>
+                    <tabBarItem key="tabBarItem" title="Infos" image="info" catalog="system" id="SQl-hg-PCQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gr4-MP-PCu">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -242,7 +242,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="info.circle" catalog="system" width="64" height="60"/>
+        <image name="info" catalog="system" width="46" height="64"/>
         <image name="mapMarker" width="30" height="30"/>
         <image name="timetable" width="30" height="30"/>
         <image name="userMale" width="30" height="30"/>
