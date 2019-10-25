@@ -1,4 +1,3 @@
-// swiftlint:disable dynamic_storyboard_reference
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import IQKeyboardManagerSwift

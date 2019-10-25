@@ -30,7 +30,6 @@
 		85A3F82A23463D4D006A9473 /* LexikonEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A3F82923463D4D006A9473 /* LexikonEntries.swift */; };
 		85A3F82C23464290006A9473 /* Seminare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A3F82B23464290006A9473 /* Seminare.swift */; };
 		85AAD03A231ABCC900C0F813 /* LexikonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */; };
-		85AAD03E231ACC0400C0F813 /* InteractiveSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD03D231ACC0400C0F813 /* InteractiveSheetViewController.swift */; };
 		85AAD040231ACC7600C0F813 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD03F231ACC7600C0F813 /* Style.swift */; };
 		85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */; };
 		85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */; };
@@ -70,7 +69,6 @@
 		85A3F82923463D4D006A9473 /* LexikonEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonEntries.swift; sourceTree = "<group>"; };
 		85A3F82B23464290006A9473 /* Seminare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seminare.swift; sourceTree = "<group>"; };
 		85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonTableViewController.swift; sourceTree = "<group>"; };
-		85AAD03D231ACC0400C0F813 /* InteractiveSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveSheetViewController.swift; sourceTree = "<group>"; };
 		85AAD03F231ACC7600C0F813 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonDetailViewController.swift; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 		85AAD03C231ACBF500C0F813 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				85AAD03D231ACC0400C0F813 /* InteractiveSheetViewController.swift */,
 				85AAD03F231ACC7600C0F813 /* Style.swift */,
 			);
 			path = Views;
@@ -366,7 +363,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\n  swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		85E3F38D23142B4900E6B845 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -422,7 +419,6 @@
 				853CC16E2360CD7C00A3F4F3 /* MainTabBar.swift in Sources */,
 				85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */,
 				85E3F2F823140AAA00E6B845 /* MeinPaxAnViewController.swift in Sources */,
-				85AAD03E231ACC0400C0F813 /* InteractiveSheetViewController.swift in Sources */,
 				853CC15E2360BF8900A3F4F3 /* DefaultsKeysExtension.swift in Sources */,
 				85D4B419231E8E690010E55F /* HapticFeedbackManager.swift in Sources */,
 				853CC16A2360CB4800A3F4F3 /* ThirdSetupPageViewController.swift in Sources */,

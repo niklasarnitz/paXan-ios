@@ -30,7 +30,6 @@ opt_in_rules:
 - multiline_parameters
 - multiline_parameters_brackets
 - nimble_operator
-- number_separator
 - object_literal
 - operator_usage_whitespace
 - overridden_super_call
@@ -56,7 +55,6 @@ opt_in_rules:
 - vertical_parameter_alignment_on_call
 - vertical_whitespace_between_cases
 - vertical_whitespace_closing_braces
-- vertical_whitespace_opening_braces
 - yoda_condition
 
 disabled_rules:
@@ -185,12 +183,6 @@ custom_rules:
     regex: 'UIColor\(\s*named:\s*\"'
     name: "Dynamic Color Reference"
     message: "Don't use dynamic color references – use SwiftGen & Color instead."
-    severity: warning
-  dynamic_storyboard_reference:
-    included: ".*.swift"
-    regex: 'UIStoryboard\(\s*name:\s*\"'
-    name: "Dynamic Storyboard Reference"
-    message: "Don't use dynamic storyboard references – use SwiftGen & StoryboardScene instead."
     severity: warning
   dynamic_string_reference:
     included: ".*.swift"
