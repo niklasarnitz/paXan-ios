@@ -246,6 +246,8 @@ class ThirdSetupPageViewController: UIViewController {
     }
 
     @objc func goToNextPage(_ button: UIButton) {
+        button.pulsate()
+
         let viewController = FinalSetupPageViewController()
         viewController.modalPresentationStyle = .fullScreen
         viewController.modalTransitionStyle = .flipHorizontal
