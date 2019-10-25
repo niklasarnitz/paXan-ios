@@ -64,7 +64,7 @@ class ThirdSetupPageViewController: UIViewController {
 
         textField.textColor = .white
         textField.attributedPlaceholder = NSAttributedString(
-            string: secondPageTextFieldPlaceholder,
+            string: thirdPageTextFieldPlaceholderOne,
             attributes: [ NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5) ]
         )
         textField.textAlignment = .center
@@ -87,7 +87,7 @@ class ThirdSetupPageViewController: UIViewController {
 
         textField.textColor = .white
         textField.attributedPlaceholder = NSAttributedString(
-            string: secondPageTextFieldPlaceholder,
+            string: thirdPageTextFieldPlaceholderTwo,
             attributes: [ NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5) ]
         )
         textField.textAlignment = .center
@@ -124,7 +124,7 @@ class ThirdSetupPageViewController: UIViewController {
 
         textField.textColor = .white
         textField.attributedPlaceholder = NSAttributedString(
-            string: secondPageTextFieldPlaceholder,
+            string: thirdPageTextFieldPlaceholderThree,
             attributes: [ NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5) ]
         )
         textField.textAlignment = .center
