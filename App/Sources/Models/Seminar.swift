@@ -8,7 +8,7 @@ struct Seminar {
     var description: String
     var location: CLLocationCoordinate2D
 
-    init?(_ title: String, description: String, location: CLLocationCoordinate2D) {
+    init?(title: String, description: String, location: CLLocationCoordinate2D) {
         self.title = title
         self.description = description
         self.location = location

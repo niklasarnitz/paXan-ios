@@ -103,10 +103,12 @@ class FinalSetupPageViewController: UIViewController {
     }
 
     @objc func goToNextPage(_ button: UIButton) {
+        button.pulsate()
+
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateInitialViewController()
         viewController?.modalPresentationStyle = .fullScreen
-        viewController?.modalTransitionStyle = .flipHorizontal
+        viewController?.modalTransitionStyle = .coverVertical
         present(viewController!, animated: true)
     }
 }

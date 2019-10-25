@@ -54,6 +54,8 @@ class SecondSetupPageViewController: UIViewController {
         button.layer.borderColor = UIColor.white.cgColor
         button.isEnabled = false
 
+        button.alpha = 0.5
+
         return button
     }()
 
@@ -106,8 +108,10 @@ class SecondSetupPageViewController: UIViewController {
     @objc func editingChanged(_ textField: UITextField) {
         if nameTextField.text!.isEmpty {
             continueButton.isEnabled = false
+            continueButton.alpha = 0.5
         } else {
             continueButton.isEnabled = true
+            continueButton.alpha = 1
         }
     }
 
@@ -126,6 +130,8 @@ class SecondSetupPageViewController: UIViewController {
 
     @objc func goToNextPage(_ button: UIButton) {
         Defaults.username = nameTextField.text
+
+        button.pulsate()
 
         let viewController = ThirdSetupPageViewController()
         viewController.modalPresentationStyle = .fullScreen

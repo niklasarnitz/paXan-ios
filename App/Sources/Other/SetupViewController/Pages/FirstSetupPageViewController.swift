@@ -101,6 +101,7 @@ class FirstSetupPageViewController: UIViewController {
     }
 
     @objc func goToNextPage(_ button: UIButton) {
+        button.pulsate()
         let viewController = SecondSetupPageViewController()
         viewController.modalPresentationStyle = .fullScreen
         viewController.modalTransitionStyle = .flipHorizontal
