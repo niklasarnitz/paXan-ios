@@ -18,6 +18,12 @@ let thirdPageTitle: String = "Deine paXan Seminare"
 
 let thirdPageSubtitle: String = "Trage hier unten bitte deine Seminare ein. Keine Angst, falsch du etwas falsch machst, kannst du es später natürlich nocheinmal ändern."
 
+let thirdPageTextFieldPlaceholderOne: String = "Seminar 1"
+
+let thirdPageTextFieldPlaceholderTwo: String = "Seminar 2"
+
+let thirdPageTextFieldPlaceholderThree: String = "Seminar 3"
+
 let finalPageTitle: String = "Und jetzt...\nViel Spaß bei paXan!"
 
 let finalPageSubtitle: String = "In der App findest du alles, was du früher in deinem Kongressheft gefunden hast."
