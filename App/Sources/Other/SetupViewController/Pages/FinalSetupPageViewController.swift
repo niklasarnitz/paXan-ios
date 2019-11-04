@@ -1,5 +1,6 @@
 // Copyright © 2019 SWDEC. All rights reserved.
 
+import SwiftyUserDefaults
 import UIKit
 
 class FinalSetupPageViewController: UIViewController {
@@ -52,6 +53,12 @@ class FinalSetupPageViewController: UIViewController {
         setupSubTitleLabel()
         setupLogoImageView()
         setupContinueButton()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+
+        Defaults.didLaunchBefore = true
     }
 
     private func setupView() {

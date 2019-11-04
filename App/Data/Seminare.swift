@@ -11,12 +11,12 @@ import MapKit
 
 let seminarBlockOneSeminars: [Seminar?] = [
     Seminar(
-        title: "Testseminar1",
+        title: "Echt Mann sein",
         description: "Das ist ein Test",
         location: CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
     ),
     Seminar(
-        title: "Testseminar2",
+        title: "Echt Frau Sein",
         description: "Das ist ein Test",
         location: CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
     )
@@ -24,12 +24,12 @@ let seminarBlockOneSeminars: [Seminar?] = [
 
 let seminarBlockTwoSeminars: [Seminar?] = [
     Seminar(
-        title: "Testseminar1",
+        title: "Öffentlichkeitsarbeit",
         description: "Das ist ein Test",
         location: CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
     ),
     Seminar(
-        title: "Testseminar2",
+        title: "Flaggenworship für Anfänger",
         description: "Das ist ein Test",
         location: CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
     )
@@ -37,12 +37,12 @@ let seminarBlockTwoSeminars: [Seminar?] = [
 
 let seminarBlockThreeSeminars: [Seminar?] = [
     Seminar(
-        title: "Testseminar1",
+        title: "Generation Worship",
         description: "Das ist ein Test",
         location: CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
     ),
     Seminar(
-        title: "Testseminar2",
+        title: "Technik - Ein Mittel zum Zweck?",
         description: "Das ist ein Test",
         location: CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
     )

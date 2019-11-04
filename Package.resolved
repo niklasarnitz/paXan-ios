@@ -2,12 +2,21 @@
   "object": {
     "pins": [
       {
+        "package": "Codextended",
+        "repositoryURL": "https://github.com/JohnSundell/Codextended",
+        "state": {
+          "branch": null,
+          "revision": "8d7c46dfc9c55240870cf5561d6cefa41e3d7105",
+          "version": "0.3.0"
+        }
+      },
+      {
         "package": "IQKeyboardManagerSwift",
         "repositoryURL": "https://github.com/hackiftekhar/IQKeyboardManager.git",
         "state": {
           "branch": null,
-          "revision": "95fe8db1c34b6ef55f7956dc821ad34f32b9aa72",
-          "version": "6.5.1"
+          "revision": "a911a481b9a031ea6ec949030871cbb851d01111",
+          "version": "6.5.3"
         }
       },
       {
