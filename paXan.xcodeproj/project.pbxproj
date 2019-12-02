@@ -141,22 +141,6 @@
 			path = Pages;
 			sourceTree = "<group>";
 		};
-		855138BA2321901000538CE9 /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				855138BB2321901000538CE9 /* SwiftGen */,
-			);
-			name = Generated;
-			path = App/Generated;
-			sourceTree = SOURCE_ROOT;
-		};
-		855138BB2321901000538CE9 /* SwiftGen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SwiftGen;
-			sourceTree = "<group>";
-		};
 		85866CD223154E6600B408E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +174,6 @@
 		85939BFF231406A50009A009 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				855138BA2321901000538CE9 /* Generated */,
 				85939C122314073C0009A009 /* Sources */,
 				85E3F39023142BBE00E6B845 /* Resources */,
 				85939C00231406A50009A009 /* AppDelegate.swift */,
