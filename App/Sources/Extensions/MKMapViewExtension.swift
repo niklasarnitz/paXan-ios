@@ -3,8 +3,11 @@
 import MapKit
 
 extension MKMapView {
+    /// This function centers the map on a given location
     func centerMapOnLocation(
+        /// The Location the Map is focused on
         location: CLLocation,
+        /// The Radius around the location which will be seen
         regionRadius: CLLocationDistance
     ) {
         let coordinateRegion = MKCoordinateRegion(
