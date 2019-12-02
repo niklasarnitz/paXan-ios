@@ -13,7 +13,7 @@ class SeminarButton: UIButton {
 
     var borderWidth: CGFloat = 1.0
     var borderRadius: CGFloat = 5.0
-    var borderColor: CGColor = Colors.ecGreen.cgColor
+    var borderColor: CGColor = UIColor.white.cgColor
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,5 +33,8 @@ class SeminarButton: UIButton {
         self.layer.cornerRadius = self.borderRadius
         self.layer.borderColor = self.borderColor
         self.layer.borderWidth = self.borderWidth
+
+        self.backgroundColor = Colors.ecGreen
+        self.setTitleColor(.white, for: .normal)
     }
 }

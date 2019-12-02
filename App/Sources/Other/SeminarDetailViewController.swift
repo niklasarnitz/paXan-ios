@@ -12,12 +12,14 @@ class SeminarDetailViewController: UIViewController {
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 0
         label.minimumScaleFactor = 0.2
+        label.textColor = .white
         return label
     }()
 
     private lazy var referentLabel: UILabel = {
         let label = UILabel()
 
+        label.textColor = .white
         label.numberOfLines = 0
 
         return label
@@ -26,6 +28,7 @@ class SeminarDetailViewController: UIViewController {
     private lazy var roomNameLabel: UILabel = {
         let label = UILabel()
 
+        label.textColor = .white
         label.numberOfLines = 0
 
         return label
@@ -34,6 +37,7 @@ class SeminarDetailViewController: UIViewController {
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
 
+        label.textColor = .white
         label.numberOfLines = 0
 
         return label
@@ -74,9 +78,9 @@ class SeminarDetailViewController: UIViewController {
         super.viewDidLoad()
 
         if #available(iOS 13.0, *) {
-            view.backgroundColor = .systemBackground
+            view.backgroundColor = Colors.ecGreen
         } else {
-            view.backgroundColor = .white
+            view.backgroundColor = Colors.ecGreen
         }
 
         setupTitleLabel()
