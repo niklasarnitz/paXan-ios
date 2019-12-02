@@ -1,3 +1,4 @@
+// swiftlint:disable trailing_closure
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import MapKit
@@ -28,15 +29,15 @@ class SeminarPlanViewController: UIViewController {
         return label
     }()
 
-    private lazy var seminarOneLabel: UILabel = {
-        let label = UILabel()
+    private lazy var seminarOneButton: SeminarButton = {
+        let button = SeminarButton()
 
-        label.text = Defaults.seminarOne
-        label.font = .preferredFont(forTextStyle: .caption1)
-        label.textAlignment = .center
-        label.contentMode = .center
+        button.titleText = Defaults.seminarOne
+        button.titleLabel?.font = .preferredFont(forTextStyle: .caption1)
+        button.titleLabel?.textAlignment = .center
+        button.titleLabel?.contentMode = .center
 
-        return label
+        return button
     }()
 
     private lazy var seminarTwoCaptionLabel: UILabel = {
@@ -50,15 +51,15 @@ class SeminarPlanViewController: UIViewController {
         return label
     }()
 
-    private lazy var seminarTwoLabel: UILabel = {
-        let label = UILabel()
+    private lazy var seminarTwoButton: SeminarButton = {
+        let button = SeminarButton()
 
-        label.text = Defaults.seminarTwo
-        label.font = .preferredFont(forTextStyle: .caption1)
-        label.textAlignment = .center
-        label.contentMode = .center
+        button.titleText = Defaults.seminarTwo
+        button.titleLabel?.font = .preferredFont(forTextStyle: .caption1)
+        button.titleLabel?.textAlignment = .center
+        button.titleLabel?.contentMode = .center
 
-        return label
+        return button
     }()
 
     private lazy var heimwehTitleLabel: UILabel = {
@@ -84,15 +85,15 @@ class SeminarPlanViewController: UIViewController {
         return label
     }()
 
-    private lazy var seminarThreeLabel: UILabel = {
-        let label = UILabel()
+    private lazy var seminarThreeButton: SeminarButton = {
+        let button = SeminarButton()
 
-        label.text = Defaults.seminarThree
-        label.font = .preferredFont(forTextStyle: .caption1)
-        label.textAlignment = .center
-        label.contentMode = .center
+        button.titleText = Defaults.seminarThree
+        button.titleLabel?.font = .preferredFont(forTextStyle: .caption1)
+        button.titleLabel?.textAlignment = .center
+        button.titleLabel?.contentMode = .center
 
-        return label
+        return button
     }()
 
     private lazy var editButton: UIButton = {
@@ -130,12 +131,12 @@ class SeminarPlanViewController: UIViewController {
 
         setupHeimatlosTitleLabel()
         setupSeminarOneCaptionLabel()
-        setupSeminarOneLabel()
+        setupSeminarOneButton()
         setupSeminarTwoCaptionLabel()
-        setupSeminarTwoLabel()
+        setupSeminarTwoButton()
         setupHeimwehTitleLabel()
         setupSeminarThreeCaptionLabel()
-        setupSeminarThreeLabel()
+        setupSeminarThreeButton()
         setupEditButton()
     }
 
@@ -159,37 +160,41 @@ class SeminarPlanViewController: UIViewController {
         }
     }
 
-    private func setupSeminarOneLabel() {
-        view.addSubview(seminarOneLabel)
+    private func setupSeminarOneButton() {
+        view.addSubview(seminarOneButton)
 
-        seminarOneLabel.snp.makeConstraints { make in
+        seminarOneButton.snp.makeConstraints { make in
             make.top.equalTo(seminarOneCaptionLabel.snp.bottomMargin).offset(20)
-            make.height.equalTo(20)
+            make.height.equalTo(40)
             make.leading.equalToSuperview().offset(25)
             make.trailing.equalToSuperview().offset(-25)
         }
+
+        seminarOneButton.addTarget(self, action: #selector(seminarOneButtonPressed), for: .touchUpInside)
     }
 
     private func setupSeminarTwoCaptionLabel() {
         view.addSubview(seminarTwoCaptionLabel)
 
         seminarTwoCaptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(seminarOneLabel.snp.bottomMargin).offset(20)
-            make.height.equalTo(20)
+            make.top.equalTo(seminarOneButton.snp.bottomMargin).offset(20)
+            make.height.equalTo(30)
             make.leading.equalToSuperview().offset(25)
             make.trailing.equalToSuperview().offset(-25)
         }
     }
 
-    private func setupSeminarTwoLabel() {
-        view.addSubview(seminarTwoLabel)
+    private func setupSeminarTwoButton() {
+        view.addSubview(seminarTwoButton)
 
-        seminarTwoLabel.snp.makeConstraints { make in
+        seminarTwoButton.snp.makeConstraints { make in
             make.top.equalTo(seminarTwoCaptionLabel.snp.bottomMargin).offset(20)
-            make.height.equalTo(20)
+            make.height.equalTo(40)
             make.leading.equalToSuperview().offset(25)
             make.trailing.equalToSuperview().offset(-25)
         }
+
+        seminarTwoButton.addTarget(self, action: #selector(seminarTwoButtonPressed), for: .touchUpInside)
     }
 
     private func setupHeimwehTitleLabel() {
@@ -197,7 +202,7 @@ class SeminarPlanViewController: UIViewController {
         heimwehTitleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(25)
             make.trailing.equalToSuperview().offset(-25)
-            make.top.equalTo(seminarTwoLabel.snp.bottomMargin).offset(25)
+            make.top.equalTo(seminarTwoButton.snp.bottomMargin).offset(25)
         }
     }
 
@@ -206,21 +211,23 @@ class SeminarPlanViewController: UIViewController {
 
         seminarThreeCaptionLabel.snp.makeConstraints { make in
             make.top.equalTo(heimwehTitleLabel.snp.bottomMargin).offset(20)
-            make.height.equalTo(20)
+            make.height.equalTo(40)
             make.leading.equalToSuperview().offset(25)
             make.trailing.equalToSuperview().offset(-25)
         }
     }
 
-    private func setupSeminarThreeLabel() {
-        view.addSubview(seminarThreeLabel)
+    private func setupSeminarThreeButton() {
+        view.addSubview(seminarThreeButton)
 
-        seminarThreeLabel.snp.makeConstraints { make in
+        seminarThreeButton.snp.makeConstraints { make in
             make.top.equalTo(seminarThreeCaptionLabel.snp.bottomMargin).offset(20)
-            make.height.equalTo(20)
+            make.height.equalTo(40)
             make.leading.equalToSuperview().offset(25)
             make.trailing.equalToSuperview().offset(-25)
         }
+
+        seminarThreeButton.addTarget(self, action: #selector(seminarThreeButtonPressed), for: .touchUpInside)
     }
 
     private func setupEditButton() {
@@ -236,26 +243,10 @@ class SeminarPlanViewController: UIViewController {
         editButton.addTarget(self, action: #selector(editButtonPressed), for: .touchUpInside)
     }
 
-    private func showMap(_ seminar: Seminar) {
-        let mapView = MKMapView()
-        let seminarAnnotation = MKPointAnnotation()
-        seminarAnnotation.title = seminar.title
-        seminarAnnotation.subtitle = seminar.description
-        seminarAnnotation.coordinate = seminar.location
-
-        mapView.addAnnotation(seminarAnnotation)
-
-        let viewController = UIViewController()
-
-        viewController.view.addSubview(mapView)
-
-        mapView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-        }
-        present(viewController, animated: true)
+    func reloadData() {
+        seminarOneButton.titleText = Defaults.seminarOne
+        seminarTwoButton.titleText = Defaults.seminarTwo
+        seminarThreeButton.titleText = Defaults.seminarThree
     }
 
     @objc func editButtonPressed(_ button: UIButton) {
@@ -266,9 +257,42 @@ class SeminarPlanViewController: UIViewController {
         reloadData()
     }
 
-    func reloadData() {
-        seminarOneLabel.text = Defaults.seminarOne
-        seminarTwoLabel.text = Defaults.seminarTwo
-        seminarThreeLabel.text = Defaults.seminarThree
+    @objc func seminarOneButtonPressed(_ button: UIButton) {
+        button.pulsate()
+
+        let viewController = SeminarDetailViewController(
+            seminar: seminarBlockOneSeminars.first(
+                where: {
+                    $0.title == Defaults.seminarOne
+                }
+            )!
+        )!
+        present(viewController, animated: true)
+    }
+
+    @objc func seminarTwoButtonPressed(_ button: UIButton) {
+        button.pulsate()
+
+        let viewController = SeminarDetailViewController(
+            seminar: seminarBlockOneSeminars.first(
+                where: {
+                    $0.title == Defaults.seminarTwo
+                }
+            )!
+        )!
+        present(viewController, animated: true)
+    }
+
+    @objc func seminarThreeButtonPressed(_ button: UIButton) {
+        button.pulsate()
+
+        let viewController = SeminarDetailViewController(
+            seminar: seminarBlockOneSeminars.first(
+                where: {
+                    $0.title == Defaults.seminarThree
+                }
+            )!
+        )!
+        present(viewController, animated: true)
     }
 }

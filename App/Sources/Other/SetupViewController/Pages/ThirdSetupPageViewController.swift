@@ -29,12 +29,9 @@ class ThirdSetupPageViewController: UIViewController {
     }()
 
     private lazy var continueButton: UIButton = {
-        let button = UIButton()
+        let button = SetupButton()
 
         button.setTitle(setupContinueButtonTitle, for: .normal)
-        button.layer.borderWidth = 1
-        button.layer.cornerRadius = 5
-        button.layer.borderColor = UIColor.white.cgColor
 
         return button
     }()
@@ -274,11 +271,11 @@ extension ThirdSetupPageViewController: UIPickerViewDataSource, UIPickerViewDele
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == seminarOnePickerView {
-            return seminarBlockOneSeminars[row]?.title
+            return seminarBlockOneSeminars[row].title
         } else if pickerView == seminarTwoPickerView {
-            return seminarBlockTwoSeminars[row]?.title
+            return seminarBlockTwoSeminars[row].title
         } else if pickerView == seminarThreePickerView {
-            return seminarBlockThreeSeminars[row]?.title
+            return seminarBlockThreeSeminars[row].title
         } else {
             return "Error"
         }
@@ -286,13 +283,13 @@ extension ThirdSetupPageViewController: UIPickerViewDataSource, UIPickerViewDele
 
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == seminarOnePickerView {
-            seminarOnePickerViewTextField.text = seminarBlockOneSeminars[row]?.title
+            seminarOnePickerViewTextField.text = seminarBlockOneSeminars[row].title
             Defaults.seminarOne = seminarOnePickerViewTextField.text ?? ""
         } else if pickerView == seminarTwoPickerView {
-            seminarTwoPickerViewTextField.text = seminarBlockTwoSeminars[row]?.title
+            seminarTwoPickerViewTextField.text = seminarBlockTwoSeminars[row].title
             Defaults.seminarTwo = seminarTwoPickerViewTextField.text ?? ""
         } else if pickerView == seminarThreePickerView {
-            seminarThreePickerViewTextField.text = seminarBlockThreeSeminars[row]?.title
+            seminarThreePickerViewTextField.text = seminarBlockThreeSeminars[row].title
             Defaults.seminarThree = seminarThreePickerViewTextField.text ?? ""
         }
     }

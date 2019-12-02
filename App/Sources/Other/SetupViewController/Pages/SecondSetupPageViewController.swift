@@ -46,13 +46,9 @@ class SecondSetupPageViewController: UIViewController {
     }()
 
     private lazy var continueButton: UIButton = {
-        let button = UIButton()
+        let button = SetupButton()
 
         button.setTitle(setupContinueButtonTitle, for: .normal)
-        button.layer.borderWidth = 1
-        button.layer.cornerRadius = 5
-        button.layer.borderColor = UIColor.white.cgColor
-        button.isEnabled = false
 
         button.alpha = 0.5
 

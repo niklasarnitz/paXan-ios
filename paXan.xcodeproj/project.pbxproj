@@ -10,7 +10,9 @@
 		0E8611E67BA94825964453FA /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538967131DCEEECEA70FB8BA /* SnapKit.framework */; };
 		851E6BB823636C68002F0168 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E6BB723636C68002F0168 /* EditViewController.swift */; };
 		85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85257B382362CA5600E84CC5 /* UIButtonExtension.swift */; };
-		85257B3B2362D12F00E84CC5 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 85257B3A2362D12F00E84CC5 /* Data.json */; };
+		8539E59C237C790400EBC1DB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539E59B237C790400EBC1DB /* Data.swift */; };
+		853C4B662393D30900300689 /* SeminarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C4B652393D30900300689 /* SeminarButton.swift */; };
+		853C4B682393D41D00300689 /* SetupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C4B672393D41D00300689 /* SetupButton.swift */; };
 		853CC15E2360BF8900A3F4F3 /* DefaultsKeysExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */; };
 		853CC1642360C6DF00A3F4F3 /* SetupAssistantPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC1632360C6DF00A3F4F3 /* SetupAssistantPages.swift */; };
 		853CC1662360CB1C00A3F4F3 /* FirstSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC1652360CB1C00A3F4F3 /* FirstSetupPageViewController.swift */; };
@@ -18,7 +20,9 @@
 		853CC16A2360CB4800A3F4F3 /* ThirdSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC1692360CB4800A3F4F3 /* ThirdSetupPageViewController.swift */; };
 		853CC16C2360CB6300A3F4F3 /* FinalSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC16B2360CB6300A3F4F3 /* FinalSetupPageViewController.swift */; };
 		853CC16E2360CD7C00A3F4F3 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */; };
-		853CC1702360DB2700A3F4F3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC16F2360DB2700A3F4F3 /* Strings.swift */; };
+		854CC10723932CB7000AD257 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CC10623932CB7000AD257 /* Place.swift */; };
+		854CC10923932F87000AD257 /* SeminarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CC10823932F87000AD257 /* SeminarDetailViewController.swift */; };
+		854CC10B2393302C000AD257 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CC10A2393302C000AD257 /* MKMapViewExtension.swift */; };
 		85866CCB23151F5600B408E9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85866CCA23151F5600B408E9 /* Assets.swift */; };
 		85866CD123154E6300B408E9 /* LexikonEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85866CD023154E6300B408E9 /* LexikonEntry.swift */; };
 		85939C01231406A50009A009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85939C00231406A50009A009 /* AppDelegate.swift */; };
@@ -28,8 +32,6 @@
 		85939C152314075F0009A009 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85939C142314075F0009A009 /* Colors.xcassets */; };
 		85A3F82423463C29006A9473 /* Seminar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A3F82323463C29006A9473 /* Seminar.swift */; };
 		85A3F82723463CAA006A9473 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 85A3F82623463CAA006A9473 /* .swiftlint.yml */; };
-		85A3F82A23463D4D006A9473 /* LexikonEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A3F82923463D4D006A9473 /* LexikonEntries.swift */; };
-		85A3F82C23464290006A9473 /* Seminare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A3F82B23464290006A9473 /* Seminare.swift */; };
 		85AAD03A231ABCC900C0F813 /* LexikonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */; };
 		85AAD040231ACC7600C0F813 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD03F231ACC7600C0F813 /* Style.swift */; };
 		85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */; };
@@ -41,6 +43,7 @@
 		85E3F2F823140AAA00E6B845 /* MeinPaxAnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */; };
 		85E3F38A23142B2A00E6B845 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 85E3F38923142B2A00E6B845 /* swiftgen.yml */; };
 		8BD900518DC1FA74F5D40930 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */; };
+		B095EF044CD3E96F3A9FF352 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55D34104A396091DDF9796B /* ObjectMapper.framework */; };
 		CD3C8019640CC56CA601F0EA /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */; };
 		D7BEE783E7BECEAF7E35E7C6 /* Codextended.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEB232D5AC847AEE9C60157 /* Codextended.framework */; };
 /* End PBXBuildFile section */
@@ -50,7 +53,10 @@
 		69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Dependencies/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
 		851E6BB723636C68002F0168 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		85257B382362CA5600E84CC5 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
-		85257B3A2362D12F00E84CC5 /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		8539E599237C78B500EBC1DB /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		8539E59B237C790400EBC1DB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		853C4B652393D30900300689 /* SeminarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarButton.swift; sourceTree = "<group>"; };
+		853C4B672393D41D00300689 /* SetupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButton.swift; sourceTree = "<group>"; };
 		853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeysExtension.swift; sourceTree = "<group>"; };
 		853CC1632360C6DF00A3F4F3 /* SetupAssistantPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAssistantPages.swift; sourceTree = "<group>"; };
 		853CC1652360CB1C00A3F4F3 /* FirstSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSetupPageViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +64,9 @@
 		853CC1692360CB4800A3F4F3 /* ThirdSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSetupPageViewController.swift; sourceTree = "<group>"; };
 		853CC16B2360CB6300A3F4F3 /* FinalSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalSetupPageViewController.swift; sourceTree = "<group>"; };
 		853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
-		853CC16F2360DB2700A3F4F3 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		854CC10623932CB7000AD257 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		854CC10823932F87000AD257 /* SeminarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarDetailViewController.swift; sourceTree = "<group>"; };
+		854CC10A2393302C000AD257 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		85866CCA23151F5600B408E9 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		85866CD023154E6300B408E9 /* LexikonEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonEntry.swift; sourceTree = "<group>"; };
 		85939BFD231406A50009A009 /* paXan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paXan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,8 +78,6 @@
 		85939C142314075F0009A009 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		85A3F82323463C29006A9473 /* Seminar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seminar.swift; sourceTree = "<group>"; };
 		85A3F82623463CAA006A9473 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		85A3F82923463D4D006A9473 /* LexikonEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonEntries.swift; sourceTree = "<group>"; };
-		85A3F82B23464290006A9473 /* Seminare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seminare.swift; sourceTree = "<group>"; };
 		85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonTableViewController.swift; sourceTree = "<group>"; };
 		85AAD03F231ACC7600C0F813 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -83,7 +89,8 @@
 		85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeinPaxAnViewController.swift; sourceTree = "<group>"; };
 		85E3F38923142B2A00E6B845 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
 		A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
-		CDEB232D5AC847AEE9C60157 /* Codextended.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = Codextended.framework; path = Dependencies/iOS/Codextended.framework; sourceTree = "<group>"; };
+		A55D34104A396091DDF9796B /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ObjectMapper.framework; path = Dependencies/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		CDEB232D5AC847AEE9C60157 /* Codextended.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Codextended.framework; path = Dependencies/iOS/Codextended.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +102,7 @@
 				CD3C8019640CC56CA601F0EA /* SwiftyUserDefaults.framework in Frameworks */,
 				8BD900518DC1FA74F5D40930 /* IQKeyboardManagerSwift.framework in Frameworks */,
 				D7BEE783E7BECEAF7E35E7C6 /* Codextended.framework in Frameworks */,
+				B095EF044CD3E96F3A9FF352 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +114,7 @@
 			children = (
 				CDEB232D5AC847AEE9C60157 /* Codextended.framework */,
 				69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */,
+				A55D34104A396091DDF9796B /* ObjectMapper.framework */,
 				538967131DCEEECEA70FB8BA /* SnapKit.framework */,
 				A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */,
 			);
@@ -131,6 +140,7 @@
 		853CC1622360C5A500A3F4F3 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				853CC1632360C6DF00A3F4F3 /* SetupAssistantPages.swift */,
 				853CC1652360CB1C00A3F4F3 /* FirstSetupPageViewController.swift */,
 				853CC1672360CB3E00A3F4F3 /* SecondSetupPageViewController.swift */,
 				853CC1692360CB4800A3F4F3 /* ThirdSetupPageViewController.swift */,
@@ -160,6 +170,7 @@
 			children = (
 				85866CD023154E6300B408E9 /* LexikonEntry.swift */,
 				85A3F82323463C29006A9473 /* Seminar.swift */,
+				854CC10623932CB7000AD257 /* Place.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +178,7 @@
 		85939BF4231406A50009A009 = {
 			isa = PBXGroup;
 			children = (
+				8539E599237C78B500EBC1DB /* Package.swift */,
 				85A3F82623463CAA006A9473 /* .swiftlint.yml */,
 				85E3F38923142B2A00E6B845 /* swiftgen.yml */,
 				85939BFF231406A50009A009 /* App */,
@@ -186,11 +198,11 @@
 		85939BFF231406A50009A009 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				85A3F82823463D40006A9473 /* Data */,
 				855138BA2321901000538CE9 /* Generated */,
 				85939C122314073C0009A009 /* Sources */,
 				85E3F39023142BBE00E6B845 /* Resources */,
 				85939C00231406A50009A009 /* AppDelegate.swift */,
+				8539E59B237C790400EBC1DB /* Data.swift */,
 				85939C04231406A50009A009 /* Main.storyboard */,
 				85939C09231406A60009A009 /* LaunchScreen.storyboard */,
 				85939C0C231406A60009A009 /* Info.plist */,
@@ -224,19 +236,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		85A3F82823463D40006A9473 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				85A3F82923463D4D006A9473 /* LexikonEntries.swift */,
-				85A3F82B23464290006A9473 /* Seminare.swift */,
-				853CC1632360C6DF00A3F4F3 /* SetupAssistantPages.swift */,
-				853CC16F2360DB2700A3F4F3 /* SetupPagesStrings.swift */,
-				85257B3A2362D12F00E84CC5 /* Data.json */,
-				853CC16F2360DB2700A3F4F3 /* Strings.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		85AAD03B231ACBF100C0F813 /* Global */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +248,9 @@
 		85AAD03C231ACBF500C0F813 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				853C4B652393D30900300689 /* SeminarButton.swift */,
 				85AAD03F231ACC7600C0F813 /* Style.swift */,
+				853C4B672393D41D00300689 /* SetupButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +261,7 @@
 				85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */,
 				853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */,
 				85257B382362CA5600E84CC5 /* UIButtonExtension.swift */,
+				854CC10A2393302C000AD257 /* MKMapViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,6 +272,7 @@
 				853CC15F2360C3B400A3F4F3 /* SetupViewController */,
 				85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */,
 				851E6BB723636C68002F0168 /* EditViewController.swift */,
+				854CC10823932F87000AD257 /* SeminarDetailViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -349,7 +352,6 @@
 				85939C0B231406A60009A009 /* LaunchScreen.storyboard in Resources */,
 				85939C152314075F0009A009 /* Colors.xcassets in Resources */,
 				85E3F38A23142B2A00E6B845 /* swiftgen.yml in Resources */,
-				85257B3B2362D12F00E84CC5 /* Data.json in Resources */,
 				85939C08231406A60009A009 /* Images.xcassets in Resources */,
 				85939C06231406A50009A009 /* Main.storyboard in Resources */,
 			);
@@ -402,6 +404,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Dependencies/iOS/Codextended.framework",
 				"$(SRCROOT)/Dependencies/iOS/IQKeyboardManagerSwift.framework",
+				"$(SRCROOT)/Dependencies/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Dependencies/iOS/SnapKit.framework",
 				"$(SRCROOT)/Dependencies/iOS/SwiftyUserDefaults.framework",
 			);
@@ -409,6 +412,7 @@
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Codextended.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManagerSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyUserDefaults.framework",
 			);
@@ -424,9 +428,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				851E6BB823636C68002F0168 /* EditViewController.swift in Sources */,
+				853C4B682393D41D00300689 /* SetupButton.swift in Sources */,
 				853CC1662360CB1C00A3F4F3 /* FirstSetupPageViewController.swift in Sources */,
 				85A3F82423463C29006A9473 /* Seminar.swift in Sources */,
-				85A3F82C23464290006A9473 /* Seminare.swift in Sources */,
 				85E3F2F42314099D00E6B845 /* SeminarPlanViewController.swift in Sources */,
 				853CC1642360C6DF00A3F4F3 /* SetupAssistantPages.swift in Sources */,
 				85AAD040231ACC7600C0F813 /* Style.swift in Sources */,
@@ -437,15 +441,18 @@
 				853CC15E2360BF8900A3F4F3 /* DefaultsKeysExtension.swift in Sources */,
 				85D4B419231E8E690010E55F /* HapticFeedbackManager.swift in Sources */,
 				853CC16A2360CB4800A3F4F3 /* ThirdSetupPageViewController.swift in Sources */,
-				85A3F82A23463D4D006A9473 /* LexikonEntries.swift in Sources */,
 				85866CD123154E6300B408E9 /* LexikonEntry.swift in Sources */,
 				85939C01231406A50009A009 /* AppDelegate.swift in Sources */,
+				853C4B662393D30900300689 /* SeminarButton.swift in Sources */,
+				854CC10B2393302C000AD257 /* MKMapViewExtension.swift in Sources */,
+				854CC10923932F87000AD257 /* SeminarDetailViewController.swift in Sources */,
 				853CC16C2360CB6300A3F4F3 /* FinalSetupPageViewController.swift in Sources */,
 				85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */,
 				85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */,
+				854CC10723932CB7000AD257 /* Place.swift in Sources */,
 				85866CCB23151F5600B408E9 /* Assets.swift in Sources */,
+				8539E59C237C790400EBC1DB /* Data.swift in Sources */,
 				85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */,
-				853CC1702360DB2700A3F4F3 /* Strings.swift in Sources */,
 				85AAD03A231ABCC900C0F813 /* LexikonTableViewController.swift in Sources */,
 				853CC1682360CB3E00A3F4F3 /* SecondSetupPageViewController.swift in Sources */,
 			);
@@ -593,8 +600,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6N5F2VGD4A;
+				DEVELOPMENT_TEAM = YYZ333K89U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/iOS",
@@ -605,8 +613,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = swdec.paXan;
+				PRODUCT_BUNDLE_IDENTIFIER = de.swdec.paxan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -616,8 +625,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6N5F2VGD4A;
+				DEVELOPMENT_TEAM = YYZ333K89U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/iOS",
@@ -628,8 +638,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = swdec.paXan;
+				PRODUCT_BUNDLE_IDENTIFIER = de.swdec.paxan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

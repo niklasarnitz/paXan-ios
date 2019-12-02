@@ -73,7 +73,7 @@ class LexikonTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailData = lexikonEntries[indexPath.row]
-        present(LexikonDetailViewController(detailData!.title, detailData!.description)!, animated: true)
+        present(LexikonDetailViewController(detailData!.title!, detailData!.description!)!, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
