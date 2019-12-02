@@ -47,6 +47,14 @@ class SeminarDetailViewController: UIViewController {
         return button
     }()
 
+    private lazy var doneButton: SeminarButton = {
+        let button = SeminarButton()
+
+        button.titleText = "Fertig"
+
+        return button
+    }()
+
     init?(seminar: Seminar) {
         self.seminar = seminar
         super.init(nibName: nil, bundle: nil)
@@ -75,6 +83,7 @@ class SeminarDetailViewController: UIViewController {
         setupReferentLabel()
         setupRoomNameLabel()
         setupDescriptionLabel()
+        setupDoneButton()
         setupNavigateButton()
     }
 
@@ -114,10 +123,23 @@ class SeminarDetailViewController: UIViewController {
         }
     }
 
+    private func setupDoneButton() {
+        view.addSubview(doneButton)
+        doneButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-40)
+            make.height.equalTo(40)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+        }
+
+        doneButton.addTarget(self, action: #selector(doneButtonPressed), for: .touchUpInside)
+    }
+
     private func setupNavigateButton() {
         view.addSubview(navigateButton)
         navigateButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-40)
+            make.bottom.equalTo(doneButton.snp.topMargin).offset(-40)
+            make.height.equalTo(40)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
         }
@@ -126,7 +148,24 @@ class SeminarDetailViewController: UIViewController {
     }
 
     @objc
+    private func doneButtonPressed() {
+        doneButton.pulsate()
+        self.dismiss(animated: true)
+    }
+
+    @objc
     private func navigateButtonPressed() {
-        // TODO: Implement this
+        navigateButton.pulsate()
+        let regionDistance: CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(seminar.place!.annotation!.coordinate.latitude, seminar.place!.annotation!.coordinate.longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = seminar.place!.roomname
+        mapItem.openInMaps(launchOptions: options)
     }
 }
