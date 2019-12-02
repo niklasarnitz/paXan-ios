@@ -2,9 +2,8 @@
 
 import UIKit
 
-@IBDesignable
 class SeminarButton: UIButton {
-    @IBInspectable
+    /// The TextField of the Button
     var titleText: String? {
         didSet {
             self.setTitle(titleText, for: .normal)
