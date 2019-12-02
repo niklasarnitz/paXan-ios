@@ -5,15 +5,14 @@ let package = Package(
     name: "paXan",
     products: [],
     dependencies: [
-        // add your dependencies here, for example:
+        // SnapKit - A Swift Autolayout DSL for iOS & OS X
 	    .package(url: "git@github.com:SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.0")),
-	    .package(
-            url: "git@github.com:sunshinejr/SwiftyUserDefaults.git",
-            .upToNextMajor(from: "5.0.0-beta.5")
-        ),
-	    .package(url: "https://github.com/hackiftekhar/IQKeyboardManager.git", from: "6.5.0"),
-	    .package(url: "https://github.com/JohnSundell/Codextended", from: "0.1.0"),
-        .package(url: "git@github.com:tristanhimmelman/ObjectMapper.git", from: "3.5.1"),
+
+        // SwiftyUserDefaults - Modern Swift API for NSUserDefaults
+	    .package(url: "git@github.com:sunshinejr/SwiftyUserDefaults.git", .upToNextMajor(from: "5.0.0-beta.5")),
+
+        // IQKeyboardManager - Codeless library to prevent general issues with covering UITextFields/UITextViews
+	    .package(url: "git@github.com:hackiftekhar/IQKeyboardManager.git", from: "6.5.0"),
     ],
     targets: [
         .target(
@@ -22,8 +21,6 @@ let package = Package(
 		        "SnapKit",
 		        "SwiftyUserDefaults",
 		        "IQKeyboardManagerSwift",
-		        "Codextended",
-                "ObjectMapper"
             ],
             path: "App"
         ),

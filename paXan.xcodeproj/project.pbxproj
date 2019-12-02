@@ -43,9 +43,7 @@
 		85E3F2F823140AAA00E6B845 /* MeinPaxAnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */; };
 		85E3F38A23142B2A00E6B845 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 85E3F38923142B2A00E6B845 /* swiftgen.yml */; };
 		8BD900518DC1FA74F5D40930 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */; };
-		B095EF044CD3E96F3A9FF352 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55D34104A396091DDF9796B /* ObjectMapper.framework */; };
 		CD3C8019640CC56CA601F0EA /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */; };
-		D7BEE783E7BECEAF7E35E7C6 /* Codextended.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEB232D5AC847AEE9C60157 /* Codextended.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,8 +87,6 @@
 		85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeinPaxAnViewController.swift; sourceTree = "<group>"; };
 		85E3F38923142B2A00E6B845 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
 		A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
-		A55D34104A396091DDF9796B /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ObjectMapper.framework; path = Dependencies/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
-		CDEB232D5AC847AEE9C60157 /* Codextended.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Codextended.framework; path = Dependencies/iOS/Codextended.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +97,6 @@
 				0E8611E67BA94825964453FA /* SnapKit.framework in Frameworks */,
 				CD3C8019640CC56CA601F0EA /* SwiftyUserDefaults.framework in Frameworks */,
 				8BD900518DC1FA74F5D40930 /* IQKeyboardManagerSwift.framework in Frameworks */,
-				D7BEE783E7BECEAF7E35E7C6 /* Codextended.framework in Frameworks */,
-				B095EF044CD3E96F3A9FF352 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,9 +106,7 @@
 		1A01167B88F121C71A885B9D /* paXan */ = {
 			isa = PBXGroup;
 			children = (
-				CDEB232D5AC847AEE9C60157 /* Codextended.framework */,
 				69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */,
-				A55D34104A396091DDF9796B /* ObjectMapper.framework */,
 				538967131DCEEECEA70FB8BA /* SnapKit.framework */,
 				A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */,
 			);
@@ -402,17 +394,13 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Dependencies/iOS/Codextended.framework",
 				"$(SRCROOT)/Dependencies/iOS/IQKeyboardManagerSwift.framework",
-				"$(SRCROOT)/Dependencies/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Dependencies/iOS/SnapKit.framework",
 				"$(SRCROOT)/Dependencies/iOS/SwiftyUserDefaults.framework",
 			);
 			name = Accio;
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Codextended.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManagerSwift.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyUserDefaults.framework",
 			);
