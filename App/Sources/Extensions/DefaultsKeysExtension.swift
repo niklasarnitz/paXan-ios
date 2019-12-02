@@ -7,9 +7,7 @@ extension DefaultsKeys {
 
     var didLaunchBefore: DefaultsKey<Bool> { return .init("didLaunchBefore", defaultValue: false) }
 
-    var seminarOne: DefaultsKey<String> {
-        return .init("", defaultValue: "")
-    }
+    var seminarOne: DefaultsKey<String> { return .init("", defaultValue: "") }
 
     var seminarTwo: DefaultsKey<String> { return .init("seminarTwo", defaultValue: "") }
 
