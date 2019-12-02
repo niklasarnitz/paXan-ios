@@ -1,6 +1,5 @@
 // Copyright © 2019 SWDEC. All rights reserved.
 
-import Contacts
 import MapKit
 import UIKit
 
