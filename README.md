@@ -45,6 +45,12 @@ open paXan.xcodeproj/
 4. Click the play button
 5. Have fun :)
 
+## 3rd Party Licenses
+In the paXan app, we are using a few different libaries/dependencies to make our live a bit easier. You may find them listed below:
+- [SnapKit](https://github.com:SnapKit/SnapKit)
+- [SwiftyUserDefaults](https://github.com:sunshinejr/SwiftyUserDefaults)
+- [IQKeyboardManager](https://github.com:hackiftekhar/IQKeyboardManager)
+
 ## Contributors
 You can see the contributors in the CONTRIBUTORS.md file.
 
