@@ -17,7 +17,7 @@ let setupContinueButtonTitle: String = "Weiter"
 
 let thirdPageTitle: String = "Deine paXan Seminare"
 
-let thirdPageSubtitle: String = "Trage hier unten bitte deine Seminare ein. Keine Angst, falsch du etwas falsch machst, kannst du es später natürlich nocheinmal ändern."
+let thirdPageSubtitle: String = "Trage hier unten bitte deine Seminare ein, für die du dich online angemeldet hast. Keine Angst, falsch du etwas falsch machst, kannst du es später natürlich nocheinmal ändern."
 
 let thirdPageTextFieldPlaceholderOne: String = "Seminar 1"
 
@@ -379,6 +379,69 @@ let lexikonEntries: [LexikonEntry?] = [
         title: "FSZ-Dobel",
         description: "Das Freizeitzentrum des SWDEC im schönen Ort Dobel, ist das Haupt-Schulungszentrum des SWDEC-Jugendverbandes.",
         roomname: "FSZ",
+        lat: 48.796334,
+        long: 8.503422
+    ),
+    LexikonEntry(
+        title: "SWDEC",
+        description: "Der SWDEC ist ein Unterverband der Weltweiten EC-Bewegung.\nEs is ein Verband christlicher Jugendarbeiten, bei denen Jesus Christus im Mittelpunkt des Lebens der Mitglieder und der Gemeinden steht.\nDer SWDEC arbeitet ebenfalls eng mit den Liebenzeller Gemeinschaften und der Evangelischen Landeskirche zusammen.",
+        roomname: "",
+        lat: 48.796334,
+        long: 8.503422
+    ),
+    LexikonEntry(
+        title: "SWDEC",
+        description: "Der SWDEC ist ein Unterverband der Weltweiten EC-Bewegung.\nEs is ein Verband christlicher Jugendarbeiten, bei denen Jesus Christus im Mittelpunkt des Lebens der Mitglieder und der Gemeinden steht.\nDer SWDEC arbeitet ebenfalls eng mit den Liebenzeller Gemeinschaften und der Evangelischen Landeskirche zusammen.",
+        roomname: "",
+        lat: 48.796334,
+        long: 8.503422
+    ),
+    LexikonEntry(
+        title: "SWDEC",
+        description: "Der SWDEC ist ein Unterverband der Weltweiten EC-Bewegung.\nEs is ein Verband christlicher Jugendarbeiten, bei denen Jesus Christus im Mittelpunkt des Lebens der Mitglieder und der Gemeinden steht.\nDer SWDEC arbeitet ebenfalls eng mit den Liebenzeller Gemeinschaften und der Evangelischen Landeskirche zusammen.",
+        roomname: "",
+        lat: 48.796334,
+        long: 8.503422
+    ),
+    LexikonEntry(
+        title: "SWDEC",
+        description: "Der SWDEC ist ein Unterverband der Weltweiten EC-Bewegung.\nEs is ein Verband christlicher Jugendarbeiten, bei denen Jesus Christus im Mittelpunkt des Lebens der Mitglieder und der Gemeinden steht.\nDer SWDEC arbeitet ebenfalls eng mit den Liebenzeller Gemeinschaften und der Evangelischen Landeskirche zusammen.",
+        roomname: "",
+        lat: 48.796334,
+        long: 8.503422
+    ),
+    LexikonEntry(
+        title: "SWDEC",
+        description: "Der SWDEC ist ein Unterverband der Weltweiten EC-Bewegung.\nEs is ein Verband christlicher Jugendarbeiten, bei denen Jesus Christus im Mittelpunkt des Lebens der Mitglieder und der Gemeinden steht.\nDer SWDEC arbeitet ebenfalls eng mit den Liebenzeller Gemeinschaften und der Evangelischen Landeskirche zusammen.",
+        roomname: "",
+        lat: 48.796334,
+        long: 8.503422
+    ),
+    LexikonEntry(
+        title: "SWDEC",
+        description: "Der SWDEC ist ein Unterverband der Weltweiten EC-Bewegung.\nEs is ein Verband christlicher Jugendarbeiten, bei denen Jesus Christus im Mittelpunkt des Lebens der Mitglieder und der Gemeinden steht.\nDer SWDEC arbeitet ebenfalls eng mit den Liebenzeller Gemeinschaften und der Evangelischen Landeskirche zusammen.",
+        roomname: "",
+        lat: 48.796334,
+        long: 8.503422
+    ),
+    LexikonEntry(
+        title: "SWDEC",
+        description: "Der SWDEC ist ein Unterverband der Weltweiten EC-Bewegung.\nEs is ein Verband christlicher Jugendarbeiten, bei denen Jesus Christus im Mittelpunkt des Lebens der Mitglieder und der Gemeinden steht.\nDer SWDEC arbeitet ebenfalls eng mit den Liebenzeller Gemeinschaften und der Evangelischen Landeskirche zusammen.",
+        roomname: "",
+        lat: 48.796334,
+        long: 8.503422
+    ),
+    LexikonEntry(
+        title: "SWDEC",
+        description: "Der SWDEC ist ein Unterverband der Weltweiten EC-Bewegung.\nEs is ein Verband christlicher Jugendarbeiten, bei denen Jesus Christus im Mittelpunkt des Lebens der Mitglieder und der Gemeinden steht.\nDer SWDEC arbeitet ebenfalls eng mit den Liebenzeller Gemeinschaften und der Evangelischen Landeskirche zusammen.",
+        roomname: "",
+        lat: 48.796334,
+        long: 8.503422
+    ),
+    LexikonEntry(
+        title: "SWDEC",
+        description: "Der SWDEC ist ein Unterverband der Weltweiten EC-Bewegung.\nEs is ein Verband christlicher Jugendarbeiten, bei denen Jesus Christus im Mittelpunkt des Lebens der Mitglieder und der Gemeinden steht.\nDer SWDEC arbeitet ebenfalls eng mit den Liebenzeller Gemeinschaften und der Evangelischen Landeskirche zusammen.",
+        roomname: "",
         lat: 48.796334,
         long: 8.503422
     ),
