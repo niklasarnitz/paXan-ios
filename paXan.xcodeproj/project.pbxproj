@@ -223,7 +223,6 @@
 				85AAD03B231ACBF100C0F813 /* Global */,
 				85866CD223154E6600B408E9 /* Models */,
 				85939C13231407450009A009 /* Views */,
-				85AAD044231ACD2C00C0F813 /* Other */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -231,6 +230,7 @@
 		85939C13231407450009A009 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				85AAD044231ACD2C00C0F813 /* Other */,
 				85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */,
 				85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */,
 				85E3F2F5231409F000E6B845 /* MapViewController.swift */,
