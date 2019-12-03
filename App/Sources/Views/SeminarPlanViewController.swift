@@ -96,14 +96,11 @@ class SeminarPlanViewController: UIViewController {
         return button
     }()
 
-    private lazy var editButton: UIButton = {
-        let button = UIButton()
+    private lazy var editButton: SeminarButton = {
+        let button = SeminarButton()
 
-        button.setTitle("Bearbeiten", for: .normal)
-        button.setTitleColor(Colors.ecGreen, for: .normal)
-        button.layer.borderWidth = 1
-        button.layer.cornerRadius = 5
-        button.layer.borderColor = Colors.ecGreen.cgColor
+        button.titleText = "Bearbeiten"
+
         button.isEnabled = true
 
         return button
