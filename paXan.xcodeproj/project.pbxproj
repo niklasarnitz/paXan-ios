@@ -56,7 +56,6 @@
 		85E3F2F42314099D00E6B845 /* SeminarPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */; };
 		85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F5231409F000E6B845 /* MapViewController.swift */; };
 		85E3F2F823140AAA00E6B845 /* MeinPaxAnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */; };
-		85E3F38A23142B2A00E6B845 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 85E3F38923142B2A00E6B845 /* swiftgen.yml */; };
 		8BD900518DC1FA74F5D40930 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */; };
 		CD3C8019640CC56CA601F0EA /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */; };
 /* End PBXBuildFile section */
@@ -115,7 +114,6 @@
 		85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarPlanViewController.swift; sourceTree = "<group>"; };
 		85E3F2F5231409F000E6B845 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeinPaxAnViewController.swift; sourceTree = "<group>"; };
-		85E3F38923142B2A00E6B845 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
 		A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,7 +184,6 @@
 			children = (
 				8539E599237C78B500EBC1DB /* Package.swift */,
 				85A3F82623463CAA006A9473 /* .swiftlint.yml */,
-				85E3F38923142B2A00E6B845 /* swiftgen.yml */,
 				85939BFF231406A50009A009 /* App */,
 				77747A9D949475995EE0B140 /* Dependencies */,
 			);
@@ -338,7 +335,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85939C0F231406A60009A009 /* Build configuration list for PBXNativeTarget "paXan" */;
 			buildPhases = (
-				85E3F38D23142B4900E6B845 /* SwiftGen */,
 				85939BF9231406A50009A009 /* Sources */,
 				85939BFA231406A50009A009 /* Frameworks */,
 				85939BFB231406A50009A009 /* Resources */,
@@ -405,7 +401,6 @@
 				85939C0B231406A60009A009 /* LaunchScreen.storyboard in Resources */,
 				85B4ACCC2395D6A1001F282C /* Nunito-ExtraLight.ttf in Resources */,
 				85939C152314075F0009A009 /* Colors.xcassets in Resources */,
-				85E3F38A23142B2A00E6B845 /* swiftgen.yml in Resources */,
 				85939C08231406A60009A009 /* Images.xcassets in Resources */,
 				85B4ACC62395D6A1001F282C /* Nunito-Light.ttf in Resources */,
 				85B4ACCB2395D6A1001F282C /* Nunito-Black.ttf in Resources */,
@@ -436,24 +431,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\n  swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		85E3F38D23142B4900E6B845 /* SwiftGen */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftGen;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n\n";
 		};
 		8C77395FCC121EC2EC52AE1A /* Accio */ = {
 			isa = PBXShellScriptBuildPhase;
