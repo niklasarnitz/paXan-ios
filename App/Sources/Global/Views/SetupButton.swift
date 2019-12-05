@@ -2,20 +2,23 @@
 
 import UIKit
 
-@IBDesignable
+/// A custom styled Button for the setup views
 class SetupButton: UIButton {
-    @IBInspectable
+    // MARK: Instance Properties
+    /// Title of the Button
     var titleText: String? {
         didSet {
-            self.setTitle(titleText, for: .normal)
-            self.setTitleColor(UIColor.white, for: .normal)
+            setTitle(titleText, for: .normal)
+            setTitleColor(UIColor.white, for: .normal)
         }
     }
 
+    // MARK: Layer Properties
     var borderWidth: CGFloat = 1.0
     var borderColor: CGColor = UIColor.white.cgColor
     var borderRadius: CGFloat = 5.0
 
+    // MARK: Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -24,15 +27,17 @@ class SetupButton: UIButton {
         super.init(coder: coder)
     }
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        setup()
+    init?(text: String) {
+        super.init(frame: .zero)
+        setTitle(text, for: .normal)
     }
 
-    func setup() {
-        self.clipsToBounds = true
-        self.layer.cornerRadius = self.borderRadius
-        self.layer.borderColor = self.borderColor
-        self.layer.borderWidth = self.borderWidth
+    // MARK: UI Layout
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        clipsToBounds = true
+        layer.cornerRadius = borderRadius
+        layer.borderColor = borderColor
+        layer.borderWidth = borderWidth
     }
 }

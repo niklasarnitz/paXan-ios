@@ -2,26 +2,12 @@
 
 import UIKit
 
+/// First Setup Page View Controller
 class FirstSetupPageViewController: UIViewController {
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = firstPageTitle
-        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .white
-        label.numberOfLines = 0
-        return label
-    }()
+    // MARK: Instance Properties
+    private lazy var titleLabel = TitleLabel(text: firstPageTitle)!
 
-    private lazy var subTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = firstPageSubtitle
-        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        label.textColor = .white
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.lineBreakMode = .byWordWrapping
-        return label
-    }()
+    private lazy var subTitleLabel = SubtitleLabel(text: firstPageSubtitle)!
 
     private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
@@ -32,14 +18,9 @@ class FirstSetupPageViewController: UIViewController {
         return imageView
     }()
 
-    private lazy var continueButton: UIButton = {
-        let button = SetupButton()
+    private lazy var continueButton = SetupButton(text: setupContinueButtonTitle)!
 
-        button.titleText = setupContinueButtonTitle
-
-        return button
-    }()
-
+    // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,6 +31,7 @@ class FirstSetupPageViewController: UIViewController {
         setupContinueButton()
     }
 
+    // MARK: UI Setup
     private func setupView() {
         view.backgroundColor = Colors.ecGreen
     }
@@ -84,6 +66,7 @@ class FirstSetupPageViewController: UIViewController {
         }
     }
 
+    // MARK: Button Actions
     private func setupContinueButton() {
         view.addSubview(continueButton)
 

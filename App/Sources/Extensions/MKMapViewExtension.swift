@@ -5,9 +5,9 @@ import MapKit
 extension MKMapView {
     /// This function centers the map on a given location
     func centerMapOnLocation(
-        /// The Location the Map is focused on
+        /// The location the Map is focused on
         location: CLLocation,
-        /// The Radius around the location which will be seen
+        /// The radius around the location which will be seen
         regionRadius: CLLocationDistance
     ) {
         let coordinateRegion = MKCoordinateRegion(
@@ -15,6 +15,6 @@ extension MKMapView {
             latitudinalMeters: regionRadius,
             longitudinalMeters: regionRadius
         )
-      self.setRegion(coordinateRegion, animated: true)
+      setRegion(coordinateRegion, animated: true)
     }
 }

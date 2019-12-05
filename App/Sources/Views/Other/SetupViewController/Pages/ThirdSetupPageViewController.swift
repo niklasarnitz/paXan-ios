@@ -3,46 +3,16 @@
 import SwiftyUserDefaults
 import UIKit
 
+/// Third Setup Page View Controller
 class ThirdSetupPageViewController: UIViewController {
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
+    // MARK: Instance Properties
+    private lazy var titleLabel = TitleLabel(text: thirdPageTitle)!
 
-        label.text = thirdPageTitle
-        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .white
-        label.numberOfLines = 0
+    private lazy var subTitleLabel = SubtitleLabel(text: thirdPageSubtitle)!
 
-        return label
-    }()
+    private lazy var continueButton = SetupButton(text: setupContinueButtonTitle)!
 
-    private lazy var subTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = thirdPageSubtitle
-
-        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        label.textColor = .white
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.lineBreakMode = .byWordWrapping
-
-        return label
-    }()
-
-    private lazy var continueButton: UIButton = {
-        let button = SetupButton()
-
-        button.setTitle(setupContinueButtonTitle, for: .normal)
-
-        return button
-    }()
-
-    private lazy var heimatlosTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "#heimatlos"
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .white
-        return label
-    }()
+    private lazy var heimatlosTitleLabel = TitleLabel(text: "#heimatlos")!
 
     private lazy var seminarOnePickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -102,17 +72,13 @@ class ThirdSetupPageViewController: UIViewController {
         return textField
     }()
 
-    private lazy var heimwehTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "#heimweh"
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .white
-        return label
-    }()
+    private lazy var heimwehTitleLabel = TitleLabel(text: "#heimweh")!
 
     private lazy var seminarThreePickerView: UIPickerView = {
         let pickerView = UIPickerView()
+
         pickerView.delegate = self
+
         return pickerView
     }()
 
@@ -139,6 +105,7 @@ class ThirdSetupPageViewController: UIViewController {
         return textField
     }()
 
+    // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -153,6 +120,7 @@ class ThirdSetupPageViewController: UIViewController {
         setupContinueButton()
     }
 
+    // MARK: UI Setup
     private func setupView() {
         view.backgroundColor = Colors.ecGreen
     }
@@ -245,7 +213,7 @@ class ThirdSetupPageViewController: UIViewController {
     @objc func goToNextPage(_ button: UIButton) {
         button.pulsate()
 
-        let viewController = FinalSetupPageViewController()
+        let viewController = FourthSetupPageViewController()
         viewController.modalPresentationStyle = .fullScreen
         viewController.modalTransitionStyle = .flipHorizontal
         present(viewController, animated: true)

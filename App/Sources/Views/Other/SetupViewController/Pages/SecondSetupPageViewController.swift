@@ -3,30 +3,12 @@
 import SwiftyUserDefaults
 import UIKit
 
+/// Second Setup Page View Controller
 class SecondSetupPageViewController: UIViewController {
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
+    // MARK: Instance Properties
+    private lazy var titleLabel = TitleLabel(text: secondPageTitle)!
 
-        label.text = secondPageTitle
-        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .white
-        label.numberOfLines = 0
-
-        return label
-    }()
-
-    private lazy var subTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = secondPageSubtitle
-
-        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        label.textColor = .white
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.lineBreakMode = .byWordWrapping
-
-        return label
-    }()
+    private lazy var subTitleLabel = SubtitleLabel(text: secondPageSubtitle)!
 
     private lazy var nameTextField: UITextField = {
         let textField = UITextField()
@@ -55,6 +37,7 @@ class SecondSetupPageViewController: UIViewController {
         return button
     }()
 
+    // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 

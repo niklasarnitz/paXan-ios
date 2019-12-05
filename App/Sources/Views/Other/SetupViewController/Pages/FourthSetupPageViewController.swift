@@ -3,27 +3,12 @@
 import SwiftyUserDefaults
 import UIKit
 
-class FinalSetupPageViewController: UIViewController {
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = finalPageTitle
-        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .white
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        return label
-    }()
+/// Fourth Setup Page View Controller
+class FourthSetupPageViewController: UIViewController {
+    // MARK: Instance Properties
+    private lazy var titleLabel = TitleLabel(text: finalPageTitle)!
 
-    private lazy var subTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = finalPageSubtitle
-        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        label.textColor = .white
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.lineBreakMode = .byWordWrapping
-        return label
-    }()
+    private lazy var subTitleLabel = SubtitleLabel(text: finalPageSubtitle)!
 
     private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
@@ -34,14 +19,9 @@ class FinalSetupPageViewController: UIViewController {
         return imageView
     }()
 
-    private lazy var continueButton: UIButton = {
-        let button = SetupButton()
+    private lazy var continueButton = SetupButton(text: setupFinishButtonTitle)!
 
-        button.setTitle(setupFinishButtonTitle, for: .normal)
-
-        return button
-    }()
-
+    // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,6 +38,7 @@ class FinalSetupPageViewController: UIViewController {
         Defaults.didLaunchBefore = true
     }
 
+    // MARK: UI Setup
     private func setupView() {
         view.backgroundColor = Colors.ecGreen
     }

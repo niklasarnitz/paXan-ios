@@ -2,19 +2,23 @@
 
 import UIKit
 
+/// A custom styled Button for Seminars
 class SeminarButton: UIButton {
-    /// The TextField of the Button
+    // MARK: Instance Properties
+    /// Title of the Button
     var titleText: String? {
         didSet {
-            self.setTitle(titleText, for: .normal)
-            self.setTitleColor(UIColor.black, for: .normal)
+            setTitle(titleText, for: .normal)
+            setTitleColor(UIColor.black, for: .normal)
         }
     }
 
+    // MARK: Layer Properties
     var borderWidth: CGFloat = 1.0
     var borderRadius: CGFloat = 5.0
     var borderColor: CGColor = UIColor.white.cgColor
 
+    // MARK: Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -23,18 +27,15 @@ class SeminarButton: UIButton {
         super.init(coder: coder)
     }
 
+    // MARK: UI Layout
     override func layoutSubviews() {
         super.layoutSubviews()
-        setup()
-    }
+        clipsToBounds = true
+        layer.cornerRadius = borderRadius
+        layer.borderColor = borderColor
+        layer.borderWidth = borderWidth
 
-    func setup() {
-        self.clipsToBounds = true
-        self.layer.cornerRadius = self.borderRadius
-        self.layer.borderColor = self.borderColor
-        self.layer.borderWidth = self.borderWidth
-
-        self.backgroundColor = Colors.ecGreen
-        self.setTitleColor(.white, for: .normal)
+        backgroundColor = Colors.ecGreen
+        setTitleColor(.white, for: .normal)
     }
 }

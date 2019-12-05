@@ -3,23 +3,11 @@
 import UIKit
 
 class LexikonDetailViewController: UIViewController {
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        return label
-    }()
+    private lazy var titleLabel = TitleLabel(text: "")!
 
-    private lazy var descriptionTextView: UITextView = {
-        let textView = UITextView()
-        textView.layer.borderColor = Colors.body.cgColor
-        textView.layer.borderWidth = 1
-        textView.layer.cornerRadius = 5
-        textView.layer.opacity = 15
-        textView.isEditable = false
-        return textView
-    }()
+    private lazy var descriptionTextView = DescriptionTextView()
 
-    init?(_ title: String, _ description: String) {
+    init?(title: String, description: String) {
         super.init(nibName: nil, bundle: nil)
 
         self.titleLabel.text = title

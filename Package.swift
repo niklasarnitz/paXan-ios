@@ -15,6 +15,7 @@ let package = Package(
 	    .package(url: "git@github.com:hackiftekhar/IQKeyboardManager.git", from: "6.5.0"),
     ],
     targets: [
+        // Main target of the paXan app, located in the ./App folder
         .target(
             name: "paXan",
             dependencies: [

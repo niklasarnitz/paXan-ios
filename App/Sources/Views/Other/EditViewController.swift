@@ -4,48 +4,13 @@ import SwiftyUserDefaults
 import UIKit
 
 class EditViewController: UIViewController {
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
+    private lazy var titleLabel = TitleLabel(text: "Seminare Bearbeiten")!
 
-        label.text = "Seminare Bearbeiten"
-        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .white
-        label.numberOfLines = 0
+    private lazy var subTitleLabel = SubtitleLabel(text: "Hier kannst du deine Seminare bearbeiten")!
 
-        return label
-    }()
+    private lazy var continueButton = SetupButton(text: "Fertig")!
 
-    private lazy var subTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Hier kannst du deine Seminare bearbeiten"
-
-        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        label.textColor = .white
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.lineBreakMode = .byWordWrapping
-
-        return label
-    }()
-
-    private lazy var continueButton: UIButton = {
-        let button = UIButton()
-
-        button.setTitle("Fertig", for: .normal)
-        button.layer.borderWidth = 1
-        button.layer.cornerRadius = 5
-        button.layer.borderColor = UIColor.white.cgColor
-
-        return button
-    }()
-
-    private lazy var heimatlosTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "#heimatlos"
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .white
-        return label
-    }()
+    private lazy var heimatlosTitleLabel = TitleLabel(text: "#heimatlos")!
 
     private lazy var seminarOnePickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -82,36 +47,12 @@ class EditViewController: UIViewController {
         return textField
     }()
 
-    private lazy var seminarTwoPickerViewTextField: UITextField = {
-        let textField = UITextField()
+    private lazy var seminarTwoPickerViewTextField = SeminarPickerViewTextField(
+        placeholder: thirdPageTextFieldPlaceholderTwo,
+        pickerView: seminarTwoPickerView
+    )!
 
-        textField.textColor = .white
-        textField.attributedPlaceholder = NSAttributedString(
-            string: thirdPageTextFieldPlaceholderTwo,
-            attributes: [ NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5) ]
-        )
-        textField.textAlignment = .center
-        textField.layer.borderWidth = 1
-        textField.layer.cornerRadius = 5
-        textField.layer.borderColor = UIColor.white.cgColor
-        textField.inputView = seminarTwoPickerView
-        textField.rightViewMode = .always
-        textField.rightView = {
-            let imageView = UIImageView(image: Images.upDownArrow)
-            imageView.tintColor = .white
-            return imageView
-        }()
-
-        return textField
-    }()
-
-    private lazy var heimwehTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "#heimweh"
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .white
-        return label
-    }()
+    private lazy var heimwehTitleLabel = TitleLabel(text: "#heimweh")!
 
     private lazy var seminarThreePickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -119,28 +60,10 @@ class EditViewController: UIViewController {
         return pickerView
     }()
 
-    private lazy var seminarThreePickerViewTextField: UITextField = {
-        let textField = UITextField()
-
-        textField.textColor = .white
-        textField.attributedPlaceholder = NSAttributedString(
-            string: thirdPageTextFieldPlaceholderThree,
-            attributes: [ NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5) ]
-        )
-        textField.textAlignment = .center
-        textField.layer.borderWidth = 1
-        textField.layer.cornerRadius = 5
-        textField.layer.borderColor = UIColor.white.cgColor
-        textField.inputView = seminarThreePickerView
-        textField.rightViewMode = .always
-        textField.rightView = {
-            let imageView = UIImageView(image: Images.upDownArrow)
-            imageView.tintColor = .white
-            return imageView
-        }()
-
-        return textField
-    }()
+    private lazy var seminarThreePickerViewTextField = SeminarPickerViewTextField(
+        placeholder: thirdPageTextFieldPlaceholderThree,
+        pickerView: seminarThreePickerView
+    )!
 
     override func viewDidLoad() {
         super.viewDidLoad()

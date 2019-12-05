@@ -2,9 +2,10 @@
 
 import UIKit
 
+/// A array with all of the SetupAssistantViewControllers
 let setupAssistantPages: [UIViewController] = [
     FirstSetupPageViewController(),
     SecondSetupPageViewController(),
     ThirdSetupPageViewController(),
-    FinalSetupPageViewController()
+    FourthSetupPageViewController()
 ]

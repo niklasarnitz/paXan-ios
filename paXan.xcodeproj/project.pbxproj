@@ -18,7 +18,7 @@
 		853CC1662360CB1C00A3F4F3 /* FirstSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC1652360CB1C00A3F4F3 /* FirstSetupPageViewController.swift */; };
 		853CC1682360CB3E00A3F4F3 /* SecondSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC1672360CB3E00A3F4F3 /* SecondSetupPageViewController.swift */; };
 		853CC16A2360CB4800A3F4F3 /* ThirdSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC1692360CB4800A3F4F3 /* ThirdSetupPageViewController.swift */; };
-		853CC16C2360CB6300A3F4F3 /* FinalSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC16B2360CB6300A3F4F3 /* FinalSetupPageViewController.swift */; };
+		853CC16C2360CB6300A3F4F3 /* FourthSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC16B2360CB6300A3F4F3 /* FourthSetupPageViewController.swift */; };
 		853CC16E2360CD7C00A3F4F3 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */; };
 		854CC10723932CB7000AD257 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CC10623932CB7000AD257 /* Place.swift */; };
 		854CC10923932F87000AD257 /* SeminarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CC10823932F87000AD257 /* SeminarDetailViewController.swift */; };
@@ -56,6 +56,10 @@
 		85E3F2F42314099D00E6B845 /* SeminarPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */; };
 		85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F5231409F000E6B845 /* MapViewController.swift */; };
 		85E3F2F823140AAA00E6B845 /* MeinPaxAnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */; };
+		85E884C623994863004C3AE4 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884C523994863004C3AE4 /* TitleLabel.swift */; };
+		85E884C82399494D004C3AE4 /* SubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884C72399494D004C3AE4 /* SubtitleLabel.swift */; };
+		85E884CA23994B6E004C3AE4 /* DescriptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884C923994B6E004C3AE4 /* DescriptionTextView.swift */; };
+		85E884CC23994D62004C3AE4 /* SeminarPickerViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884CB23994D62004C3AE4 /* SeminarPickerViewTextField.swift */; };
 		8BD900518DC1FA74F5D40930 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */; };
 		CD3C8019640CC56CA601F0EA /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */; };
 /* End PBXBuildFile section */
@@ -74,7 +78,7 @@
 		853CC1652360CB1C00A3F4F3 /* FirstSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSetupPageViewController.swift; sourceTree = "<group>"; };
 		853CC1672360CB3E00A3F4F3 /* SecondSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSetupPageViewController.swift; sourceTree = "<group>"; };
 		853CC1692360CB4800A3F4F3 /* ThirdSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSetupPageViewController.swift; sourceTree = "<group>"; };
-		853CC16B2360CB6300A3F4F3 /* FinalSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalSetupPageViewController.swift; sourceTree = "<group>"; };
+		853CC16B2360CB6300A3F4F3 /* FourthSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthSetupPageViewController.swift; sourceTree = "<group>"; };
 		853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		854CC10623932CB7000AD257 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		854CC10823932F87000AD257 /* SeminarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarDetailViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,10 @@
 		85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarPlanViewController.swift; sourceTree = "<group>"; };
 		85E3F2F5231409F000E6B845 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeinPaxAnViewController.swift; sourceTree = "<group>"; };
+		85E884C523994863004C3AE4 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		85E884C72399494D004C3AE4 /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
+		85E884C923994B6E004C3AE4 /* DescriptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextView.swift; sourceTree = "<group>"; };
+		85E884CB23994D62004C3AE4 /* SeminarPickerViewTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarPickerViewTextField.swift; sourceTree = "<group>"; };
 		A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,7 +172,7 @@
 				853CC1652360CB1C00A3F4F3 /* FirstSetupPageViewController.swift */,
 				853CC1672360CB3E00A3F4F3 /* SecondSetupPageViewController.swift */,
 				853CC1692360CB4800A3F4F3 /* ThirdSetupPageViewController.swift */,
-				853CC16B2360CB6300A3F4F3 /* FinalSetupPageViewController.swift */,
+				853CC16B2360CB6300A3F4F3 /* FourthSetupPageViewController.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -250,9 +258,13 @@
 		85AAD03C231ACBF500C0F813 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				853C4B652393D30900300689 /* SeminarButton.swift */,
 				85AAD03F231ACC7600C0F813 /* Style.swift */,
+				853C4B652393D30900300689 /* SeminarButton.swift */,
 				853C4B672393D41D00300689 /* SetupButton.swift */,
+				85E884C523994863004C3AE4 /* TitleLabel.swift */,
+				85E884C72399494D004C3AE4 /* SubtitleLabel.swift */,
+				85E884C923994B6E004C3AE4 /* DescriptionTextView.swift */,
+				85E884CB23994D62004C3AE4 /* SeminarPickerViewTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -469,6 +481,8 @@
 				85C483B72362FDAD001C6FD8 /* AboutViewController.swift in Sources */,
 				853CC16E2360CD7C00A3F4F3 /* MainTabBar.swift in Sources */,
 				85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */,
+				85E884CA23994B6E004C3AE4 /* DescriptionTextView.swift in Sources */,
+				85E884C82399494D004C3AE4 /* SubtitleLabel.swift in Sources */,
 				85E3F2F823140AAA00E6B845 /* MeinPaxAnViewController.swift in Sources */,
 				853CC15E2360BF8900A3F4F3 /* DefaultsKeysExtension.swift in Sources */,
 				85D4B419231E8E690010E55F /* HapticFeedbackManager.swift in Sources */,
@@ -478,10 +492,12 @@
 				853C4B662393D30900300689 /* SeminarButton.swift in Sources */,
 				854CC10B2393302C000AD257 /* MKMapViewExtension.swift in Sources */,
 				854CC10923932F87000AD257 /* SeminarDetailViewController.swift in Sources */,
-				853CC16C2360CB6300A3F4F3 /* FinalSetupPageViewController.swift in Sources */,
+				853CC16C2360CB6300A3F4F3 /* FourthSetupPageViewController.swift in Sources */,
 				85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */,
 				85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */,
+				85E884CC23994D62004C3AE4 /* SeminarPickerViewTextField.swift in Sources */,
 				854CC10723932CB7000AD257 /* Place.swift in Sources */,
+				85E884C623994863004C3AE4 /* TitleLabel.swift in Sources */,
 				85866CCB23151F5600B408E9 /* Assets.swift in Sources */,
 				8539E59C237C790400EBC1DB /* Data.swift in Sources */,
 				85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */,
