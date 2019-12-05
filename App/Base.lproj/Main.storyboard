@@ -152,11 +152,11 @@
             </objects>
             <point key="canvasLocation" x="956.52173913043487" y="7.3660714285714279"/>
         </scene>
-        <!--Lexikon-->
+        <!--A-Z-->
         <scene sceneID="8st-aS-e2U">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U3x-aA-fQd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lexikon" image="userManual" id="4RO-mo-Vbv"/>
+                    <tabBarItem key="tabBarItem" title="A-Z" image="userManual" id="4RO-mo-Vbv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dez-Y0-ykA">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
