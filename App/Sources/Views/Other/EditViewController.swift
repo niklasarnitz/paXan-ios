@@ -182,11 +182,11 @@ extension EditViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == seminarOnePickerView {
-            return seminarBlockOneSeminars.count
+            return seminars.count
         } else if pickerView == seminarTwoPickerView {
-            return seminarBlockTwoSeminars.count
+            return seminars.count
         } else if pickerView == seminarThreePickerView {
-            return seminarBlockThreeSeminars.count
+            return seminars.count
         } else {
             return 0
         }
@@ -194,11 +194,11 @@ extension EditViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == seminarOnePickerView {
-            return seminarBlockOneSeminars[row].title
+            return seminars[row].title
         } else if pickerView == seminarTwoPickerView {
-            return seminarBlockTwoSeminars[row].title
+            return seminars[row].title
         } else if pickerView == seminarThreePickerView {
-            return seminarBlockThreeSeminars[row].title
+            return seminars[row].title
         } else {
             return "Error"
         }
@@ -206,13 +206,13 @@ extension EditViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == seminarOnePickerView {
-            seminarOnePickerViewTextField.text = seminarBlockOneSeminars[row].title
+            seminarOnePickerViewTextField.text = seminars[row].title
             Defaults.seminarOne = seminarOnePickerViewTextField.text ?? ""
          } else if pickerView == seminarTwoPickerView {
-            seminarTwoPickerViewTextField.text = seminarBlockTwoSeminars[row].title
+            seminarTwoPickerViewTextField.text = seminars[row].title
             Defaults.seminarTwo = seminarTwoPickerViewTextField.text ?? ""
         } else if pickerView == seminarThreePickerView {
-            seminarThreePickerViewTextField.text = seminarBlockThreeSeminars[row].title
+            seminarThreePickerViewTextField.text = seminars[row].title
             Defaults.seminarThree = seminarThreePickerViewTextField.text ?? ""
         }
     }

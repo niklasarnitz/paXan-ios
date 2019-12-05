@@ -258,7 +258,7 @@ class SeminarPlanViewController: UIViewController {
         button.pulsate()
 
         let viewController = SeminarDetailViewController(
-            seminar: seminarBlockOneSeminars.first(
+            seminar: seminars.first(
                 where: {
                     $0.title == Defaults.seminarOne
                 }
@@ -271,7 +271,7 @@ class SeminarPlanViewController: UIViewController {
         button.pulsate()
 
         let viewController = SeminarDetailViewController(
-            seminar: seminarBlockOneSeminars.first(
+            seminar: seminars.first(
                 where: {
                     $0.title == Defaults.seminarTwo
                 }
@@ -284,7 +284,7 @@ class SeminarPlanViewController: UIViewController {
         button.pulsate()
 
         let viewController = SeminarDetailViewController(
-            seminar: seminarBlockOneSeminars.first(
+            seminar: seminars.first(
                 where: {
                     $0.title == Defaults.seminarThree
                 }

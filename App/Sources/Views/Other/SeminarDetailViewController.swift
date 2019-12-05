@@ -64,7 +64,7 @@ class SeminarDetailViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         self.titleLabel.text = seminar.title
-        self.referentLabel.text = "Referent: " + (seminar.referent ?? "")
+        self.referentLabel.text = "Referent: " + (seminar.referent?.name ?? "")
         self.roomNameLabel.text = "Raum: " + (seminar.place?.roomname ?? "")
         self.descriptionLabel.text = "Beschreibung: " + (seminar.description ?? "")
     }
