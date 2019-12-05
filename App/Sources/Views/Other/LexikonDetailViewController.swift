@@ -7,6 +7,8 @@ class LexikonDetailViewController: UIViewController {
 
     private lazy var descriptionTextView = DescriptionTextView()
 
+    private lazy var doneButton = SetupButton(text: "Fertig")!
+
     init?(title: String, description: String) {
         super.init(nibName: nil, bundle: nil)
 
@@ -23,12 +25,13 @@ class LexikonDetailViewController: UIViewController {
         super.viewDidLoad()
 
         if #available(iOS 13.0, *) {
-            view.backgroundColor = .systemBackground
+            view.backgroundColor = Colors.ecGreen
         } else {
-            view.backgroundColor = .white
+            view.backgroundColor = Colors.ecGreen
         }
 
         setupTitleLabel()
+        setupDoneButton()
         setupDescriptionTextView()
     }
 
@@ -46,7 +49,25 @@ class LexikonDetailViewController: UIViewController {
             make.top.equalTo(titleLabel.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
-            make.bottom.equalTo(super.view.snp.bottomMargin).offset(-20)
+            make.bottom.equalTo(doneButton.snp.topMargin).offset(-20)
         }
+    }
+
+    private func setupDoneButton() {
+        view.addSubview(doneButton)
+        doneButton.snp.makeConstraints { make in
+            make.height.equalTo(40)
+            make.bottom.equalToSuperview().offset(-50)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+        }
+
+        doneButton.addTarget(self, action: #selector(didPressDone), for: .touchUpInside)
+    }
+
+    @objc
+    func didPressDone() {
+        doneButton.pulsate()
+        dismiss(animated: true)
     }
 }

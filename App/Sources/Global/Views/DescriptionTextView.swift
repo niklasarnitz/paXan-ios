@@ -7,10 +7,14 @@ class DescriptionTextView: UITextView {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        layer.borderColor = Colors.body.cgColor
+        backgroundColor = Colors.ecGreen
+
+        textColor = .white
+        layer.borderColor = UIColor.white.cgColor
         layer.borderWidth = 1
         layer.cornerRadius = 5
         layer.opacity = 15
+        font = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .body), size: 15)
         isEditable = false
     }
 }

@@ -12,6 +12,7 @@
         <scene sceneID="BXv-Ll-kuq">
             <objects>
                 <tabBarController storyboardIdentifier="MeinPaxanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TK4-6J-W1A" customClass="MainTabBar" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="w0P-gr-zCy"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WSu-58-Cdr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -231,6 +232,9 @@
                         <color key="backgroundColor" name="ecGreen"/>
                         <color key="barTintColor" name="ecGreen"/>
                         <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
