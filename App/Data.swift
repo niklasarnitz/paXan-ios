@@ -1,6 +1,6 @@
 // Copyright © 2019 SWDEC. All rights reserved.
 
-import UIKit
+import UIKit.UIImage
 
 // MARK: Strings
 let firstPageTitle: String = "Willkommen in\nder paXan App!"
@@ -44,7 +44,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -61,7 +61,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -78,7 +78,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "Mein Leben nach der Jugendarbeit",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -95,7 +95,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "Social Media Relations in der Jugendarbeit",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -112,7 +112,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "Deine Flyer für die Jugendarbeit",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -129,7 +129,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "Strömungen in der Jugendarbeit begegnen und verstehen",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -146,7 +146,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -163,7 +163,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -180,7 +180,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -197,7 +197,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -214,7 +214,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -231,7 +231,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -248,7 +248,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
@@ -265,7 +265,7 @@ let seminars: [Seminar] = [
             picture: UIImage()
         ),
         description: "",
-        setPlace: Place(
+        place: Place(
             title: "",
             roomname: "",
             lat: 0,
