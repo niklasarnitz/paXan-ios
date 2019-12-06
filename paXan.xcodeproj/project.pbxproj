@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E8611E67BA94825964453FA /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538967131DCEEECEA70FB8BA /* SnapKit.framework */; };
-		851E6BB823636C68002F0168 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E6BB723636C68002F0168 /* EditViewController.swift */; };
+		851141D6239A58050062438E /* EditorsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141D5239A58050062438E /* EditorsDelegate.swift */; };
+		851E6BB823636C68002F0168 /* SeminarsEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */; };
 		85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85257B382362CA5600E84CC5 /* UIButtonExtension.swift */; };
 		8539E59C237C790400EBC1DB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539E59B237C790400EBC1DB /* Data.swift */; };
 		853C4B662393D30900300689 /* SeminarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C4B652393D30900300689 /* SeminarButton.swift */; };
@@ -68,7 +69,8 @@
 /* Begin PBXFileReference section */
 		538967131DCEEECEA70FB8BA /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapKit.framework; path = Dependencies/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Dependencies/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
-		851E6BB723636C68002F0168 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		851141D5239A58050062438E /* EditorsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsDelegate.swift; sourceTree = "<group>"; };
+		851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarsEditViewController.swift; sourceTree = "<group>"; };
 		85257B382362CA5600E84CC5 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		8539E599237C78B500EBC1DB /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		8539E59B237C790400EBC1DB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -288,8 +290,9 @@
 			children = (
 				853CC15F2360C3B400A3F4F3 /* SetupViewController */,
 				85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */,
-				851E6BB723636C68002F0168 /* EditViewController.swift */,
+				851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */,
 				854CC10823932F87000AD257 /* SeminarDetailViewController.swift */,
+				851141D5239A58050062438E /* EditorsDelegate.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -474,7 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				851E6BB823636C68002F0168 /* EditViewController.swift in Sources */,
+				851E6BB823636C68002F0168 /* SeminarsEditViewController.swift in Sources */,
 				85E884CE23995AF3004C3AE4 /* Referent.swift in Sources */,
 				853C4B682393D41D00300689 /* SetupButton.swift in Sources */,
 				853CC1662360CB1C00A3F4F3 /* FirstSetupPageViewController.swift in Sources */,
@@ -497,6 +500,7 @@
 				854CC10B2393302C000AD257 /* MKMapViewExtension.swift in Sources */,
 				854CC10923932F87000AD257 /* SeminarDetailViewController.swift in Sources */,
 				853CC16C2360CB6300A3F4F3 /* FourthSetupPageViewController.swift in Sources */,
+				851141D6239A58050062438E /* EditorsDelegate.swift in Sources */,
 				85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */,
 				85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */,
 				85E884CC23994D62004C3AE4 /* SeminarPickerViewTextField.swift in Sources */,

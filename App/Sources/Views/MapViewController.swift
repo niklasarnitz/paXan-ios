@@ -1,4 +1,3 @@
-// swiftlint:disable opening_brace
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import MapKit

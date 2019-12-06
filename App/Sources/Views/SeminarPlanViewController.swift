@@ -5,7 +5,7 @@ import MapKit
 import SwiftyUserDefaults
 import UIKit
 
-class SeminarPlanViewController: UIViewController {
+class SeminarPlanViewController: UIViewController, EditorsDelegate {
     private lazy var heimatlosTitleLabel: UILabel = {
         let label = UILabel()
 
@@ -240,18 +240,11 @@ class SeminarPlanViewController: UIViewController {
         editButton.addTarget(self, action: #selector(editButtonPressed), for: .touchUpInside)
     }
 
-    func reloadData() {
-        seminarOneButton.titleText = Defaults.seminarOne
-        seminarTwoButton.titleText = Defaults.seminarTwo
-        seminarThreeButton.titleText = Defaults.seminarThree
-    }
-
     @objc func editButtonPressed(_ button: UIButton) {
         button.pulsate()
 
-        let viewController = EditViewController()
-        present(viewController, animated: true)
-        reloadData()
+        let viewController = SeminarsEditViewController(delegate: self)
+        present(viewController!, animated: true)
     }
 
     @objc func seminarOneButtonPressed(_ button: UIButton) {
@@ -291,5 +284,11 @@ class SeminarPlanViewController: UIViewController {
             )!
         )!
         present(viewController, animated: true)
+    }
+
+    func updateData() {
+        seminarOneButton.setTitle(Defaults.seminarOne, for: .normal)
+        seminarTwoButton.setTitle(Defaults.seminarTwo, for: .normal)
+        seminarThreeButton.setTitle(Defaults.seminarThree, for: .normal)
     }
 }
