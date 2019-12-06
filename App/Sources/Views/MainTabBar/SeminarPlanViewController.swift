@@ -12,8 +12,6 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         label.text = "#heimatlos"
         label.font = .preferredFont(forTextStyle: .largeTitle)
         label.textColor = Colors.ecGreen
-        label.textAlignment = .center
-        label.contentMode = .center
 
         return label
     }()
@@ -23,8 +21,6 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
 
         label.text = "Seminar I"
         label.font = .preferredFont(forTextStyle: .body)
-        label.textAlignment = .center
-        label.contentMode = .center
 
         return label
     }()
@@ -34,8 +30,6 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
 
         button.titleText = Defaults.seminarOne
         button.titleLabel?.font = .preferredFont(forTextStyle: .caption1)
-        button.titleLabel?.textAlignment = .center
-        button.titleLabel?.contentMode = .center
 
         return button
     }()
@@ -45,8 +39,6 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
 
         label.text = "Seminar II"
         label.font = .preferredFont(forTextStyle: .body)
-        label.textAlignment = .center
-        label.contentMode = .center
 
         return label
     }()
@@ -56,8 +48,6 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
 
         button.titleText = Defaults.seminarTwo
         button.titleLabel?.font = .preferredFont(forTextStyle: .caption1)
-        button.titleLabel?.textAlignment = .center
-        button.titleLabel?.contentMode = .center
 
         return button
     }()
@@ -67,8 +57,6 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
 
         label.text = "#heimweh"
         label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.textAlignment = .center
-        label.contentMode = .center
         label.textColor = Colors.ecGreen
 
         return label
@@ -79,8 +67,6 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
 
         label.text = "Seminar III"
         label.font = .preferredFont(forTextStyle: .body)
-        label.textAlignment = .center
-        label.contentMode = .center
 
         return label
     }()
@@ -90,8 +76,6 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
 
         button.titleText = Defaults.seminarThree
         button.titleLabel?.font = .preferredFont(forTextStyle: .caption1)
-        button.titleLabel?.textAlignment = .center
-        button.titleLabel?.contentMode = .center
 
         return button
     }()
@@ -209,7 +193,7 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
             make.top.equalTo(heimwehTitleLabel.snp.bottomMargin).offset(15)
             make.height.equalTo(30)
             make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
         }
     }
 

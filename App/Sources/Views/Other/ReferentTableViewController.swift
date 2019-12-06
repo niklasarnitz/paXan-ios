@@ -1,9 +1,10 @@
+// swiftlint:disable file_types_order
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import UIKit
 
-class SeminarTableViewController: UIViewController {
-    private lazy var tableView = SeminarsTableViewController()
+class ReferentTableViewController: UIViewController {
+    private lazy var tableView = ReferentsTableViewController()
     private lazy var doneButton = SeminarButton(text: "Fertig")
 
     override func viewDidLoad() {
@@ -45,10 +46,8 @@ class SeminarTableViewController: UIViewController {
     }
 }
 
-private class SeminarsTableViewController: UITableViewController {
-    private var detailViewController: LexikonDetailViewController?
-
-    private let cellId: String = "seminarCell"
+private class ReferentsTableViewController: UITableViewController {
+    private let cellId: String = "referent"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,11 +60,6 @@ private class SeminarsTableViewController: UITableViewController {
             view.backgroundColor = .white
             tableView.backgroundColor = .white
             tableView.backgroundView?.backgroundColor = .white
-        }
-
-        if let split = splitViewController {
-            let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count - 1] as! UINavigationController).topViewController as? LexikonDetailViewController
         }
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
@@ -82,21 +76,21 @@ private class SeminarsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return seminars.count
+        return referents.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
 
-        let seminarData = seminars[indexPath.row]
-        cell.textLabel!.text = seminarData.title
+        let referentData = referents[indexPath.row]
+        cell.textLabel!.text = referentData.name
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailData = seminars[indexPath.row]
+        let referentData = referents[indexPath.row]
         present(
-            SeminarDetailViewController(seminar: detailData)!,
+            ReferentDetailViewController(referent: referentData),
             animated: true
         )
         tableView.deselectRow(at: indexPath, animated: true)

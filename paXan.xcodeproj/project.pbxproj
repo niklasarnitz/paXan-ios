@@ -11,9 +11,10 @@
 		850BA458239A7A810098196D /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA457239A7A810098196D /* TimeTableViewController.swift */; };
 		850BA45A239A7B8A0098196D /* SpendenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA459239A7B8A0098196D /* SpendenViewController.swift */; };
 		850BA45C239A7C250098196D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA45B239A7C250098196D /* AboutViewController.swift */; };
+		850BA45E239A81FE0098196D /* ReferentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA45D239A81FE0098196D /* ReferentTableViewController.swift */; };
 		851141D6239A58050062438E /* EditorsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141D5239A58050062438E /* EditorsDelegate.swift */; };
 		851141D8239A62C90062438E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141D7239A62C90062438E /* InfoViewController.swift */; };
-		851141DA239A68150062438E /* SeminarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141D9239A68150062438E /* SeminarsTableViewController.swift */; };
+		851141DA239A68150062438E /* SeminarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141D9239A68150062438E /* SeminarTableViewController.swift */; };
 		851141DD239A6C870062438E /* ReferentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141DC239A6C870062438E /* ReferentDetailViewController.swift */; };
 		851141DF239A6D3B0062438E /* ProfilePictureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141DE239A6D3B0062438E /* ProfilePictureImageView.swift */; };
 		851141E3239A6F570062438E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 851141E2239A6F570062438E /* Media.xcassets */; };
@@ -79,9 +80,10 @@
 		850BA457239A7A810098196D /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
 		850BA459239A7B8A0098196D /* SpendenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendenViewController.swift; sourceTree = "<group>"; };
 		850BA45B239A7C250098196D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		850BA45D239A81FE0098196D /* ReferentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferentTableViewController.swift; sourceTree = "<group>"; };
 		851141D5239A58050062438E /* EditorsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsDelegate.swift; sourceTree = "<group>"; };
 		851141D7239A62C90062438E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		851141D9239A68150062438E /* SeminarsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarsTableViewController.swift; sourceTree = "<group>"; };
+		851141D9239A68150062438E /* SeminarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarTableViewController.swift; sourceTree = "<group>"; };
 		851141DC239A6C870062438E /* ReferentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferentDetailViewController.swift; sourceTree = "<group>"; };
 		851141DE239A6D3B0062438E /* ProfilePictureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureImageView.swift; sourceTree = "<group>"; };
 		851141E2239A6F570062438E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -316,7 +318,8 @@
 				851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */,
 				854CC10823932F87000AD257 /* SeminarDetailViewController.swift */,
 				851141D5239A58050062438E /* EditorsDelegate.swift */,
-				851141D9239A68150062438E /* SeminarsTableViewController.swift */,
+				851141D9239A68150062438E /* SeminarTableViewController.swift */,
+				850BA45D239A81FE0098196D /* ReferentTableViewController.swift */,
 				851141DC239A6C870062438E /* ReferentDetailViewController.swift */,
 				850BA457239A7A810098196D /* TimeTableViewController.swift */,
 				850BA459239A7B8A0098196D /* SpendenViewController.swift */,
@@ -521,6 +524,7 @@
 				85E884CA23994B6E004C3AE4 /* DescriptionTextView.swift in Sources */,
 				85E884C82399494D004C3AE4 /* SubtitleLabel.swift in Sources */,
 				85E3F2F823140AAA00E6B845 /* MeinPaxAnViewController.swift in Sources */,
+				850BA45E239A81FE0098196D /* ReferentTableViewController.swift in Sources */,
 				853CC15E2360BF8900A3F4F3 /* DefaultsKeysExtension.swift in Sources */,
 				85D4B419231E8E690010E55F /* HapticFeedbackManager.swift in Sources */,
 				853CC16A2360CB4800A3F4F3 /* ThirdSetupPageViewController.swift in Sources */,
@@ -534,7 +538,7 @@
 				851141D8239A62C90062438E /* InfoViewController.swift in Sources */,
 				85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */,
 				85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */,
-				851141DA239A68150062438E /* SeminarsTableViewController.swift in Sources */,
+				851141DA239A68150062438E /* SeminarTableViewController.swift in Sources */,
 				850BA45A239A7B8A0098196D /* SpendenViewController.swift in Sources */,
 				85E884CC23994D62004C3AE4 /* SeminarPickerViewTextField.swift in Sources */,
 				854CC10723932CB7000AD257 /* Place.swift in Sources */,

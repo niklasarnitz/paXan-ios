@@ -350,3 +350,21 @@ let lexikonEntries: [LexikonEntry?] = [
     LexikonEntry(title: "Zeitraum", description: "", roomname: "", lat: 0, long: 0),
     LexikonEntry(title: "Zelten", description: "", roomname: "", lat: 0, long: 0),
 ]
+
+// MARK: Referents
+
+let referents: [Referent] = [
+    Referent(
+        name: "Volker Gäckle",
+        connection: "IHL",
+        website: "ihl.de",
+        picture: UIImage(
+            named: "gäckle",
+            in: Bundle(for: BundleToken.self),
+            compatibleWith: nil
+        )!
+    )
+]
+
+// MARK: - Implementation Details
+private final class BundleToken {}

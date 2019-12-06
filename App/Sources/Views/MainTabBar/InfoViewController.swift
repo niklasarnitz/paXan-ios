@@ -1,4 +1,4 @@
-// swiftlint:disable multiline_arguments_brackets trailing_closure empty_type file_types_order vertical_whitespaces_around_mark
+// swiftlint:disable multiline_arguments_brackets trailing_closure empty_type vertical_whitespaces_around_mark
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import SnapKit
@@ -105,18 +105,7 @@ class InfoViewController: UIViewController {
     private func referentButtonPressed() {
         referentButton?.pulsate()
 
-        let viewController = ReferentDetailViewController(
-            referent: Referent(
-                name: "Volker Gäckle",
-                connection: "IHL",
-                website: "ihl.de",
-                picture: UIImage(
-                    named: "gäckle",
-                    in: Bundle(for: BundleToken.self),
-                    compatibleWith: nil
-                    )!
-                )
-            )
+        let viewController = ReferentTableViewController()
 
         present(viewController, animated: true)
     }
@@ -145,7 +134,3 @@ class InfoViewController: UIViewController {
         present(AboutViewController(), animated: true)
     }
 }
-
-// MARK: - Implementation Details
-
-private final class BundleToken {}
