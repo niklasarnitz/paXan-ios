@@ -140,20 +140,19 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
     private func setupHeimatlosTitleLabel() {
         view.addSubview(heimatlosTitleLabel)
         heimatlosTitleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
-            make.top.equalTo(super.view.snp.topMargin).offset(25)
+            make.top.equalTo(super.view.snp.topMargin).offset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
         }
     }
 
     private func setupSeminarOneCaptionLabel() {
         view.addSubview(seminarOneCaptionLabel)
-
         seminarOneCaptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(heimatlosTitleLabel.snp.bottomMargin).offset(20)
+            make.top.equalTo(heimatlosTitleLabel.snp.bottomMargin).offset(15)
             make.height.equalTo(20)
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
         }
     }
 
@@ -161,10 +160,10 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         view.addSubview(seminarOneButton)
 
         seminarOneButton.snp.makeConstraints { make in
-            make.top.equalTo(seminarOneCaptionLabel.snp.bottomMargin).offset(20)
-            make.height.equalTo(40)
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
+            make.top.equalTo(seminarOneCaptionLabel.snp.bottomMargin).offset(15)
+            make.height.equalTo(30)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
         }
 
         seminarOneButton.addTarget(self, action: #selector(seminarOneButtonPressed), for: .touchUpInside)
@@ -174,10 +173,10 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         view.addSubview(seminarTwoCaptionLabel)
 
         seminarTwoCaptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(seminarOneButton.snp.bottomMargin).offset(20)
+            make.top.equalTo(seminarOneButton.snp.bottomMargin).offset(15)
             make.height.equalTo(30)
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
         }
     }
 
@@ -185,10 +184,10 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         view.addSubview(seminarTwoButton)
 
         seminarTwoButton.snp.makeConstraints { make in
-            make.top.equalTo(seminarTwoCaptionLabel.snp.bottomMargin).offset(20)
-            make.height.equalTo(40)
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
+            make.top.equalTo(seminarTwoCaptionLabel.snp.bottomMargin).offset(15)
+            make.height.equalTo(30)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
         }
 
         seminarTwoButton.addTarget(self, action: #selector(seminarTwoButtonPressed), for: .touchUpInside)
@@ -197,9 +196,9 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
     private func setupHeimwehTitleLabel() {
         view.addSubview(heimwehTitleLabel)
         heimwehTitleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
-            make.top.equalTo(seminarTwoButton.snp.bottomMargin).offset(25)
+            make.top.equalTo(seminarTwoButton.snp.bottomMargin).offset(15)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
         }
     }
 
@@ -207,10 +206,10 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         view.addSubview(seminarThreeCaptionLabel)
 
         seminarThreeCaptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(heimwehTitleLabel.snp.bottomMargin).offset(20)
-            make.height.equalTo(40)
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
+            make.top.equalTo(heimwehTitleLabel.snp.bottomMargin).offset(15)
+            make.height.equalTo(30)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(20)
         }
     }
 
@@ -218,10 +217,10 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         view.addSubview(seminarThreeButton)
 
         seminarThreeButton.snp.makeConstraints { make in
-            make.top.equalTo(seminarThreeCaptionLabel.snp.bottomMargin).offset(20)
-            make.height.equalTo(40)
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
+            make.top.equalTo(seminarThreeCaptionLabel.snp.bottomMargin).offset(15)
+            make.height.equalTo(30)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
         }
 
         seminarThreeButton.addTarget(self, action: #selector(seminarThreeButtonPressed), for: .touchUpInside)
@@ -231,10 +230,10 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         view.addSubview(editButton)
 
         editButton.snp.makeConstraints { make in
-            make.height.equalTo(40)
-            make.bottom.equalTo(super.view.snp.bottomMargin).offset(-50)
-            make.leading.equalToSuperview().offset(26)
-            make.trailing.equalToSuperview().offset(-26)
+            make.height.equalTo(30)
+            make.bottom.equalTo(super.view.snp.bottomMargin).offset(-40)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
         }
 
         editButton.addTarget(self, action: #selector(editButtonPressed), for: .touchUpInside)
