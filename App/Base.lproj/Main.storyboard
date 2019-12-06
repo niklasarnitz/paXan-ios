@@ -64,7 +64,7 @@
         <!--Infos-->
         <scene sceneID="eMa-BU-5WU">
             <objects>
-                <viewController id="obc-QA-RO0" customClass="AboutViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="obc-QA-RO0" customClass="InfoViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Infos" id="Y9p-mK-wd1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvR-1q-Cw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -230,6 +230,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="ecGreen"/>
+                        <color key="tintColor" name="ecGreen"/>
                         <color key="barTintColor" name="ecGreen"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

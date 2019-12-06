@@ -27,6 +27,11 @@ class SeminarButton: UIButton {
         super.init(coder: coder)
     }
 
+    init?(text: String) {
+        super.init(frame: .zero)
+        setTitle(text, for: .normal)
+    }
+
     // MARK: UI Layout
     override func layoutSubviews() {
         super.layoutSubviews()
