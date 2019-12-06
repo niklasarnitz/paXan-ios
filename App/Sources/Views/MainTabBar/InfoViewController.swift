@@ -1,4 +1,4 @@
-// swiftlint:disable multiline_arguments_brackets trailing_closure
+// swiftlint:disable multiline_arguments_brackets trailing_closure empty_type file_types_order vertical_whitespaces_around_mark
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import SnapKit
@@ -104,26 +104,48 @@ class InfoViewController: UIViewController {
     @objc
     private func referentButtonPressed() {
         referentButton?.pulsate()
+
+        let viewController = ReferentDetailViewController(
+            referent: Referent(
+                name: "Volker Gäckle",
+                connection: "IHL",
+                website: "ihl.de",
+                picture: UIImage(
+                    named: "gäckle",
+                    in: Bundle(for: BundleToken.self),
+                    compatibleWith: nil
+                    )!
+                )
+            )
+
+        present(viewController, animated: true)
     }
 
     @objc
     private func seminarsButtonPressed() {
         seminarsButton?.pulsate()
-        present(SeminarsTableViewController(), animated: true)
+        present(SeminarTableViewController(), animated: true)
     }
 
     @objc
     private func spendenButtonPressed() {
         spendenButton?.pulsate()
+        present(SpendenViewController(), animated: true)
     }
 
     @objc
     private func timeTableButtonPressed() {
         timetableButton?.pulsate()
+        present(TimeTableViewController(), animated: true)
     }
 
     @objc
     private func aboutButtonPressed() {
         aboutButton?.pulsate()
+        present(AboutViewController(), animated: true)
     }
 }
+
+// MARK: - Implementation Details
+
+private final class BundleToken {}

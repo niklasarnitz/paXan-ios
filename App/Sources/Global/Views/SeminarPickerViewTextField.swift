@@ -13,7 +13,7 @@ class SeminarPickerViewTextField: UITextField {
     }
 
     /// Creates a pickerview with the given placeholder and pickerview
-    init?(placeholder: String, pickerView: UIPickerView) {
+    init(placeholder: String, pickerView: UIPickerView) {
         super.init(frame: .zero)
         attributedPlaceholder = NSAttributedString(
             string: placeholder,

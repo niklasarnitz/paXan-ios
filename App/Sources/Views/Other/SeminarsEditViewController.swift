@@ -6,13 +6,13 @@ import UIKit
 class SeminarsEditViewController: UIViewController {
     private weak var editorsDelegate: EditorsDelegate?
 
-    private lazy var titleLabel = TitleLabel(text: "Seminare Bearbeiten")!
+    private lazy var titleLabel = TitleLabel(text: "Seminare Bearbeiten")
 
-    private lazy var subTitleLabel = SubtitleLabel(text: "Hier kannst du deine Seminare bearbeiten")!
+    private lazy var subTitleLabel = SubtitleLabel(text: "Hier kannst du deine Seminare bearbeiten")
 
-    private lazy var continueButton = SetupButton(text: "Fertig")!
+    private lazy var continueButton = SetupButton(text: "Fertig")
 
-    private lazy var heimatlosTitleLabel = TitleLabel(text: "#heimatlos")!
+    private lazy var heimatlosTitleLabel = TitleLabel(text: "#heimatlos")
 
     private lazy var seminarOnePickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -52,9 +52,9 @@ class SeminarsEditViewController: UIViewController {
     private lazy var seminarTwoPickerViewTextField = SeminarPickerViewTextField(
         placeholder: thirdPageTextFieldPlaceholderTwo,
         pickerView: seminarTwoPickerView
-    )!
+    )
 
-    private lazy var heimwehTitleLabel = TitleLabel(text: "#heimweh")!
+    private lazy var heimwehTitleLabel = TitleLabel(text: "#heimweh")
 
     private lazy var seminarThreePickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -65,7 +65,7 @@ class SeminarsEditViewController: UIViewController {
     private lazy var seminarThreePickerViewTextField = SeminarPickerViewTextField(
         placeholder: thirdPageTextFieldPlaceholderThree,
         pickerView: seminarThreePickerView
-    )!
+    )
 
     init?(delegate: EditorsDelegate?) {
         super.init(nibName: nil, bundle: nil)

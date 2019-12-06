@@ -13,7 +13,7 @@ class SubtitleLabel: UILabel {
     }
 
     /// Creates a subtitle label with the given text
-    init?(text: String) {
+    init(text: String) {
         super.init(frame: .zero)
         self.text = text
     }

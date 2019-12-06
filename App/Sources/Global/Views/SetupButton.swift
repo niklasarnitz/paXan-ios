@@ -27,7 +27,7 @@ class SetupButton: UIButton {
         super.init(coder: coder)
     }
 
-    init?(text: String) {
+    init(text: String) {
         super.init(frame: .zero)
         setTitle(text, for: .normal)
     }

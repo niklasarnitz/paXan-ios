@@ -6,13 +6,13 @@ import UIKit
 /// Third Setup Page View Controller
 class ThirdSetupPageViewController: UIViewController {
     // MARK: Instance Properties
-    private lazy var titleLabel = TitleLabel(text: thirdPageTitle)!
+    private lazy var titleLabel = TitleLabel(text: thirdPageTitle)
 
-    private lazy var subTitleLabel = SubtitleLabel(text: thirdPageSubtitle)!
+    private lazy var subTitleLabel = SubtitleLabel(text: thirdPageSubtitle)
 
-    private lazy var continueButton = SetupButton(text: setupContinueButtonTitle)!
+    private lazy var continueButton = SetupButton(text: setupContinueButtonTitle)
 
-    private lazy var heimatlosTitleLabel = TitleLabel(text: "#heimatlos")!
+    private lazy var heimatlosTitleLabel = TitleLabel(text: "#heimatlos")
 
     private lazy var seminarOnePickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -72,7 +72,7 @@ class ThirdSetupPageViewController: UIViewController {
         return textField
     }()
 
-    private lazy var heimwehTitleLabel = TitleLabel(text: "#heimweh")!
+    private lazy var heimwehTitleLabel = TitleLabel(text: "#heimweh")
 
     private lazy var seminarThreePickerView: UIPickerView = {
         let pickerView = UIPickerView()

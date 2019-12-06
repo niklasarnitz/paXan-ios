@@ -17,7 +17,7 @@ struct Seminar {
     var seminarUnit: Int?
 
     // MARK: Initializer
-    init?(title: String?, referent: Referent?, description: String?, setPlace: Place?, unit: Int?) {
+    init(title: String?, referent: Referent?, description: String?, setPlace: Place?, unit: Int?) {
         self.title = title
         self.referent = referent
         self.description = description

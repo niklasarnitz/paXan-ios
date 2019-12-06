@@ -6,9 +6,9 @@ import UIKit
 /// Second Setup Page View Controller
 class SecondSetupPageViewController: UIViewController {
     // MARK: Instance Properties
-    private lazy var titleLabel = TitleLabel(text: secondPageTitle)!
+    private lazy var titleLabel = TitleLabel(text: secondPageTitle)
 
-    private lazy var subTitleLabel = SubtitleLabel(text: secondPageSubtitle)!
+    private lazy var subTitleLabel = SubtitleLabel(text: secondPageSubtitle)
 
     private lazy var nameTextField: UITextField = {
         let textField = UITextField()

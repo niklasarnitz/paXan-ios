@@ -1,12 +1,54 @@
 // Copyright © 2019 SWDEC. All rights reserved.
 
-import MapKit
 import UIKit
 
-class SeminarsTableViewController: UITableViewController {
+class SeminarTableViewController: UIViewController {
+    private lazy var tableView = SeminarsTableViewController()
+    private lazy var doneButton = SeminarButton(text: "Fertig")
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.backgroundColor = .white
+
+        setupTableView()
+        setupDoneButton()
+    }
+
+    private func setupTableView() {
+        view.addSubview(tableView.view)
+        tableView.view.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(10)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-80)
+        }
+    }
+
+    private func setupDoneButton() {
+        view.addSubview(doneButton!)
+        doneButton?.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-40)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+            make.height.equalTo(40)
+        }
+
+        doneButton?.addTarget(self, action: #selector(doneButtonPressed), for: .touchUpInside)
+    }
+
+    @objc
+    private func doneButtonPressed() {
+        doneButton?.pulsate()
+
+        dismiss(animated: true)
+    }
+}
+
+private class SeminarsTableViewController: UITableViewController {
     private var detailViewController: LexikonDetailViewController?
 
-    private var cellId = "seminarCell"
+    private let cellId: String = "seminarCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,21 +88,8 @@ class SeminarsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
 
-        let imageView = UIImageView(image: Images.chevronRight)
-        cell.addSubview(imageView)
-        imageView.tintColor = Colors.ecGreen
-        imageView.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.trailing.equalToSuperview().offset(-20)
-            make.size.equalTo(cell.bounds.height - 20)
-        }
-
         let seminarData = seminars[indexPath.row]
         cell.textLabel!.text = seminarData.title
-
-        cell.imageView?.image = Images.userManual
-        cell.imageView?.tintColor = Colors.ecGreen
-
         return cell
     }
 

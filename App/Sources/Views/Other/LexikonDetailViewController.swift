@@ -3,11 +3,11 @@
 import UIKit
 
 class LexikonDetailViewController: UIViewController {
-    private lazy var titleLabel = TitleLabel(text: "")!
+    private lazy var titleLabel = TitleLabel(text: "")
 
     private lazy var descriptionTextView = DescriptionTextView()
 
-    private lazy var doneButton = SetupButton(text: "Fertig")!
+    private lazy var doneButton = SetupButton(text: "Fertig")
 
     init?(title: String, description: String) {
         super.init(nibName: nil, bundle: nil)

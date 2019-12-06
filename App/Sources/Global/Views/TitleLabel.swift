@@ -13,7 +13,7 @@ class TitleLabel: UILabel {
     }
 
     /// Creates a title label with the given text
-    init?(text: String) {
+    init(text: String) {
         super.init(frame: .zero)
         self.text = text
     }

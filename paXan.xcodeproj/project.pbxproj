@@ -8,9 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0E8611E67BA94825964453FA /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538967131DCEEECEA70FB8BA /* SnapKit.framework */; };
+		850BA458239A7A810098196D /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA457239A7A810098196D /* TimeTableViewController.swift */; };
+		850BA45A239A7B8A0098196D /* SpendenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA459239A7B8A0098196D /* SpendenViewController.swift */; };
+		850BA45C239A7C250098196D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA45B239A7C250098196D /* AboutViewController.swift */; };
 		851141D6239A58050062438E /* EditorsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141D5239A58050062438E /* EditorsDelegate.swift */; };
 		851141D8239A62C90062438E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141D7239A62C90062438E /* InfoViewController.swift */; };
 		851141DA239A68150062438E /* SeminarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141D9239A68150062438E /* SeminarsTableViewController.swift */; };
+		851141DD239A6C870062438E /* ReferentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141DC239A6C870062438E /* ReferentDetailViewController.swift */; };
+		851141DF239A6D3B0062438E /* ProfilePictureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141DE239A6D3B0062438E /* ProfilePictureImageView.swift */; };
+		851141E3239A6F570062438E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 851141E2239A6F570062438E /* Media.xcassets */; };
 		851E6BB823636C68002F0168 /* SeminarsEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */; };
 		85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85257B382362CA5600E84CC5 /* UIButtonExtension.swift */; };
 		8539E59C237C790400EBC1DB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539E59B237C790400EBC1DB /* Data.swift */; };
@@ -70,9 +76,15 @@
 /* Begin PBXFileReference section */
 		538967131DCEEECEA70FB8BA /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapKit.framework; path = Dependencies/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Dependencies/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
+		850BA457239A7A810098196D /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
+		850BA459239A7B8A0098196D /* SpendenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendenViewController.swift; sourceTree = "<group>"; };
+		850BA45B239A7C250098196D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		851141D5239A58050062438E /* EditorsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsDelegate.swift; sourceTree = "<group>"; };
 		851141D7239A62C90062438E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		851141D9239A68150062438E /* SeminarsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarsTableViewController.swift; sourceTree = "<group>"; };
+		851141DC239A6C870062438E /* ReferentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferentDetailViewController.swift; sourceTree = "<group>"; };
+		851141DE239A6D3B0062438E /* ProfilePictureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureImageView.swift; sourceTree = "<group>"; };
+		851141E2239A6F570062438E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarsEditViewController.swift; sourceTree = "<group>"; };
 		85257B382362CA5600E84CC5 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		8539E599237C78B500EBC1DB /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -163,6 +175,18 @@
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
+		851141DB239A6C720062438E /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */,
+				85E3F2F5231409F000E6B845 /* MapViewController.swift */,
+				85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */,
+				853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */,
+				851141D7239A62C90062438E /* InfoViewController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
 		853CC15F2360C3B400A3F4F3 /* SetupViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,11 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				85AAD044231ACD2C00C0F813 /* Other */,
-				85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */,
-				85E3F2F5231409F000E6B845 /* MapViewController.swift */,
-				85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */,
-				853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */,
-				851141D7239A62C90062438E /* InfoViewController.swift */,
+				851141DB239A6C720062438E /* MainTabBar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +291,7 @@
 				85E884C72399494D004C3AE4 /* SubtitleLabel.swift */,
 				85E884C923994B6E004C3AE4 /* DescriptionTextView.swift */,
 				85E884CB23994D62004C3AE4 /* SeminarPickerViewTextField.swift */,
+				851141DE239A6D3B0062438E /* ProfilePictureImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +317,10 @@
 				854CC10823932F87000AD257 /* SeminarDetailViewController.swift */,
 				851141D5239A58050062438E /* EditorsDelegate.swift */,
 				851141D9239A68150062438E /* SeminarsTableViewController.swift */,
+				851141DC239A6C870062438E /* ReferentDetailViewController.swift */,
+				850BA457239A7A810098196D /* TimeTableViewController.swift */,
+				850BA459239A7B8A0098196D /* SpendenViewController.swift */,
+				850BA45B239A7C250098196D /* AboutViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -345,6 +370,7 @@
 				85939C142314075F0009A009 /* Colors.xcassets */,
 				85939C07231406A60009A009 /* Images.xcassets */,
 				85866CCA23151F5600B408E9 /* Assets.swift */,
+				851141E2239A6F570062438E /* Media.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -425,6 +451,7 @@
 				85939C08231406A60009A009 /* Images.xcassets in Resources */,
 				85B4ACC62395D6A1001F282C /* Nunito-Light.ttf in Resources */,
 				85B4ACCB2395D6A1001F282C /* Nunito-Black.ttf in Resources */,
+				851141E3239A6F570062438E /* Media.xcassets in Resources */,
 				85B4ACC32395D6A1001F282C /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				85939C06231406A50009A009 /* Main.storyboard in Resources */,
 				85B4ACC42395D6A1001F282C /* Nunito-ExtraBold.ttf in Resources */,
@@ -488,6 +515,7 @@
 				85E3F2F42314099D00E6B845 /* SeminarPlanViewController.swift in Sources */,
 				853CC1642360C6DF00A3F4F3 /* SetupAssistantPages.swift in Sources */,
 				85AAD040231ACC7600C0F813 /* Style.swift in Sources */,
+				851141DF239A6D3B0062438E /* ProfilePictureImageView.swift in Sources */,
 				853CC16E2360CD7C00A3F4F3 /* MainTabBar.swift in Sources */,
 				85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */,
 				85E884CA23994B6E004C3AE4 /* DescriptionTextView.swift in Sources */,
@@ -507,13 +535,17 @@
 				85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */,
 				85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */,
 				851141DA239A68150062438E /* SeminarsTableViewController.swift in Sources */,
+				850BA45A239A7B8A0098196D /* SpendenViewController.swift in Sources */,
 				85E884CC23994D62004C3AE4 /* SeminarPickerViewTextField.swift in Sources */,
 				854CC10723932CB7000AD257 /* Place.swift in Sources */,
 				85E884C623994863004C3AE4 /* TitleLabel.swift in Sources */,
+				851141DD239A6C870062438E /* ReferentDetailViewController.swift in Sources */,
 				85866CCB23151F5600B408E9 /* Assets.swift in Sources */,
 				8539E59C237C790400EBC1DB /* Data.swift in Sources */,
 				85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */,
 				85AAD03A231ABCC900C0F813 /* LexikonTableViewController.swift in Sources */,
+				850BA458239A7A810098196D /* TimeTableViewController.swift in Sources */,
+				850BA45C239A7C250098196D /* AboutViewController.swift in Sources */,
 				853CC1682360CB3E00A3F4F3 /* SecondSetupPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -51,7 +51,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "Läuft – die geistliche Begleitung der Kinder und Jugendlichen",
         referent: Referent(
@@ -68,7 +68,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "EC to go",
         referent: Referent(
@@ -85,7 +85,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "Jugendarbeit goes VIRAL",
         referent: Referent(
@@ -102,7 +102,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "Einladend gestalten",
         referent: Referent(
@@ -119,7 +119,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "Digital Natives & Co.",
         referent: Referent(
@@ -136,7 +136,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
         referent: Referent(
@@ -153,7 +153,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
         referent: Referent(
@@ -170,7 +170,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
         referent: Referent(
@@ -187,7 +187,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
         referent: Referent(
@@ -204,7 +204,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
         referent: Referent(
@@ -221,7 +221,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
         referent: Referent(
@@ -238,7 +238,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
         referent: Referent(
@@ -255,7 +255,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
         referent: Referent(
@@ -272,7 +272,7 @@ let seminars: [Seminar] = [
             long: 0
         ),
         unit: 0
-    )!,
+    ),
 
 ]
 
