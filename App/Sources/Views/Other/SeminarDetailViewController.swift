@@ -64,9 +64,9 @@ class SeminarDetailViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         self.titleLabel.text = seminar.title
-        self.referentLabel.text = "Referent: " + (seminar.referent?.name ?? "")
-        self.roomNameLabel.text = "Raum: " + (seminar.place?.roomname ?? "")
-        self.descriptionLabel.text = "Beschreibung: " + (seminar.description ?? "")
+        self.referentLabel.text = "Referent: " + (seminar.referent.name)
+        self.roomNameLabel.text = "Raum: " + (seminar.place.roomname)
+        self.descriptionLabel.text = "Beschreibung: " + (seminar.description)
     }
 
     @available(*, unavailable)
@@ -161,7 +161,7 @@ class SeminarDetailViewController: UIViewController {
     private func navigateButtonPressed() {
         navigateButton.pulsate()
         let regionDistance: CLLocationDistance = 10000
-        let coordinates = CLLocationCoordinate2DMake(seminar.place!.annotation!.coordinate.latitude, seminar.place!.annotation!.coordinate.longitude)
+        let coordinates = CLLocationCoordinate2DMake(seminar.place.annotation.coordinate.latitude, seminar.place.annotation.coordinate.longitude)
         let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
         let options = [
             MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
@@ -169,7 +169,7 @@ class SeminarDetailViewController: UIViewController {
         ]
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = seminar.place!.roomname
+        mapItem.name = seminar.place.roomname
         mapItem.openInMaps(launchOptions: options)
     }
 }

@@ -3,18 +3,11 @@
 import Foundation
 
 struct LexikonEntry {
-    var title: String?
-    var description: String?
-    var place: Place
+    var title: String
+    var description: String
 
-    init(title: String?, description: String?, roomname: String?, lat: Double, long: Double) {
+    init(title: String, description: String) {
         self.title = title
         self.description = description
-        self.place = Place(
-            title: self.title!,
-            roomname: roomname!,
-            lat: lat,
-            long: long
-        )
     }
 }

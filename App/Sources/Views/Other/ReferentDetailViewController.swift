@@ -12,11 +12,11 @@ class ReferentDetailViewController: UIViewController {
     init(referent: Referent) {
         super.init(nibName: nil, bundle: nil)
 
-        imageView.image = maskRoundedImage(image: referent.picture ?? UIImage(), radius: (referent.picture?.size.height ?? 0) / 2)
+        imageView.image = maskRoundedImage(image: referent.picture, radius: referent.picture.size.height / 2)
 
         nameLabel.text = referent.name
-        connectionCaptionLabel.text = "Organisation: " + (referent.connection ?? "")
-        websiteCaptionLabel.text = "Website: " + (referent.website ?? "")
+        connectionCaptionLabel.text = "Organisation: " + referent.connection
+        websiteCaptionLabel.text = "Website: " + referent.website
     }
 
     @available(*, unavailable)

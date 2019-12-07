@@ -6,9 +6,9 @@ import MapKit
 /// Struct depicting some locationdata
 struct Place {
     /// The title/name of the Place/Location
-    let title: String?
+    let title: String
     /// The roomname of the Place/Location
-    let roomname: String?
+    let roomname: String
 
     /// The latitude of the coordinates of the place
     let lat: Double
@@ -17,7 +17,7 @@ struct Place {
     let long: Double
 
     /// The MKPointAnnotation of the place to be placed on a map
-    let annotation: MKPointAnnotation?
+    let annotation: MKPointAnnotation
 
     // MARK: Initializer
     init(title: String, roomname: String, lat: Double, long: Double) {
@@ -27,7 +27,7 @@ struct Place {
         self.long = long
 
         annotation = MKPointAnnotation()
-        annotation?.title = title
-        annotation?.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+        annotation.title = title
+        annotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
     }
 }

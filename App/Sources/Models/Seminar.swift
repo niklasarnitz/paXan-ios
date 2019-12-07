@@ -6,22 +6,22 @@ import Foundation
 struct Seminar {
     // MARK: Properties
     /// The Seminar's title
-    var title: String?
+    var title: String
     /// The organizer of the Seminar
-    var referent: Referent?
+    var referent: Referent
     /// A short (or long) description of the Seminar
-    var description: String?
+    var description: String
     /// The Location Data for the Seminar
-    var place: Place?
+    var place: Place
     /// Number of the seminar unit
-    var seminarUnit: Int?
+    var time: Date
 
     // MARK: Initializer
-    init(title: String?, referent: Referent?, description: String?, place: Place?, unit: Int?) {
+    init(title: String, referent: Referent, description: String, place: Place, time: Date) {
         self.title = title
         self.referent = referent
         self.description = description
         self.place = place
-        self.seminarUnit = unit
+        self.time = time
     }
 }
