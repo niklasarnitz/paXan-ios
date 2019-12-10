@@ -42,5 +42,7 @@ class SeminarButton: UIButton {
 
         backgroundColor = Colors.ecGreen
         setTitleColor(.white, for: .normal)
+
+        titleLabel?.font = UIFont.buttonBody
     }
 }

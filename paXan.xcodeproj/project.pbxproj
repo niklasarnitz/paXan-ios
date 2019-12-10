@@ -61,6 +61,7 @@
 		85B4ACD02395D6A1001F282C /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B4ACC12395D6A1001F282C /* Nunito-Italic.ttf */; };
 		85B4ACD12395D6A1001F282C /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B4ACC22395D6A1001F282C /* Nunito-LightItalic.ttf */; };
 		85B4ACD72395D6A7001F282C /* Gloss_And_Bloom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B4ACD42395D6A7001F282C /* Gloss_And_Bloom.ttf */; };
+		85B6C5AA239FE565000C33E4 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6C5A9239FE565000C33E4 /* UIFontExtension.swift */; };
 		85D4B419231E8E690010E55F /* HapticFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4B418231E8E690010E55F /* HapticFeedbackManager.swift */; };
 		85E3F2F42314099D00E6B845 /* SeminarPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */; };
 		85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F5231409F000E6B845 /* MapViewController.swift */; };
@@ -133,6 +134,7 @@
 		85B4ACC12395D6A1001F282C /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
 		85B4ACC22395D6A1001F282C /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
 		85B4ACD42395D6A7001F282C /* Gloss_And_Bloom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gloss_And_Bloom.ttf; sourceTree = "<group>"; };
+		85B6C5A9239FE565000C33E4 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		85D4B418231E8E690010E55F /* HapticFeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackManager.swift; sourceTree = "<group>"; };
 		85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarPlanViewController.swift; sourceTree = "<group>"; };
 		85E3F2F5231409F000E6B845 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */,
 				853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */,
 				851141D7239A62C90062438E /* InfoViewController.swift */,
+				85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */,
 				85257B382362CA5600E84CC5 /* UIButtonExtension.swift */,
 				854CC10A2393302C000AD257 /* MKMapViewExtension.swift */,
+				85B6C5A9239FE565000C33E4 /* UIFontExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -313,7 +317,6 @@
 			isa = PBXGroup;
 			children = (
 				853CC15F2360C3B400A3F4F3 /* SetupViewController */,
-				85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */,
 				85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */,
 				851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */,
 				854CC10823932F87000AD257 /* SeminarDetailViewController.swift */,
@@ -520,6 +523,7 @@
 				85AAD040231ACC7600C0F813 /* Style.swift in Sources */,
 				851141DF239A6D3B0062438E /* ProfilePictureImageView.swift in Sources */,
 				853CC16E2360CD7C00A3F4F3 /* MainTabBar.swift in Sources */,
+				85B6C5AA239FE565000C33E4 /* UIFontExtension.swift in Sources */,
 				85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */,
 				85E884CA23994B6E004C3AE4 /* DescriptionTextView.swift in Sources */,
 				85E884C82399494D004C3AE4 /* SubtitleLabel.swift in Sources */,

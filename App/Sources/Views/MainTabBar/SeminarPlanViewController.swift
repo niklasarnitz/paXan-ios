@@ -10,7 +10,7 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         let label = UILabel()
 
         label.text = "#heimatlos"
-        label.font = .preferredFont(forTextStyle: .largeTitle)
+        label.font = .title
         label.textColor = Colors.ecGreen
 
         return label
@@ -29,7 +29,7 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         let button = SeminarButton()
 
         button.titleText = Defaults.seminarOne
-        button.titleLabel?.font = .preferredFont(forTextStyle: .caption1)
+        button.titleLabel?.font = .buttonBody
 
         return button
     }()
@@ -47,7 +47,7 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         let button = SeminarButton()
 
         button.titleText = Defaults.seminarTwo
-        button.titleLabel?.font = .preferredFont(forTextStyle: .caption1)
+        button.titleLabel?.font = .buttonBody
 
         return button
     }()
@@ -75,7 +75,7 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         let button = SeminarButton()
 
         button.titleText = Defaults.seminarThree
-        button.titleLabel?.font = .preferredFont(forTextStyle: .caption1)
+        button.titleLabel?.font = .buttonBody
 
         return button
     }()
@@ -103,8 +103,8 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()
-            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.title]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.title]
             navBarAppearance.backgroundColor = Colors.ecGreen
             super.navigationController?.navigationBar.standardAppearance = navBarAppearance
             super.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance

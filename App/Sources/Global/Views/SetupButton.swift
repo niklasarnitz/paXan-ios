@@ -39,5 +39,7 @@ class SetupButton: UIButton {
         layer.cornerRadius = borderRadius
         layer.borderColor = borderColor
         layer.borderWidth = borderWidth
+
+        titleLabel?.font = UIFont.buttonBody
     }
 }

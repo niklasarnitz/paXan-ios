@@ -1,10 +1,6 @@
 // Copyright © 2019 SWDEC. All rights reserved.
 
-#if os(OSX)
-    import AppKit.NSImage
-#elseif os(iOS) || os(tvOS) || os(watchOS)
-    import UIKit.UIImage
-#endif
+import UIKit.UIImage
 
 // MARK: - Asset Catalogs
 

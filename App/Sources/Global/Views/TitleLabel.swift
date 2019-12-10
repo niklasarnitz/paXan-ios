@@ -22,8 +22,12 @@ class TitleLabel: UILabel {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        font = .title
         textColor = .white
         numberOfLines = 0
+    }
+
+    func setTextColor(color: UIColor) {
+        textColor = color
     }
 }
