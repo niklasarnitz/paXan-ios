@@ -13,6 +13,9 @@ let package = Package(
 
         // IQKeyboardManager - Codeless library to prevent general issues with covering UITextFields/UITextViews
 	    .package(url: "git@github.com:hackiftekhar/IQKeyboardManager.git", from: "6.5.0"),
+
+        // SwiftyJSON The better way to deal with JSON data in Swift.
+        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "4.0.0"),
     ],
     targets: [
         // Main target of the paXan app, located in the ./App folder
@@ -22,6 +25,7 @@ let package = Package(
 		        "SnapKit",
 		        "SwiftyUserDefaults",
 		        "IQKeyboardManagerSwift",
+                "SwiftyJSON",
             ],
             path: "App"
         ),

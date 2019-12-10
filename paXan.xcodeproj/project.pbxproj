@@ -20,7 +20,7 @@
 		851141E3239A6F570062438E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 851141E2239A6F570062438E /* Media.xcassets */; };
 		851E6BB823636C68002F0168 /* SeminarsEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */; };
 		85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85257B382362CA5600E84CC5 /* UIButtonExtension.swift */; };
-		8539E59C237C790400EBC1DB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539E59B237C790400EBC1DB /* Data.swift */; };
+		8539E59C237C790400EBC1DB /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539E59B237C790400EBC1DB /* Strings.swift */; };
 		853C4B662393D30900300689 /* SeminarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C4B652393D30900300689 /* SeminarButton.swift */; };
 		853C4B682393D41D00300689 /* SetupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C4B672393D41D00300689 /* SetupButton.swift */; };
 		853CC15E2360BF8900A3F4F3 /* DefaultsKeysExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */; };
@@ -71,6 +71,7 @@
 		85E884CA23994B6E004C3AE4 /* DescriptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884C923994B6E004C3AE4 /* DescriptionTextView.swift */; };
 		85E884CC23994D62004C3AE4 /* SeminarPickerViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884CB23994D62004C3AE4 /* SeminarPickerViewTextField.swift */; };
 		85E884CE23995AF3004C3AE4 /* Referent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884CD23995AF3004C3AE4 /* Referent.swift */; };
+		868710AC7FF6F5075EF6FB6B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAC6E07135EB4909E0912DB /* SwiftyJSON.framework */; };
 		8BD900518DC1FA74F5D40930 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */; };
 		CD3C8019640CC56CA601F0EA /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */; };
 /* End PBXBuildFile section */
@@ -91,7 +92,7 @@
 		851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarsEditViewController.swift; sourceTree = "<group>"; };
 		85257B382362CA5600E84CC5 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		8539E599237C78B500EBC1DB /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		8539E59B237C790400EBC1DB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		8539E59B237C790400EBC1DB /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		853C4B652393D30900300689 /* SeminarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarButton.swift; sourceTree = "<group>"; };
 		853C4B672393D41D00300689 /* SetupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButton.swift; sourceTree = "<group>"; };
 		853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeysExtension.swift; sourceTree = "<group>"; };
@@ -144,6 +145,7 @@
 		85E884C923994B6E004C3AE4 /* DescriptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextView.swift; sourceTree = "<group>"; };
 		85E884CB23994D62004C3AE4 /* SeminarPickerViewTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarPickerViewTextField.swift; sourceTree = "<group>"; };
 		85E884CD23995AF3004C3AE4 /* Referent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referent.swift; sourceTree = "<group>"; };
+		8EAC6E07135EB4909E0912DB /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyJSON.framework; path = Dependencies/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 				0E8611E67BA94825964453FA /* SnapKit.framework in Frameworks */,
 				CD3C8019640CC56CA601F0EA /* SwiftyUserDefaults.framework in Frameworks */,
 				8BD900518DC1FA74F5D40930 /* IQKeyboardManagerSwift.framework in Frameworks */,
+				868710AC7FF6F5075EF6FB6B /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +169,7 @@
 			children = (
 				69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */,
 				538967131DCEEECEA70FB8BA /* SnapKit.framework */,
+				8EAC6E07135EB4909E0912DB /* SwiftyJSON.framework */,
 				A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */,
 			);
 			name = paXan;
@@ -248,7 +252,7 @@
 				85939C122314073C0009A009 /* Sources */,
 				85E3F39023142BBE00E6B845 /* Resources */,
 				85939C00231406A50009A009 /* AppDelegate.swift */,
-				8539E59B237C790400EBC1DB /* Data.swift */,
+				8539E59B237C790400EBC1DB /* Strings.swift */,
 				85939C04231406A50009A009 /* Main.storyboard */,
 				85939C09231406A60009A009 /* LaunchScreen.storyboard */,
 				85939C0C231406A60009A009 /* Info.plist */,
@@ -494,12 +498,14 @@
 			inputPaths = (
 				"$(SRCROOT)/Dependencies/iOS/IQKeyboardManagerSwift.framework",
 				"$(SRCROOT)/Dependencies/iOS/SnapKit.framework",
+				"$(SRCROOT)/Dependencies/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Dependencies/iOS/SwiftyUserDefaults.framework",
 			);
 			name = Accio;
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManagerSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyJSON.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyUserDefaults.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,7 +555,7 @@
 				85E884C623994863004C3AE4 /* TitleLabel.swift in Sources */,
 				851141DD239A6C870062438E /* ReferentDetailViewController.swift in Sources */,
 				85866CCB23151F5600B408E9 /* Assets.swift in Sources */,
-				8539E59C237C790400EBC1DB /* Data.swift in Sources */,
+				8539E59C237C790400EBC1DB /* Strings.swift in Sources */,
 				85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */,
 				85AAD03A231ABCC900C0F813 /* LexikonTableViewController.swift in Sources */,
 				850BA458239A7A810098196D /* TimeTableViewController.swift in Sources */,
