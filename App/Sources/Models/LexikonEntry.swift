@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct LexikonEntry {
+struct LexikonEntry: Decodable {
     var title: String
     var description: String
 

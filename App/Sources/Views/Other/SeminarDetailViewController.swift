@@ -161,7 +161,7 @@ class SeminarDetailViewController: UIViewController {
     private func navigateButtonPressed() {
         navigateButton.pulsate()
         let regionDistance: CLLocationDistance = 10000
-        let coordinates = CLLocationCoordinate2DMake(seminar.place.annotation.coordinate.latitude, seminar.place.annotation.coordinate.longitude)
+        let coordinates = CLLocationCoordinate2DMake(seminar.place.lat, seminar.place.long)
         let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
         let options = [
             MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),

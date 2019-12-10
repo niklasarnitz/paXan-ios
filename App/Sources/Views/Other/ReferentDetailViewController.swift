@@ -12,7 +12,7 @@ class ReferentDetailViewController: UIViewController {
     init(referent: Referent) {
         super.init(nibName: nil, bundle: nil)
 
-        imageView.image = maskRoundedImage(image: referent.picture, radius: referent.picture.size.height / 2)
+        imageView.image = maskRoundedImage(image: UIImage(data: referent.picture)!, radius: UIImage(data: referent.picture)!.size.height / 2)
 
         nameLabel.text = referent.name
         connectionCaptionLabel.text = "Organisation: " + referent.connection
