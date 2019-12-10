@@ -3,7 +3,7 @@
 import Foundation
 
 /// The struct depicting a Seminar
-struct Seminar: Decodable {
+struct Seminar: Codable {
     // MARK: Properties
     /// The Seminar's title
     var title: String

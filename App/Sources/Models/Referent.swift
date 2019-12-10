@@ -2,7 +2,7 @@
 
 import UIKit
 
-struct Referent: Decodable {
+struct Referent: Codable {
     var name: String
     var connection: String
     var website: String

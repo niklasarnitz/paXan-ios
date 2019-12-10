@@ -4,7 +4,7 @@ import Foundation
 import MapKit
 
 /// Struct depicting some locationdata
-struct Place: Decodable {
+struct Place: Codable {
     /// The title/name of the Place/Location
     let title: String
     /// The roomname of the Place/Location
