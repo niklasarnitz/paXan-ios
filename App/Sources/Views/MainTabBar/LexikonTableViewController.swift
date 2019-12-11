@@ -65,6 +65,7 @@ class LexikonTableViewController: UITableViewController {
 
         let lexikonEntryData = lexikonEntries[indexPath.row]
         cell.textLabel!.text = lexikonEntryData.title
+        cell.textLabel!.font = .buttonBody
 
         cell.imageView?.image = Images.userManual
         cell.imageView?.tintColor = Colors.ecGreen

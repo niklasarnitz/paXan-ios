@@ -84,6 +84,7 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         let button = SeminarButton()
 
         button.titleText = "Bearbeiten"
+        button.titleLabel?.font = .buttonBody
 
         button.isEnabled = true
 

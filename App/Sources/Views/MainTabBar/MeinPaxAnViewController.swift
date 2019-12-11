@@ -12,7 +12,7 @@ class MeinPaxAnViewController: UIViewController {
     private lazy var helloLabel: UILabel = {
         let label = UILabel()
         label.text = "Hallo, \(Defaults.username ?? "Error")"
-        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        label.font = .title
         return label
     }()
 
@@ -27,7 +27,7 @@ class MeinPaxAnViewController: UIViewController {
         label.text = meinPaXanCaption
         label.numberOfLines = 3
         label.textAlignment = .center
-        label.font = UIFont.preferredFont(forTextStyle: .title3)
+        label.font = .buttonBody
         return label
     }()
 
