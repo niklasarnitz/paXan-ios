@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E8611E67BA94825964453FA /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538967131DCEEECEA70FB8BA /* SnapKit.framework */; };
+		7C248CEFBC92BC3F36260B49 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AA791D80A696E6C51CC33C /* Alamofire.framework */; };
 		850BA458239A7A810098196D /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA457239A7A810098196D /* TimeTableViewController.swift */; };
 		850BA45A239A7B8A0098196D /* SpendenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA459239A7B8A0098196D /* SpendenViewController.swift */; };
 		850BA45C239A7C250098196D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA45B239A7C250098196D /* AboutViewController.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41AA791D80A696E6C51CC33C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Alamofire.framework; path = Dependencies/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		538967131DCEEECEA70FB8BA /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapKit.framework; path = Dependencies/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Dependencies/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
 		850BA457239A7A810098196D /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				CD3C8019640CC56CA601F0EA /* SwiftyUserDefaults.framework in Frameworks */,
 				8BD900518DC1FA74F5D40930 /* IQKeyboardManagerSwift.framework in Frameworks */,
 				868710AC7FF6F5075EF6FB6B /* SwiftyJSON.framework in Frameworks */,
+				7C248CEFBC92BC3F36260B49 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +170,7 @@
 		1A01167B88F121C71A885B9D /* paXan */ = {
 			isa = PBXGroup;
 			children = (
+				41AA791D80A696E6C51CC33C /* Alamofire.framework */,
 				69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */,
 				538967131DCEEECEA70FB8BA /* SnapKit.framework */,
 				8EAC6E07135EB4909E0912DB /* SwiftyJSON.framework */,
@@ -186,12 +190,12 @@
 		851141DB239A6C720062438E /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */,
+				85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */,
 				85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */,
 				85E3F2F5231409F000E6B845 /* MapViewController.swift */,
-				85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */,
-				853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */,
-				851141D7239A62C90062438E /* InfoViewController.swift */,
 				85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */,
+				851141D7239A62C90062438E /* InfoViewController.swift */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -496,6 +500,7 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Dependencies/iOS/Alamofire.framework",
 				"$(SRCROOT)/Dependencies/iOS/IQKeyboardManagerSwift.framework",
 				"$(SRCROOT)/Dependencies/iOS/SnapKit.framework",
 				"$(SRCROOT)/Dependencies/iOS/SwiftyJSON.framework",
@@ -503,6 +508,7 @@
 			);
 			name = Accio;
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManagerSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyJSON.framework",
