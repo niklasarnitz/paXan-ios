@@ -4,11 +4,6 @@ import SwiftyUserDefaults
 import UIKit
 
 class MeinPaxAnViewController: UIViewController {
-    private lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        return scrollView
-    }()
-
     private lazy var helloLabel: UILabel = {
         let label = UILabel()
         label.text = "Hallo, \(Defaults.username ?? "Error")"
@@ -44,49 +39,43 @@ class MeinPaxAnViewController: UIViewController {
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()
-            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.title]
-            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.title]
+            navBarAppearance.titleTextAttributes = [
+                .foregroundColor: UIColor.white,
+                .font: UIFont.title
+            ]
+            navBarAppearance.largeTitleTextAttributes = [
+                .foregroundColor: UIColor.white,
+                .font: UIFont.title
+            ]
             navBarAppearance.backgroundColor = Colors.ecGreen
             super.navigationController?.navigationBar.standardAppearance = navBarAppearance
             super.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
         }
 
-        setupScrollView()
         setupUserImageView()
         setupHelloLabel()
         setupDaysUntilPaXanLabel()
     }
 
-    private func setupScrollView() {
-        view.addSubview(scrollView)
-        scrollView.snp.makeConstraints { make in
-            make.top.equalTo(view.snp.topMargin)
-            make.bottom.equalTo(view.snp.bottomMargin)
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-        }
-        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
-
     private func setupUserImageView() {
-        scrollView.addSubview(userImageView)
+        view.addSubview(userImageView)
         userImageView.snp.makeConstraints { make in
-            make.top.equalTo(scrollView.snp.topMargin).offset(40)
+            make.top.equalTo(super.view.snp.topMargin).offset(40)
             make.size.equalTo(70)
             make.centerX.equalToSuperview()
         }
     }
 
     private func setupHelloLabel() {
-        scrollView.addSubview(helloLabel)
+        view.addSubview(helloLabel)
         helloLabel.snp.makeConstraints { make in
-            make.top.equalTo(userImageView.snp.bottomMargin).offset(15)
+            make.top.equalTo(userImageView.snp.bottomMargin)
             make.centerX.equalToSuperview()
         }
     }
 
     private func setupDaysUntilPaXanLabel() {
-        scrollView.addSubview(daysUntilPaXanLabel)
+        view.addSubview(daysUntilPaXanLabel)
         daysUntilPaXanLabel.snp.makeConstraints { make in
             make.top.equalTo(helloLabel.snp.bottomMargin).offset(20)
             make.centerX.equalToSuperview()
