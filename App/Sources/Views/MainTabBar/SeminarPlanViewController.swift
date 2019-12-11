@@ -146,7 +146,7 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
 
         seminarOneButton.snp.makeConstraints { make in
             make.top.equalTo(seminarOneCaptionLabel.snp.bottomMargin).offset(15)
-            make.height.equalTo(30)
+            make.height.equalTo(40)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
         }
@@ -170,7 +170,7 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
 
         seminarTwoButton.snp.makeConstraints { make in
             make.top.equalTo(seminarTwoCaptionLabel.snp.bottomMargin).offset(15)
-            make.height.equalTo(30)
+            make.height.equalTo(40)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
         }
@@ -203,7 +203,7 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
 
         seminarThreeButton.snp.makeConstraints { make in
             make.top.equalTo(seminarThreeCaptionLabel.snp.bottomMargin).offset(15)
-            make.height.equalTo(30)
+            make.height.equalTo(40)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
         }
@@ -215,7 +215,7 @@ class SeminarPlanViewController: UIViewController, EditorsDelegate {
         view.addSubview(editButton)
 
         editButton.snp.makeConstraints { make in
-            make.height.equalTo(30)
+            make.height.equalTo(40)
             make.bottom.equalTo(super.view.snp.bottomMargin).offset(-40)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)

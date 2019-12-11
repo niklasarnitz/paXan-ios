@@ -13,6 +13,7 @@
 		850BA45A239A7B8A0098196D /* SpendenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA459239A7B8A0098196D /* SpendenViewController.swift */; };
 		850BA45C239A7C250098196D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA45B239A7C250098196D /* AboutViewController.swift */; };
 		850BA45E239A81FE0098196D /* ReferentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA45D239A81FE0098196D /* ReferentTableViewController.swift */; };
+		850DC89D23A13C700097C927 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DC89C23A13C700097C927 /* DataManager.swift */; };
 		851141D6239A58050062438E /* EditorsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141D5239A58050062438E /* EditorsDelegate.swift */; };
 		851141D8239A62C90062438E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141D7239A62C90062438E /* InfoViewController.swift */; };
 		851141DA239A68150062438E /* SeminarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141D9239A68150062438E /* SeminarTableViewController.swift */; };
@@ -85,6 +86,7 @@
 		850BA459239A7B8A0098196D /* SpendenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendenViewController.swift; sourceTree = "<group>"; };
 		850BA45B239A7C250098196D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		850BA45D239A81FE0098196D /* ReferentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferentTableViewController.swift; sourceTree = "<group>"; };
+		850DC89C23A13C700097C927 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		851141D5239A58050062438E /* EditorsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsDelegate.swift; sourceTree = "<group>"; };
 		851141D7239A62C90062438E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		851141D9239A68150062438E /* SeminarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarTableViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				85939C09231406A60009A009 /* LaunchScreen.storyboard */,
 				85939C0C231406A60009A009 /* Info.plist */,
 				85939BFE231406A50009A009 /* Products */,
+				850DC89C23A13C700097C927 /* DataManager.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				851141DA239A68150062438E /* SeminarTableViewController.swift in Sources */,
 				850BA45A239A7B8A0098196D /* SpendenViewController.swift in Sources */,
 				85E884CC23994D62004C3AE4 /* SeminarPickerViewTextField.swift in Sources */,
+				850DC89D23A13C700097C927 /* DataManager.swift in Sources */,
 				854CC10723932CB7000AD257 /* Place.swift in Sources */,
 				85E884C623994863004C3AE4 /* TitleLabel.swift in Sources */,
 				851141DD239A6C870062438E /* ReferentDetailViewController.swift in Sources */,
