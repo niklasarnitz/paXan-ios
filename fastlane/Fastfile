@@ -23,3 +23,7 @@ platform :ios do
     upload_to_testflight
   end
 end
+
+lane :release do
+  build_app(scheme: "MyApp")
+end
