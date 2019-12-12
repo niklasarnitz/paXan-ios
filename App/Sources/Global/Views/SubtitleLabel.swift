@@ -28,7 +28,7 @@ class SubtitleLabel: UILabel {
         lineBreakMode = .byWordWrapping
 
         if #available(iOS 13.0, *) {
-            textColor = UIColor.label
+            textColor = UIColor.label.inverseColor()
         } else {
             textColor = .white
         }

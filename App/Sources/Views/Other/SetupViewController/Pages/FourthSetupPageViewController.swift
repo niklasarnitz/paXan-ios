@@ -44,6 +44,8 @@ class FourthSetupPageViewController: UIViewController {
     }
 
     private func setupTitleLabel() {
+        titleLabel.textAlignment = .center
+
         view.addSubview(titleLabel)
 
         titleLabel.snp.makeConstraints { make in

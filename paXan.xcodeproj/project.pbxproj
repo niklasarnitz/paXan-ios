@@ -40,6 +40,7 @@
 		858ECD6423A23B800055B9FB /* paXanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858ECD6323A23B800055B9FB /* paXanUITests.swift */; };
 		858ECD7823A23B9D0055B9FB /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858ECD6D23A23B920055B9FB /* SnapshotHelper.swift */; };
 		858ECD7A23A243ED0055B9FB /* createScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858ECD7923A243ED0055B9FB /* createScreenshots.swift */; };
+		858ECD7C23A244D90055B9FB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858ECD7B23A244D90055B9FB /* UIColorExtension.swift */; };
 		85939C01231406A50009A009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85939C00231406A50009A009 /* AppDelegate.swift */; };
 		85939C06231406A50009A009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85939C04231406A50009A009 /* Main.storyboard */; };
 		85939C08231406A60009A009 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85939C07231406A60009A009 /* Images.xcassets */; };
@@ -134,6 +135,7 @@
 		858ECD7023A23B920055B9FB /* report.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
 		858ECD7123A23B920055B9FB /* Snapfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
 		858ECD7923A243ED0055B9FB /* createScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createScreenshots.swift; sourceTree = "<group>"; };
+		858ECD7B23A244D90055B9FB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		85939BFD231406A50009A009 /* paXan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paXan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85939C00231406A50009A009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85939C05231406A50009A009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 				85257B382362CA5600E84CC5 /* UIButtonExtension.swift */,
 				854CC10A2393302C000AD257 /* MKMapViewExtension.swift */,
 				85B6C5A9239FE565000C33E4 /* UIFontExtension.swift */,
+				858ECD7B23A244D90055B9FB /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 				853CC15E2360BF8900A3F4F3 /* DefaultsKeysExtension.swift in Sources */,
 				85D4B419231E8E690010E55F /* HapticFeedbackManager.swift in Sources */,
 				853CC16A2360CB4800A3F4F3 /* ThirdSetupPageViewController.swift in Sources */,
+				858ECD7C23A244D90055B9FB /* UIColorExtension.swift in Sources */,
 				85866CD123154E6300B408E9 /* LexikonEntry.swift in Sources */,
 				85939C01231406A50009A009 /* AppDelegate.swift in Sources */,
 				853C4B662393D30900300689 /* SeminarButton.swift in Sources */,

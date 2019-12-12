@@ -37,6 +37,9 @@ class FirstSetupPageViewController: UIViewController {
     }
 
     private func setupTitleLabel() {
+        titleLabel.contentMode = .center
+        titleLabel.textAlignment = .center
+
         view.addSubview(titleLabel)
 
         titleLabel.snp.makeConstraints { make in
