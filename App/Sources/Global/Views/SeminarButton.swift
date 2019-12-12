@@ -41,7 +41,11 @@ class SeminarButton: UIButton {
         layer.borderWidth = borderWidth
 
         backgroundColor = Colors.ecGreen
-        setTitleColor(.white, for: .normal)
+        if #available(iOS 13.0, *) {
+            setTitleColor(UIColor.label, for: .normal)
+        } else {
+            setTitleColor(.white, for: .normal)
+        }
 
         titleLabel?.font = UIFont.buttonBody
     }

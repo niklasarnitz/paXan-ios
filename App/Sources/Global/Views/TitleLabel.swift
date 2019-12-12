@@ -23,8 +23,13 @@ class TitleLabel: UILabel {
         super.layoutSubviews()
 
         font = .title
-        textColor = .white
         numberOfLines = 0
+
+        if #available(iOS 13.0, *) {
+            self.setTextColor(color: UIColor.label)
+        } else {
+            self.setTextColor(color: .white)
+        }
     }
 
     func setTextColor(color: UIColor) {

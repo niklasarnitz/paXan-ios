@@ -2,48 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
-        "state": {
-          "branch": null,
-          "revision": "2cbf59935fbb1f26e352ce4db53f1cf9408d5313",
-          "version": "5.0.0-rc.3"
-        }
-      },
-      {
-        "package": "IQKeyboardManagerSwift",
-        "repositoryURL": "git@github.com:hackiftekhar/IQKeyboardManager.git",
-        "state": {
-          "branch": null,
-          "revision": "dba0d0a6689534e7b7aae7d3728af0ca60a24b66",
-          "version": "6.5.4"
-        }
-      },
-      {
         "package": "SnapKit",
         "repositoryURL": "git@github.com:SnapKit/SnapKit.git",
         "state": {
           "branch": null,
           "revision": "d458564516e5676af9c70b4f4b2a9178294f1bc6",
           "version": "5.0.1"
-        }
-      },
-      {
-        "package": "SwiftyJSON",
-        "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON.git",
-        "state": {
-          "branch": null,
-          "revision": "2b6054efa051565954e1d2b9da831680026cd768",
-          "version": "4.3.0"
-        }
-      },
-      {
-        "package": "SwiftyUserDefaults",
-        "repositoryURL": "git@github.com:sunshinejr/SwiftyUserDefaults.git",
-        "state": {
-          "branch": null,
-          "revision": "dbd126b8957fc5af94d1ed5443f8f4b9405356ee",
-          "version": "5.0.0-beta.5"
         }
       }
     ]

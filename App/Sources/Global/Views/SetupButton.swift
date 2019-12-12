@@ -41,5 +41,11 @@ class SetupButton: UIButton {
         layer.borderWidth = borderWidth
 
         titleLabel?.font = UIFont.buttonBody
+
+        if #available(iOS 13.0, *) {
+            setTitleColor(UIColor.label, for: .normal)
+        } else {
+            setTitleColor(.white, for: .normal)
+        }
     }
 }

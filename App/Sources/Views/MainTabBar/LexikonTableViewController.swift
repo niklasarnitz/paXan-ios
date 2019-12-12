@@ -67,6 +67,12 @@ class LexikonTableViewController: UITableViewController {
         cell.textLabel!.text = lexikonEntryData.title
         cell.textLabel!.font = .buttonBody
 
+        if #available(iOS 13.0, *) {
+            cell.textLabel!.textColor = .label
+        } else {
+            cell.textLabel!.textColor = .white
+        }
+
         cell.imageView?.image = Images.userManual
         cell.imageView?.tintColor = Colors.ecGreen
 

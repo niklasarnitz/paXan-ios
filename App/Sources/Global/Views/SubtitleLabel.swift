@@ -23,9 +23,14 @@ class SubtitleLabel: UILabel {
         super.layoutSubviews()
 
         font = UIFont.preferredFont(forTextStyle: .subheadline)
-        textColor = .white
         numberOfLines = 0
         textAlignment = .center
         lineBreakMode = .byWordWrapping
+
+        if #available(iOS 13.0, *) {
+            textColor = UIColor.label
+        } else {
+            textColor = .white
+        }
     }
 }
