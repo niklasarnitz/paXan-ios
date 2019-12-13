@@ -72,6 +72,7 @@
 		85D1186D23A3F6CD00EC3D88 /* ZeitplanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1186C23A3F6CD00EC3D88 /* ZeitplanViewController.swift */; };
 		85D1186F23A3FFE100EC3D88 /* EventLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1186E23A3FFE100EC3D88 /* EventLabel.swift */; };
 		85D1187123A400A500EC3D88 /* EventBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1187023A400A500EC3D88 /* EventBody.swift */; };
+		85D1187323A44BFC00EC3D88 /* DeltaMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1187223A44BFC00EC3D88 /* DeltaMapViewController.swift */; };
 		85D4B419231E8E690010E55F /* HapticFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4B418231E8E690010E55F /* HapticFeedbackManager.swift */; };
 		85E3F2F42314099D00E6B845 /* SeminarPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */; };
 		85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F5231409F000E6B845 /* MapViewController.swift */; };
@@ -172,6 +173,7 @@
 		85D1186C23A3F6CD00EC3D88 /* ZeitplanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeitplanViewController.swift; sourceTree = "<group>"; };
 		85D1186E23A3FFE100EC3D88 /* EventLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLabel.swift; sourceTree = "<group>"; };
 		85D1187023A400A500EC3D88 /* EventBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBody.swift; sourceTree = "<group>"; };
+		85D1187223A44BFC00EC3D88 /* DeltaMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeltaMapViewController.swift; sourceTree = "<group>"; };
 		85D4B418231E8E690010E55F /* HapticFeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackManager.swift; sourceTree = "<group>"; };
 		85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarPlanViewController.swift; sourceTree = "<group>"; };
 		85E3F2F5231409F000E6B845 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 				850BA457239A7A810098196D /* TimeTableViewController.swift */,
 				850BA459239A7B8A0098196D /* SpendenViewController.swift */,
 				850BA45B239A7C250098196D /* AboutViewController.swift */,
+				85D1187223A44BFC00EC3D88 /* DeltaMapViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				853CC16C2360CB6300A3F4F3 /* FourthSetupPageViewController.swift in Sources */,
 				851141D6239A58050062438E /* EditorsDelegate.swift in Sources */,
 				851141D8239A62C90062438E /* InfoViewController.swift in Sources */,
+				85D1187323A44BFC00EC3D88 /* DeltaMapViewController.swift in Sources */,
 				85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */,
 				85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */,
 				851141DA239A68150062438E /* SeminarTableViewController.swift in Sources */,
