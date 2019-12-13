@@ -1,9 +1,12 @@
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import Foundation
+import ObjectMapper
+import SwiftyUserDefaults
+import UIKit.UIImage
 
 /// The struct depicting a Seminar
-struct Seminar: Codable {
+struct Seminar: Codable, Mappable, DefaultsSerializable {
     // MARK: Properties
     /// The Seminar's title
     var title: String
@@ -23,5 +26,29 @@ struct Seminar: Codable {
         self.description = description
         self.place = place
         self.time = time
+    }
+
+    init() {
+        self.title = ""
+        self.referent = Referent(name: "", connection: "", website: "", picture: UIImage())
+        self.description = ""
+        self.place = Place(title: "", roomname: "", lat: 0, long: 0)
+        self.time = Date()
+    }
+
+    init?(map: Map) {
+        self.title = ""
+        self.referent = Referent(name: "", connection: "", website: "", picture: UIImage())
+        self.description = ""
+        self.place = Place(title: "", roomname: "", lat: 0, long: 0)
+        self.time = Date()
+    }
+
+    mutating func mapping(map: Map) {
+        title <- map["title"]
+        referent <- map["referent"]
+        description <- map["description"]
+        place <- map["place"]
+        time <- map["time"]
     }
 }

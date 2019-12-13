@@ -1,6 +1,6 @@
 // Copyright © 2019 SWDEC. All rights reserved.
 
-import MapKit
+import SwiftyUserDefaults
 import UIKit
 
 class LexikonTableViewController: UITableViewController {
@@ -19,7 +19,6 @@ class LexikonTableViewController: UITableViewController {
             tableView.backgroundView?.backgroundColor = .white
         }
 
-        // TODO: Fix the navigatioBar on iOS 13. This is only a hotfix
         // TODO: Fix the navigatiobar on iOS 13. This is only a hotfix
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
@@ -48,7 +47,7 @@ class LexikonTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lexikonEntries.count
+        return Defaults.lexikonEntries.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,7 +62,7 @@ class LexikonTableViewController: UITableViewController {
             make.size.equalTo(cell.bounds.height - 20)
         }
 
-        let lexikonEntryData = lexikonEntries[indexPath.row]
+        let lexikonEntryData = Defaults.lexikonEntries[indexPath.row]
         cell.textLabel!.text = lexikonEntryData.title
         cell.textLabel!.font = .buttonBody
 
@@ -80,12 +79,12 @@ class LexikonTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailData = lexikonEntries[indexPath.row]
+        let detailData = Defaults.lexikonEntries[indexPath.row]
         present(
             LexikonDetailViewController(
                 title: detailData.title,
                 description: detailData.description
-                )!,
+            )!,
             animated: true
         )
         tableView.deselectRow(at: indexPath, animated: true)

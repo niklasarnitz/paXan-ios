@@ -1,5 +1,6 @@
 // Copyright © 2019 SWDEC. All rights reserved.
 
+import SwiftyUserDefaults
 import UIKit.UIImage
 
 // MARK: Strings
@@ -34,7 +35,7 @@ let setupFinishButtonTitle: String = "Fertig"
 let meinPaXanCaption: String = "paXan startet bald!\nDann kannst du\ndie App benutzen."
 
 // MARK: Seminars
-let seminars: [Seminar] = [
+var seminars: [Seminar] = [
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
         referent: Referent(
@@ -274,12 +275,16 @@ let seminars: [Seminar] = [
         time: Date()
     ),
 
-]
+    ] {
+    didSet {
+
+    }
+}
 
 // MARK: Lexikon Entries
-let lexikonEntries: [LexikonEntry] = [
+let backupLexikonEntries: [LexikonEntry] = [
     LexikonEntry(
-        title: "Bistro",
+        title: "BBistro",
         description: "Natürlich ist für deine Verpflegung bei den Hauptmahlzeiten bestens gesorgt. Es geht aber nichts über einen leckeren Snack zu später Stunde. Wenn dein Magen nach den Abendveranstaltungen wieder knurrt, dann laden wir dich herzlich in unser Bistro im kleinen Verpflegungszelt 1 ein. Den kleinen Abendsnack gibt es dort zwischen 21:30 Uhr und 23:30 Uhr: Crepes, Flammkuchen und andere Leckereien. Eis und kalte Getränke gibt es den ganzen Tag über im Foyer und abends auch im Bistro."
     ),
     LexikonEntry(

@@ -20,14 +20,19 @@ let package = Package(
         .package(url: "git@github.com:tristanhimmelman/ObjectMapper.git", .upToNextMajor(from: "3.5.1")),
 
         // AlamofireObjectMapper - An Alamofire extension which converts JSON response data into swift objects using ObjectMapper
-//        .package(url: "git@github.com:tristanhimmelman/AlamofireObjectMapper.git", .upToNextMajor(from: "6.2.0")),
+        .package(url: "git@github.com:niklasarnitz/AlamofireObjectMapper.git", .branch("master")),
     ],
     targets: [
     .target(
         name: "paXan",
         dependencies: [
             "SnapKit",
-        ],
+            "SwiftyUserDefaults",
+            "IQKeyboardManagerSwift",
+            "Alamofire",
+            "ObjectMapper",
+            "AlamofireObjectMapper",
+	],
         path: "App"
     )
     ]

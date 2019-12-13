@@ -51,11 +51,11 @@
             </objects>
             <point key="canvasLocation" x="1866.6666666666667" y="-667.63392857142856"/>
         </scene>
-        <!--Seminarplan-->
+        <!--Programm-->
         <scene sceneID="KZR-eb-5Q7">
             <objects>
-                <viewController id="KAG-tV-8DW" customClass="SeminarPlanViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Seminarplan" id="lgw-8Q-DuY"/>
+                <viewController id="KAG-tV-8DW" customClass="ZeitplanViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Programm" id="lgw-8Q-DuY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XwC-BP-P4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,11 +98,11 @@
             </objects>
             <point key="canvasLocation" x="956.52173913043487" y="-667.63392857142856"/>
         </scene>
-        <!--Seminarplan-->
+        <!--Programm-->
         <scene sceneID="bxz-Wl-MXV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z9N-pl-430" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Seminarplan" image="timetable" id="A6b-tR-pyL"/>
+                    <tabBarItem key="tabBarItem" title="Programm" image="timetable" id="A6b-tR-pyL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="GhM-cX-hKT">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
