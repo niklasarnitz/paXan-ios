@@ -220,9 +220,9 @@ let backupLexikonEntries: [LexikonEntry] = [
     LexikonEntry(title: "Zelten", description: ""),
 ]
 
-// MARK: Referents
+// MARK: Speakers
 
-let backupReferents: [Referent] = [
+let backupSpeakers: [Referent] = [
     Referent(
         name: "Klaus Göttler",
         connection: "Johanneum",

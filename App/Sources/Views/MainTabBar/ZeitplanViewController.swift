@@ -81,11 +81,6 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.bounds = view.bounds
 
         scrollView.contentSize = CGSize(width: view.bounds.width, height: (view.bounds.height + mondayEventLabel.bounds.maxX))
-
-        print(view.bounds)
-        print(scrollView.bounds)
-        print(scrollView.contentSize)
-        print(scrollView.visibleSize)
     }
 
     override func viewWillLayoutSubviews() {

@@ -43,7 +43,6 @@ class DataManager {
             AF.request(seminarUrl!).responseArray { (response: AFDataResponse<[Seminar]>) in
                 self.seminars = try! response.result.get()
                 Defaults.seminars = self.seminars
-                print(Defaults.seminars)
             }
         } else {
             Defaults.seminars = backupSeminars
@@ -55,10 +54,9 @@ class DataManager {
             AF.request(referentUrl!).responseArray { (response: AFDataResponse<[Referent]>) in
                 self.referents = try! response.result.get()
                 Defaults.referents = self.referents
-                print(Defaults.referents)
             }
         } else {
-            Defaults.referents = backupReferents
+            Defaults.referents = backupSpeakers
         }
     }
 }
