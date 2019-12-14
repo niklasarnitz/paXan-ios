@@ -1,4 +1,4 @@
-// swiftlint:disable file_types_order empty_type
+// swiftlint:disable file_types_order empty_type 
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import UIKit

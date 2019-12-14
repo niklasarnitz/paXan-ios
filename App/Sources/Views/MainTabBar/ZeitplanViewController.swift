@@ -7,11 +7,7 @@ import UIKit
 class ZeitplanViewController: UIViewController, EditorsDelegate {
     private weak var editorsDelegate: EditorsDelegate?
 
-    private var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-
-        return scrollView
-    }()
+    private lazy var scrollView = UIScrollView()
 
     // Thursday
     private lazy var thursdayCaptionLabel = EventLabel(text: "Donnerstag, 09. April 2020\n#heimatkunde")
@@ -62,9 +58,17 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
             super.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
         }
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Bearbeiten", style: .plain, target: self, action: #selector(didPressEdit))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Bearbeiten",
+            style: .plain,
+            target: self,
+            action: #selector(didPressEdit)
+        )
+
         navigationItem.rightBarButtonItem?.tintColor = .white
-        navigationItem.rightBarButtonItem?.setTitleTextAttributes([ .font: UIFont.eventTitle.withSize(18) ], for: .normal)
+        navigationItem.rightBarButtonItem?.setTitleTextAttributes(
+            [ .font: UIFont.eventTitle.withSize(18) ], for: .normal
+        )
 
         layoutSubViews()
     }
@@ -72,7 +76,16 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        scrollView.contentSize = CGSize(width: view.bounds.width, height: ( view.bounds.height + mondayEventLabel.bounds.maxX ))
+        scrollView.bindEdgesToSuperview()
+
+        scrollView.bounds = view.bounds
+
+        scrollView.contentSize = CGSize(width: view.bounds.width, height: (view.bounds.height + mondayEventLabel.bounds.maxX))
+
+        print(view.bounds)
+        print(scrollView.bounds)
+        print(scrollView.contentSize)
+        print(scrollView.visibleSize)
     }
 
     override func viewWillLayoutSubviews() {
@@ -121,8 +134,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(thursdayCaptionLabel)
         thursdayCaptionLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
@@ -130,8 +143,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(thursdayEventLabel)
         thursdayEventLabel.snp.makeConstraints { make in
             make.top.equalTo(thursdayCaptionLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
@@ -139,8 +152,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(fridayCaptionLabel)
         fridayCaptionLabel.snp.makeConstraints { make in
             make.top.equalTo(thursdayEventLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
@@ -148,8 +161,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(fridayEventLabelOne)
         fridayEventLabelOne.snp.makeConstraints { make in
             make.top.equalTo(fridayCaptionLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
@@ -157,8 +170,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(fridaySeminarOneButton!)
         fridaySeminarOneButton?.snp.makeConstraints { make in
             make.top.equalTo(fridayEventLabelOne.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview()
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
 
         fridaySeminarOneButton?.addTarget(self, action: #selector(didPressSeminarOneButton), for: .touchUpInside)
@@ -168,8 +181,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(fridayEventLabelTwo)
         fridayEventLabelTwo.snp.makeConstraints { make in
             make.top.equalTo(fridaySeminarOneButton!.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
@@ -177,8 +190,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(fridaySeminarTwoButton!)
         fridaySeminarTwoButton?.snp.makeConstraints { make in
             make.top.equalTo(fridayEventLabelTwo.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
 
         fridaySeminarTwoButton?.addTarget(self, action: #selector(didPressSeminarTwoButton), for: .touchUpInside)
@@ -188,8 +201,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(fridayEventLabelThree)
         fridayEventLabelThree.snp.makeConstraints { make in
             make.top.equalTo(fridaySeminarTwoButton!.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
@@ -197,8 +210,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(saturdayCaptionLabel)
         saturdayCaptionLabel.snp.makeConstraints { make in
             make.top.equalTo(fridayEventLabelThree.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
@@ -206,8 +219,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(saturdayEventOneLabel)
         saturdayEventOneLabel.snp.makeConstraints { make in
             make.top.equalTo(saturdayCaptionLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
@@ -215,8 +228,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(saturdaySeminarButton!)
         saturdaySeminarButton?.snp.makeConstraints { make in
             make.top.equalTo(saturdayEventOneLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
 
         saturdaySeminarButton?.addTarget(self, action: #selector(didPressSeminarThreeButton), for: .touchUpInside)
@@ -226,8 +239,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(saturdayEventTwoLabel)
         saturdayEventTwoLabel.snp.makeConstraints { make in
             make.top.equalTo(saturdaySeminarButton!.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
@@ -235,8 +248,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(sundayCaptionLabel)
         sundayCaptionLabel.snp.makeConstraints { make in
             make.top.equalTo(saturdayEventTwoLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
@@ -244,8 +257,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(sundayEventLabel)
         sundayEventLabel.snp.makeConstraints { make in
             make.top.equalTo(sundayCaptionLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
@@ -253,8 +266,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(sundayEveningEventButton!)
         sundayEveningEventButton?.snp.makeConstraints { make in
             make.top.equalTo(sundayEventLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
 
         sundayEveningEventButton?.addTarget(self, action: #selector(didPressDeltaMapButton), for: .touchUpInside)
@@ -264,8 +277,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(mondayCaptionLabel)
         mondayCaptionLabel.snp.makeConstraints { make in
             make.top.equalTo(sundayEveningEventButton!.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
@@ -273,8 +286,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         scrollView.addSubview(mondayEventLabel)
         mondayEventLabel.snp.makeConstraints { make in
             make.top.equalTo(mondayCaptionLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
