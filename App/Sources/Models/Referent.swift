@@ -9,20 +9,20 @@ struct Referent: Codable, DefaultsSerializable, Mappable {
     var name: String
     var connection: String
     var website: String
-    var picture: Data?
+    var picture: String
 
     init(name: String, connection: String, website: String, picture: String) {
         self.name = name
         self.connection = connection
         self.website = website
-        self.picture = UIImage(named: picture, in: Bundle(for: BundleToken.self), compatibleWith: nil)?.pngData()
+        self.picture = picture
     }
 
     init?(map: Map) {
         name = ""
         connection = ""
         website = ""
-        picture = UIImage().pngData()
+        picture = ""
     }
 
     mutating func mapping(map: Map) {

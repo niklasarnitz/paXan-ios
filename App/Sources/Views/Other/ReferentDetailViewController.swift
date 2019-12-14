@@ -1,3 +1,4 @@
+// swiftlint:disable file_types_order empty_type
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import UIKit
@@ -12,7 +13,9 @@ class ReferentDetailViewController: UIViewController {
     init(referent: Referent) {
         super.init(nibName: nil, bundle: nil)
 
-        imageView.image = maskRoundedImage(image: UIImage(data: referent.picture!)!, radius: UIImage(data: referent.picture!)!.size.height / 2)
+        let image = UIImage(named: referent.picture, in: Bundle(for: BundleToken.self), compatibleWith: nil)
+
+        imageView.image = maskRoundedImage(image: image!, radius: image!.size.height / 2)
 
         nameLabel.text = referent.name
         connectionCaptionLabel.text = "Organisation: " + referent.connection
@@ -112,3 +115,5 @@ class ReferentDetailViewController: UIViewController {
         dismiss(animated: true)
     }
 }
+
+private final class BundleToken {}

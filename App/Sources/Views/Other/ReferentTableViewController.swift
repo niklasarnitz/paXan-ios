@@ -1,6 +1,7 @@
 // swiftlint:disable file_types_order
 // Copyright © 2019 SWDEC. All rights reserved.
 
+import SwiftyUserDefaults
 import UIKit
 
 class ReferentTableViewController: UIViewController {
@@ -76,19 +77,19 @@ private class ReferentsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return referents.count
+        return Defaults.referents.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
 
-        let referentData = referents[indexPath.row]
+        let referentData = Defaults.referents[indexPath.row]
         cell.textLabel!.text = referentData.name
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let referentData = referents[indexPath.row]
+        let referentData = Defaults.referents[indexPath.row]
         present(
             ReferentDetailViewController(referent: referentData),
             animated: true

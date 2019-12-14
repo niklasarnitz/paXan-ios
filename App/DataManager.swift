@@ -6,23 +6,25 @@ import ObjectMapper
 import AlamofireObjectMapper
 import Foundation
 
-//var referents: [Referent] = []
-
 class DataManager {
     private let backendUrl: URL?
     private let lexikonUrl: URL?
     private let seminarUrl: URL?
+    private let referentUrl: URL?
 
     private var seminars: [Seminar] = []
     private var lexikonEntries: [LexikonEntry] = []
+    private var referents: [Referent] = []
 
     init(backendUrl: String) {
         self.backendUrl = URL(string: backendUrl)
-        self.lexikonUrl = URL(string: (backendUrl + "lexikon.php"))
+        self.lexikonUrl = URL(string: (backendUrl + "lexikon"))
         self.seminarUrl = URL(string: (backendUrl + "seminar"))
+        self.referentUrl = URL(string: (backendUrl + "speaker"))
 
         loadLexikonEntries()
         loadSeminars()
+        loadReferents()
     }
 
     func loadLexikonEntries() {
@@ -45,6 +47,18 @@ class DataManager {
             }
         } else {
             Defaults.seminars = backupSeminars
+        }
+    }
+
+    func loadReferents() {
+        if(NetworkReachabilityManager()?.isReachable ?? false) {
+            AF.request(referentUrl!).responseArray { (response: AFDataResponse<[Referent]>) in
+                self.referents = try! response.result.get()
+                Defaults.referents = self.referents
+                print(Defaults.referents)
+            }
+        } else {
+            Defaults.referents = backupReferents
         }
     }
 }
