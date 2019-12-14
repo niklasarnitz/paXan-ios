@@ -18,7 +18,7 @@ let setupContinueButtonTitle: String = "Weiter"
 
 let thirdPageTitle: String = "Deine paXan Seminare"
 
-let thirdPageSubtitle: String = "Trage hier unten bitte deine Seminare ein, für die du dich online angemeldet hast. Keine Angst, falsch du etwas falsch machst, kannst du es später natürlich nocheinmal ändern."
+let thirdPageSubtitle: String = "Trage hier unten bitte deine Seminare ein, für die du dich online angemeldet hast. Keine Angst, falls du etwas falsch machst, kannst du es später natürlich nocheinmal ändern."
 
 let thirdPageTextFieldPlaceholderOne: String = "Seminar 1"
 
