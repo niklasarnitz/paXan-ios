@@ -33,7 +33,6 @@
 		853CC16A2360CB4800A3F4F3 /* ThirdSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC1692360CB4800A3F4F3 /* ThirdSetupPageViewController.swift */; };
 		853CC16C2360CB6300A3F4F3 /* FourthSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC16B2360CB6300A3F4F3 /* FourthSetupPageViewController.swift */; };
 		853CC16E2360CD7C00A3F4F3 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */; };
-		854CC10723932CB7000AD257 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CC10623932CB7000AD257 /* Place.swift */; };
 		854CC10923932F87000AD257 /* SeminarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CC10823932F87000AD257 /* SeminarDetailViewController.swift */; };
 		854CC10B2393302C000AD257 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CC10A2393302C000AD257 /* MKMapViewExtension.swift */; };
 		85866CCB23151F5600B408E9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85866CCA23151F5600B408E9 /* Assets.swift */; };
@@ -125,7 +124,6 @@
 		853CC1692360CB4800A3F4F3 /* ThirdSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSetupPageViewController.swift; sourceTree = "<group>"; };
 		853CC16B2360CB6300A3F4F3 /* FourthSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthSetupPageViewController.swift; sourceTree = "<group>"; };
 		853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
-		854CC10623932CB7000AD257 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		854CC10823932F87000AD257 /* SeminarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarDetailViewController.swift; sourceTree = "<group>"; };
 		854CC10A2393302C000AD257 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		85866CCA23151F5600B408E9 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
@@ -185,7 +183,7 @@
 		914E5D5FD6D03D393585755F /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Dependencies/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		A55D34104A396091DDF9796B /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ObjectMapper.framework; path = Dependencies/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
-		F74C1B4F14E4751AA4E8CA43 /* ImageScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = ImageScrollView.framework; path = Dependencies/iOS/ImageScrollView.framework; sourceTree = "<group>"; };
+		F74C1B4F14E4751AA4E8CA43 /* ImageScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ImageScrollView.framework; path = Dependencies/iOS/ImageScrollView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,7 +271,6 @@
 			children = (
 				85866CD023154E6300B408E9 /* LexikonEntry.swift */,
 				85A3F82323463C29006A9473 /* Seminar.swift */,
-				854CC10623932CB7000AD257 /* Place.swift */,
 				85E884CD23995AF3004C3AE4 /* Referent.swift */,
 			);
 			path = Models;
@@ -684,7 +681,6 @@
 				850BA45A239A7B8A0098196D /* SpendenViewController.swift in Sources */,
 				85E884CC23994D62004C3AE4 /* SeminarPickerViewTextField.swift in Sources */,
 				850DC89D23A13C700097C927 /* DataManager.swift in Sources */,
-				854CC10723932CB7000AD257 /* Place.swift in Sources */,
 				85E884C623994863004C3AE4 /* TitleLabel.swift in Sources */,
 				85D1186F23A3FFE100EC3D88 /* EventLabel.swift in Sources */,
 				851141DD239A6C870062438E /* ReferentDetailViewController.swift in Sources */,

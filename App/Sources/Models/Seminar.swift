@@ -1,3 +1,4 @@
+// swiftlint:disable force_try
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import Foundation
@@ -11,44 +12,60 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
     /// The Seminar's title
     var title: String
     /// The organizer of the Seminar
-    var referent: Referent
+    var referent: String
     /// A short (or long) description of the Seminar
     var description: String
-    /// The Location Data for the Seminar
-    var place: Place
+
+    /// roomname of Seminar
+    var roomname: String
+
+    /// Lattitude of Seminar
+    var lat: Double
+
+    /// Longitude of Seminar
+    var long: Double
+
     /// Number of the seminar unit
     var time: Date
 
     // MARK: Initializer
-    init(title: String, referent: Referent, description: String, place: Place, time: Date) {
+    init(title: String, referent: String, description: String, roomname: String, lat: Double, long: Double, time: Date) {
         self.title = title
         self.referent = referent
         self.description = description
-        self.place = place
+        self.roomname = roomname
+        self.lat = lat
+        self.long = long
         self.time = time
     }
 
     init() {
         self.title = ""
-        self.referent = Referent(name: "", connection: "", website: "", picture: UIImage())
+        self.referent = ""
         self.description = ""
-        self.place = Place(title: "", roomname: "", lat: 0, long: 0)
+        self.roomname = ""
+        self.lat = 0
+        self.long = 0
         self.time = Date()
     }
 
     init?(map: Map) {
         self.title = ""
-        self.referent = Referent(name: "", connection: "", website: "", picture: UIImage())
+        self.referent = ""
         self.description = ""
-        self.place = Place(title: "", roomname: "", lat: 0, long: 0)
+        self.roomname = ""
+        self.lat = 0
+        self.long = 0
         self.time = Date()
     }
 
     mutating func mapping(map: Map) {
         title <- map["title"]
-        referent <- map["referent"]
+        referent <- map["referentName"]
         description <- map["description"]
-        place <- map["place"]
-        time <- map["time"]
+        roomname <- map["roomname"]
+        lat <- map["lat"]
+        long <- map["long"]
+        time = try! map.value("time", using: DateTransform())
     }
 }

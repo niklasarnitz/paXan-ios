@@ -11,8 +11,6 @@ class InfoViewController: UIViewController {
 
     private lazy var spendenButton = SeminarButton(text: "Spenden")
 
-    private lazy var timetableButton = SeminarButton(text: "Zeitplan")
-
     private lazy var aboutButton = SeminarButton(text: "Über")
 
     override func viewDidLoad() {
@@ -38,7 +36,6 @@ class InfoViewController: UIViewController {
         setupReferentButton()
         setupSeminarsButton()
         setupSpendenButton()
-        setupTimeTableButton()
         setupAboutButton()
     }
 
@@ -78,18 +75,6 @@ class InfoViewController: UIViewController {
         spendenButton?.addTarget(self, action: #selector(spendenButtonPressed), for: .touchUpInside)
     }
 
-    private func setupTimeTableButton() {
-        view.addSubview(timetableButton!)
-        timetableButton?.snp.makeConstraints({ make in
-            make.top.equalTo(spendenButton!.snp.bottomMargin).offset(30)
-            make.leading.equalToSuperview().offset(26)
-            make.trailing.equalToSuperview().offset(-26)
-            make.height.equalTo(40)
-        })
-
-        timetableButton?.addTarget(self, action: #selector(timeTableButtonPressed), for: .touchUpInside)
-    }
-
     private func setupAboutButton() {
         view.addSubview(aboutButton!)
         aboutButton?.snp.makeConstraints({ make in
@@ -120,12 +105,6 @@ class InfoViewController: UIViewController {
     private func spendenButtonPressed() {
         spendenButton?.pulsate()
         present(SpendenViewController(), animated: true)
-    }
-
-    @objc
-    private func timeTableButtonPressed() {
-        timetableButton?.pulsate()
-        present(TimeTableViewController(), animated: true)
     }
 
     @objc

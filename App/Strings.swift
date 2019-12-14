@@ -35,243 +35,131 @@ let setupFinishButtonTitle: String = "Fertig"
 let meinPaXanCaption: String = "paXan startet bald!\nDann kannst du\ndie App benutzen."
 
 // MARK: Seminars
-var seminars: [Seminar] = [
+var backupSeminars: [Seminar] = [
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "Läuft – die geistliche Begleitung der Kinder und Jugendlichen",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "EC to go",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "Mein Leben nach der Jugendarbeit",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "Jugendarbeit goes VIRAL",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "Social Media Relations in der Jugendarbeit",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "Einladend gestalten",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "Deine Flyer für die Jugendarbeit",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "Digital Natives & Co.",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "Strömungen in der Jugendarbeit begegnen und verstehen",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
     Seminar(
         title: "Born to be wild - Wie gründe ich einen EC vor Ort?",
-        referent: Referent(
-            name: "",
-            connection: "",
-            website: "",
-            picture: UIImage()
-        ),
+        referent: "",
         description: "",
-        place: Place(
-            title: "",
-            roomname: "",
-            lat: 0,
-            long: 0
-        ),
+        roomname: "",
+        lat: 0,
+        long: 0,
         time: Date()
     ),
 
@@ -339,23 +227,12 @@ let referents: [Referent] = [
         name: "Volker Gäckle",
         connection: "IHL",
         website: "ihl.de",
-        picture: UIImage(
-            named: "gäckle",
-            in: Bundle(for: BundleToken.self),
-            compatibleWith: nil
-        )!
+        picture: "gäckle"
     ),
     Referent(
         name: "Volker Gäckle",
         connection: "IHL",
         website: "ihl.de",
-        picture: UIImage(
-            named: "gäckle",
-            in: Bundle(for: BundleToken.self),
-            compatibleWith: nil
-        )!
+        picture: "gäckle"
     )
 ]
-
-// MARK: - Implementation Details
-private final class BundleToken {}

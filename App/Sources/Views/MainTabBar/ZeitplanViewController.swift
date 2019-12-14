@@ -20,15 +20,15 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     // Friday
     private lazy var fridayCaptionLabel = EventLabel(text: "Freitag, 10. April 2020\n#heimatlos")
     private lazy var fridayEventLabelOne = EventBody(text: "09:30 Uhr Praxis Session / CoffeeTime\n11:30 Uhr Bibel Session mit Klaus Göttler\n15:00 Uhr Seminare I")
-    private lazy var fridaySeminarOneButton = SeminarButton(text: "Seminar Eins")
+    private lazy var fridaySeminarOneButton = SeminarButton(text: Defaults.seminarOne.title)
     private lazy var fridayEventLabelTwo = EventBody(text: "16:30 Uhr Seminare II")
-    private lazy var fridaySeminarTwoButton = SeminarButton(text: "Seminar Zwei")
+    private lazy var fridaySeminarTwoButton = SeminarButton(text: Defaults.seminarTwo.title)
     private lazy var fridayEventLabelThree = EventBody(text: "19:30 Uhr Das Kreuz")
 
     // Saturday
     private lazy var saturdayCaptionLabel = EventLabel(text: "Samstag, 11. April 2020\n#heimweh")
     private lazy var saturdayEventOneLabel = EventBody(text: "09:30 Uhr Bibel Session mit Joachim Böker\n11:30 Uhr Dennoch feiern\n14:00 Uhr Praxis Session / CoffeeTime\n16:30 Uhr Seminare III")
-    private lazy var saturdaySeminarButton = SeminarButton(text: "Seminar Drei")
+    private lazy var saturdaySeminarButton = SeminarButton(text: Defaults.seminarThree.title)
     private lazy var saturdayEventTwoLabel = EventBody(text: "19:30 Uhr Danke")
 
     // Sunday
@@ -178,7 +178,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         fridaySeminarTwoButton?.snp.makeConstraints { make in
             make.top.equalTo(fridayEventLabelTwo.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview()
+            make.trailing.equalToSuperview().offset(-20)
         }
 
         fridaySeminarTwoButton?.addTarget(self, action: #selector(didPressSeminarTwoButton), for: .touchUpInside)
@@ -216,7 +216,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         saturdaySeminarButton?.snp.makeConstraints { make in
             make.top.equalTo(saturdayEventOneLabel.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview()
+            make.trailing.equalToSuperview().offset(-20)
         }
 
         saturdaySeminarButton?.addTarget(self, action: #selector(didPressSeminarThreeButton), for: .touchUpInside)
@@ -254,7 +254,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         sundayEveningEventButton?.snp.makeConstraints { make in
             make.top.equalTo(sundayEventLabel.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview()
+            make.trailing.equalToSuperview().offset(-20)
         }
 
         sundayEveningEventButton?.addTarget(self, action: #selector(didPressDeltaMapButton), for: .touchUpInside)
@@ -281,21 +281,21 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     @objc private func didPressSeminarOneButton() {
         fridaySeminarOneButton?.pulsate()
 
-        let viewController = SeminarDetailViewController(seminar: seminars[0])!
+        let viewController = SeminarDetailViewController(seminar: Defaults.seminarOne)!
         present(viewController, animated: true)
     }
 
     @objc private func didPressSeminarTwoButton() {
         fridaySeminarTwoButton?.pulsate()
 
-        let viewController = SeminarDetailViewController(seminar: seminars[0])!
+        let viewController = SeminarDetailViewController(seminar: Defaults.seminarTwo)!
         present(viewController, animated: true)
     }
 
     @objc private func didPressSeminarThreeButton() {
         saturdaySeminarButton?.pulsate()
 
-        let viewController = SeminarDetailViewController(seminar: seminars[0])!
+        let viewController = SeminarDetailViewController(seminar: Defaults.seminarThree)!
         present(viewController, animated: true)
     }
 
@@ -312,8 +312,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     }
 
     func updateData() {
-        fridaySeminarOneButton?.titleText = Defaults.seminarOne
-        fridaySeminarTwoButton?.titleText = Defaults.seminarTwo
-        saturdaySeminarButton?.titleText = Defaults.seminarThree
+        fridaySeminarOneButton?.titleText = Defaults.seminarOne.title
+        fridaySeminarTwoButton?.titleText = Defaults.seminarTwo.title
+        saturdaySeminarButton?.titleText = Defaults.seminarThree.title
     }
 }

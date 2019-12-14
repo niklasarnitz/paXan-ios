@@ -21,13 +21,52 @@ extension DefaultsKeys {
 
     /// The first Seminar's name
     /// Is set during inital setup
-    var seminarOne: DefaultsKey<String> { return .init("", defaultValue: "") }
+    var seminarOne: DefaultsKey<Seminar> {
+        return .init(
+            "",
+            defaultValue: Seminar(
+                title: "",
+                referent: "",
+                description: "",
+                roomname: "",
+                lat: 0,
+                long: 0,
+                time: Date()
+            )
+        )
+    }
 
     /// The second Seminar's name
     /// Is set during initial setup
-    var seminarTwo: DefaultsKey<String> { return .init("seminarTwo", defaultValue: "") }
+    var seminarTwo: DefaultsKey<Seminar> {
+        return .init(
+            "seminarTwo",
+            defaultValue:Seminar(
+                title: "",
+                referent: "",
+                description: "",
+                roomname: "",
+                lat: 0,
+                long: 0,
+                time: Date()
+            )
+        )
+    }
 
     /// The third Seminar's name
     /// Is set during initial setup
-    var seminarThree: DefaultsKey<String> { return .init("seminarThree", defaultValue: "") }
+    var seminarThree: DefaultsKey<Seminar> {
+        return .init(
+            "seminarThree",
+            defaultValue: Seminar(
+                title: "",
+                referent: "",
+                description: "",
+                roomname: "",
+                lat: 0,
+                long: 0,
+                time: Date()
+            )
+        )
+    }
 }

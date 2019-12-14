@@ -1,6 +1,7 @@
 // swiftlint:disable file_types_order
 // Copyright © 2019 SWDEC. All rights reserved.
 
+import SwiftyUserDefaults
 import UIKit
 
 class SeminarTableViewController: UIViewController {
@@ -77,19 +78,19 @@ private class SeminarsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return seminars.count
+        return Defaults.seminars.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
 
-        let seminarData = seminars[indexPath.row]
+        let seminarData = Defaults.seminars[indexPath.row]
         cell.textLabel!.text = seminarData.title
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailData = seminars[indexPath.row]
+        let detailData = Defaults.seminars[indexPath.row]
         present(
             SeminarDetailViewController(seminar: detailData)!,
             animated: true
