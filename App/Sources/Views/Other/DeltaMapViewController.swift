@@ -26,7 +26,15 @@ class DeltaMapViewController: UIViewController {
 
         layoutDoneButton()
 
-        imageScrollView.zoom(to: CGRect(x: view.bounds.width / 2, y: view.bounds.height / 2, width: view.bounds.width, height: view.bounds.height - 100), animated: true)
+        imageScrollView.zoom(
+            to: CGRect(
+                x: view.bounds.width / 2,
+                y: view.bounds.height / 2,
+                width: view.bounds.width,
+                height: view.bounds.height - 100
+            ),
+            animated: true
+        )
     }
 
     private func layoutDoneButton() {

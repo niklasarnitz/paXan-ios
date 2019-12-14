@@ -1,4 +1,4 @@
-// swiftlint:disable line_length
+// swiftlint:disable line_length type_body_length
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import SwiftyUserDefaults
