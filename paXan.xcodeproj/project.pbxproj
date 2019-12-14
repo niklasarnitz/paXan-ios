@@ -74,7 +74,6 @@
 		85D1187123A400A500EC3D88 /* EventBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1187023A400A500EC3D88 /* EventBody.swift */; };
 		85D1187323A44BFC00EC3D88 /* DeltaMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1187223A44BFC00EC3D88 /* DeltaMapViewController.swift */; };
 		85D4B419231E8E690010E55F /* HapticFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4B418231E8E690010E55F /* HapticFeedbackManager.swift */; };
-		85E3F2F42314099D00E6B845 /* SeminarPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */; };
 		85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F5231409F000E6B845 /* MapViewController.swift */; };
 		85E3F2F823140AAA00E6B845 /* MeinPaxAnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */; };
 		85E884C623994863004C3AE4 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884C523994863004C3AE4 /* TitleLabel.swift */; };
@@ -175,7 +174,6 @@
 		85D1187023A400A500EC3D88 /* EventBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBody.swift; sourceTree = "<group>"; };
 		85D1187223A44BFC00EC3D88 /* DeltaMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeltaMapViewController.swift; sourceTree = "<group>"; };
 		85D4B418231E8E690010E55F /* HapticFeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackManager.swift; sourceTree = "<group>"; };
-		85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarPlanViewController.swift; sourceTree = "<group>"; };
 		85E3F2F5231409F000E6B845 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeinPaxAnViewController.swift; sourceTree = "<group>"; };
 		85E884C523994863004C3AE4 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
@@ -242,7 +240,6 @@
 				85E3F2F5231409F000E6B845 /* MapViewController.swift */,
 				85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */,
 				851141D7239A62C90062438E /* InfoViewController.swift */,
-				85E3F2F32314099D00E6B845 /* SeminarPlanViewController.swift */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -650,7 +647,6 @@
 				853C4B682393D41D00300689 /* SetupButton.swift in Sources */,
 				853CC1662360CB1C00A3F4F3 /* FirstSetupPageViewController.swift in Sources */,
 				85A3F82423463C29006A9473 /* Seminar.swift in Sources */,
-				85E3F2F42314099D00E6B845 /* SeminarPlanViewController.swift in Sources */,
 				853CC1642360C6DF00A3F4F3 /* SetupAssistantPages.swift in Sources */,
 				85D1186D23A3F6CD00EC3D88 /* ZeitplanViewController.swift in Sources */,
 				85AAD040231ACC7600C0F813 /* Style.swift in Sources */,
