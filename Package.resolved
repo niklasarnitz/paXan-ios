@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "ImageScrollView",
+        "repositoryURL": "git@github.com:niklasarnitz/ImageScrollView.git",
+        "state": {
+          "branch": "master",
+          "revision": "5268009dd88587206a2f171784d698bad6f2ef3a",
+          "version": null
+        }
+      },
+      {
         "package": "IQKeyboardManagerSwift",
         "repositoryURL": "git@github.com:hackiftekhar/IQKeyboardManager.git",
         "state": {

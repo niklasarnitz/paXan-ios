@@ -84,6 +84,7 @@
 		8BD900518DC1FA74F5D40930 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */; };
 		B095EF044CD3E96F3A9FF352 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55D34104A396091DDF9796B /* ObjectMapper.framework */; };
 		CD3C8019640CC56CA601F0EA /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */; };
+		E485024CE001A4A46CF17800 /* ImageScrollView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74C1B4F14E4751AA4E8CA43 /* ImageScrollView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,7 @@
 		914E5D5FD6D03D393585755F /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Dependencies/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		A55D34104A396091DDF9796B /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ObjectMapper.framework; path = Dependencies/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		F74C1B4F14E4751AA4E8CA43 /* ImageScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = ImageScrollView.framework; path = Dependencies/iOS/ImageScrollView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				7C248CEFBC92BC3F36260B49 /* Alamofire.framework in Frameworks */,
 				B095EF044CD3E96F3A9FF352 /* ObjectMapper.framework in Frameworks */,
 				28E3F88E24EE25B22989D6B9 /* AlamofireObjectMapper.framework in Frameworks */,
+				E485024CE001A4A46CF17800 /* ImageScrollView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +219,7 @@
 				41AA791D80A696E6C51CC33C /* Alamofire.framework */,
 				914E5D5FD6D03D393585755F /* AlamofireObjectMapper.framework */,
 				69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */,
+				F74C1B4F14E4751AA4E8CA43 /* ImageScrollView.framework */,
 				A55D34104A396091DDF9796B /* ObjectMapper.framework */,
 				538967131DCEEECEA70FB8BA /* SnapKit.framework */,
 				A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */,
@@ -608,6 +612,7 @@
 				"$(SRCROOT)/Dependencies/iOS/Alamofire.framework",
 				"$(SRCROOT)/Dependencies/iOS/AlamofireObjectMapper.framework",
 				"$(SRCROOT)/Dependencies/iOS/IQKeyboardManagerSwift.framework",
+				"$(SRCROOT)/Dependencies/iOS/ImageScrollView.framework",
 				"$(SRCROOT)/Dependencies/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Dependencies/iOS/SnapKit.framework",
 				"$(SRCROOT)/Dependencies/iOS/SwiftyUserDefaults.framework",
@@ -617,6 +622,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireObjectMapper.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManagerSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ImageScrollView.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyUserDefaults.framework",

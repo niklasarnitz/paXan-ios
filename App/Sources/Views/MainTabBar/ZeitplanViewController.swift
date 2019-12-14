@@ -254,7 +254,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         sundayEveningEventButton?.snp.makeConstraints { make in
             make.top.equalTo(sundayEventLabel.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.trailing.equalToSuperview()
         }
 
         sundayEveningEventButton?.addTarget(self, action: #selector(didPressDeltaMapButton), for: .touchUpInside)

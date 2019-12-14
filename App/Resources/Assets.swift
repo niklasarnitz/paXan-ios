@@ -31,6 +31,7 @@ internal enum Asset {
         internal static let userMale = UIImage(named: "userMale", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
         internal static let userManual = UIImage(named: "userManual", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
         internal static let chevronRight = UIImage(named: "chevronRight", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let deltaMap = UIImage(named: "deltaMap", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     }
 }
 
