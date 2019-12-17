@@ -13,6 +13,15 @@ extension DefaultsKeys {
     /// seminars loaded from Strings.swift, gets overwritten if internet connection is available
     var seminars: DefaultsKey<[Seminar]> { return .init("seminars", defaultValue: []) }
 
+    /// seminars loaded from Strings.swift, gets overwritten if internet connection is available
+    var seminarsOne: DefaultsKey<[Seminar]> { return .init("seminarsOne", defaultValue: []) }
+
+    /// seminars loaded from Strings.swift, gets overwritten if internet connection is available
+    var seminarsTwo: DefaultsKey<[Seminar]> { return .init("seminarsTwo", defaultValue: []) }
+
+    /// seminars loaded from Strings.swift, gets overwritten if internet connection is available
+    var seminarsThree: DefaultsKey<[Seminar]> { return .init("seminarsThree", defaultValue: []) }
+
     /// lexikonEntries loaded from Strings.swift, gets overwritten if internet connection is available
     var lexikonEntries: DefaultsKey<[LexikonEntry]> { return .init("lexikonEntries", defaultValue: []) }
 
@@ -26,12 +35,13 @@ extension DefaultsKeys {
             "",
             defaultValue: Seminar(
                 title: "",
+                subtitle: "",
                 referent: "",
                 description: "",
                 roomname: "",
                 lat: 0,
                 long: 0,
-                time: Date()
+                time: ""
             )
         )
     }
@@ -41,14 +51,15 @@ extension DefaultsKeys {
     var seminarTwo: DefaultsKey<Seminar> {
         return .init(
             "seminarTwo",
-            defaultValue:Seminar(
+            defaultValue: Seminar(
                 title: "",
+                subtitle: "",
                 referent: "",
                 description: "",
                 roomname: "",
                 lat: 0,
                 long: 0,
-                time: Date()
+                time: ""
             )
         )
     }
@@ -60,12 +71,13 @@ extension DefaultsKeys {
             "seminarThree",
             defaultValue: Seminar(
                 title: "",
+                subtitle: "",
                 referent: "",
                 description: "",
                 roomname: "",
                 lat: 0,
                 long: 0,
-                time: Date()
+                time: ""
             )
         )
     }

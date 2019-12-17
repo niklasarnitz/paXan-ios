@@ -25,6 +25,8 @@ class DataManager {
         loadLexikonEntries()
         loadSeminars()
         loadReferents()
+
+        sortSeminars()
     }
 
     func loadLexikonEntries() {
@@ -43,6 +45,7 @@ class DataManager {
             AF.request(seminarUrl!).responseArray { (response: AFDataResponse<[Seminar]>) in
                 self.seminars = try! response.result.get()
                 Defaults.seminars = self.seminars
+                print(Defaults.seminars)
             }
         } else {
             Defaults.seminars = backupSeminars
@@ -57,6 +60,25 @@ class DataManager {
             }
         } else {
             Defaults.referents = backupSpeakers
+        }
+    }
+
+    func sortSeminars() {
+        Defaults.seminarsOne = []
+        Defaults.seminarsTwo = []
+        Defaults.seminarsThree = []
+
+        Defaults.seminars.forEach {
+        
+            if $0.time == "2020-04-10 15:00:00" {
+                Defaults.seminarsOne.append($0)
+            }
+            if $0.time == "2020-04-10 16:30:00" {
+                Defaults.seminarsTwo.append($0)
+            }
+            if $0.time == "2020-04-11 16:30:00" {
+                Defaults.seminarsThree.append($0)
+            }
         }
     }
 }

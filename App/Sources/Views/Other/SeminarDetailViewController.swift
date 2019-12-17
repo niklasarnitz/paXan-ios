@@ -6,15 +6,9 @@ import UIKit
 class SeminarDetailViewController: UIViewController {
     private var seminar: Seminar
 
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.adjustsFontSizeToFitWidth = true
-        label.numberOfLines = 0
-        label.minimumScaleFactor = 0.2
-        label.textColor = .white
-        return label
-    }()
+    private lazy var titleLabel = TitleLabel(text: "")
+
+    private lazy var subtitleLabel = SubtitleLabel(text: "")
 
     private lazy var referentLabel: UILabel = {
         let label = UILabel()
@@ -64,6 +58,7 @@ class SeminarDetailViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         self.titleLabel.text = seminar.title
+        self.subtitleLabel.text = seminar.subtitle
         self.referentLabel.text = "Referent: " + (seminar.referent)
         self.roomNameLabel.text = "Raum: " + (seminar.roomname)
         self.descriptionLabel.text = "Beschreibung: " + (seminar.description)
@@ -84,6 +79,7 @@ class SeminarDetailViewController: UIViewController {
         }
 
         setupTitleLabel()
+        setupSubtitleLabel()
         setupReferentLabel()
         setupRoomNameLabel()
         setupDescriptionLabel()
@@ -100,10 +96,21 @@ class SeminarDetailViewController: UIViewController {
         }
     }
 
+    private func setupSubtitleLabel() {
+        view.addSubview(subtitleLabel)
+        subtitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottomMargin).offset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+        }
+
+        subtitleLabel.textAlignment = .natural
+    }
+
     private func setupReferentLabel() {
         view.addSubview(referentLabel)
         referentLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottomMargin).offset(20)
+            make.top.equalTo(subtitleLabel.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
         }
