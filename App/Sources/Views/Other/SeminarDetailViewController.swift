@@ -72,11 +72,7 @@ class SeminarDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if #available(iOS 13.0, *) {
-            view.backgroundColor = Colors.ecGreen
-        } else {
-            view.backgroundColor = Colors.ecGreen
-        }
+        view.backgroundColor = Colors.ecGreen
 
         setupTitleLabel()
         setupSubtitleLabel()
