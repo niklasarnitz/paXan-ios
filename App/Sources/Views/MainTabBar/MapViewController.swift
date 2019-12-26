@@ -1,63 +1,42 @@
 // Copyright © 2019 SWDEC. All rights reserved.
 
-import MapKit
+import ImageScrollView
 import UIKit
 
 class MapViewController: UIViewController {
-    private let initialLocation = CLLocation(latitude: 48.796355, longitude: 8.503494)
-    private let regionRadius: CLLocationDistance = 100
-    private lazy var mapView: MKMapView = {
-        let mapView = MKMapView()
-        return mapView
-    }()
+    private lazy var imageScrollView: ImageScrollView = {
+        let view = ImageScrollView()
 
-    private let annotations: [MKPointAnnotation] = [
-        {
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: 48.796355, longitude: 8.503494)
-            annotation.title = "EC-FSZ"
-            annotation.subtitle = "Hauptveranstaltungsort"
-            return annotation
-        }(),
-        {
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: 48.796360, longitude: 8.503494)
-            annotation.title = "EC-FSZ2"
-            annotation.subtitle = "Hauptveranstaltungsort2"
-            return annotation
-        }()
-    ]
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
-
         fixNavigationBar()
 
-        setupMapView()
-    }
+        view.backgroundColor = .white
 
-    private func setupMapView() {
-        view.addSubview(mapView)
-        mapView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.trailing.equalToSuperview()
+        view.addSubview(imageScrollView)
+        imageScrollView.snp.makeConstraints { make in
+            make.top.equalTo(view.snp.topMargin)
             make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalTo(view.snp.bottomMargin)
         }
-        centerMapOnLocation(location: initialLocation)
-        annotations.forEach { annotation in
-            mapView.addAnnotation(annotation)
-        }
-    }
 
-    private func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegion(
-            center: location.coordinate,
-            latitudinalMeters: regionRadius,
-            longitudinalMeters: regionRadius
+        imageScrollView.setup()
+
+        imageScrollView.display(image: Images.map)
+
+        imageScrollView.zoom(
+            to: CGRect(
+                x: view.bounds.width,
+                y: view.bounds.height,
+                width: view.bounds.width,
+                height: view.bounds.height
+            ),
+            animated: true
         )
-        mapView.setRegion(coordinateRegion, animated: true)
     }
 }

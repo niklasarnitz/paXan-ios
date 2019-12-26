@@ -4,7 +4,11 @@ import SwiftyUserDefaults
 import UIKit
 
 class MeinPaxAnViewController: UIViewController {
-    private lazy var helloLabel = TitleLabel(text: "Hallo, \(Defaults.username ?? "Error")")
+    private lazy var helloLabel: TitleLabel = {
+        let label = TitleLabel(text: "Hallo, \(Defaults.username ?? "Error")")
+        label.textColor = .black
+        return label
+    }()
 
     private lazy var userImageView: UIImageView = {
         let imageView = UIImageView(image: Images.userMale)
