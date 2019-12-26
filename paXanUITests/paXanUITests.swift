@@ -8,7 +8,7 @@
 
 import XCTest
 
-class paXanUITests: XCTestCase {
+class PaXanUITests: XCTestCase {
 
     var app: XCUIApplication!
 
