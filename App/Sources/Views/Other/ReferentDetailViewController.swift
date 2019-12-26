@@ -5,7 +5,7 @@ import UIKit
 
 class ReferentDetailViewController: UIViewController {
     private lazy var nameLabel = TitleLabel()
-    private lazy var imageView = ProfilePictureImageView()
+    private lazy var roundImageView = ProfilePictureImageView()
     private lazy var connectionCaptionLabel = SubtitleLabel(text: "Organisation: ")
     private lazy var websiteCaptionLabel = SubtitleLabel(text: "Website: ")
     private lazy var doneButton = SetupButton(text: "Fertig")
@@ -15,7 +15,7 @@ class ReferentDetailViewController: UIViewController {
 
         let image = UIImage(named: referent.picture, in: Bundle(for: BundleToken.self), compatibleWith: nil)
 
-        imageView.image = maskRoundedImage(image: image!, radius: image!.size.height / 2)
+        roundImageView.image = maskRoundedImage(image: image!, radius: image!.size.height / 2)
 
         nameLabel.text = referent.name
         connectionCaptionLabel.text = "Organisation: " + referent.connection
@@ -40,8 +40,8 @@ class ReferentDetailViewController: UIViewController {
     }
 
     private func setupImageView() {
-        view.addSubview(imageView)
-        imageView.snp.makeConstraints { make in
+        view.addSubview(roundImageView)
+        roundImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(30)
             make.centerX.equalToSuperview()
             make.size.equalTo(CGSize(width: 200, height: 200))
@@ -51,7 +51,7 @@ class ReferentDetailViewController: UIViewController {
     private func setupNameLabel() {
         view.addSubview(nameLabel)
         nameLabel.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottomMargin).offset(20)
+            make.top.equalTo(roundImageView.snp.bottomMargin).offset(20)
             make.centerX.equalToSuperview()
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
