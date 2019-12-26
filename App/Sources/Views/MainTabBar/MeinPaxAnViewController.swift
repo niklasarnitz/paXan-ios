@@ -19,22 +19,7 @@ class MeinPaxAnViewController: UIViewController {
 
         view.backgroundColor = .white
 
-        // Fixes the navigatiobar on iOS 13.
-        if #available(iOS 13.0, *) {
-            let navBarAppearance = UINavigationBarAppearance()
-            navBarAppearance.configureWithOpaqueBackground()
-            navBarAppearance.titleTextAttributes = [
-                .foregroundColor: UIColor.white,
-                .font: UIFont.title
-            ]
-            navBarAppearance.largeTitleTextAttributes = [
-                .foregroundColor: UIColor.white,
-                .font: UIFont.title
-            ]
-            navBarAppearance.backgroundColor = Colors.ecGreen
-            super.navigationController?.navigationBar.standardAppearance = navBarAppearance
-            super.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-        }
+        fixNavigationBar()
 
         setupUserImageView()
         setupHelloLabel()

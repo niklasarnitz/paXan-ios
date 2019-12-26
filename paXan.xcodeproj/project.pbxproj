@@ -37,6 +37,7 @@
 		854CC10B2393302C000AD257 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CC10A2393302C000AD257 /* MKMapViewExtension.swift */; };
 		8566826C23B4F1D000CE94CC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566826B23B4F1D000CE94CC /* Configuration.swift */; };
 		8566827023B4F26800CE94CC /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8566826F23B4F26800CE94CC /* Config.plist */; };
+		8566830E23B4F9EA00CE94CC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566830D23B4F9EA00CE94CC /* UIViewControllerExtension.swift */; };
 		85866CCB23151F5600B408E9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85866CCA23151F5600B408E9 /* Assets.swift */; };
 		85866CD123154E6300B408E9 /* LexikonEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85866CD023154E6300B408E9 /* LexikonEntry.swift */; };
 		858ECD6423A23B800055B9FB /* paXanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858ECD6323A23B800055B9FB /* paXanUITests.swift */; };
@@ -129,6 +130,7 @@
 		854CC10A2393302C000AD257 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		8566826B23B4F1D000CE94CC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		8566826F23B4F26800CE94CC /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		8566830D23B4F9EA00CE94CC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		85866CCA23151F5600B408E9 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		85866CD023154E6300B408E9 /* LexikonEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonEntry.swift; sourceTree = "<group>"; };
 		858ECD6123A23B800055B9FB /* paXanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = paXanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -390,11 +392,12 @@
 		85AAD041231ACCA800C0F813 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */,
 				853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */,
-				85257B382362CA5600E84CC5 /* UIButtonExtension.swift */,
 				854CC10A2393302C000AD257 /* MKMapViewExtension.swift */,
+				85257B382362CA5600E84CC5 /* UIButtonExtension.swift */,
 				85B6C5A9239FE565000C33E4 /* UIFontExtension.swift */,
+				8566830D23B4F9EA00CE94CC /* UIViewControllerExtension.swift */,
+				85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */,
 				851141DA239A68150062438E /* SeminarTableViewController.swift in Sources */,
 				850BA45A239A7B8A0098196D /* SpendenViewController.swift in Sources */,
+				8566830E23B4F9EA00CE94CC /* UIViewControllerExtension.swift in Sources */,
 				8566826C23B4F1D000CE94CC /* Configuration.swift in Sources */,
 				85E884CC23994D62004C3AE4 /* SeminarPickerViewTextField.swift in Sources */,
 				850DC89D23A13C700097C927 /* DataManager.swift in Sources */,
