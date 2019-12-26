@@ -13,7 +13,7 @@ class DataManager {
 
     private var config = Configuration()
 
-    init(backendUrl: String) {
+    init() {
         loadLexikonEntries()
         loadSeminars()
         loadReferents()
