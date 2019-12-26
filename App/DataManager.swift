@@ -7,21 +7,13 @@ import AlamofireObjectMapper
 import Foundation
 
 class DataManager {
-    private let backendUrl: URL?
-    private let lexikonUrl: URL?
-    private let seminarUrl: URL?
-    private let referentUrl: URL?
-
     private var seminars: [Seminar] = []
     private var lexikonEntries: [LexikonEntry] = []
     private var referents: [Referent] = []
 
-    init(backendUrl: String) {
-        self.backendUrl = URL(string: backendUrl)
-        self.lexikonUrl = URL(string: (backendUrl + "lexikon"))
-        self.seminarUrl = URL(string: (backendUrl + "seminar"))
-        self.referentUrl = URL(string: (backendUrl + "speaker"))
+    private var config = Configuration()
 
+    init(backendUrl: String) {
         loadLexikonEntries()
         loadSeminars()
         loadReferents()
@@ -31,7 +23,7 @@ class DataManager {
 
     func loadLexikonEntries() {
         if(NetworkReachabilityManager()?.isReachable ?? false) {
-            AF.request(lexikonUrl!).responseArray { (response: AFDataResponse<[LexikonEntry]>) in
+            AF.request(config.lexikonUrl).responseArray { (response: AFDataResponse<[LexikonEntry]>) in
                 do {
                     self.lexikonEntries = try response.result.get()
                     Defaults.lexikonEntries = self.lexikonEntries
@@ -48,7 +40,7 @@ class DataManager {
 
     func loadSeminars() {
         if(NetworkReachabilityManager()?.isReachable ?? false) {
-            AF.request(seminarUrl!).responseArray { (response: AFDataResponse<[Seminar]>) in
+            AF.request(config.seminarUrl).responseArray { (response: AFDataResponse<[Seminar]>) in
                 do {
                     self.seminars = try response.result.get()
                     Defaults.seminars = self.seminars
@@ -65,7 +57,7 @@ class DataManager {
 
     func loadReferents() {
         if(NetworkReachabilityManager()?.isReachable ?? false) {
-            AF.request(referentUrl!).responseArray { (response: AFDataResponse<[Referent]>) in
+            AF.request(config.speakerUrl).responseArray { (response: AFDataResponse<[Referent]>) in
                 do {
                     self.referents = try response.result.get()
                     Defaults.referents = self.referents

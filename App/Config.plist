@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>seminarUrl</key>
+	<string>http://app.swdec.de/paxan/seminar</string>
+	<key>speakerUrl</key>
+	<string>http://app.swdec.de/paxan/speaker</string>
+	<key>lexikonUrl</key>
+	<string>http://app.swdec.de/paxan/lexikon</string>
+</dict>
+</plist>
