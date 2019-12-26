@@ -9,17 +9,7 @@ class LexikonTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if #available(iOS 13.0, *) {
-            view.backgroundColor = .systemBackground
-            tableView.backgroundColor = .systemBackground
-            tableView.backgroundView?.backgroundColor = .systemBackground
-        } else {
-            view.backgroundColor = .white
-            tableView.backgroundColor = .white
-            tableView.backgroundView?.backgroundColor = .white
-        }
-
-        // TODO: Fix the navigatiobar on iOS 13. This is only a hotfix
+        // Fixes the navigatiobar on iOS 13.
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()
@@ -66,11 +56,7 @@ class LexikonTableViewController: UITableViewController {
         cell.textLabel!.text = lexikonEntryData.title
         cell.textLabel!.font = .buttonBody
 
-        if #available(iOS 13.0, *) {
-            cell.textLabel!.textColor = .label
-        } else {
-            cell.textLabel!.textColor = .white
-        }
+        cell.textLabel!.textColor = .black
 
         cell.imageView?.image = Images.userManual
         cell.imageView?.tintColor = Colors.ecGreen

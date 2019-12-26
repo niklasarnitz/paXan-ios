@@ -44,11 +44,7 @@ class SeminarButton: UIButton {
         titleLabel?.lineBreakMode = .byWordWrapping
 
         backgroundColor = Colors.ecGreen
-        if #available(iOS 13.0, *) {
-            setTitleColor(UIColor.label.inverseColor(), for: .normal)
-        } else {
-            setTitleColor(.white, for: .normal)
-        }
+        setTitleColor(.white, for: .normal)
 
         titleLabel?.font = UIFont.buttonBody
     }

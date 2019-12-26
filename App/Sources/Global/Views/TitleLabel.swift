@@ -25,11 +25,7 @@ class TitleLabel: UILabel {
         font = .title
         numberOfLines = 0
 
-        if #available(iOS 13.0, *) {
-            self.setTextColor(color: UIColor.label.inverseColor())
-        } else {
-            self.setTextColor(color: .white)
-        }
+        self.setTextColor(color: .white)
     }
 
     func setTextColor(color: UIColor) {

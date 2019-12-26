@@ -4,12 +4,7 @@ import SwiftyUserDefaults
 import UIKit
 
 class MeinPaxAnViewController: UIViewController {
-    private lazy var helloLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Hallo, \(Defaults.username ?? "Error")"
-        label.font = .title
-        return label
-    }()
+    private lazy var helloLabel = TitleLabel(text: "Hallo, \(Defaults.username ?? "Error")")
 
     private lazy var userImageView: UIImageView = {
         let imageView = UIImageView(image: Images.userMale)
@@ -17,25 +12,14 @@ class MeinPaxAnViewController: UIViewController {
         return imageView
     }()
 
-    private lazy var daysUntilPaXanLabel: UILabel = {
-        let label = UILabel()
-        label.text = meinPaXanCaption
-        label.numberOfLines = 3
-        label.textAlignment = .center
-        label.font = .buttonBody
-        return label
-    }()
+    private lazy var daysUntilPaXanLabel = SubtitleLabel(text: meinPaXanCaption)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if #available(iOS 13.0, *) {
-            view.backgroundColor = .systemBackground
-        } else {
-            view.backgroundColor = .white
-        }
+        view.backgroundColor = .white
 
-        // TODO: Fix the navigatiobar on iOS 13. This is only a hotfix
+        // Fixes the navigatiobar on iOS 13.
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()

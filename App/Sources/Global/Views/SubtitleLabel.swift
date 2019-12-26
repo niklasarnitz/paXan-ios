@@ -27,10 +27,6 @@ class SubtitleLabel: UILabel {
         textAlignment = .center
         lineBreakMode = .byWordWrapping
 
-        if #available(iOS 13.0, *) {
-            textColor = UIColor.label.inverseColor()
-        } else {
-            textColor = .white
-        }
+        textColor = .white
     }
 }

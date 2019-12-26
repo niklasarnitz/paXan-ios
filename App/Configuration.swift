@@ -12,7 +12,7 @@ final class Configuration {
         if let path = Bundle.main.path(forResource: "Config", ofType: "plist") {
            config = NSDictionary(contentsOfFile: path)
         }
-        print(config)
+
         seminarUrl = URL(string: config!["seminarUrl"] as! String)!
         lexikonUrl = URL(string: config!["lexikonUrl"] as! String)!
         speakerUrl = URL(string: config!["speakerUrl"] as! String)!
