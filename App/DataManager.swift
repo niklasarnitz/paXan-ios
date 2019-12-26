@@ -32,8 +32,14 @@ class DataManager {
     func loadLexikonEntries() {
         if(NetworkReachabilityManager()?.isReachable ?? false) {
             AF.request(lexikonUrl!).responseArray { (response: AFDataResponse<[LexikonEntry]>) in
-                self.lexikonEntries = try! response.result.get()
-                Defaults.lexikonEntries = self.lexikonEntries
+                do {
+                    self.lexikonEntries = try response.result.get()
+                    Defaults.lexikonEntries = self.lexikonEntries
+                }
+                catch {
+                    self.lexikonEntries = backupLexikonEntries
+                    Defaults.lexikonEntries = self.lexikonEntries
+                }
             }
         } else {
             Defaults.lexikonEntries = backupLexikonEntries
@@ -43,9 +49,14 @@ class DataManager {
     func loadSeminars() {
         if(NetworkReachabilityManager()?.isReachable ?? false) {
             AF.request(seminarUrl!).responseArray { (response: AFDataResponse<[Seminar]>) in
-                self.seminars = try! response.result.get()
-                Defaults.seminars = self.seminars
-                print(Defaults.seminars)
+                do {
+                    self.seminars = try response.result.get()
+                    Defaults.seminars = self.seminars
+                }
+                catch {
+                    self.seminars = backupSeminars
+                    Defaults.seminars = self.seminars
+                }
             }
         } else {
             Defaults.seminars = backupSeminars
@@ -55,8 +66,14 @@ class DataManager {
     func loadReferents() {
         if(NetworkReachabilityManager()?.isReachable ?? false) {
             AF.request(referentUrl!).responseArray { (response: AFDataResponse<[Referent]>) in
-                self.referents = try! response.result.get()
-                Defaults.referents = self.referents
+                do {
+                    self.referents = try response.result.get()
+                    Defaults.referents = self.referents
+                }
+                catch {
+                    self.referents = backupSpeakers
+                    Defaults.referents = self.referents
+                }
             }
         } else {
             Defaults.referents = backupSpeakers
@@ -69,16 +86,9 @@ class DataManager {
         Defaults.seminarsThree = []
 
         Defaults.seminars.forEach {
-        
-            if $0.time == "2020-04-10 15:00:00" {
-                Defaults.seminarsOne.append($0)
-            }
-            if $0.time == "2020-04-10 16:30:00" {
-                Defaults.seminarsTwo.append($0)
-            }
-            if $0.time == "2020-04-11 16:30:00" {
-                Defaults.seminarsThree.append($0)
-            }
+            if $0.time == "2020-04-10 15:00:00" { Defaults.seminarsOne.append($0) }
+            if $0.time == "2020-04-10 16:30:00" { Defaults.seminarsTwo.append($0) }
+            if $0.time == "2020-04-11 16:30:00" { Defaults.seminarsThree.append($0) }
         }
     }
 }
