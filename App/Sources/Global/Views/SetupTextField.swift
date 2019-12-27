@@ -34,6 +34,8 @@ class SetupTextField: UITextField {
         layer.cornerRadius = 5
         layer.borderColor = UIColor.white.cgColor
 
+        isEnabled = true
+
         textColor = .white
     }
 }

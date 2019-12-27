@@ -10,25 +10,10 @@ class SecondSetupPageViewController: UIViewController {
 
     private lazy var subTitleLabel = SubtitleLabel(text: config.secondPageSubtitle)
 
-    private lazy var nameTextField: UITextField = {
-        let textfield = UITextField()
-
-        textfield.textColor = .white
-        textfield.attributedPlaceholder = NSAttributedString(
-            string: config.secondPageTextFieldPlaceholder,
-            attributes: [
-                NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)
-            ]
-        )
-        textfield.textAlignment = .center
-        textfield.layer.borderWidth = 1
-        textfield.layer.cornerRadius = 5
-        textfield.layer.borderColor = UIColor.white.cgColor
-
-        textfield.textColor = .white
-
-        return textfield
-    }()
+    private lazy var nameTextField = SetupTextField(
+        placeholder: config.secondPageTextFieldPlaceholder,
+        target: #selector(editingChanged)
+    )
 
     private lazy var continueButton: UIButton = {
         let button = SetupButton()
