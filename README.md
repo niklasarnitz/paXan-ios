@@ -53,7 +53,7 @@ sudo gem install fastlane -NV
 # Alternatively using Homebrew
 brew cask install fastlane
 ```
-2. Run ```bash fastlane beta``` in this repository
+2. Run ```fastlane beta``` in this repository
 3. Enter your credentials for AppStoreConnect
 
 ## Create Screenshots using Fastlane
@@ -64,7 +64,7 @@ sudo gem install fastlane -NV
 # Alternatively using Homebrew
 brew cask install fastlane
 ```
-2. Run ```bash fastlane snapshot```
+2. Run ```fastlane snapshot```
 3. You will now find the screenshots in the ```screenshots``` folder
 
 ## 3rd Party Licenses
