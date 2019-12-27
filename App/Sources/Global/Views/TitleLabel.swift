@@ -24,6 +24,7 @@ class TitleLabel: UILabel {
 
         font = .title
         numberOfLines = 0
+        lineBreakMode = .byWordWrapping
 
         self.setTextColor(color: .white)
     }

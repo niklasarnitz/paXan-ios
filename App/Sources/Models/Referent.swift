@@ -1,4 +1,3 @@
-// swiftlint:disable empty_type file_types_order
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import ObjectMapper
@@ -32,6 +31,3 @@ struct Referent: Codable, DefaultsSerializable, Mappable {
         picture <- map["picture"]
     }
 }
-
-// MARK: - Implementation Details
-private final class BundleToken {}

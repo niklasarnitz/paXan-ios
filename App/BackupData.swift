@@ -3,38 +3,6 @@
 import SwiftyUserDefaults
 import UIKit.UIImage
 
-// MARK: Strings
-let firstPageTitle: String = "Willkommen in\nder paXan App!"
-
-let firstPageSubtitle: String = "Cool, dass du da bist!\nIm Namen des SWDEC heißen wir dich herzlich Willkommen zu paXan 2020!"
-
-let secondPageTitle: String = "Deine paXan App"
-
-let secondPageSubtitle: String = "Damit wir dich in der App etwas persönlicher ansprechen können, gib bitte im unteren Textfeld deinen Vornamen ein. Den speichern wir natürlich nur auf deinem Gerät. 😉"
-
-let secondPageTextFieldPlaceholder: String = "Vorname"
-
-let setupContinueButtonTitle: String = "Weiter"
-
-let thirdPageTitle: String = "Deine paXan Seminare"
-
-let thirdPageSubtitle: String = "Trage hier unten bitte deine Seminare ein, für die du dich online angemeldet hast. Keine Angst, falls du etwas falsch machst, kannst du es später natürlich nocheinmal ändern."
-
-let thirdPageTextFieldPlaceholderOne: String = "Seminar 1"
-
-let thirdPageTextFieldPlaceholderTwo: String = "Seminar 2"
-
-let thirdPageTextFieldPlaceholderThree: String = "Seminar 3"
-
-let finalPageTitle: String = "Und jetzt...\nViel Spaß bei paXan!"
-
-let finalPageSubtitle: String = "In der App findest du alles, was du früher in deinem Kongressheft gefunden hast."
-
-let setupFinishButtonTitle: String = "Fertig"
-
-let meinPaXanCaption: String = "paXan startet bald!\nDann kannst du\ndie App benutzen."
-
-
 let dateFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -42,7 +10,9 @@ let dateFormatter: DateFormatter = {
     return dateFormatter
 }()
 
-// MARK: Seminars
+
+
+// MARK: - Seminars
 var backupSeminars: [Seminar] = [
     Seminar(title: "Allah gut!?", subtitle: "Glauben wir alle an den gleichen Gott?", referent: "Ralf Albrecht", description: "Alle reden vom gleichen Gott. Der Absolutheitsanspruch Jesu. Geht das heute Ÿberhaupt noch?", roomname: "EC-FSZ", lat: 0.0, long: 0.0, time: "2020-04-10 15:00:00"),
     Seminar(title: "Allah vs. JHWH ", subtitle: "Das Wesen Gottes", referent: "Adnan Al-Masoud", description: "Gottesbild(-er) und HintergrŸnde/Lehre\nAllah oder JHWH\nIslam: wie kann ich als Christ fŸr gute Begegnungen arbeiten?\n", roomname: "EC-FSZ\r", lat: 0.0, long: 0.0, time: "2020-04-10 15:00:00"),
@@ -58,8 +28,6 @@ var backupSeminars: [Seminar] = [
     Seminar(title: "Gemeinde, biblisches Auslaufmodell ", subtitle: "Welche Bedeutung hat Gemeinde in einer postmodernen Welt?", referent: "Hans-Joachim Eckstein", description: "1\n", roomname: "EC-FSZ\r", lat: 0.0, long: 0.0, time: "2020-04-10 15:00:00"),
     Seminar(title: "Neuer Wein in alte SchlŠuche?! ", subtitle: "Kann Jugendarbeit alteingesessene Gemeinden noch verŠndern oder sprengt es den Schlauch?", referent: "Klaus Ehrenfeuchter", description: "Sterbende Gemeinde (wie kann ich Jugend in den Godi integrieren?) Ð †beralterung \nGemeinde gestalten: was ist gut? Was kann besser sein? Wie kann ãichÒ es umsetzen?\n", roomname: "EC-FSZ\r", lat: 0.0, long: 0.0, time: "2020-04-10 15:00:00"),
     Seminar(title: "Sand im Getriebe ", subtitle: "Wie lšse ich Konflikte?", referent: "1 Fischer", description: "Mediation 1zu1 (in Konflikten vermitteln)\nSchwierige GesprŠche fŸhren\nKonflikte in der Gemeinde/in Teams\nVergebung Ð Konflikte bewŠltigen \n", roomname: "EC-FSZ\r", lat: 0.0, long: 0.0, time: "2020-04-10 15:00:00"),
-
-
     Seminar(title: "Uns gibtÕs auch! ", subtitle: "Als EC-Jugendarbeit in Rathaus, Schule, Zeitung und Co. wahrgenommen werden", referent: "Eberhard Fuhr", description: "Pressearbeit / …-Arbeit\nWie kommt mein EC in die Zeitung? Wie wird die Jugendarbeit im Ort wahrgenommen?\n", roomname: "EC-FSZ\r", lat: 0.0, long: 0.0, time: "2020-04-10 15:00:00"),
     Seminar(title: "Fake News or Good News ", subtitle: "Wahrheitsanspruch der Bibel", referent: "Volker GŠckle", description: "Wahrheit\nJesus sagt: ich bin die Wahrheit. Wie passt das mit westl. WahrheitsverstŠndnis zusammen?\n", roomname: "EC-FSZ\r", lat: 0.0, long: 0.0, time: "2020-04-10 15:00:00"),
     Seminar(title: "Smartphonejunkie", subtitle: "Vom Umgang mit suchtgefŠhrdeten Teens ", referent: "Ulrich Giesekus", description: "Guter Umgang im Teenkreis. Wie thematisiere ich das im TK gut...\nTheorie und ganz praktische Ideen:\n- alle Handys vor TK einsammeln?\n- wŠhrend Andacht off?", roomname: "EC-FSZ\r", lat: 0.0, long: 0.0, time: "2020-04-10 15:00:00"),
@@ -101,7 +69,7 @@ var backupSeminars: [Seminar] = [
     Seminar(title: "Wer checktÔs noch?", subtitle: "Adventisten, Neu-Apostolen, É", referent: "Bernd Wildermuth", description: "Verschiedene Kirchenstršmungen. Etwas Durchblick in den in (SŸd-)Deutschland gŠngigen Stršmungen.", roomname: "EC-FSZ\r", lat: 0.0, long: 0.0, time: "2020-04-10 15:00:00"),
     Seminar(title: "Schrumm Schrumm Evangelium kšnnen", subtitle: "Wie wir in kleinen Kreisen guten Lobpreis gestalten ", referent: "Jan Wšrner", description: "Lobpreis (im Jugendbund, mit Herz, Kultur, wie, warum, Hearts of Worship)\nLobpreis leiten\nLobpreisgestaltung in kleinen Kreisen\nLobpreis anleiten\nImpulse zur Gestaltung von Lobpreiszeiten\n", roomname: "EC-FSZ", lat: 0.0, long: 0.0, time: "2020-04-10 15:00:00")]
 
-// MARK: Lexikon Entries
+// MARK: - Lexikon Entries
 let backupLexikonEntries: [LexikonEntry] = [
     LexikonEntry(
         title: "BBistro",
@@ -152,7 +120,7 @@ let backupLexikonEntries: [LexikonEntry] = [
     LexikonEntry(title: "Zelten", description: ""),
 ]
 
-// MARK: Speakers
+// MARK: - Speakers
 
 let backupSpeakers: [Referent] = [
     Referent(

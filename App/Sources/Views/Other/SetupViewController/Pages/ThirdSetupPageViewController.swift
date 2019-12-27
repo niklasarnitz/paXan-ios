@@ -6,11 +6,11 @@ import UIKit
 /// Third Setup Page View Controller
 class ThirdSetupPageViewController: UIViewController {
     // MARK: Instance Properties
-    private lazy var titleLabel = TitleLabel(text: thirdPageTitle)
+    private lazy var titleLabel = TitleLabel(text: config.thirdPageTitle)
 
-    private lazy var subTitleLabel = SubtitleLabel(text: thirdPageSubtitle)
+    private lazy var subTitleLabel = SubtitleLabel(text: config.thirdPageSubtitle)
 
-    private lazy var continueButton = SetupButton(text: setupContinueButtonTitle)
+    private lazy var continueButton = SetupButton(text: config.setupContinueButtonTitle)
 
     private lazy var heimatlosTitleLabel = TitleLabel(text: "#heimatlos")
 
@@ -26,51 +26,15 @@ class ThirdSetupPageViewController: UIViewController {
         return pickerView
     }()
 
-    private lazy var seminarOnePickerViewTextField: UITextField = {
-        let textField = UITextField()
+    private lazy var seminarOnePickerViewTextField = SeminarPickerViewTextField(
+        placeholder: config.thirdPageTextFieldPlaceholderOne,
+        pickerView: seminarOnePickerView
+    )
 
-        textField.textColor = .white
-        textField.attributedPlaceholder = NSAttributedString(
-            string: thirdPageTextFieldPlaceholderOne,
-            attributes: [ NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5) ]
-        )
-        textField.textAlignment = .center
-        textField.layer.borderWidth = 1
-        textField.layer.cornerRadius = 5
-        textField.layer.borderColor = UIColor.white.cgColor
-        textField.inputView = seminarOnePickerView
-        textField.rightViewMode = .always
-        textField.rightView = {
-            let imageView = UIImageView(image: Images.upDownArrow)
-            imageView.tintColor = .white
-            return imageView
-        }()
-
-        return textField
-    }()
-
-    private lazy var seminarTwoPickerViewTextField: UITextField = {
-        let textField = UITextField()
-
-        textField.textColor = .white
-        textField.attributedPlaceholder = NSAttributedString(
-            string: thirdPageTextFieldPlaceholderTwo,
-            attributes: [ NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5) ]
-        )
-        textField.textAlignment = .center
-        textField.layer.borderWidth = 1
-        textField.layer.cornerRadius = 5
-        textField.layer.borderColor = UIColor.white.cgColor
-        textField.inputView = seminarTwoPickerView
-        textField.rightViewMode = .always
-        textField.rightView = {
-            let imageView = UIImageView(image: Images.upDownArrow)
-            imageView.tintColor = .white
-            return imageView
-        }()
-
-        return textField
-    }()
+    private lazy var seminarTwoPickerViewTextField = SeminarPickerViewTextField(
+        placeholder: config.thirdPageTextFieldPlaceholderTwo,
+        pickerView: seminarTwoPickerView
+    )
 
     private lazy var heimwehTitleLabel = TitleLabel(text: "#heimweh")
 
@@ -82,28 +46,10 @@ class ThirdSetupPageViewController: UIViewController {
         return pickerView
     }()
 
-    private lazy var seminarThreePickerViewTextField: UITextField = {
-        let textField = UITextField()
-
-        textField.textColor = .white
-        textField.attributedPlaceholder = NSAttributedString(
-            string: thirdPageTextFieldPlaceholderThree,
-            attributes: [ NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5) ]
-        )
-        textField.textAlignment = .center
-        textField.layer.borderWidth = 1
-        textField.layer.cornerRadius = 5
-        textField.layer.borderColor = UIColor.white.cgColor
-        textField.inputView = seminarThreePickerView
-        textField.rightViewMode = .always
-        textField.rightView = {
-            let imageView = UIImageView(image: Images.upDownArrow)
-            imageView.tintColor = .white
-            return imageView
-        }()
-
-        return textField
-    }()
+    private lazy var seminarThreePickerViewTextField = SeminarPickerViewTextField(
+        placeholder: config.thirdPageTextFieldPlaceholderThree,
+        pickerView: seminarThreePickerView
+    )
 
     // MARK: View Lifecycle
     override func viewDidLoad() {

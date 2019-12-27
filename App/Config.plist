@@ -8,5 +8,37 @@
 	<string>http://app.swdec.de/paxan/speaker</string>
 	<key>lexikonUrl</key>
 	<string>http://app.swdec.de/paxan/lexikon</string>
+	<key>firstPageTitle</key>
+	<string>Willkommen in der paXan App!</string>
+	<key>firstPageSubtitle</key>
+	<string>Cool, dass du da bist! Im Namen des SWDEC heißen wir dich herzlich Willkommen zu paXan 2020!</string>
+	<key>secondPageTitle</key>
+	<string>Deine paXan App</string>
+	<key>secondPageSubtitle</key>
+	<string>Damit wir dich in der App etwas persönlicher ansprechen können, gib bitte im unteren Textfeld deinen Vornamen ein. Den speichern wir natürlich nur auf deinem Gerät. 😉</string>
+	<key>secondPageTextFieldPlaceholder</key>
+	<string>Name</string>
+	<key>setupContinueButtonTitle</key>
+	<string>Weiter</string>
+	<key>thirdPageTitle</key>
+	<string>Deine paXan Seminare</string>
+	<key>thirdPageSubtitle</key>
+	<string>Trage hier unten bitte deine Seminare ein, für die du dich online angemeldet hast. Keine Angst, falls du etwas falsch machst, kannst du es später natürlich nocheinmal ändern.</string>
+	<key>thirdPageTextFieldPlaceholderOne</key>
+	<string>Seminar 1</string>
+	<key>thirdPageTextFieldPlaceholderTwo</key>
+	<string>Seminar 2</string>
+	<key>thirdPageTextFieldPlaceholderThree</key>
+	<string>Seminar 3</string>
+	<key>fourthPageTitle</key>
+	<string>Und jetzt...\nViel Spaß bei paXan!</string>
+	<key>fourthPageSubtitle</key>
+	<string>In der App findest du alles, was du früher in deinem Kongressheft gefunden hast.</string>
+	<key>setupFinishButtonTitle</key>
+	<string>Fertig</string>
+	<key>meinPaXanTitle</key>
+	<string></string>
+	<key>heimwehTitle</key>
+	<string>#heimweh</string>
 </dict>
 </plist>

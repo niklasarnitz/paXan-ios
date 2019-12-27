@@ -16,7 +16,7 @@ class MeinPaxAnViewController: UIViewController {
         return imageView
     }()
 
-    private lazy var daysUntilPaXanLabel = SubtitleLabel(text: meinPaXanCaption)
+    private lazy var daysUntilPaXanLabel = SubtitleLabel(text: config.meinPaXanTitle)
 
     override func viewDidLoad() {
         super.viewDidLoad()

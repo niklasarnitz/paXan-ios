@@ -1,4 +1,3 @@
-// swiftlint:disable line_length type_body_length
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import SwiftyUserDefaults
@@ -15,7 +14,9 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
 
     // Friday
     private lazy var fridayCaptionLabel = EventLabel(text: "Freitag, 10. April 2020\n#heimatlos")
-    private lazy var fridayEventLabelOne = EventBody(text: "09:30 Uhr Praxis Session / CoffeeTime\n11:30 Uhr Bibel Session mit Klaus Göttler\n15:00 Uhr Seminare I")
+    private lazy var fridayEventLabelOne = EventBody(
+        text: "09:30 Uhr Praxis Session / CoffeeTime\n11:30 Uhr Bibel Session mit Klaus Göttler\n15:00 Uhr Seminare I"
+    )
     private lazy var fridaySeminarOneButton = SeminarButton(text: Defaults.seminarOne.title)
     private lazy var fridayEventLabelTwo = EventBody(text: "16:30 Uhr Seminare II")
     private lazy var fridaySeminarTwoButton = SeminarButton(text: Defaults.seminarTwo.title)
@@ -23,13 +24,17 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
 
     // Saturday
     private lazy var saturdayCaptionLabel = EventLabel(text: "Samstag, 11. April 2020\n#heimweh")
-    private lazy var saturdayEventOneLabel = EventBody(text: "09:30 Uhr Bibel Session mit Joachim Böker\n11:30 Uhr Dennoch feiern\n14:00 Uhr Praxis Session / CoffeeTime\n16:30 Uhr Seminare III")
+    private lazy var saturdayEventOneLabel = EventBody(
+        text: "09:30 Uhr Bibel Session mit Joachim Böker\n11:30 Uhr Dennoch feiern\n14:00 Uhr Praxis Session / CoffeeTime\n16:30 Uhr Seminare III"
+    )
     private lazy var saturdaySeminarButton = SeminarButton(text: Defaults.seminarThree.title)
     private lazy var saturdayEventTwoLabel = EventBody(text: "19:30 Uhr Danke")
 
     // Sunday
     private lazy var sundayCaptionLabel = EventLabel(text: "Sonntag, 12. April 2020\n#heimweg")
-    private lazy var sundayEventLabel = EventBody(text: "09:30 Uhr Bibel Session mit Volker Gäckle\n14:00 Uhr Praxis Session / CoffeeTime\n16:30 Uhr Trainings Session\n19:30 Uhr DELTA Endlos feiern")
+    private lazy var sundayEventLabel = EventBody(
+        text: "09:30 Uhr Bibel Session mit Volker Gäckle\n14:00 Uhr Praxis Session / CoffeeTime\n16:30 Uhr Trainings Session\n19:30 Uhr DELTA Endlos feiern"
+    )
     private lazy var sundayEveningEventButton = SeminarButton(text: "DELTA - KARTE")
 
     // Monday

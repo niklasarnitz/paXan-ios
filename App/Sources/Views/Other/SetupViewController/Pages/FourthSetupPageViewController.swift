@@ -6,9 +6,9 @@ import UIKit
 /// Fourth Setup Page View Controller
 class FourthSetupPageViewController: UIViewController {
     // MARK: Instance Properties
-    private lazy var titleLabel = TitleLabel(text: finalPageTitle)
+    private lazy var titleLabel = TitleLabel(text: config.firstPageTitle)
 
-    private lazy var subTitleLabel = SubtitleLabel(text: finalPageSubtitle)
+    private lazy var subTitleLabel = SubtitleLabel(text: config.firstPageSubtitle)
 
     private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
@@ -19,7 +19,7 @@ class FourthSetupPageViewController: UIViewController {
         return imageView
     }()
 
-    private lazy var continueButton = SetupButton(text: setupFinishButtonTitle)
+    private lazy var continueButton = SetupButton(text: config.setupContinueButtonTitle)
 
     // MARK: View Lifecycle
     override func viewDidLoad() {

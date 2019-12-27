@@ -6,31 +6,34 @@ import UIKit
 /// Second Setup Page View Controller
 class SecondSetupPageViewController: UIViewController {
     // MARK: Instance Properties
-    private lazy var titleLabel = TitleLabel(text: secondPageTitle)
+    private lazy var titleLabel = TitleLabel(text: config.secondPageTitle)
 
-    private lazy var subTitleLabel = SubtitleLabel(text: secondPageSubtitle)
+    private lazy var subTitleLabel = SubtitleLabel(text: config.secondPageSubtitle)
 
     private lazy var nameTextField: UITextField = {
-        let textField = UITextField()
+        let textfield = UITextField()
 
-        textField.textColor = .white
-        textField.attributedPlaceholder = NSAttributedString(
-            string: secondPageTextFieldPlaceholder,
-            attributes: [ NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5) ]
+        textfield.textColor = .white
+        textfield.attributedPlaceholder = NSAttributedString(
+            string: config.secondPageTextFieldPlaceholder,
+            attributes: [
+                NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)
+            ]
         )
-        textField.textAlignment = .center
-        textField.layer.borderWidth = 1
-        textField.layer.cornerRadius = 5
-        textField.layer.borderColor = UIColor.white.cgColor
-        textField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        textfield.textAlignment = .center
+        textfield.layer.borderWidth = 1
+        textfield.layer.cornerRadius = 5
+        textfield.layer.borderColor = UIColor.white.cgColor
 
-        return textField
+        textfield.textColor = .white
+
+        return textfield
     }()
 
     private lazy var continueButton: UIButton = {
         let button = SetupButton()
 
-        button.setTitle(setupContinueButtonTitle, for: .normal)
+        button.setTitle(config.setupContinueButtonTitle, for: .normal)
 
         button.alpha = 0.5
 
@@ -82,6 +85,8 @@ class SecondSetupPageViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-26)
             make.height.equalTo(35)
         }
+
+        nameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
     }
 
     @objc func editingChanged(_ textField: UITextField) {

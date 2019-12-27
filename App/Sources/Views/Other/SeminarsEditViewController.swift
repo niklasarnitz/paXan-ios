@@ -30,31 +30,13 @@ class SeminarsEditViewController: UIViewController {
         return pickerView
     }()
 
-    private lazy var seminarOnePickerViewTextField: UITextField = {
-        let textField = UITextField()
-
-        textField.textColor = .white
-        textField.attributedPlaceholder = NSAttributedString(
-            string: thirdPageTextFieldPlaceholderOne,
-            attributes: [ NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5) ]
-        )
-        textField.textAlignment = .center
-        textField.layer.borderWidth = 1
-        textField.layer.cornerRadius = 5
-        textField.layer.borderColor = UIColor.white.cgColor
-        textField.inputView = seminarOnePickerView
-        textField.rightViewMode = .always
-        textField.rightView = {
-            let imageView = UIImageView(image: Images.upDownArrow)
-            imageView.tintColor = .white
-            return imageView
-        }()
-
-        return textField
-    }()
+    private lazy var seminarOnePickerViewTextField = SeminarPickerViewTextField(
+        placeholder: config.thirdPageTextFieldPlaceholderOne,
+        pickerView: seminarOnePickerView
+    )
 
     private lazy var seminarTwoPickerViewTextField = SeminarPickerViewTextField(
-        placeholder: thirdPageTextFieldPlaceholderTwo,
+        placeholder: config.thirdPageTextFieldPlaceholderTwo,
         pickerView: seminarTwoPickerView
     )
 
@@ -67,7 +49,7 @@ class SeminarsEditViewController: UIViewController {
     }()
 
     private lazy var seminarThreePickerViewTextField = SeminarPickerViewTextField(
-        placeholder: thirdPageTextFieldPlaceholderThree,
+        placeholder: config.thirdPageTextFieldPlaceholderThree,
         pickerView: seminarThreePickerView
     )
 
