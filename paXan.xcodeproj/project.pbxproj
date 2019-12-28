@@ -81,7 +81,6 @@
 		85E884C623994863004C3AE4 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884C523994863004C3AE4 /* TitleLabel.swift */; };
 		85E884C82399494D004C3AE4 /* SubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884C72399494D004C3AE4 /* SubtitleLabel.swift */; };
 		85E884CA23994B6E004C3AE4 /* DescriptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884C923994B6E004C3AE4 /* DescriptionTextView.swift */; };
-		85E884CC23994D62004C3AE4 /* SeminarPickerViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884CB23994D62004C3AE4 /* SeminarPickerViewTextField.swift */; };
 		85E884CE23995AF3004C3AE4 /* Referent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E884CD23995AF3004C3AE4 /* Referent.swift */; };
 		8BD900518DC1FA74F5D40930 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */; };
 		B095EF044CD3E96F3A9FF352 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55D34104A396091DDF9796B /* ObjectMapper.framework */; };
@@ -184,7 +183,6 @@
 		85E884C523994863004C3AE4 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		85E884C72399494D004C3AE4 /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
 		85E884C923994B6E004C3AE4 /* DescriptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextView.swift; sourceTree = "<group>"; };
-		85E884CB23994D62004C3AE4 /* SeminarPickerViewTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarPickerViewTextField.swift; sourceTree = "<group>"; };
 		85E884CD23995AF3004C3AE4 /* Referent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referent.swift; sourceTree = "<group>"; };
 		914E5D5FD6D03D393585755F /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Dependencies/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		A1E25D4001CF2E8A992A7C17 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
@@ -382,7 +380,6 @@
 				85E884C523994863004C3AE4 /* TitleLabel.swift */,
 				85E884C72399494D004C3AE4 /* SubtitleLabel.swift */,
 				85E884C923994B6E004C3AE4 /* DescriptionTextView.swift */,
-				85E884CB23994D62004C3AE4 /* SeminarPickerViewTextField.swift */,
 				851141DE239A6D3B0062438E /* ProfilePictureImageView.swift */,
 				85D1186E23A3FFE100EC3D88 /* EventLabel.swift */,
 				85D1187023A400A500EC3D88 /* EventBody.swift */,
@@ -690,7 +687,6 @@
 				8566830E23B4F9EA00CE94CC /* UIViewControllerExtension.swift in Sources */,
 				8566826C23B4F1D000CE94CC /* Configuration.swift in Sources */,
 				850FB7D723B64F8400D3ECFB /* SeminarPickerTextField.swift in Sources */,
-				85E884CC23994D62004C3AE4 /* SeminarPickerViewTextField.swift in Sources */,
 				850DC89D23A13C700097C927 /* DataManager.swift in Sources */,
 				85E884C623994863004C3AE4 /* TitleLabel.swift in Sources */,
 				85D1186F23A3FFE100EC3D88 /* EventLabel.swift in Sources */,
@@ -898,7 +894,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_TEAM = YYZ333K89U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -924,7 +920,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_TEAM = YYZ333K89U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -30,12 +30,12 @@ class SeminarsEditViewController: UIViewController {
         return pickerView
     }()
 
-    private lazy var seminarOnePickerViewTextField = SeminarPickerViewTextField(
+    private lazy var seminarOnePickerViewTextField = SeminarPickerTextField(
         placeholder: config.thirdPageTextFieldPlaceholderOne,
         pickerView: seminarOnePickerView
     )
 
-    private lazy var seminarTwoPickerViewTextField = SeminarPickerViewTextField(
+    private lazy var seminarTwoPickerViewTextField = SeminarPickerTextField(
         placeholder: config.thirdPageTextFieldPlaceholderTwo,
         pickerView: seminarTwoPickerView
     )
@@ -48,7 +48,7 @@ class SeminarsEditViewController: UIViewController {
         return pickerView
     }()
 
-    private lazy var seminarThreePickerViewTextField = SeminarPickerViewTextField(
+    private lazy var seminarThreePickerViewTextField = SeminarPickerTextField(
         placeholder: config.thirdPageTextFieldPlaceholderThree,
         pickerView: seminarThreePickerView
     )

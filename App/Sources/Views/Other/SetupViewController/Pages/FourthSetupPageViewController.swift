@@ -50,8 +50,9 @@ class FourthSetupPageViewController: UIViewController {
         view.addSubview(titleLabel)
 
         titleLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
             make.top.equalTo(super.view.snp.topMargin).offset(50)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
         }
     }
 

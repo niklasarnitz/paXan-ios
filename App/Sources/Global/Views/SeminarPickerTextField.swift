@@ -41,10 +41,7 @@ class SeminarPickerTextField: UITextField {
         layer.borderColor = UIColor.white.cgColor
         inputView = pickerView
 
-        addSubview(imageView)
-        imageView.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().offset(-10)
-            make.centerX.equalToSuperview()
-        }
+        rightView = imageView
+        rightViewMode = .always
     }
 }
