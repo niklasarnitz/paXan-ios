@@ -10,7 +10,6 @@
 		0E8611E67BA94825964453FA /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538967131DCEEECEA70FB8BA /* SnapKit.framework */; };
 		28E3F88E24EE25B22989D6B9 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914E5D5FD6D03D393585755F /* AlamofireObjectMapper.framework */; };
 		7C248CEFBC92BC3F36260B49 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AA791D80A696E6C51CC33C /* Alamofire.framework */; };
-		850BA458239A7A810098196D /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA457239A7A810098196D /* TimeTableViewController.swift */; };
 		850BA45A239A7B8A0098196D /* SpendenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA459239A7B8A0098196D /* SpendenViewController.swift */; };
 		850BA45C239A7C250098196D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA45B239A7C250098196D /* AboutViewController.swift */; };
 		850BA45E239A81FE0098196D /* ReferentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA45D239A81FE0098196D /* ReferentTableViewController.swift */; };
@@ -102,7 +101,6 @@
 		41AA791D80A696E6C51CC33C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Alamofire.framework; path = Dependencies/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		538967131DCEEECEA70FB8BA /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapKit.framework; path = Dependencies/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Dependencies/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
-		850BA457239A7A810098196D /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
 		850BA459239A7B8A0098196D /* SpendenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendenViewController.swift; sourceTree = "<group>"; };
 		850BA45B239A7C250098196D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		850BA45D239A81FE0098196D /* ReferentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferentTableViewController.swift; sourceTree = "<group>"; };
@@ -416,7 +414,6 @@
 				851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */,
 				851141D9239A68150062438E /* SeminarTableViewController.swift */,
 				850BA459239A7B8A0098196D /* SpendenViewController.swift */,
-				850BA457239A7A810098196D /* TimeTableViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -696,7 +693,6 @@
 				8539E59C237C790400EBC1DB /* BackupData.swift in Sources */,
 				85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */,
 				85AAD03A231ABCC900C0F813 /* LexikonTableViewController.swift in Sources */,
-				850BA458239A7A810098196D /* TimeTableViewController.swift in Sources */,
 				850BA45C239A7C250098196D /* AboutViewController.swift in Sources */,
 				853CC1682360CB3E00A3F4F3 /* SecondSetupPageViewController.swift in Sources */,
 			);
