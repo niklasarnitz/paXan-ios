@@ -4,6 +4,11 @@ import UIKit.UITextField
 
 class SeminarPickerTextField: UITextField {
     private var pickerView: UIPickerView
+    private lazy var imageView: UIImageView = {
+        let imageView = UIImageView(image: Images.upDownArrow)
+        imageView.tintColor = .white
+        return imageView
+    }()
 
     /// Creates a SeminarPickerTextView with the given placeholder and target
     init(placeholder: String, pickerView: UIPickerView) {
@@ -35,11 +40,11 @@ class SeminarPickerTextField: UITextField {
         layer.cornerRadius = 5
         layer.borderColor = UIColor.white.cgColor
         inputView = pickerView
-        rightViewMode = .always
-        rightView = {
-            let imageView = UIImageView(image: Images.upDownArrow)
-            imageView.tintColor = .white
-            return imageView
-        }()
+
+        addSubview(imageView)
+        imageView.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().offset(-10)
+            make.centerX.equalToSuperview()
+        }
     }
 }

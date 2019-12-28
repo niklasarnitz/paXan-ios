@@ -10,10 +10,7 @@ class SecondSetupPageViewController: UIViewController {
 
     private lazy var subTitleLabel = SubtitleLabel(text: config.secondPageSubtitle)
 
-    private lazy var nameTextField = SetupTextField(
-        placeholder: config.secondPageTextFieldPlaceholder,
-        target: #selector(editingChanged)
-    )
+    private lazy var nameTextField = SetupTextField(placeholder: config.secondPageTextFieldPlaceholder)
 
     private lazy var continueButton: UIButton = {
         let button = SetupButton()

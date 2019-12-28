@@ -5,12 +5,10 @@ import UIKit.UITextField
 class SetupTextField: UITextField {
     private var placeholderString: String
     /// Creates a subtitle label with the given text
-    init(placeholder: String, target: Selector) {
+    init(placeholder: String) {
         self.placeholderString = placeholder
 
         super.init(frame: .zero)
-
-        self.addTarget(self, action: target, for: .editingChanged)
     }
 
     @available(*, unavailable)

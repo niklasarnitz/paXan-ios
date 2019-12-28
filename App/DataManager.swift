@@ -7,12 +7,6 @@ import AlamofireObjectMapper
 import Foundation
 
 class DataManager {
-    private var seminars: [Seminar] = []
-    private var lexikonEntries: [LexikonEntry] = []
-    private var referents: [Referent] = []
-
-    private var config = Configuration()
-
     init() {
         loadLexikonEntries()
         loadSeminars()
@@ -25,12 +19,11 @@ class DataManager {
         if(NetworkReachabilityManager()?.isReachable ?? false) {
             AF.request(config.lexikonUrl).responseArray { (response: AFDataResponse<[LexikonEntry]>) in
                 do {
-                    self.lexikonEntries = try response.result.get()
-                    Defaults.lexikonEntries = self.lexikonEntries
+                    Defaults.lexikonEntries = try response.result.get()
                 }
                 catch {
-                    self.lexikonEntries = backupLexikonEntries
-                    Defaults.lexikonEntries = self.lexikonEntries
+                    print(error)
+                    Defaults.lexikonEntries = backupLexikonEntries
                 }
             }
         } else {
@@ -42,12 +35,11 @@ class DataManager {
         if(NetworkReachabilityManager()?.isReachable ?? false) {
             AF.request(config.seminarUrl).responseArray { (response: AFDataResponse<[Seminar]>) in
                 do {
-                    self.seminars = try response.result.get()
-                    Defaults.seminars = self.seminars
+                    Defaults.seminars = try response.result.get()
                 }
                 catch {
-                    self.seminars = backupSeminars
-                    Defaults.seminars = self.seminars
+                    print(error)
+                    Defaults.seminars = backupSeminars
                 }
             }
         } else {
@@ -59,12 +51,11 @@ class DataManager {
         if(NetworkReachabilityManager()?.isReachable ?? false) {
             AF.request(config.speakerUrl).responseArray { (response: AFDataResponse<[Referent]>) in
                 do {
-                    self.referents = try response.result.get()
-                    Defaults.referents = self.referents
+                    Defaults.referents = try response.result.get()
                 }
                 catch {
-                    self.referents = backupSpeakers
-                    Defaults.referents = self.referents
+                    print(error)
+                    Defaults.referents = backupSpeakers
                 }
             }
         } else {

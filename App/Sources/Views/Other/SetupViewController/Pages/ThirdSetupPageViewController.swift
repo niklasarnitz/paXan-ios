@@ -145,7 +145,6 @@ class ThirdSetupPageViewController: UIViewController {
 
     private func setupContinueButton() {
         view.addSubview(continueButton)
-
         continueButton.snp.makeConstraints { make in
             make.height.equalTo(40)
             make.bottom.equalToSuperview().offset(-50)

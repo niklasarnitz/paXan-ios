@@ -45,6 +45,7 @@ class FourthSetupPageViewController: UIViewController {
 
     private func setupTitleLabel() {
         titleLabel.textAlignment = .center
+        titleLabel.lineBreakMode = .byWordWrapping
 
         view.addSubview(titleLabel)
 
