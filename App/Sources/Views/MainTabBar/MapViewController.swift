@@ -28,15 +28,5 @@ class MapViewController: UIViewController {
         imageScrollView.setup()
 
         imageScrollView.display(image: Images.map)
-
-        imageScrollView.zoom(
-            to: CGRect(
-                x: view.bounds.width,
-                y: view.bounds.height,
-                width: view.bounds.width,
-                height: view.bounds.height
-            ),
-            animated: true
-        )
     }
 }

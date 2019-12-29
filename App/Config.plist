@@ -31,14 +31,41 @@
 	<key>thirdPageTextFieldPlaceholderThree</key>
 	<string>Seminar 3</string>
 	<key>fourthPageTitle</key>
-	<string>Und jetzt...\nViel Spaß bei paXan!</string>
+	<string>Und jetzt...
+Viel Spaß bei paXan!</string>
 	<key>fourthPageSubtitle</key>
 	<string>In der App findest du alles, was du früher in deinem Kongressheft gefunden hast.</string>
 	<key>setupFinishButtonTitle</key>
 	<string>Fertig</string>
-	<key>meinPaXanTitle</key>
-	<string></string>
 	<key>heimwehTitle</key>
 	<string>#heimweh</string>
+	<key>thursdayCaptionLabel</key>
+	<string>Donnerstag, 09. April 2020
+#heimatkunde</string>
+	<key>thursdayEventLabel</key>
+	<string>19:30 Uhr paX an Start - Bibel Session
+mit Joachim Böker
+22:00 Uhr Darum feiern</string>
+	<key>fridayCaptionLabel</key>
+	<string>Freitag, 10. April 2020
+#heimatlos</string>
+	<key>fridayEventLabelOne</key>
+	<string>09:30 Uhr Praxis Session / CoffeeTime
+11:30 Uhr Bibel Session mit Klaus Göttler
+15:00 Uhr Seminare I</string>
+	<key>fridayEventLabelTwo</key>
+	<string>16:30 Uhr Seminare II</string>
+	<key>fridayEventLabelThree</key>
+	<string>19:30 Uhr Das Kreuz</string>
+	<key>saturdayCaptionLabel</key>
+	<string>Samstag, 11. April 2020
+#heimweh</string>
+	<key>saturdayEventOneLabel</key>
+	<string>09:30 Uhr Bibel Session mit Joachim Böker
+11:30 Uhr Dennoch feiern
+14:00 Uhr Praxis Session / CoffeeTime
+16:30 Uhr Seminare III</string>
+	<key>saturdayEventTwoLabel</key>
+	<string>19:30 Uhr Danke</string>
 </dict>
 </plist>

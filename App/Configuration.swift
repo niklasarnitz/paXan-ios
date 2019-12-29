@@ -28,12 +28,17 @@ final class Configuration {
     var thirdPageTextFieldPlaceholderTwo: String
     var thirdPageTextFieldPlaceholderThree: String
 
-    // MARK: - Tabs
-    // MARK: Mein paXan
-    var meinPaXanTitle: String
-
     // MARK: - Timetable
     var heimwehTitle: String
+    var thursdayCaptionLabel: String
+    var thursdayEventLabel: String
+    var fridayCaptionLabel: String
+    var fridayEventLabelOne: String
+    var fridayEventLabelTwo: String
+    var fridayEventLabelThree: String
+    var saturdayCaptionLabel: String
+    var saturdayEventOneLabel: String
+    var saturdayEventTwoLabel: String
 
     init() {
         if let path = Bundle.main.path(forResource: "Config", ofType: "plist") {
@@ -65,11 +70,17 @@ final class Configuration {
         thirdPageTextFieldPlaceholderThree = config!["thirdPageTextFieldPlaceholderThree"] as! String
 
         // MARK: - Tabs Vars
-        // MARK: - Mein paXan Vars
-        meinPaXanTitle = config!["meinPaXanTitle"] as! String
-
         // MARK: - Timetable Vars
         heimwehTitle = config!["heimwehTitle"] as! String
+        thursdayCaptionLabel = config!["thursdayCaptionLabel"] as! String
+        thursdayEventLabel = config!["thursdayEventLabel"] as! String
+        fridayCaptionLabel = config!["fridayCaptionLabel"] as! String
+        fridayEventLabelOne = config!["fridayEventLabelOne"] as! String
+        fridayEventLabelTwo = config!["fridayEventLabelTwo"] as! String
+        fridayEventLabelThree = config!["fridayEventLabelThree"] as! String
+        saturdayCaptionLabel = config!["saturdayCaptionLabel"] as! String
+        saturdayEventOneLabel = config!["saturdayEventOneLabel"] as! String
+        saturdayEventTwoLabel = config!["saturdayEventTwoLabel"] as! String
     }
 }
 

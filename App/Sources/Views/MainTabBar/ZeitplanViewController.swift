@@ -9,26 +9,24 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     private lazy var scrollView = UIScrollView()
 
     // Thursday
-    private lazy var thursdayCaptionLabel = EventLabel(text: "Donnerstag, 09. April 2020\n#heimatkunde")
-    private lazy var thursdayEventLabel = EventBody(text: "19:30 Uhr paX an Start - Bibel Session\nmit Joachim Böker\n22:00 Uhr Darum feiern")
+    private lazy var thursdayCaptionLabel = EventLabel(text: config.thursdayCaptionLabel)
+    private lazy var thursdayEventLabel = EventBody(text: config.thursdayEventLabel)
 
     // Friday
-    private lazy var fridayCaptionLabel = EventLabel(text: "Freitag, 10. April 2020\n#heimatlos")
-    private lazy var fridayEventLabelOne = EventBody(
-        text: "09:30 Uhr Praxis Session / CoffeeTime\n11:30 Uhr Bibel Session mit Klaus Göttler\n15:00 Uhr Seminare I"
-    )
+    private lazy var fridayCaptionLabel = EventLabel(text: config.fridayCaptionLabel)
+    private lazy var fridayEventLabelOne = EventBody(text: config.fridayEventLabelTwo)
     private lazy var fridaySeminarOneButton = SeminarButton(text: Defaults.seminarOne.title)
-    private lazy var fridayEventLabelTwo = EventBody(text: "16:30 Uhr Seminare II")
+    private lazy var fridayEventLabelTwo = EventBody(text: config.fridayEventLabelTwo)
     private lazy var fridaySeminarTwoButton = SeminarButton(text: Defaults.seminarTwo.title)
-    private lazy var fridayEventLabelThree = EventBody(text: "19:30 Uhr Das Kreuz")
+    private lazy var fridayEventLabelThree = EventBody(text: config.fridayEventLabelThree)
 
     // Saturday
-    private lazy var saturdayCaptionLabel = EventLabel(text: "Samstag, 11. April 2020\n#heimweh")
+    private lazy var saturdayCaptionLabel = EventLabel(text: config.saturdayCaptionLabel)
     private lazy var saturdayEventOneLabel = EventBody(
-        text: "09:30 Uhr Bibel Session mit Joachim Böker\n11:30 Uhr Dennoch feiern\n14:00 Uhr Praxis Session / CoffeeTime\n16:30 Uhr Seminare III"
+        text: config.saturdayEventOneLabel
     )
     private lazy var saturdaySeminarButton = SeminarButton(text: Defaults.seminarThree.title)
-    private lazy var saturdayEventTwoLabel = EventBody(text: "19:30 Uhr Danke")
+    private lazy var saturdayEventTwoLabel = EventBody(text: config.saturdayEventTwoLabel)
 
     // Sunday
     private lazy var sundayCaptionLabel = EventLabel(text: "Sonntag, 12. April 2020\n#heimweg")
@@ -72,7 +70,10 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
 
         scrollView.bounds = view.bounds
 
-        scrollView.contentSize = CGSize(width: view.bounds.width, height: (view.bounds.height + mondayEventLabel.bounds.maxX))
+        let contentRect: CGRect = scrollView.subviews.reduce(into: .zero) { rect, view in
+            rect = rect.union(view.frame)
+        }
+        scrollView.contentSize = contentRect.size
     }
 
     override func viewWillLayoutSubviews() {

@@ -11,6 +11,8 @@ class InfoViewController: UIViewController {
 
     private lazy var spendenButton = SeminarButton(text: "Spenden")
 
+    private lazy var massquarterButton = SeminarButton(text: "Massenquatiere")
+
     private lazy var aboutButton = SeminarButton(text: "Über")
 
     override func viewDidLoad() {
@@ -23,6 +25,7 @@ class InfoViewController: UIViewController {
         setupReferentButton()
         setupSeminarsButton()
         setupSpendenButton()
+        setupMassquarterButton()
         setupAboutButton()
     }
 
@@ -62,6 +65,17 @@ class InfoViewController: UIViewController {
         spendenButton?.addTarget(self, action: #selector(spendenButtonPressed), for: .touchUpInside)
     }
 
+    private func setupMassquarterButton() {
+        view.addSubview(massquarterButton!)
+        massquarterButton?.snp.makeConstraints({ make in
+            make.top.equalTo(spendenButton!.snp.bottomMargin).offset(26)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+        })
+
+        massquarterButton?.addTarget(self, action: #selector(massQuarterButtonPressed), for: .touchUpInside)
+    }
+
     private func setupAboutButton() {
         view.addSubview(aboutButton!)
         aboutButton?.snp.makeConstraints({ make in
@@ -92,6 +106,12 @@ class InfoViewController: UIViewController {
     private func spendenButtonPressed() {
         spendenButton?.pulsate()
         present(SpendenViewController(), animated: true)
+    }
+
+    @objc
+    private func massQuarterButtonPressed() {
+        massquarterButton?.pulsate()
+        present(MassQuarterViewController(), animated: true)
     }
 
     @objc

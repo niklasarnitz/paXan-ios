@@ -125,18 +125,21 @@ let backupLexikonEntries: [LexikonEntry] = [
 let backupSpeakers: [Referent] = [
     Referent(
         name: "Klaus Göttler",
+        description: "",
         connection: "Johanneum",
         website: "johanneum.net",
         picture: "göttler"
     ),
     Referent(
         name: "Joachim Böker",
+        description: "",
         connection: "Liebenzeller Mission",
         website: "liebenzell.org",
         picture: "böker"
     ),
     Referent(
         name: "Volker Gäckle",
+        description: "",
         connection: "IHL",
         website: "ihl.de",
         picture: "gäckle"
