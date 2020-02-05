@@ -30,66 +30,66 @@ class InfoViewController: UIViewController {
     }
 
     private func setupReferentButton() {
-        view.addSubview(referentButton!)
-        referentButton?.snp.makeConstraints({ make in
+        view.addSubview(referentButton)
+        referentButton.snp.makeConstraints({ make in
             make.top.equalTo(super.view.snp.topMargin).offset(30)
             make.leading.equalToSuperview().offset(26)
             make.trailing.equalToSuperview().offset(-26)
             make.height.equalTo(40)
         })
 
-        referentButton?.addTarget(self, action: #selector(referentButtonPressed), for: .touchUpInside)
+        referentButton.addTarget(self, action: #selector(referentButtonPressed), for: .touchUpInside)
     }
 
     private func setupSeminarsButton() {
-        view.addSubview(seminarsButton!)
-        seminarsButton?.snp.makeConstraints({ make in
-            make.top.equalTo(referentButton!.snp.bottomMargin).offset(26)
+        view.addSubview(seminarsButton)
+        seminarsButton.snp.makeConstraints({ make in
+            make.top.equalTo(referentButton.snp.bottomMargin).offset(26)
             make.leading.equalToSuperview().offset(26)
             make.trailing.equalToSuperview().offset(-26)
             make.height.equalTo(40)
         })
 
-        seminarsButton?.addTarget(self, action: #selector(seminarsButtonPressed), for: .touchUpInside)
+        seminarsButton.addTarget(self, action: #selector(seminarsButtonPressed), for: .touchUpInside)
     }
 
     private func setupSpendenButton() {
-        view.addSubview(spendenButton!)
-        spendenButton?.snp.makeConstraints({ make in
-            make.top.equalTo(seminarsButton!.snp.bottomMargin).offset(26)
+        view.addSubview(spendenButton)
+        spendenButton.snp.makeConstraints({ make in
+            make.top.equalTo(seminarsButton.snp.bottomMargin).offset(26)
             make.leading.equalToSuperview().offset(26)
             make.trailing.equalToSuperview().offset(-26)
             make.height.equalTo(40)
         })
 
-        spendenButton?.addTarget(self, action: #selector(spendenButtonPressed), for: .touchUpInside)
+        spendenButton.addTarget(self, action: #selector(spendenButtonPressed), for: .touchUpInside)
     }
 
     private func setupMassquarterButton() {
-        view.addSubview(massquarterButton!)
-        massquarterButton?.snp.makeConstraints({ make in
-            make.top.equalTo(spendenButton!.snp.bottomMargin).offset(26)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+        view.addSubview(massquarterButton)
+        massquarterButton.snp.makeConstraints({ make in
+            make.top.equalTo(spendenButton.snp.bottomMargin).offset(26)
+            make.leading.equalToSuperview().offset(26)
+            make.trailing.equalToSuperview().offset(-26)
         })
 
-        massquarterButton?.addTarget(self, action: #selector(massQuarterButtonPressed), for: .touchUpInside)
+        massquarterButton.addTarget(self, action: #selector(massQuarterButtonPressed), for: .touchUpInside)
     }
 
     private func setupAboutButton() {
-        view.addSubview(aboutButton!)
-        aboutButton?.snp.makeConstraints({ make in
+        view.addSubview(aboutButton)
+        aboutButton.snp.makeConstraints({ make in
             make.bottom.equalTo(super.view.snp.bottomMargin).offset(-30)
             make.leading.equalToSuperview().offset(26)
             make.trailing.equalToSuperview().offset(-26)
             make.height.equalTo(40)
         })
-        aboutButton?.addTarget(self, action: #selector(aboutButtonPressed), for: .touchUpInside)
+        aboutButton.addTarget(self, action: #selector(aboutButtonPressed), for: .touchUpInside)
     }
 
     @objc
     private func referentButtonPressed() {
-        referentButton?.pulsate()
+        referentButton.pulsate()
 
         let viewController = ReferentTableViewController()
 
@@ -98,25 +98,27 @@ class InfoViewController: UIViewController {
 
     @objc
     private func seminarsButtonPressed() {
-        seminarsButton?.pulsate()
+        seminarsButton.pulsate()
         present(SeminarTableViewController(), animated: true)
     }
 
     @objc
     private func spendenButtonPressed() {
-        spendenButton?.pulsate()
-        present(SpendenViewController(), animated: true)
+        spendenButton.pulsate()
+
+        let url = URL(string: "https://www.swdec.de/spenden/")!
+        UIApplication.shared.open(url)
     }
 
     @objc
     private func massQuarterButtonPressed() {
-        massquarterButton?.pulsate()
+        massquarterButton.pulsate()
         present(MassQuarterViewController(), animated: true)
     }
 
     @objc
     private func aboutButtonPressed() {
-        aboutButton?.pulsate()
+        aboutButton.pulsate()
         present(AboutViewController(), animated: true)
     }
 }

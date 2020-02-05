@@ -4,10 +4,6 @@ import SwiftyUserDefaults
 import UIKit
 
 class SeminarsEditViewController: UIViewController {
-    private var seminarsOne: [Seminar] = []
-    private var seminarsTwo: [Seminar] = []
-    private var seminarsThree: [Seminar] = []
-
     private weak var editorsDelegate: EditorsDelegate?
 
     private lazy var titleLabel = TitleLabel(text: "Seminare Bearbeiten")

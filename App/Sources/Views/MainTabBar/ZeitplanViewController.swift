@@ -79,7 +79,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
 
-        scrollView.contentSize = CGSize(width: view.bounds.width, height: ( view.bounds.height + mondayEventLabel.bounds.maxX ))
+        scrollView.contentSize = CGSize(width: view.bounds.width, height: ( view.bounds.height + mondayEventLabel.bounds.maxX + 26 ))
     }
 
     private func layoutSubViews() {
@@ -155,40 +155,40 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     }
 
     private func layoutFridaySeminarOneButton() {
-        scrollView.addSubview(fridaySeminarOneButton!)
-        fridaySeminarOneButton?.snp.makeConstraints { make in
+        scrollView.addSubview(fridaySeminarOneButton)
+        fridaySeminarOneButton.snp.makeConstraints { make in
             make.top.equalTo(fridayEventLabelOne.snp.bottomMargin).offset(20)
             make.leading.equalTo(view.snp.leading).offset(20)
             make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
 
-        fridaySeminarOneButton?.addTarget(self, action: #selector(didPressSeminarOneButton), for: .touchUpInside)
+        fridaySeminarOneButton.addTarget(self, action: #selector(didPressSeminarOneButton), for: .touchUpInside)
     }
 
     private func layoutFridayEventLabelTwo() {
         scrollView.addSubview(fridayEventLabelTwo)
         fridayEventLabelTwo.snp.makeConstraints { make in
-            make.top.equalTo(fridaySeminarOneButton!.snp.bottomMargin).offset(20)
+            make.top.equalTo(fridaySeminarOneButton.snp.bottomMargin).offset(20)
             make.leading.equalTo(view.snp.leading).offset(20)
             make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
     }
 
     private func layoutFridaySeminarTwoButton() {
-        scrollView.addSubview(fridaySeminarTwoButton!)
-        fridaySeminarTwoButton?.snp.makeConstraints { make in
+        scrollView.addSubview(fridaySeminarTwoButton)
+        fridaySeminarTwoButton.snp.makeConstraints { make in
             make.top.equalTo(fridayEventLabelTwo.snp.bottomMargin).offset(20)
             make.leading.equalTo(view.snp.leading).offset(20)
             make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
 
-        fridaySeminarTwoButton?.addTarget(self, action: #selector(didPressSeminarTwoButton), for: .touchUpInside)
+        fridaySeminarTwoButton.addTarget(self, action: #selector(didPressSeminarTwoButton), for: .touchUpInside)
     }
 
     private func layoutFridayEventLabelThree() {
         scrollView.addSubview(fridayEventLabelThree)
         fridayEventLabelThree.snp.makeConstraints { make in
-            make.top.equalTo(fridaySeminarTwoButton!.snp.bottomMargin).offset(20)
+            make.top.equalTo(fridaySeminarTwoButton.snp.bottomMargin).offset(20)
             make.leading.equalTo(view.snp.leading).offset(20)
             make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
@@ -213,20 +213,20 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     }
 
     private func layoutSaturdaySeminarButton() {
-        scrollView.addSubview(saturdaySeminarButton!)
-        saturdaySeminarButton?.snp.makeConstraints { make in
+        scrollView.addSubview(saturdaySeminarButton)
+        saturdaySeminarButton.snp.makeConstraints { make in
             make.top.equalTo(saturdayEventOneLabel.snp.bottomMargin).offset(20)
             make.leading.equalTo(view.snp.leading).offset(20)
             make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
 
-        saturdaySeminarButton?.addTarget(self, action: #selector(didPressSeminarThreeButton), for: .touchUpInside)
+        saturdaySeminarButton.addTarget(self, action: #selector(didPressSeminarThreeButton), for: .touchUpInside)
     }
 
     private func layoutSaturdayEventLabelTwo() {
         scrollView.addSubview(saturdayEventTwoLabel)
         saturdayEventTwoLabel.snp.makeConstraints { make in
-            make.top.equalTo(saturdaySeminarButton!.snp.bottomMargin).offset(20)
+            make.top.equalTo(saturdaySeminarButton.snp.bottomMargin).offset(20)
             make.leading.equalTo(view.snp.leading).offset(20)
             make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
@@ -251,20 +251,20 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     }
 
     private func layoutSundayEveningEventButton() {
-        scrollView.addSubview(sundayEveningEventButton!)
-        sundayEveningEventButton?.snp.makeConstraints { make in
+        scrollView.addSubview(sundayEveningEventButton)
+        sundayEveningEventButton.snp.makeConstraints { make in
             make.top.equalTo(sundayEventLabel.snp.bottomMargin).offset(20)
             make.leading.equalTo(view.snp.leading).offset(20)
             make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
 
-        sundayEveningEventButton?.addTarget(self, action: #selector(didPressDeltaMapButton), for: .touchUpInside)
+        sundayEveningEventButton.addTarget(self, action: #selector(didPressDeltaMapButton), for: .touchUpInside)
     }
 
     private func layoutMondayCaptionLabel() {
         scrollView.addSubview(mondayCaptionLabel)
         mondayCaptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(sundayEveningEventButton!.snp.bottomMargin).offset(20)
+            make.top.equalTo(sundayEveningEventButton.snp.bottomMargin).offset(20)
             make.leading.equalTo(view.snp.leading).offset(20)
             make.trailing.equalTo(view.snp.trailing).offset(-20)
         }
@@ -280,28 +280,28 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     }
 
     @objc private func didPressSeminarOneButton() {
-        fridaySeminarOneButton?.pulsate()
+        fridaySeminarOneButton.pulsate()
 
         let viewController = SeminarDetailViewController(seminar: Defaults.seminarOne)!
         present(viewController, animated: true)
     }
 
     @objc private func didPressSeminarTwoButton() {
-        fridaySeminarTwoButton?.pulsate()
+        fridaySeminarTwoButton.pulsate()
 
         let viewController = SeminarDetailViewController(seminar: Defaults.seminarTwo)!
         present(viewController, animated: true)
     }
 
     @objc private func didPressSeminarThreeButton() {
-        saturdaySeminarButton?.pulsate()
+        saturdaySeminarButton.pulsate()
 
         let viewController = SeminarDetailViewController(seminar: Defaults.seminarThree)!
         present(viewController, animated: true)
     }
 
     @objc private func didPressDeltaMapButton() {
-        sundayEveningEventButton?.pulsate()
+        sundayEveningEventButton.pulsate()
 
         let viewController = DeltaMapViewController()
         present(viewController, animated: true)
@@ -313,8 +313,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     }
 
     func updateData() {
-        fridaySeminarOneButton?.titleText = Defaults.seminarOne.title
-        fridaySeminarTwoButton?.titleText = Defaults.seminarTwo.title
-        saturdaySeminarButton?.titleText = Defaults.seminarThree.title
+        fridaySeminarOneButton.titleText = Defaults.seminarOne.title
+        fridaySeminarTwoButton.titleText = Defaults.seminarTwo.title
+        saturdaySeminarButton.titleText = Defaults.seminarThree.title
     }
 }
