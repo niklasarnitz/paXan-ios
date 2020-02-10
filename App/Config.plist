@@ -67,5 +67,7 @@ mit Joachim Böker
 16:30 Uhr Seminare III</string>
 	<key>saturdayEventTwoLabel</key>
 	<string>19:30 Uhr Danke</string>
+	<key>donationURL</key>
+	<string>https://swdec.de/spenden/</string>
 </dict>
 </plist>

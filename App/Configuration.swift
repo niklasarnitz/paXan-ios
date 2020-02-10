@@ -40,6 +40,9 @@ final class Configuration {
     var saturdayEventOneLabel: String
     var saturdayEventTwoLabel: String
 
+    // MARK: - Donations
+    var donationURL: String
+
     init() {
         if let path = Bundle.main.path(forResource: "Config", ofType: "plist") {
            config = NSDictionary(contentsOfFile: path)
@@ -81,6 +84,8 @@ final class Configuration {
         saturdayCaptionLabel = config!["saturdayCaptionLabel"] as! String
         saturdayEventOneLabel = config!["saturdayEventOneLabel"] as! String
         saturdayEventTwoLabel = config!["saturdayEventTwoLabel"] as! String
+
+        donationURL = config!["donationURL"] as! String
     }
 }
 

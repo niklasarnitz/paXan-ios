@@ -106,7 +106,7 @@ class InfoViewController: UIViewController {
     private func spendenButtonPressed() {
         spendenButton.pulsate()
 
-        let url = URL(string: "https://www.swdec.de/spenden/")!
+        let url = URL(string: config.donationURL)!
         UIApplication.shared.open(url)
     }
 

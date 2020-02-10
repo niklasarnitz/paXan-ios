@@ -10,7 +10,6 @@
 		0E8611E67BA94825964453FA /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538967131DCEEECEA70FB8BA /* SnapKit.framework */; };
 		28E3F88E24EE25B22989D6B9 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914E5D5FD6D03D393585755F /* AlamofireObjectMapper.framework */; };
 		7C248CEFBC92BC3F36260B49 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AA791D80A696E6C51CC33C /* Alamofire.framework */; };
-		850BA45A239A7B8A0098196D /* SpendenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA459239A7B8A0098196D /* SpendenViewController.swift */; };
 		850BA45C239A7C250098196D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA45B239A7C250098196D /* AboutViewController.swift */; };
 		850BA45E239A81FE0098196D /* ReferentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA45D239A81FE0098196D /* ReferentTableViewController.swift */; };
 		850DC89D23A13C700097C927 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DC89C23A13C700097C927 /* DataManager.swift */; };
@@ -88,7 +87,6 @@
 		41AA791D80A696E6C51CC33C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Alamofire.framework; path = Dependencies/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		538967131DCEEECEA70FB8BA /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapKit.framework; path = Dependencies/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		69C9D10BDA25B72C3C495C87 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Dependencies/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
-		850BA459239A7B8A0098196D /* SpendenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendenViewController.swift; sourceTree = "<group>"; };
 		850BA45B239A7C250098196D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		850BA45D239A81FE0098196D /* ReferentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferentTableViewController.swift; sourceTree = "<group>"; };
 		850DC89C23A13C700097C927 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -387,7 +385,6 @@
 				854CC10823932F87000AD257 /* SeminarDetailViewController.swift */,
 				851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */,
 				851141D9239A68150062438E /* SeminarTableViewController.swift */,
-				850BA459239A7B8A0098196D /* SpendenViewController.swift */,
 				85707EF923B7A1B700D2AF34 /* MassQuarterViewController.swift */,
 			);
 			path = Other;
@@ -620,7 +617,6 @@
 				85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */,
 				85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */,
 				851141DA239A68150062438E /* SeminarTableViewController.swift in Sources */,
-				850BA45A239A7B8A0098196D /* SpendenViewController.swift in Sources */,
 				8566830E23B4F9EA00CE94CC /* UIViewControllerExtension.swift in Sources */,
 				8566826C23B4F1D000CE94CC /* Configuration.swift in Sources */,
 				850FB7D723B64F8400D3ECFB /* SeminarPickerTextField.swift in Sources */,
