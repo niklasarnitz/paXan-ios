@@ -50,7 +50,7 @@ class SeminarDetailViewController: UIViewController {
 
         self.titleLabel.text = seminar.title
         self.subtitleLabel.text = seminar.subtitle
-        self.referentLabel.text = "Referent: " + (seminar.referent)
+        self.referentLabel.text = "Referent:\n" + (seminar.referent)
         self.roomNameLabel.text = "Raum: " + (seminar.roomname)
     }
 
