@@ -89,7 +89,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
             make.width.equalToSuperview()
         }
 
-        stackView.alignment = .leading
+        stackView.alignment = .center
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.spacing = 15
