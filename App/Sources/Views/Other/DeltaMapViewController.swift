@@ -10,7 +10,7 @@ class DeltaMapViewController: UIViewController {
         return view
     }()
 
-    private lazy var doneButton = SeminarButton(text: "Fertig")
+    private lazy var doneButton = ThemedButton(text: "Fertig")
 
     override func viewDidLoad() {
         super.viewDidLoad()

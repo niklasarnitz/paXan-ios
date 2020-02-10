@@ -28,16 +28,16 @@ class SeminarDetailViewController: UIViewController {
         return label
     }()
 
-    private lazy var navigateButton: SeminarButton = {
-        let button = SeminarButton()
+    private lazy var navigateButton: ThemedButton = {
+        let button = ThemedButton()
 
         button.titleText = "Navigieren"
 
         return button
     }()
 
-    private lazy var doneButton: SeminarButton = {
-        let button = SeminarButton()
+    private lazy var doneButton: ThemedButton = {
+        let button = ThemedButton()
 
         button.titleText = "Fertig"
 

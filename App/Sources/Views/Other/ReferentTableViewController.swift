@@ -6,7 +6,7 @@ import UIKit
 
 class ReferentTableViewController: UIViewController {
     private lazy var tableView = ReferentsTableViewController()
-    private lazy var doneButton = SeminarButton(text: "Fertig")
+    private lazy var doneButton = ThemedButton(text: "Fertig")
 
     override func viewDidLoad() {
         super.viewDidLoad()

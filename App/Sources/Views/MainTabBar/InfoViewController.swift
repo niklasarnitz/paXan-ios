@@ -5,15 +5,15 @@ import SnapKit
 import UIKit
 
 class InfoViewController: UIViewController {
-    private lazy var referentButton = SeminarButton(text: "Referenten")
+    private lazy var referentButton = ThemedButton(text: "Referenten")
 
-    private lazy var seminarsButton = SeminarButton(text: "Seminare")
+    private lazy var seminarsButton = ThemedButton(text: "Seminare")
 
-    private lazy var spendenButton = SeminarButton(text: "Spenden")
+    private lazy var spendenButton = ThemedButton(text: "Spenden")
 
-    private lazy var massquarterButton = SeminarButton(text: "Massenquatiere")
+    private lazy var massquarterButton = ThemedButton(text: "Massenquatiere")
 
-    private lazy var aboutButton = SeminarButton(text: "Über")
+    private lazy var aboutButton = ThemedButton(text: "Über")
 
     override func viewDidLoad() {
         super.viewDidLoad()

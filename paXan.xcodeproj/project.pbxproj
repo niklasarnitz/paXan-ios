@@ -26,7 +26,7 @@
 		851E6BB823636C68002F0168 /* SeminarsEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */; };
 		85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85257B382362CA5600E84CC5 /* UIButtonExtension.swift */; };
 		8539E59C237C790400EBC1DB /* BackupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539E59B237C790400EBC1DB /* BackupData.swift */; };
-		853C4B662393D30900300689 /* SeminarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C4B652393D30900300689 /* SeminarButton.swift */; };
+		853C4B662393D30900300689 /* ThemedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C4B652393D30900300689 /* ThemedButton.swift */; };
 		853C4B682393D41D00300689 /* SetupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C4B672393D41D00300689 /* SetupButton.swift */; };
 		853CC15E2360BF8900A3F4F3 /* DefaultsKeysExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */; };
 		853CC1662360CB1C00A3F4F3 /* FirstSetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CC1652360CB1C00A3F4F3 /* FirstSetupPageViewController.swift */; };
@@ -119,7 +119,7 @@
 		85257B382362CA5600E84CC5 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		8539E599237C78B500EBC1DB /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		8539E59B237C790400EBC1DB /* BackupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupData.swift; sourceTree = "<group>"; };
-		853C4B652393D30900300689 /* SeminarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarButton.swift; sourceTree = "<group>"; };
+		853C4B652393D30900300689 /* ThemedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedButton.swift; sourceTree = "<group>"; };
 		853C4B672393D41D00300689 /* SetupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButton.swift; sourceTree = "<group>"; };
 		853CC15D2360BF8900A3F4F3 /* DefaultsKeysExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeysExtension.swift; sourceTree = "<group>"; };
 		853CC1652360CB1C00A3F4F3 /* FirstSetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSetupPageViewController.swift; sourceTree = "<group>"; };
@@ -375,7 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				85AAD03F231ACC7600C0F813 /* Style.swift */,
-				853C4B652393D30900300689 /* SeminarButton.swift */,
+				853C4B652393D30900300689 /* ThemedButton.swift */,
 				853C4B672393D41D00300689 /* SetupButton.swift */,
 				85E884C523994863004C3AE4 /* TitleLabel.swift */,
 				85E884C72399494D004C3AE4 /* SubtitleLabel.swift */,
@@ -674,7 +674,7 @@
 				853CC16A2360CB4800A3F4F3 /* ThirdSetupPageViewController.swift in Sources */,
 				85866CD123154E6300B408E9 /* LexikonEntry.swift in Sources */,
 				85939C01231406A50009A009 /* AppDelegate.swift in Sources */,
-				853C4B662393D30900300689 /* SeminarButton.swift in Sources */,
+				853C4B662393D30900300689 /* ThemedButton.swift in Sources */,
 				854CC10B2393302C000AD257 /* MKMapViewExtension.swift in Sources */,
 				854CC10923932F87000AD257 /* SeminarDetailViewController.swift in Sources */,
 				853CC16C2360CB6300A3F4F3 /* FourthSetupPageViewController.swift in Sources */,

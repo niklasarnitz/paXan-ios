@@ -3,7 +3,7 @@
 import UIKit
 
 /// A custom styled Button for Seminars
-class SeminarButton: UIButton {
+class ThemedButton: UIButton {
     // MARK: Instance Properties
     /// Title of the Button
     var titleText: String? {

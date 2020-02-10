@@ -13,9 +13,9 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     // Friday
     private lazy var fridayCaptionLabel = EventLabel(text: config.fridayCaptionLabel)
     private lazy var fridayEventLabelOne = EventBody(text: config.fridayEventLabelTwo)
-    private lazy var fridaySeminarOneButton = SeminarButton(text: Defaults.seminarOne.title)
+    private lazy var fridaySeminarOneButton = ThemedButton(text: Defaults.seminarOne.title)
     private lazy var fridayEventLabelTwo = EventBody(text: config.fridayEventLabelTwo)
-    private lazy var fridaySeminarTwoButton = SeminarButton(text: Defaults.seminarTwo.title)
+    private lazy var fridaySeminarTwoButton = ThemedButton(text: Defaults.seminarTwo.title)
     private lazy var fridayEventLabelThree = EventBody(text: config.fridayEventLabelThree)
 
     // Saturday
@@ -23,7 +23,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     private lazy var saturdayEventOneLabel = EventBody(
         text: config.saturdayEventOneLabel
     )
-    private lazy var saturdaySeminarButton = SeminarButton(text: Defaults.seminarThree.title)
+    private lazy var saturdaySeminarButton = ThemedButton(text: Defaults.seminarThree.title)
     private lazy var saturdayEventTwoLabel = EventBody(text: config.saturdayEventTwoLabel)
 
     // Sunday
@@ -31,7 +31,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     private lazy var sundayEventLabel = EventBody(
         text: "09:30 Uhr Bibel Session mit Volker Gäckle\n14:00 Uhr Praxis Session / CoffeeTime\n16:30 Uhr Trainings Session\n19:30 Uhr DELTA Endlos feiern"
     )
-    private lazy var sundayEveningEventButton = SeminarButton(text: "DELTA - KARTE")
+    private lazy var sundayEveningEventButton = ThemedButton(text: "DELTA - KARTE")
 
     // Monday
     private lazy var mondayCaptionLabel = EventLabel(text: "Montag, 13. April 2020\n#heimatgeber")
