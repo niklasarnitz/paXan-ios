@@ -17,9 +17,6 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
     /// The organizer of the Seminar
     var referent: String
 
-    /// A short (or long) description of the Seminar
-    var description: String
-
     /// roomname of Seminar
     var roomname: String
 
@@ -33,11 +30,10 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
     var time: String
 
     // MARK: Initializer
-    init(title: String, subtitle: String, referent: String, description: String, roomname: String, lat: Double, long: Double, time: String) {
+    init(title: String, subtitle: String, referent: String, roomname: String, lat: Double, long: Double, time: String) {
         self.title = title
         self.subtitle = subtitle
         self.referent = referent
-        self.description = description
         self.roomname = roomname
         self.lat = lat
         self.long = long
@@ -48,7 +44,6 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
         self.title = ""
         self.subtitle = ""
         self.referent = ""
-        self.description = ""
         self.roomname = ""
         self.lat = 0
         self.long = 0
@@ -59,7 +54,6 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
         self.title = ""
         self.subtitle = ""
         self.referent = ""
-        self.description = ""
         self.roomname = ""
         self.lat = 0
         self.long = 0
@@ -70,7 +64,6 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
         title <- map["title"]
         subtitle <- map["subtitle"]
         referent <- map["referentName"]
-        description <- map["description"]
         roomname <- map["roomname"]
         lat <- map["lat"]
         long <- map["long"]

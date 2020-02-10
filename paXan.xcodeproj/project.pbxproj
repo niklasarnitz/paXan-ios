@@ -14,6 +14,7 @@
 		850BA45C239A7C250098196D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA45B239A7C250098196D /* AboutViewController.swift */; };
 		850BA45E239A81FE0098196D /* ReferentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BA45D239A81FE0098196D /* ReferentTableViewController.swift */; };
 		850DC89D23A13C700097C927 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DC89C23A13C700097C927 /* DataManager.swift */; };
+		850FA2B523F1575000661135 /* ZeitplanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FA2B423F1575000661135 /* ZeitplanViewController.swift */; };
 		850FB7D523B64E2A00D3ECFB /* SetupTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FB7D423B64E2A00D3ECFB /* SetupTextField.swift */; };
 		850FB7D723B64F8400D3ECFB /* SeminarPickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FB7D623B64F8400D3ECFB /* SeminarPickerTextField.swift */; };
 		851141D6239A58050062438E /* EditorsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851141D5239A58050062438E /* EditorsDelegate.swift */; };
@@ -71,7 +72,6 @@
 		85B4ACD12395D6A1001F282C /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B4ACC22395D6A1001F282C /* Nunito-LightItalic.ttf */; };
 		85B4ACD72395D6A7001F282C /* Gloss_And_Bloom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B4ACD42395D6A7001F282C /* Gloss_And_Bloom.ttf */; };
 		85B6C5AA239FE565000C33E4 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6C5A9239FE565000C33E4 /* UIFontExtension.swift */; };
-		85D1186D23A3F6CD00EC3D88 /* ZeitplanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1186C23A3F6CD00EC3D88 /* ZeitplanViewController.swift */; };
 		85D1186F23A3FFE100EC3D88 /* EventLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1186E23A3FFE100EC3D88 /* EventLabel.swift */; };
 		85D1187123A400A500EC3D88 /* EventBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1187023A400A500EC3D88 /* EventBody.swift */; };
 		85D1187323A44BFC00EC3D88 /* DeltaMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1187223A44BFC00EC3D88 /* DeltaMapViewController.swift */; };
@@ -106,6 +106,7 @@
 		850BA45B239A7C250098196D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		850BA45D239A81FE0098196D /* ReferentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferentTableViewController.swift; sourceTree = "<group>"; };
 		850DC89C23A13C700097C927 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		850FA2B423F1575000661135 /* ZeitplanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeitplanViewController.swift; sourceTree = "<group>"; };
 		850FB7D423B64E2A00D3ECFB /* SetupTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTextField.swift; sourceTree = "<group>"; };
 		850FB7D623B64F8400D3ECFB /* SeminarPickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarPickerTextField.swift; sourceTree = "<group>"; };
 		851141D5239A58050062438E /* EditorsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsDelegate.swift; sourceTree = "<group>"; };
@@ -173,7 +174,6 @@
 		85B4ACC22395D6A1001F282C /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
 		85B4ACD42395D6A7001F282C /* Gloss_And_Bloom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gloss_And_Bloom.ttf; sourceTree = "<group>"; };
 		85B6C5A9239FE565000C33E4 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
-		85D1186C23A3F6CD00EC3D88 /* ZeitplanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeitplanViewController.swift; sourceTree = "<group>"; };
 		85D1186E23A3FFE100EC3D88 /* EventLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLabel.swift; sourceTree = "<group>"; };
 		85D1187023A400A500EC3D88 /* EventBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBody.swift; sourceTree = "<group>"; };
 		85D1187223A44BFC00EC3D88 /* DeltaMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeltaMapViewController.swift; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 			children = (
 				853CC16D2360CD7C00A3F4F3 /* MainTabBar.swift */,
 				85E3F2F723140AAA00E6B845 /* MeinPaxAnViewController.swift */,
-				85D1186C23A3F6CD00EC3D88 /* ZeitplanViewController.swift */,
+				850FA2B423F1575000661135 /* ZeitplanViewController.swift */,
 				85E3F2F5231409F000E6B845 /* MapViewController.swift */,
 				85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */,
 				851141D7239A62C90062438E /* InfoViewController.swift */,
@@ -658,13 +658,13 @@
 				853C4B682393D41D00300689 /* SetupButton.swift in Sources */,
 				853CC1662360CB1C00A3F4F3 /* FirstSetupPageViewController.swift in Sources */,
 				85A3F82423463C29006A9473 /* Seminar.swift in Sources */,
-				85D1186D23A3F6CD00EC3D88 /* ZeitplanViewController.swift in Sources */,
 				85AAD040231ACC7600C0F813 /* Style.swift in Sources */,
 				851141DF239A6D3B0062438E /* ProfilePictureImageView.swift in Sources */,
 				85D1187123A400A500EC3D88 /* EventBody.swift in Sources */,
 				853CC16E2360CD7C00A3F4F3 /* MainTabBar.swift in Sources */,
 				85B6C5AA239FE565000C33E4 /* UIFontExtension.swift in Sources */,
 				85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */,
+				850FA2B523F1575000661135 /* ZeitplanViewController.swift in Sources */,
 				85E884CA23994B6E004C3AE4 /* DescriptionTextView.swift in Sources */,
 				85E884C82399494D004C3AE4 /* SubtitleLabel.swift in Sources */,
 				85E3F2F823140AAA00E6B845 /* MeinPaxAnViewController.swift in Sources */,
@@ -894,7 +894,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = YYZ333K89U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -920,7 +920,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = YYZ333K89U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

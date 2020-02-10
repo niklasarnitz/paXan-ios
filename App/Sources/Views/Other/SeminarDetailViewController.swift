@@ -28,15 +28,6 @@ class SeminarDetailViewController: UIViewController {
         return label
     }()
 
-    private lazy var descriptionLabel: UILabel = {
-        let label = UILabel()
-
-        label.textColor = .white
-        label.numberOfLines = 0
-
-        return label
-    }()
-
     private lazy var navigateButton: SeminarButton = {
         let button = SeminarButton()
 
@@ -61,7 +52,6 @@ class SeminarDetailViewController: UIViewController {
         self.subtitleLabel.text = seminar.subtitle
         self.referentLabel.text = "Referent: " + (seminar.referent)
         self.roomNameLabel.text = "Raum: " + (seminar.roomname)
-        self.descriptionLabel.text = "Beschreibung: " + (seminar.description)
     }
 
     @available(*, unavailable)
@@ -78,7 +68,6 @@ class SeminarDetailViewController: UIViewController {
         setupSubtitleLabel()
         setupReferentLabel()
         setupRoomNameLabel()
-        setupDescriptionLabel()
         setupDoneButton()
         setupNavigateButton()
     }
@@ -116,15 +105,6 @@ class SeminarDetailViewController: UIViewController {
         view.addSubview(roomNameLabel)
         roomNameLabel.snp.makeConstraints { make in
             make.top.equalTo(referentLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-        }
-    }
-
-    private func setupDescriptionLabel() {
-        view.addSubview(descriptionLabel)
-        descriptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(roomNameLabel.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
         }

@@ -28,5 +28,6 @@ class MapViewController: UIViewController {
         imageScrollView.setup()
 
         imageScrollView.display(image: Images.map)
+        imageScrollView.adjustFrameToCenter()
     }
 }

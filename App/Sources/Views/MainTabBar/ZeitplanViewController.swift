@@ -1,12 +1,10 @@
-// Copyright © 2019 SWDEC. All rights reserved.
+// Copyright © 2020 SWDEC. All rights reserved.
 
 import SwiftyUserDefaults
 import UIKit
 
 class ZeitplanViewController: UIViewController, EditorsDelegate {
     private weak var editorsDelegate: EditorsDelegate?
-
-    private lazy var scrollView = UIScrollView()
 
     // Thursday
     private lazy var thursdayCaptionLabel = EventLabel(text: config.thursdayCaptionLabel)
@@ -39,12 +37,32 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     private lazy var mondayCaptionLabel = EventLabel(text: "Montag, 13. April 2020\n#heimatgeber")
     private lazy var mondayEventLabel = EventBody(text: "09:30 Uhr Abschluss-Session /\npaX an Finale")
 
+    private lazy var stackView = UIStackView(
+        arrangedSubviews: [
+            thursdayCaptionLabel,
+            thursdayEventLabel,
+            fridayCaptionLabel,
+            fridayEventLabelOne,
+            fridaySeminarOneButton,
+            fridayEventLabelTwo,
+            fridaySeminarTwoButton,
+            fridayEventLabelThree,
+            saturdayCaptionLabel,
+            saturdayEventOneLabel,
+            saturdaySeminarButton,
+            saturdayEventTwoLabel,
+            sundayCaptionLabel,
+            sundayEventLabel,
+            sundayEveningEventButton,
+            mondayCaptionLabel,
+            mondayEventLabel
+        ]
+    )
+
+    private lazy var scrollView = UIScrollView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .white
-
-        editorsDelegate = self
 
         fixNavigationBar()
 
@@ -60,223 +78,33 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
             [ .font: UIFont.eventTitle.withSize(18) ], for: .normal
         )
 
-        layoutSubViews()
-    }
+        view.backgroundColor = .white
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
+        view.addSubview(scrollView)
         scrollView.bindEdgesToSuperview()
 
-        scrollView.bounds = view.bounds
-
-        let contentRect: CGRect = scrollView.subviews.reduce(into: .zero) { rect, view in
-            rect = rect.union(view.frame)
+        scrollView.addSubview(stackView)
+        stackView.bindEdgesToSuperview()
+        stackView.snp.makeConstraints { make in
+            make.width.equalToSuperview()
         }
-        scrollView.contentSize = contentRect.size
-    }
 
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+        stackView.alignment = .leading
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.spacing = 15
 
-        scrollView.contentSize = CGSize(width: view.bounds.width, height: ( view.bounds.height + mondayEventLabel.bounds.maxX + 26 ))
-    }
-
-    private func layoutSubViews() {
-        layoutScrollView()
-
-        layoutThursdayCaptionLabel()
-        layoutThursdayEventLabel()
-
-        layoutFridayCaptionLabel()
-        layoutFridayEventLabelOne()
-        layoutFridaySeminarOneButton()
-        layoutFridayEventLabelTwo()
-        layoutFridaySeminarTwoButton()
-        layoutFridayEventLabelThree()
-
-        layoutSaturdayCaptionLabel()
-        layoutSaturdayEventLabelOne()
-        layoutSaturdaySeminarButton()
-        layoutSaturdayEventLabelTwo()
-
-        layoutSundayCaptionLabel()
-        layoutSundayEventLabel()
-        layoutSundayEveningEventButton()
-
-        layoutMondayCaptionLabel()
-        layoutMondayEventLabel()
-    }
-
-    private func layoutScrollView() {
-        view.addSubview(scrollView)
-        scrollView.snp.makeConstraints { make in
-            make.top.equalTo(view.snp.topMargin)
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
-        }
-    }
-
-    private func layoutThursdayCaptionLabel() {
-        scrollView.addSubview(thursdayCaptionLabel)
-        thursdayCaptionLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-    }
-
-    private func layoutThursdayEventLabel() {
-        scrollView.addSubview(thursdayEventLabel)
-        thursdayEventLabel.snp.makeConstraints { make in
-            make.top.equalTo(thursdayCaptionLabel.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-    }
-
-    private func layoutFridayCaptionLabel() {
-        scrollView.addSubview(fridayCaptionLabel)
-        fridayCaptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(thursdayEventLabel.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-    }
-
-    private func layoutFridayEventLabelOne() {
-        scrollView.addSubview(fridayEventLabelOne)
-        fridayEventLabelOne.snp.makeConstraints { make in
-            make.top.equalTo(fridayCaptionLabel.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-    }
-
-    private func layoutFridaySeminarOneButton() {
-        scrollView.addSubview(fridaySeminarOneButton)
-        fridaySeminarOneButton.snp.makeConstraints { make in
-            make.top.equalTo(fridayEventLabelOne.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
+        stackView.arrangedSubviews.forEach { view in
+            view.snp.makeConstraints { make in
+                make.leading.equalToSuperview().offset(20)
+                make.trailing.equalToSuperview().offset(-20)
+            }
         }
 
         fridaySeminarOneButton.addTarget(self, action: #selector(didPressSeminarOneButton), for: .touchUpInside)
-    }
-
-    private func layoutFridayEventLabelTwo() {
-        scrollView.addSubview(fridayEventLabelTwo)
-        fridayEventLabelTwo.snp.makeConstraints { make in
-            make.top.equalTo(fridaySeminarOneButton.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-    }
-
-    private func layoutFridaySeminarTwoButton() {
-        scrollView.addSubview(fridaySeminarTwoButton)
-        fridaySeminarTwoButton.snp.makeConstraints { make in
-            make.top.equalTo(fridayEventLabelTwo.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-
         fridaySeminarTwoButton.addTarget(self, action: #selector(didPressSeminarTwoButton), for: .touchUpInside)
-    }
-
-    private func layoutFridayEventLabelThree() {
-        scrollView.addSubview(fridayEventLabelThree)
-        fridayEventLabelThree.snp.makeConstraints { make in
-            make.top.equalTo(fridaySeminarTwoButton.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-    }
-
-    private func layoutSaturdayCaptionLabel() {
-        scrollView.addSubview(saturdayCaptionLabel)
-        saturdayCaptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(fridayEventLabelThree.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-    }
-
-    private func layoutSaturdayEventLabelOne() {
-        scrollView.addSubview(saturdayEventOneLabel)
-        saturdayEventOneLabel.snp.makeConstraints { make in
-            make.top.equalTo(saturdayCaptionLabel.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-    }
-
-    private func layoutSaturdaySeminarButton() {
-        scrollView.addSubview(saturdaySeminarButton)
-        saturdaySeminarButton.snp.makeConstraints { make in
-            make.top.equalTo(saturdayEventOneLabel.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-
         saturdaySeminarButton.addTarget(self, action: #selector(didPressSeminarThreeButton), for: .touchUpInside)
-    }
-
-    private func layoutSaturdayEventLabelTwo() {
-        scrollView.addSubview(saturdayEventTwoLabel)
-        saturdayEventTwoLabel.snp.makeConstraints { make in
-            make.top.equalTo(saturdaySeminarButton.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-    }
-
-    private func layoutSundayCaptionLabel() {
-        scrollView.addSubview(sundayCaptionLabel)
-        sundayCaptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(saturdayEventTwoLabel.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-    }
-
-    private func layoutSundayEventLabel() {
-        scrollView.addSubview(sundayEventLabel)
-        sundayEventLabel.snp.makeConstraints { make in
-            make.top.equalTo(sundayCaptionLabel.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-    }
-
-    private func layoutSundayEveningEventButton() {
-        scrollView.addSubview(sundayEveningEventButton)
-        sundayEveningEventButton.snp.makeConstraints { make in
-            make.top.equalTo(sundayEventLabel.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-
         sundayEveningEventButton.addTarget(self, action: #selector(didPressDeltaMapButton), for: .touchUpInside)
-    }
-
-    private func layoutMondayCaptionLabel() {
-        scrollView.addSubview(mondayCaptionLabel)
-        mondayCaptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(sundayEveningEventButton.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
-    }
-
-    private func layoutMondayEventLabel() {
-        scrollView.addSubview(mondayEventLabel)
-        mondayEventLabel.snp.makeConstraints { make in
-            make.top.equalTo(mondayCaptionLabel.snp.bottomMargin).offset(20)
-            make.leading.equalTo(view.snp.leading).offset(20)
-            make.trailing.equalTo(view.snp.trailing).offset(-20)
-        }
     }
 
     @objc private func didPressSeminarOneButton() {

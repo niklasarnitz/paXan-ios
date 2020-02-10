@@ -8,6 +8,7 @@ class ReferentDetailViewController: UIViewController {
     private lazy var roundImageView = ProfilePictureImageView()
     private lazy var connectionCaptionLabel = SubtitleLabel(text: "Organisation: ")
     private lazy var websiteCaptionLabel = SubtitleLabel(text: "Website: ")
+    private lazy var descriptionLabel = SubtitleLabel(text: "")
     private lazy var doneButton = SetupButton(text: "Fertig")
 
     init(referent: Referent) {
@@ -19,6 +20,7 @@ class ReferentDetailViewController: UIViewController {
 
         nameLabel.text = referent.name
         connectionCaptionLabel.text = "Organisation: " + referent.connection
+        descriptionLabel.text = referent.description
         websiteCaptionLabel.text = "Website: " + referent.website
     }
 
@@ -36,6 +38,7 @@ class ReferentDetailViewController: UIViewController {
         setupNameLabel()
         setupConnectionCaptionLabel()
         setupWebsiteCaptionLabel()
+        setupDescriptionLabel()
         setupDoneButton()
     }
 
@@ -76,6 +79,15 @@ class ReferentDetailViewController: UIViewController {
         websiteCaptionLabel.snp.makeConstraints { make in
             make.top.equalTo(connectionCaptionLabel.snp.bottomMargin).offset(20)
             make.centerX.equalToSuperview()
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+        }
+    }
+
+    private func setupDescriptionLabel() {
+        view.addSubview(descriptionLabel)
+        descriptionLabel.snp.makeConstraints { make in
+            make.top.equalTo(websiteCaptionLabel.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
         }
