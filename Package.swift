@@ -21,8 +21,9 @@ let package = Package(
 
         // AlamofireObjectMapper - An Alamofire extension which converts JSON response data into swift objects using ObjectMapper
         .package(url: "git@github.com:niklasarnitz/AlamofireObjectMapper.git", .branch("master")),
-	
-	.package(url: "git@github.com:niklasarnitz/ImageScrollView.git", .branch("master"))
+
+        // Scrollable and zoomable image view for iOS in Swift
+        .package(url: "git@github.com:niklasarnitz/ImageScrollView.git", .branch("master"))
     ],
     targets: [
     .target(

@@ -43,6 +43,10 @@ final class Configuration {
     // MARK: - Donations
     var donationURL: String
 
+    // MARK: - Licensing
+    var openSourceViewTitle: String
+    var licenseText: String
+
     init() {
         if let path = Bundle.main.path(forResource: "Config", ofType: "plist") {
            config = NSDictionary(contentsOfFile: path)
@@ -86,6 +90,9 @@ final class Configuration {
         saturdayEventTwoLabel = config!["saturdayEventTwoLabel"] as! String
 
         donationURL = config!["donationURL"] as! String
+
+        openSourceViewTitle = config!["openSourceViewTitle"] as! String
+        licenseText = config!["licenseText"] as! String
     }
 }
 

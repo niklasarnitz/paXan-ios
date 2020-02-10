@@ -4,7 +4,16 @@ import UIKit
 
 class AboutViewController: UIViewController {
     private lazy var titleLabel = TitleLabel(text: "Über")
+    private lazy var licenseButton = ThemedButton(text: "Open-Source Lizenzen")
     private lazy var doneButton = SetupButton(text: "Fertig")
+
+    private lazy var stackView = UIStackView(
+        arrangedSubviews: [
+            licenseButton
+        ]
+    )
+
+    private lazy var scrollView = UIScrollView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,6 +22,34 @@ class AboutViewController: UIViewController {
 
         setupTitleLabel()
         setupDoneButton()
+
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottomMargin).offset(15)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalTo(doneButton.snp.topMargin)
+        }
+
+        scrollView.addSubview(stackView)
+        stackView.bindEdgesToSuperview()
+        stackView.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+        }
+
+        stackView.alignment = .leading
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.spacing = 15
+
+        stackView.arrangedSubviews.forEach { view in
+            view.snp.makeConstraints { make in
+                make.leading.equalToSuperview().offset(20)
+                make.trailing.equalToSuperview().offset(-20)
+            }
+        }
+
+        licenseButton.addTarget(self, action: #selector(didPressOpenSourceLicensesButton), for: .touchUpInside)
     }
 
     private func setupTitleLabel() {
@@ -32,12 +69,18 @@ class AboutViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-20)
             make.height.equalTo(40)
         }
-
         doneButton.addTarget(self, action: #selector(doneButtonPressed), for: .touchUpInside)
     }
 
-    @objc
-    private func doneButtonPressed() {
+    @objc private func didPressOpenSourceLicensesButton() {
+        licenseButton.pulsate()
+
+        let viewController = OpenSourceLicenseViewController()
+
+        present(viewController, animated: true)
+    }
+
+    @objc private func doneButtonPressed() {
         doneButton.pulsate()
 
         dismiss(animated: true)
