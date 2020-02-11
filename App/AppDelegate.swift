@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Launch Setup Assistant if app is launched the first time
 //        Defaults.didLaunchBefore = false
+        dataManager = DataManager()
         if Defaults.didLaunchBefore {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let initialViewController = storyboard.instantiateInitialViewController()

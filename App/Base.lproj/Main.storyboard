@@ -22,6 +22,7 @@
                     <connections>
                         <segue destination="z9N-pl-430" kind="relationship" relationship="viewControllers" id="Ik6-zx-AeM"/>
                         <segue destination="zYI-PA-0bl" kind="relationship" relationship="viewControllers" id="t0y-0o-KXw"/>
+                        <segue destination="eZm-FR-DXl" kind="relationship" relationship="viewControllers" id="SAl-FJ-2lx"/>
                         <segue destination="U3x-aA-fQd" kind="relationship" relationship="viewControllers" id="ctF-V6-rNt"/>
                         <segue destination="s7n-cc-KcJ" kind="relationship" relationship="viewControllers" id="KnX-La-600"/>
                     </connections>
@@ -69,6 +70,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvR-1q-Cw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5339.130434782609" y="-668.30357142857144"/>
+        </scene>
+        <!--Stille Zeit-->
+        <scene sceneID="ZFU-WS-kkF">
+            <objects>
+                <viewController id="09a-uO-y6P" customClass="StilleZeitViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Stille Zeit" id="aDH-nR-Fbs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTy-Q8-pCQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5339" y="7"/>
         </scene>
         <!--Mein paXan-->
         <scene sceneID="sRN-rE-0Gg">
@@ -247,8 +258,36 @@
             </objects>
             <point key="canvasLocation" x="4428.985507246377" y="-668.30357142857144"/>
         </scene>
+        <!--Stille Zeit-->
+        <scene sceneID="fU2-Ya-yxb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eZm-FR-DXl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stille Zeit" image="book" catalog="system" id="7Uu-ZS-a7C"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="eqx-78-mRE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="ecGreen"/>
+                        <color key="barTintColor" name="ecGreen"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="09a-uO-y6P" kind="relationship" relationship="rootViewController" id="5JI-go-OpW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UvE-Cz-pMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4429" y="7"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="book" catalog="system" width="64" height="50"/>
         <image name="info" catalog="system" width="46" height="64"/>
         <image name="mapMarker" width="30" height="30"/>
         <image name="timetable" width="30" height="30"/>

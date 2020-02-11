@@ -58,6 +58,7 @@
 		85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */; };
 		85B4ACC72395D6A1001F282C /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B4ACB82395D6A1001F282C /* Nunito-Regular.ttf */; };
 		85B6C5AA239FE565000C33E4 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6C5A9239FE565000C33E4 /* UIFontExtension.swift */; };
+		85CC8C1023F1DC1400F47B25 /* StilleZeitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CC8C0F23F1DC1400F47B25 /* StilleZeitViewController.swift */; };
 		85D1186F23A3FFE100EC3D88 /* EventLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1186E23A3FFE100EC3D88 /* EventLabel.swift */; };
 		85D1187123A400A500EC3D88 /* EventBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1187023A400A500EC3D88 /* EventBody.swift */; };
 		85D1187323A44BFC00EC3D88 /* DeltaMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1187223A44BFC00EC3D88 /* DeltaMapViewController.swift */; };
@@ -146,6 +147,7 @@
 		85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonDetailViewController.swift; sourceTree = "<group>"; };
 		85B4ACB82395D6A1001F282C /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		85B6C5A9239FE565000C33E4 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		85CC8C0F23F1DC1400F47B25 /* StilleZeitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StilleZeitViewController.swift; sourceTree = "<group>"; };
 		85D1186E23A3FFE100EC3D88 /* EventLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLabel.swift; sourceTree = "<group>"; };
 		85D1187023A400A500EC3D88 /* EventBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBody.swift; sourceTree = "<group>"; };
 		85D1187223A44BFC00EC3D88 /* DeltaMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeltaMapViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				85E3F2F5231409F000E6B845 /* MapViewController.swift */,
 				85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */,
 				851141D7239A62C90062438E /* InfoViewController.swift */,
+				85CC8C0F23F1DC1400F47B25 /* StilleZeitViewController.swift */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */,
 				851141DA239A68150062438E /* SeminarTableViewController.swift in Sources */,
 				8566830E23B4F9EA00CE94CC /* UIViewControllerExtension.swift in Sources */,
+				85CC8C1023F1DC1400F47B25 /* StilleZeitViewController.swift in Sources */,
 				8566826C23B4F1D000CE94CC /* Configuration.swift in Sources */,
 				850FB7D723B64F8400D3ECFB /* SeminarPickerTextField.swift in Sources */,
 				850DC89D23A13C700097C927 /* DataManager.swift in Sources */,
