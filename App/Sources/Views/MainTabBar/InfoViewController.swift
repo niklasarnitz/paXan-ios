@@ -6,14 +6,21 @@ import UIKit
 
 class InfoViewController: UIViewController {
     private lazy var referentButton = ThemedButton(text: "Referenten")
-
     private lazy var seminarsButton = ThemedButton(text: "Seminare")
-
     private lazy var spendenButton = ThemedButton(text: "Spenden")
-
     private lazy var massquarterButton = ThemedButton(text: "Massenquatiere")
-
     private lazy var aboutButton = ThemedButton(text: "Über")
+
+    private lazy var stackView = UIStackView(
+        arrangedSubviews: [
+            referentButton,
+            seminarsButton,
+            spendenButton,
+            massquarterButton
+        ]
+    )
+
+    private lazy var scrollView = UIScrollView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,57 +29,37 @@ class InfoViewController: UIViewController {
 
         fixNavigationBar()
 
-        setupReferentButton()
-        setupSeminarsButton()
-        setupSpendenButton()
-        setupMassquarterButton()
-        setupAboutButton()
-    }
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints { make in
+            make.top.equalTo(super.view.snp.topMargin).offset(20)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
 
-    private func setupReferentButton() {
-        view.addSubview(referentButton)
-        referentButton.snp.makeConstraints({ make in
-            make.top.equalTo(super.view.snp.topMargin).offset(30)
-            make.leading.equalToSuperview().offset(26)
-            make.trailing.equalToSuperview().offset(-26)
-            make.height.equalTo(40)
-        })
+        scrollView.addSubview(stackView)
+        stackView.bindEdgesToSuperview()
+        stackView.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+        }
+
+        stackView.alignment = .leading
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.spacing = 15
+
+        stackView.arrangedSubviews.forEach { view in
+            view.snp.makeConstraints { make in
+                make.leading.equalToSuperview().offset(20)
+                make.trailing.equalToSuperview().offset(-20)
+            }
+        }
+
+        setupAboutButton()
 
         referentButton.addTarget(self, action: #selector(referentButtonPressed), for: .touchUpInside)
-    }
-
-    private func setupSeminarsButton() {
-        view.addSubview(seminarsButton)
-        seminarsButton.snp.makeConstraints({ make in
-            make.top.equalTo(referentButton.snp.bottomMargin).offset(26)
-            make.leading.equalToSuperview().offset(26)
-            make.trailing.equalToSuperview().offset(-26)
-            make.height.equalTo(40)
-        })
-
         seminarsButton.addTarget(self, action: #selector(seminarsButtonPressed), for: .touchUpInside)
-    }
-
-    private func setupSpendenButton() {
-        view.addSubview(spendenButton)
-        spendenButton.snp.makeConstraints({ make in
-            make.top.equalTo(seminarsButton.snp.bottomMargin).offset(26)
-            make.leading.equalToSuperview().offset(26)
-            make.trailing.equalToSuperview().offset(-26)
-            make.height.equalTo(40)
-        })
-
         spendenButton.addTarget(self, action: #selector(spendenButtonPressed), for: .touchUpInside)
-    }
-
-    private func setupMassquarterButton() {
-        view.addSubview(massquarterButton)
-        massquarterButton.snp.makeConstraints({ make in
-            make.top.equalTo(spendenButton.snp.bottomMargin).offset(26)
-            make.leading.equalToSuperview().offset(26)
-            make.trailing.equalToSuperview().offset(-26)
-        })
-
         massquarterButton.addTarget(self, action: #selector(massQuarterButtonPressed), for: .touchUpInside)
     }
 

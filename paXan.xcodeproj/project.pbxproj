@@ -54,6 +54,7 @@
 		85939C152314075F0009A009 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85939C142314075F0009A009 /* Colors.xcassets */; };
 		85A3F82423463C29006A9473 /* Seminar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A3F82323463C29006A9473 /* Seminar.swift */; };
 		85A3F82723463CAA006A9473 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 85A3F82623463CAA006A9473 /* .swiftlint.yml */; };
+		85AA382C23F3E2FB007CD0A8 /* SimpleTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA382B23F3E2FB007CD0A8 /* SimpleTextViewController.swift */; };
 		85AAD03A231ABCC900C0F813 /* LexikonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */; };
 		85AAD040231ACC7600C0F813 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD03F231ACC7600C0F813 /* Style.swift */; };
 		85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */; };
@@ -145,6 +146,7 @@
 		85939C142314075F0009A009 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		85A3F82323463C29006A9473 /* Seminar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seminar.swift; sourceTree = "<group>"; };
 		85A3F82623463CAA006A9473 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		85AA382B23F3E2FB007CD0A8 /* SimpleTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextViewController.swift; sourceTree = "<group>"; };
 		85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonTableViewController.swift; sourceTree = "<group>"; };
 		85AAD03F231ACC7600C0F813 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 				85707EF923B7A1B700D2AF34 /* MassQuarterViewController.swift */,
 				851BE4DD23F1D639002E1EA5 /* OpenSourceLicenseViewController.swift */,
 				858745D823F2DC82004EBF96 /* BibleTextViewController.swift */,
+				85AA382B23F3E2FB007CD0A8 /* SimpleTextViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				853C4B662393D30900300689 /* ThemedButton.swift in Sources */,
 				854CC10B2393302C000AD257 /* MKMapViewExtension.swift in Sources */,
 				854CC10923932F87000AD257 /* SeminarDetailViewController.swift in Sources */,
+				85AA382C23F3E2FB007CD0A8 /* SimpleTextViewController.swift in Sources */,
 				853CC16C2360CB6300A3F4F3 /* FourthSetupPageViewController.swift in Sources */,
 				851141D6239A58050062438E /* EditorsDelegate.swift in Sources */,
 				851141D8239A62C90062438E /* InfoViewController.swift in Sources */,

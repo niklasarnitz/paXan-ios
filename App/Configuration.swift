@@ -62,6 +62,10 @@ final class Configuration {
     var mondayBibleTextTitle: String
     var mondayBibleText: String
 
+    var appInfoString: String
+
+    var impressumText: String
+
     init() {
         if let path = Bundle.main.path(forResource: "Config", ofType: "plist") {
            config = NSDictionary(contentsOfFile: path)
@@ -123,6 +127,10 @@ final class Configuration {
         mondayBibleText = config!["mondayBibleText"] as! String
 
         stilleZeitDescription = config!["stilleZeitDescription"] as! String
+
+        appInfoString = config!["appInfoString"] as! String
+
+        impressumText = config!["impressumText"] as! String
     }
 }
 
