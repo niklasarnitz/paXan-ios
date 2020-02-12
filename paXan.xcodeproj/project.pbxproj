@@ -42,6 +42,8 @@
 		85707EFA23B7A1B700D2AF34 /* MassQuarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85707EF923B7A1B700D2AF34 /* MassQuarterViewController.swift */; };
 		85866CCB23151F5600B408E9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85866CCA23151F5600B408E9 /* Assets.swift */; };
 		85866CD123154E6300B408E9 /* LexikonEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85866CD023154E6300B408E9 /* LexikonEntry.swift */; };
+		858745D923F2DC82004EBF96 /* BibleTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858745D823F2DC82004EBF96 /* BibleTextViewController.swift */; };
+		858745DB23F2DD16004EBF96 /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858745DA23F2DD16004EBF96 /* TextLabel.swift */; };
 		858ECD6423A23B800055B9FB /* paXanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858ECD6323A23B800055B9FB /* paXanUITests.swift */; };
 		858ECD7823A23B9D0055B9FB /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858ECD6D23A23B920055B9FB /* SnapshotHelper.swift */; };
 		858ECD7A23A243ED0055B9FB /* createScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858ECD7923A243ED0055B9FB /* createScreenshots.swift */; };
@@ -122,6 +124,8 @@
 		85707EF923B7A1B700D2AF34 /* MassQuarterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassQuarterViewController.swift; sourceTree = "<group>"; };
 		85866CCA23151F5600B408E9 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		85866CD023154E6300B408E9 /* LexikonEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonEntry.swift; sourceTree = "<group>"; };
+		858745D823F2DC82004EBF96 /* BibleTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleTextViewController.swift; sourceTree = "<group>"; };
+		858745DA23F2DD16004EBF96 /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
 		858ECD6123A23B800055B9FB /* paXanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = paXanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		858ECD6323A23B800055B9FB /* paXanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paXanUITests.swift; sourceTree = "<group>"; };
 		858ECD6523A23B800055B9FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -360,6 +364,7 @@
 				85D1187023A400A500EC3D88 /* EventBody.swift */,
 				850FB7D423B64E2A00D3ECFB /* SetupTextField.swift */,
 				850FB7D623B64F8400D3ECFB /* SeminarPickerTextField.swift */,
+				858745DA23F2DD16004EBF96 /* TextLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 				851141D9239A68150062438E /* SeminarTableViewController.swift */,
 				85707EF923B7A1B700D2AF34 /* MassQuarterViewController.swift */,
 				851BE4DD23F1D639002E1EA5 /* OpenSourceLicenseViewController.swift */,
+				858745D823F2DC82004EBF96 /* BibleTextViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -632,9 +638,11 @@
 				85D1186F23A3FFE100EC3D88 /* EventLabel.swift in Sources */,
 				851141DD239A6C870062438E /* ReferentDetailViewController.swift in Sources */,
 				85866CCB23151F5600B408E9 /* Assets.swift in Sources */,
+				858745D923F2DC82004EBF96 /* BibleTextViewController.swift in Sources */,
 				850FB7D523B64E2A00D3ECFB /* SetupTextField.swift in Sources */,
 				851BE4DE23F1D639002E1EA5 /* OpenSourceLicenseViewController.swift in Sources */,
 				8539E59C237C790400EBC1DB /* BackupData.swift in Sources */,
+				858745DB23F2DD16004EBF96 /* TextLabel.swift in Sources */,
 				85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */,
 				85AAD03A231ABCC900C0F813 /* LexikonTableViewController.swift in Sources */,
 				850BA45C239A7C250098196D /* AboutViewController.swift in Sources */,
@@ -834,7 +842,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = YYZ333K89U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -860,7 +868,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = YYZ333K89U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

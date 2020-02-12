@@ -47,6 +47,21 @@ final class Configuration {
     var openSourceViewTitle: String
     var licenseText: String
 
+    // MARK: - Stille Zeit
+    var stilleZeitDescription: String
+
+    var fridayBibleTextTitle: String
+    var fridayBibleText: String
+
+    var saturdayBibleTextTitle: String
+    var saturdayBibleText: String
+
+    var sundayBibleTextTitle: String
+    var sundayBibleText: String
+
+    var mondayBibleTextTitle: String
+    var mondayBibleText: String
+
     init() {
         if let path = Bundle.main.path(forResource: "Config", ofType: "plist") {
            config = NSDictionary(contentsOfFile: path)
@@ -93,6 +108,21 @@ final class Configuration {
 
         openSourceViewTitle = config!["openSourceViewTitle"] as! String
         licenseText = config!["licenseText"] as! String
+
+
+        fridayBibleTextTitle = config!["fridayBibleTextTitle"] as! String
+        fridayBibleText = config!["fridayBibleText"] as! String
+
+        saturdayBibleTextTitle = config!["saturdayBibleTextTitle"] as! String
+        saturdayBibleText = config!["saturdayBibleText"] as! String
+
+        sundayBibleTextTitle = config!["sundayBibleTextTitle"] as! String
+        sundayBibleText = config!["sundayBibleText"] as! String
+
+        mondayBibleTextTitle = config!["mondayBibleTextTitle"] as! String
+        mondayBibleText = config!["mondayBibleText"] as! String
+
+        stilleZeitDescription = config!["stilleZeitDescription"] as! String
     }
 }
 
