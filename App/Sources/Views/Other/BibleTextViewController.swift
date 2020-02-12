@@ -9,7 +9,6 @@ class BibleTextViewController: UIViewController {
 
     private lazy var stackView = UIStackView(
         arrangedSubviews: [
-            bibleTextTitleLabel,
             bibleTextLabel,
             copyrightLabel
         ]
@@ -38,9 +37,16 @@ class BibleTextViewController: UIViewController {
 
         setupDoneButton()
 
+        view.addSubview(bibleTextTitleLabel)
+        bibleTextTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.snp.topMargin).offset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+        }
+
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(20)
+            make.top.equalTo(bibleTextTitleLabel.snp.bottomMargin).offset(15)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.bottom.equalTo(doneButton.snp.topMargin).offset(-15)
