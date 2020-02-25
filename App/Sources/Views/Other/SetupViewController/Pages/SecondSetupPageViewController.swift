@@ -10,8 +10,6 @@ class SecondSetupPageViewController: UIViewController {
 
     private lazy var subTitleLabel = SubtitleLabel(text: config.secondPageSubtitle)
 
-    private lazy var nameTextField = SetupTextField(placeholder: config.secondPageTextFieldPlaceholder)
-
     private lazy var continueButton: UIButton = {
         let button = SetupButton()
 
@@ -29,7 +27,6 @@ class SecondSetupPageViewController: UIViewController {
         setupView()
         setupTitleLabel()
         setupSubTitleLabel()
-        setupNameTextField()
         setupContinueButton()
     }
 
@@ -42,7 +39,7 @@ class SecondSetupPageViewController: UIViewController {
 
         titleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(super.view.snp.topMargin).offset(50)
+            make.topMargin.equalToSuperview().offset(40)
         }
     }
 
@@ -54,30 +51,6 @@ class SecondSetupPageViewController: UIViewController {
             make.top.equalTo(titleLabel.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
-        }
-    }
-
-    private func setupNameTextField() {
-        view.addSubview(nameTextField)
-
-        nameTextField.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(subTitleLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(26)
-            make.trailing.equalToSuperview().offset(-26)
-            make.height.equalTo(35)
-        }
-
-        nameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-    }
-
-    @objc func editingChanged(_ textField: UITextField) {
-        if nameTextField.text!.isEmpty {
-            continueButton.isEnabled = false
-            continueButton.alpha = 0.5
-        } else {
-            continueButton.isEnabled = true
-            continueButton.alpha = 1
         }
     }
 
@@ -95,8 +68,6 @@ class SecondSetupPageViewController: UIViewController {
     }
 
     @objc func goToNextPage(_ button: UIButton) {
-        Defaults.username = nameTextField.text
-
         button.pulsate()
 
         let viewController = ThirdSetupPageViewController()

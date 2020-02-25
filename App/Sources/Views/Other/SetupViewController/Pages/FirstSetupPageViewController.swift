@@ -9,14 +9,22 @@ class FirstSetupPageViewController: UIViewController {
 
     private lazy var subTitleLabel = SubtitleLabel(text: config.firstPageSubtitle)
 
-    private lazy var logoImageView: UIImageView = {
-        let imageView = UIImageView()
+    private lazy var descriptionLabelOne = SubtitleLabel(
+        text: "Wir freuen uns, dass du mit dabei bist.\nGemeinsam wollen wir uns auf paXan von Gottes Plan mit uns Menschen begeistern lassen."
+    )
+    private lazy var descriptionLabelTwo = SubtitleLabel(
+        text: "Sei gespannt, was dich an den einzelnen Tagen erwartet.\n\nAlle wichtigen Infos zu paX an haben wir in unserer paX-an-App zusammen gestellt.\nJede Menge Platz für deine persönlichen Notizen findest Du in deinem Notizheft.\nDein Armin und das paX-an-Team"
+    )
 
-        imageView.image = Images.ecLogo
-        imageView.tintColor = .white
+    private lazy var stackView = UIStackView(
+        arrangedSubviews: [
+            subTitleLabel,
+            descriptionLabelOne,
+            descriptionLabelTwo
+        ]
+    )
 
-        return imageView
-    }()
+    private lazy var scrollView = UIScrollView()
 
     private lazy var continueButton = SetupButton(text: config.setupContinueButtonTitle)
 
@@ -24,49 +32,43 @@ class FirstSetupPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupView()
-        setupTitleLabel()
-        setupSubTitleLabel()
-        setupLogoImageView()
-        setupContinueButton()
-    }
-
-    // MARK: UI Setup
-    private func setupView() {
-        view.backgroundColor = Colors.ecGreen
-    }
-
-    private func setupTitleLabel() {
-        titleLabel.contentMode = .center
         titleLabel.textAlignment = .center
 
+        view.backgroundColor = Colors.ecGreen
+
+        setupContinueButton()
+
         view.addSubview(titleLabel)
-
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(super.view.snp.topMargin).offset(50)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
+            make.top.equalToSuperview().offset(40)
         }
-    }
 
-    private func setupSubTitleLabel() {
-        view.addSubview(subTitleLabel)
-
-        subTitleLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(titleLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottomMargin).offset(15)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalTo(continueButton.snp.topMargin).offset(-15)
         }
-    }
 
-    private func setupLogoImageView() {
-        view.addSubview(logoImageView)
+        scrollView.addSubview(stackView)
+        stackView.bindEdgesToSuperview()
+        stackView.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+        }
 
-        logoImageView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(subTitleLabel.snp.bottomMargin).offset(20)
-            make.size.equalTo(50)
+        stackView.alignment = .leading
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.spacing = 15
+
+        stackView.arrangedSubviews.forEach { view in
+            view.snp.makeConstraints { make in
+                make.leading.equalToSuperview().offset(20)
+                make.trailing.equalToSuperview().offset(-20)
+            }
         }
     }
 
@@ -87,7 +89,7 @@ class FirstSetupPageViewController: UIViewController {
     @objc func goToNextPage(_ button: UIButton) {
         button.pulsate()
 
-        let viewController = SecondSetupPageViewController()
+        let viewController = ThirdSetupPageViewController()
         viewController.modalPresentationStyle = .fullScreen
         viewController.modalTransitionStyle = .flipHorizontal
         present(viewController, animated: true)

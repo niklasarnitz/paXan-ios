@@ -3,4 +3,130 @@
    uuid = "AA3B63B1-6C48-4849-B38B-36BC1214154E"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E6CB6E6-F797-4C43-B56D-A923F7659D53"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "2E6CB6E6-F797-4C43-B56D-A923F7659D53 - ccb6102161cdd924"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "paXan.FirstSetupPageViewController.(stackView in _0376830DD52924FAE8C11C352632A851).getter : __C.UIStackView"
+                  moduleName = "paXan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niklas/personal/dev/paXan-iOS/App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "385">
+               </Location>
+               <Location
+                  uuid = "2E6CB6E6-F797-4C43-B56D-A923F7659D53 - ae20e9d84ee3ad50"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "paXan.FirstSetupPageViewController.(stackView in _0376830DD52924FAE8C11C352632A851).setter : __C.UIStackView"
+                  moduleName = "paXan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niklas/personal/dev/paXan-iOS/App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "2E6CB6E6-F797-4C43-B56D-A923F7659D53 - f62d09fd4ff86627"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "paXan.FirstSetupPageViewController.(stackView in _0376830DD52924FAE8C11C352632A851).modify : __C.UIStackView"
+                  moduleName = "paXan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niklas/personal/dev/paXan-iOS/App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "2E6CB6E6-F797-4C43-B56D-A923F7659D53 - c4e55fda004ff98b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "paXan.FirstSetupPageViewController.(stackView in _0376830DD52924FAE8C11C352632A851).modify : __C.UIStackView with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "paXan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niklas/personal/dev/paXan-iOS/App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "2E6CB6E6-F797-4C43-B56D-A923F7659D53 - 2d250cc0b9b701a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "paXan.FirstSetupPageViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; paXan.FirstSetupPageViewController"
+                  moduleName = "paXan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niklas/personal/dev/paXan-iOS/App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "504">
+               </Location>
+               <Location
+                  uuid = "2E6CB6E6-F797-4C43-B56D-A923F7659D53 - 719cd753a4b18290"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "paXan.FirstSetupPageViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;paXan.FirstSetupPageViewController&gt;"
+                  moduleName = "paXan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niklas/personal/dev/paXan-iOS/App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "435">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A76F1B78-D4BA-46B9-BDE1-9B4F5920B82F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

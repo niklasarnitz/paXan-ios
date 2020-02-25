@@ -25,25 +25,32 @@ class CreateScreenshots: XCTestCase {
 
     func testScreenshots() {
         XCUIDevice.shared.orientation = .portrait
-        // Mein paXan
-        app.tabBars.buttons.element(boundBy: 0).tap()
-        snapshot("0-MeinPaXan")
 
-        // Seminarplan
-        app.tabBars.buttons.element(boundBy: 1).tap()
-        snapshot("1-Seminarplan")
+        app.buttons["Weiter"].tap()
+
+        app.buttons["Weiter"].tap()
+
+        app.buttons["Weiter"].tap()
+
+        // Programm
+        app.tabBars.buttons.element(boundBy: 0).tap()
+        snapshot("0-Programm")
 
         // Karte
-        app.tabBars.buttons.element(boundBy: 2).tap()
+        app.tabBars.buttons.element(boundBy: 1).tap()
         snapshot("2-Karte")
+
+        // Stille Zeit
+        app.tabBars.buttons.element(boundBy: 2).tap()
+        snapshot("3-StilleZeit")
 
         // A-Z
         app.tabBars.buttons.element(boundBy: 3).tap()
-        snapshot("3-A-Z")
+        snapshot("4-A-Z")
 
         // Infos
         app.tabBars.buttons.element(boundBy: 4).tap()
-        snapshot("4-Infos")
+        snapshot("5-Infos")
     }
 
 }

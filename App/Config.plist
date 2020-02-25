@@ -13,9 +13,9 @@
 	<key>firstPageSubtitle</key>
 	<string>Cool, dass du da bist! Im Namen des SWDEC heißen wir dich herzlich Willkommen zu paXan 2020!</string>
 	<key>secondPageTitle</key>
-	<string>Deine paXan App</string>
+	<string>HALLO UND HERZLICH WILLKOMMEN BEI paX an 2020!</string>
 	<key>secondPageSubtitle</key>
-	<string>Damit wir dich in der App etwas persönlicher ansprechen können, gib bitte im unteren Textfeld deinen Vornamen ein. Den speichern wir natürlich nur auf deinem Gerät. 😉</string>
+	<string>„Da wir bei Jesus Heimat gefunden haben, wollen wir die besten Heimatgeber sein.  Gemeinsam sind wir auf dem Weg zu ihm.“</string>
 	<key>secondPageTextFieldPlaceholder</key>
 	<string>Name</string>
 	<key>setupContinueButtonTitle</key>
@@ -66,7 +66,7 @@ mit Joachim Böker
 14:00 Uhr Praxis Session / CoffeeTime
 16:30 Uhr Seminare III</string>
 	<key>saturdayEventTwoLabel</key>
-	<string>19:30 Uhr Danke</string>
+	<string>19:30 Uhr</string>
 	<key>donationURL</key>
 	<string>https://swdec.de/spenden/</string>
 	<key>openSourceViewTitle</key>

@@ -51,95 +51,69 @@ class ThirdSetupPageViewController: UIViewController {
         pickerView: seminarThreePickerView
     )
 
+    private lazy var stackView = UIStackView(
+        arrangedSubviews: [
+            heimatlosTitleLabel,
+            seminarOnePickerViewTextField,
+            seminarTwoPickerViewTextField,
+            heimwehTitleLabel,
+            seminarThreePickerViewTextField
+        ]
+    )
+
+    private lazy var scrollView = UIScrollView()
+
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupView()
-        setupTitleLabel()
-        setupSubTitleLabel()
-        setupHeimatlosTitleLabel()
-        setupSeminarOnePickerViewTextField()
-        setupSeminarTwoPickerViewTextField()
-        setupHeimwehTitleLabel()
-        setupSeminarThreePickerViewTextField()
-        setupContinueButton()
-    }
-
-    // MARK: UI Setup
-    private func setupView() {
         view.backgroundColor = Colors.ecGreen
-    }
 
-    private func setupTitleLabel() {
+        setupContinueButton()
+
         view.addSubview(titleLabel)
-
         titleLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(super.view.snp.topMargin).offset(50)
-        }
-    }
-
-    private func setupSubTitleLabel() {
-        view.addSubview(subTitleLabel)
-
-        subTitleLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(titleLabel.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
+            make.top.equalToSuperview().offset(40)
         }
-    }
 
-    private func setupHeimatlosTitleLabel() {
-        view.addSubview(heimatlosTitleLabel)
-        heimatlosTitleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(25)
-            make.top.equalTo(subTitleLabel.snp.bottomMargin).offset(25)
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottomMargin).offset(15)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalTo(continueButton.snp.topMargin).offset(-15)
         }
-    }
 
-    private func setupSeminarOnePickerViewTextField() {
-        view.addSubview(seminarOnePickerViewTextField)
+        scrollView.addSubview(stackView)
+        stackView.bindEdgesToSuperview()
+        stackView.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+        }
+
+        stackView.alignment = .leading
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.spacing = 15
 
         seminarOnePickerViewTextField.snp.makeConstraints { make in
-            make.top.equalTo(heimatlosTitleLabel.snp.bottomMargin).offset(25)
             make.height.equalTo(40)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
         }
-    }
-
-    private func setupSeminarTwoPickerViewTextField() {
-        view.addSubview(seminarTwoPickerViewTextField)
 
         seminarTwoPickerViewTextField.snp.makeConstraints { make in
-            make.top.equalTo(seminarOnePickerViewTextField.snp.bottomMargin).offset(25)
             make.height.equalTo(40)
-            make.centerX.equalToSuperview()
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
         }
-    }
-
-    private func setupHeimwehTitleLabel() {
-        view.addSubview(heimwehTitleLabel)
-        heimwehTitleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(25)
-            make.top.equalTo(seminarTwoPickerViewTextField.snp.bottomMargin).offset(25)
-        }
-    }
-
-    private func setupSeminarThreePickerViewTextField() {
-        view.addSubview(seminarThreePickerViewTextField)
 
         seminarThreePickerViewTextField.snp.makeConstraints { make in
-            make.top.equalTo(heimwehTitleLabel.snp.bottomMargin).offset(25)
             make.height.equalTo(40)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+        }
+
+        stackView.arrangedSubviews.forEach { view in
+            view.snp.makeConstraints { make in
+                make.leading.equalToSuperview().offset(20)
+                make.trailing.equalToSuperview().offset(-20)
+            }
         }
     }
 
