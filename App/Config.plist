@@ -9,7 +9,7 @@
 	<key>lexikonUrl</key>
 	<string>http://app.swdec.de/paxan/lexikon</string>
 	<key>firstPageTitle</key>
-	<string>Willkommen in der paXan App!</string>
+	<string>Willkommen in der paX an App!</string>
 	<key>firstPageSubtitle</key>
 	<string>Cool, dass du da bist! Im Namen des SWDEC heißen wir dich herzlich Willkommen zu paXan 2020!</string>
 	<key>secondPageTitle</key>
@@ -21,15 +21,15 @@
 	<key>setupContinueButtonTitle</key>
 	<string>Weiter</string>
 	<key>thirdPageTitle</key>
-	<string>Deine paXan Seminare</string>
+	<string>Deine paX an Seminare</string>
 	<key>thirdPageSubtitle</key>
-	<string>Trage hier unten bitte deine Seminare ein, für die du dich online angemeldet hast. Keine Angst, falls du etwas falsch machst, kannst du es später natürlich nocheinmal ändern.</string>
+	<string>pa</string>
 	<key>thirdPageTextFieldPlaceholderOne</key>
-	<string>Seminar 1</string>
+	<string>Seminar A</string>
 	<key>thirdPageTextFieldPlaceholderTwo</key>
-	<string>Seminar 2</string>
+	<string>Seminar B</string>
 	<key>thirdPageTextFieldPlaceholderThree</key>
-	<string>Seminar 3</string>
+	<string>Seminar C</string>
 	<key>fourthPageTitle</key>
 	<string>Und jetzt...
 Viel Spaß bei paXan!</string>
@@ -52,9 +52,9 @@ mit Joachim Böker
 	<key>fridayEventLabelOne</key>
 	<string>09:30 Uhr Praxis Session / CoffeeTime
 11:30 Uhr Bibel Session mit Klaus Göttler
-15:00 Uhr Seminare I</string>
+15:00 Uhr Seminarblock A</string>
 	<key>fridayEventLabelTwo</key>
-	<string>16:30 Uhr Seminare II</string>
+	<string>16:30 Uhr Seminarblock B</string>
 	<key>fridayEventLabelThree</key>
 	<string>19:30 Uhr Das Kreuz</string>
 	<key>saturdayCaptionLabel</key>
@@ -64,7 +64,7 @@ mit Joachim Böker
 	<string>09:30 Uhr Bibel Session mit Joachim Böker
 11:30 Uhr Dennoch feiern
 14:00 Uhr Praxis Session / CoffeeTime
-16:30 Uhr Seminare III</string>
+16:30 Uhr Seminarblock C</string>
 	<key>saturdayEventTwoLabel</key>
 	<string>19:30 Uhr</string>
 	<key>donationURL</key>

@@ -16,8 +16,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "FirstSetupPageViewController"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "2E6CB6E6-F797-4C43-B56D-A923F7659D53 - ccb6102161cdd924"
@@ -30,8 +30,8 @@
                   urlString = "file:///Users/niklas/personal/dev/paXan-iOS/App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
                   offsetFromSymbolStart = "385">
                </Location>
                <Location
@@ -45,8 +45,8 @@
                   urlString = "file:///Users/niklas/personal/dev/paXan-iOS/App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
                   offsetFromSymbolStart = "160">
                </Location>
                <Location
@@ -75,8 +75,8 @@
                   urlString = "file:///Users/niklas/personal/dev/paXan-iOS/App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
                   offsetFromSymbolStart = "27">
                </Location>
                <Location
@@ -90,8 +90,8 @@
                   urlString = "file:///Users/niklas/personal/dev/paXan-iOS/App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
                   offsetFromSymbolStart = "504">
                </Location>
                <Location
@@ -105,8 +105,8 @@
                   urlString = "file:///Users/niklas/personal/dev/paXan-iOS/App/Sources/Views/Other/SetupViewController/Pages/FirstSetupPageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
                   offsetFromSymbolStart = "435">
                </Location>
             </Locations>
@@ -124,8 +124,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "stackView"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

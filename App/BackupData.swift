@@ -38,7 +38,7 @@ let backupLexikonEntries: [LexikonEntry] = [
     ),
     LexikonEntry(
         title: "Coffee-Time-Reflexionsrunde",
-        description: "In gemütlicher Atmosphäre zusammen mit den anderen Leuten aus deiner Jugendarbeit die vielen Impulse und Anregungen innerhalb der eigenen Jugendarbeit reflektieren, wo du persönlich herausgefordert wurdest, was du zuhause beherzt angehen willst und wie die eigene Jugendarbeit/Gemeinde vorangebracht werden kann. Sucht euch zusammen ein lauschiges Plätzchen und genießt nebenher eine Runde Kaffee und Donuts. Diese könnt ihr in Kisten voher im großen Verpflegungszelt (bitte Beschilderung achten!) abholen und anschließend im Spülzelt abgeben.\n Die Gesprächsanregungen zu den jeweiligen Tagen und wie es nach paXan in deiner Jugendarbeit weitergehen kann findest du unter 'Info'."
+        description: "In gemütlicher Atmosphäre zusammen mit den anderen Leuten aus deiner Jugendarbeit die vielen Impulse und Anregungen innerhalb der eigenen Jugendarbeit reflektieren, wo du persönlich herausgefordert wurdest, was du zuhause beherzt angehen willst und wie die eigene Jugendarbeit/Gemeinde vorangebracht werden kann. Sucht euch zusammen ein lauschiges Plätzchen und genießt nebenher eine Runde Kaffee und Donuts. Diese könnt ihr in Kisten voher im großen Verpflegungszelt (bitte Beschilderung achten!) abholen und anschließend im Spülzelt abgeben.\n Die Gesprächsanregungen zu den jeweiligen Tagen und wie es nach paX an in deiner Jugendarbeit weitergehen kann findest du unter 'Info'."
     ),
     LexikonEntry(
         title: "Einlass",

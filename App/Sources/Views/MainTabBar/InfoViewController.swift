@@ -6,14 +6,16 @@ import UIKit
 
 class InfoViewController: UIViewController {
     private lazy var referentButton = ThemedButton(text: "Referenten")
+    private lazy var bandsButton = ThemedButton(text: "Bands")
     private lazy var seminarsButton = ThemedButton(text: "Seminare")
     private lazy var spendenButton = ThemedButton(text: "Spenden")
-    private lazy var massquarterButton = ThemedButton(text: "Massenquatiere")
+    private lazy var massquarterButton = ThemedButton(text: "Massenquartiere")
     private lazy var aboutButton = ThemedButton(text: "Über")
 
     private lazy var stackView = UIStackView(
         arrangedSubviews: [
             referentButton,
+            bandsButton,
             seminarsButton,
             spendenButton,
             massquarterButton
@@ -61,6 +63,7 @@ class InfoViewController: UIViewController {
         seminarsButton.addTarget(self, action: #selector(seminarsButtonPressed), for: .touchUpInside)
         spendenButton.addTarget(self, action: #selector(spendenButtonPressed), for: .touchUpInside)
         massquarterButton.addTarget(self, action: #selector(massQuarterButtonPressed), for: .touchUpInside)
+        bandsButton.addTarget(self, action: #selector(didPressBandsButton), for: .touchUpInside)
     }
 
     private func setupAboutButton() {
@@ -74,8 +77,7 @@ class InfoViewController: UIViewController {
         aboutButton.addTarget(self, action: #selector(aboutButtonPressed), for: .touchUpInside)
     }
 
-    @objc
-    private func referentButtonPressed() {
+    @objc private func referentButtonPressed() {
         referentButton.pulsate()
 
         let viewController = ReferentTableViewController()
@@ -83,29 +85,31 @@ class InfoViewController: UIViewController {
         present(viewController, animated: true)
     }
 
-    @objc
-    private func seminarsButtonPressed() {
+    @objc private func seminarsButtonPressed() {
         seminarsButton.pulsate()
         present(SeminarTableViewController(), animated: true)
     }
 
-    @objc
-    private func spendenButtonPressed() {
+    @objc private func spendenButtonPressed() {
         spendenButton.pulsate()
 
         let url = URL(string: config.donationURL)!
         UIApplication.shared.open(url)
     }
 
-    @objc
-    private func massQuarterButtonPressed() {
+    @objc private func massQuarterButtonPressed() {
         massquarterButton.pulsate()
         present(MassQuarterViewController(), animated: true)
     }
 
-    @objc
-    private func aboutButtonPressed() {
+    @objc private func aboutButtonPressed() {
         aboutButton.pulsate()
         present(AboutViewController(), animated: true)
+    }
+
+    @objc private func didPressBandsButton() {
+        bandsButton.pulsate()
+
+        present(BandsViewController(), animated: true)
     }
 }

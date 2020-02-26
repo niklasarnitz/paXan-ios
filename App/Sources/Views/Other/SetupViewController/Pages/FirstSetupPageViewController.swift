@@ -1,3 +1,4 @@
+// swiflint:disable line_length
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import UIKit
@@ -10,7 +11,7 @@ class FirstSetupPageViewController: UIViewController {
     private lazy var subTitleLabel = SubtitleLabel(text: config.firstPageSubtitle)
 
     private lazy var descriptionLabelOne = SubtitleLabel(
-        text: "Wir freuen uns, dass du mit dabei bist.\nGemeinsam wollen wir uns auf paXan von Gottes Plan mit uns Menschen begeistern lassen."
+        text: "Wir freuen uns, dass du mit dabei bist.\nGemeinsam wollen wir uns auf paX an von Gottes Plan mit uns Menschen begeistern lassen."
     )
     private lazy var descriptionLabelTwo = SubtitleLabel(
         text: "Sei gespannt, was dich an den einzelnen Tagen erwartet.\n\nAlle wichtigen Infos zu paX an haben wir in unserer paX-an-App zusammen gestellt.\nJede Menge Platz für deine persönlichen Notizen findest Du in deinem Notizheft.\nDein Armin und das paX-an-Team"

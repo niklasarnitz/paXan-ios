@@ -44,7 +44,7 @@ class StilleZeitViewController: UIViewController {
 
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(30)
+            make.top.equalTo(super.view.snp.topMargin).offset(20)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()

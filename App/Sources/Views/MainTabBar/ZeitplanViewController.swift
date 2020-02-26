@@ -89,6 +89,9 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
 
         view.addSubview(scrollView)
         scrollView.bindEdgesToSuperview()
+        scrollView.snp.makeConstraints { make in
+            make.top.equalTo(super.view.snp.topMargin).offset(20)
+        }
 
         scrollView.addSubview(stackView)
         stackView.bindEdgesToSuperview()

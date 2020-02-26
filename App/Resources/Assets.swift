@@ -21,6 +21,7 @@ internal enum Asset {
         internal static let shadow = UIColor(named: "shadow", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
         internal static let background = UIColor(named: "background", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
         internal static let secondaryBackground = UIColor(named: "secondaryBackground", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let stylishGrey = UIColor(named: "stylishGrey", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     }
 
     internal enum Images {

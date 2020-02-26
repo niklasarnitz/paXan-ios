@@ -27,7 +27,7 @@ class EventBody: UILabel {
         lineBreakMode = .byWordWrapping
         numberOfLines = 0
 
-        self.setTextColor(color: Colors.ecGreen)
+        self.setTextColor(color: Colors.stylishGrey)
     }
 
     func setTextColor(color: UIColor) {
