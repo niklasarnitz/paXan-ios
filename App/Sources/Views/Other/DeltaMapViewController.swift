@@ -15,7 +15,7 @@ class DeltaMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = Colors.ecGreen
+        view.backgroundColor = .white
 
         view.addSubview(imageScrollView)
         imageScrollView.bindEdgesToSuperview()
@@ -25,16 +25,6 @@ class DeltaMapViewController: UIViewController {
         imageScrollView.display(image: Images.deltaMap)
 
         layoutDoneButton()
-
-        imageScrollView.zoom(
-            to: CGRect(
-                x: view.bounds.width / 2,
-                y: view.bounds.height / 2,
-                width: view.bounds.width,
-                height: view.bounds.height - 100
-            ),
-            animated: true
-        )
     }
 
     private func layoutDoneButton() {

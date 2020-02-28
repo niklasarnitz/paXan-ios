@@ -33,6 +33,8 @@ class FirstSetupPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        DataManager()
+
         titleLabel.textAlignment = .center
 
         view.backgroundColor = Colors.ecGreen

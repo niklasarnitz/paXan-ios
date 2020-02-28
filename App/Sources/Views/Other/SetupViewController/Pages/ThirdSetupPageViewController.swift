@@ -69,6 +69,8 @@ class ThirdSetupPageViewController: UIViewController {
 
         view.backgroundColor = Colors.ecGreen
 
+        DataManager()
+
         setupContinueButton()
 
         view.addSubview(titleLabel)

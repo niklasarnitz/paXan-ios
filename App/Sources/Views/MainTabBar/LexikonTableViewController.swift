@@ -11,10 +11,10 @@ class LexikonTableViewController: UITableViewController {
 
         fixNavigationBar()
 
-        if let split = splitViewController {
-            let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count - 1] as! UINavigationController).topViewController as? LexikonDetailViewController
-        }
+//        if let split = splitViewController {
+//            let controllers = split.viewControllers
+//            detailViewController = (controllers[controllers.count - 1] as! UINavigationController).topViewController as? LexikonDetailViewController
+//        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
