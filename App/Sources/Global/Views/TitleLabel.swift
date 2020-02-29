@@ -26,10 +26,6 @@ class TitleLabel: UILabel {
         numberOfLines = 0
         lineBreakMode = .byWordWrapping
 
-        self.setTextColor(color: .white)
-    }
-
-    func setTextColor(color: UIColor) {
-        textColor = color
+        self.textColor = .white
     }
 }

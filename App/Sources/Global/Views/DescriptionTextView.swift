@@ -11,7 +11,7 @@ class DescriptionTextView: UITextView {
 
         textColor = .white
         layer.borderColor = UIColor.white.cgColor
-        layer.borderWidth = 1
+        layer.borderWidth = 0.5
         layer.cornerRadius = 5
         layer.opacity = 15
         font = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .body), size: 15)

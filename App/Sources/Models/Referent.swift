@@ -11,7 +11,13 @@ struct Referent: Codable, DefaultsSerializable, Mappable {
     var website: String
     var picture: String
 
-    init(name: String, description: String, connection: String, website: String, picture: String) {
+    init(
+        name: String,
+        description: String,
+        connection: String,
+        website: String,
+        picture: String
+    ) {
         self.name = name
         self.description = description
         self.connection = connection

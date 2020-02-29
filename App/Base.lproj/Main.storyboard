@@ -41,16 +41,6 @@
             </objects>
             <point key="canvasLocation" x="1866.6666666666667" y="7.3660714285714279"/>
         </scene>
-        <!--Mein paXan-->
-        <scene sceneID="8Zn-E9-Z3l">
-            <objects>
-                <viewController id="VFG-JX-tSy" customClass="MeinPaxAnViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Mein paXan" id="Grk-R4-Fis"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S2M-GK-5EQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1866.6666666666667" y="-667.63392857142856"/>
-        </scene>
         <!--Programm-->
         <scene sceneID="KZR-eb-5Q7">
             <objects>
@@ -80,33 +70,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTy-Q8-pCQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5339" y="7"/>
-        </scene>
-        <!--Mein paXan-->
-        <scene sceneID="sRN-rE-0Gg">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a26-5A-4iS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mein paXan" image="userMale" id="eTw-CB-Ogc"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="7ZU-3V-Dc3">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="ecGreen"/>
-                        <color key="barTintColor" name="ecGreen"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="VFG-JX-tSy" kind="relationship" relationship="rootViewController" id="J2C-Dw-QsS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nIt-br-z45" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="956.52173913043487" y="-667.63392857142856"/>
         </scene>
         <!--Programm-->
         <scene sceneID="bxz-Wl-MXV">
@@ -291,7 +254,6 @@
         <image name="info" catalog="system" width="46" height="64"/>
         <image name="mapMarker" width="30" height="30"/>
         <image name="timetable" width="30" height="30"/>
-        <image name="userMale" width="30" height="30"/>
         <image name="userManual" width="30" height="30"/>
         <namedColor name="ecGreen">
             <color red="0.68235294117647061" green="0.79607843137254897" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

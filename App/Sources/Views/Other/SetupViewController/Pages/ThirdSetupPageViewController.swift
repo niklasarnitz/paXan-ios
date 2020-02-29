@@ -69,7 +69,7 @@ class ThirdSetupPageViewController: UIViewController {
 
         view.backgroundColor = Colors.ecGreen
 
-        DataManager()
+        _ = DataManager()
 
         setupContinueButton()
 

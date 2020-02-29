@@ -10,16 +10,6 @@ class LexikonTableViewController: UITableViewController {
         super.viewDidLoad()
 
         fixNavigationBar()
-
-//        if let split = splitViewController {
-//            let controllers = split.viewControllers
-//            detailViewController = (controllers[controllers.count - 1] as! UINavigationController).topViewController as? LexikonDetailViewController
-//        }
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController?.isCollapsed ?? false
-        super.viewWillAppear(animated)
     }
 
     // MARK: - Table view data source

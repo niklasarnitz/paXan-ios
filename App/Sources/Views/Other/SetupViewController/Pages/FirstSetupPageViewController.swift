@@ -1,4 +1,4 @@
-// swiflint:disable line_length
+// swiftlint:disable line_length
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import UIKit
@@ -33,7 +33,7 @@ class FirstSetupPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DataManager()
+        _ = DataManager()
 
         titleLabel.textAlignment = .center
 

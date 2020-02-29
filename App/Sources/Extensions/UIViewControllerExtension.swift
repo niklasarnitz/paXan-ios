@@ -3,6 +3,7 @@
 import UIKit
 
 extension UIViewController {
+    /// A iOS 13 specific fix for the NavigationBar Background
     func fixNavigationBar() {
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()

@@ -30,7 +30,15 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
     var time: String
 
     // MARK: Initializer
-    init(title: String, subtitle: String, referent: String, roomname: String, lat: Double, long: Double, time: String) {
+    init(
+        title: String,
+        subtitle: String,
+        referent: String,
+        roomname: String,
+        lat: Double,
+        long: Double,
+        time: String
+    ) {
         self.title = title
         self.subtitle = subtitle
         self.referent = referent

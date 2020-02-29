@@ -9,7 +9,7 @@ class ThemedButton: UIButton {
     var titleText: String? {
         didSet {
             setTitle(titleText, for: .normal)
-            setTitleColor(UIColor.black, for: .normal)
+            setTitleColor(.white, for: .normal)
         }
     }
 

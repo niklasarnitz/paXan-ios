@@ -20,12 +20,18 @@ class ProfilePictureImageView: UIImageView {
     private func maskRoundedImage(image: UIImage, radius: CGFloat) -> UIImage {
         let imageView = UIImageView(image: image)
         let layer = imageView.layer
+
         layer.masksToBounds = true
         layer.cornerRadius = radius
+
         UIGraphicsBeginImageContext(imageView.bounds.size)
+
         layer.render(in: UIGraphicsGetCurrentContext()!)
+
         let roundedImage = UIGraphicsGetImageFromCurrentImageContext()
+
         UIGraphicsEndImageContext()
+
         return roundedImage!
     }
 }
