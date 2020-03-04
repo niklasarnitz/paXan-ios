@@ -61,11 +61,11 @@
             </objects>
             <point key="canvasLocation" x="5339.130434782609" y="-668.30357142857144"/>
         </scene>
-        <!--Stille Zeit-->
+        <!--Bible & Breakfast-->
         <scene sceneID="ZFU-WS-kkF">
             <objects>
                 <viewController id="09a-uO-y6P" customClass="StilleZeitViewController" customModule="paXan" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Stille Zeit" id="aDH-nR-Fbs"/>
+                    <navigationItem key="navigationItem" title="Bible &amp; Breakfast" id="aDH-nR-Fbs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTy-Q8-pCQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,11 +221,11 @@
             </objects>
             <point key="canvasLocation" x="4428.985507246377" y="-668.30357142857144"/>
         </scene>
-        <!--Stille Zeit-->
+        <!--Bible & Breakfast-->
         <scene sceneID="fU2-Ya-yxb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eZm-FR-DXl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Stille Zeit" image="book" catalog="system" id="7Uu-ZS-a7C"/>
+                    <tabBarItem key="tabBarItem" title="Bible &amp; Breakfast" image="book" catalog="system" id="7Uu-ZS-a7C"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="eqx-78-mRE">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>

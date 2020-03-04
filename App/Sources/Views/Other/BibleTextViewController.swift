@@ -6,16 +6,12 @@ class BibleTextViewController: UIViewController {
     private lazy var bibleTextTitleLabel = TitleLabel(text: "")
     private lazy var bibleTextLabel = TextLabel(text: "")
     private lazy var copyrightLabel = TextLabel(text: "2011 © Genfer Bibelgesellschaft")
-
-    private lazy var stackView = UIStackView(
+    private lazy var verticalView = VerticalViewController(
         arrangedSubviews: [
             bibleTextLabel,
             copyrightLabel
         ]
     )
-
-    private lazy var scrollView = UIScrollView()
-
     private lazy var doneButton = SetupButton(text: "Fertig")
 
     init(bibleTextTitle: String, bibleText: String) {
@@ -44,30 +40,12 @@ class BibleTextViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-20)
         }
 
-        view.addSubview(scrollView)
-        scrollView.snp.makeConstraints { make in
-            make.top.equalTo(bibleTextTitleLabel.snp.bottomMargin).offset(15)
+        view.addSubview(verticalView.view)
+        verticalView.view.snp.makeConstraints { make in
+            make.top.equalTo(bibleTextTitleLabel.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.bottom.equalTo(doneButton.snp.topMargin).offset(-15)
-        }
-
-        scrollView.addSubview(stackView)
-        stackView.bindEdgesToSuperview()
-        stackView.snp.makeConstraints { make in
-            make.width.equalToSuperview()
-        }
-
-        stackView.alignment = .leading
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.spacing = 15
-
-        stackView.arrangedSubviews.forEach { view in
-            view.snp.makeConstraints { make in
-                make.leading.equalToSuperview().offset(20)
-                make.trailing.equalToSuperview().offset(-20)
-            }
+            make.bottom.equalTo(doneButton.snp.topMargin).offset(-20)
         }
     }
 

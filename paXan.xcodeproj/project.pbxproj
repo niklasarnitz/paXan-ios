@@ -53,6 +53,7 @@
 		85939C08231406A60009A009 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85939C07231406A60009A009 /* Images.xcassets */; };
 		85939C0B231406A60009A009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85939C09231406A60009A009 /* LaunchScreen.storyboard */; };
 		85939C152314075F0009A009 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85939C142314075F0009A009 /* Colors.xcassets */; };
+		859A439924105F51001C4CC0 /* VerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859A439824105F51001C4CC0 /* VerticalView.swift */; };
 		85A3F82423463C29006A9473 /* Seminar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A3F82323463C29006A9473 /* Seminar.swift */; };
 		85A3F82723463CAA006A9473 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 85A3F82623463CAA006A9473 /* .swiftlint.yml */; };
 		85AA382C23F3E2FB007CD0A8 /* SimpleTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA382B23F3E2FB007CD0A8 /* SimpleTextViewController.swift */; };
@@ -146,6 +147,7 @@
 		85939C0A231406A60009A009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85939C0C231406A60009A009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85939C142314075F0009A009 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		859A439824105F51001C4CC0 /* VerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalView.swift; sourceTree = "<group>"; };
 		85A3F82323463C29006A9473 /* Seminar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seminar.swift; sourceTree = "<group>"; };
 		85A3F82623463CAA006A9473 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		85AA382B23F3E2FB007CD0A8 /* SimpleTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextViewController.swift; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 				858745DA23F2DD16004EBF96 /* TextLabel.swift */,
 				853C4B652393D30900300689 /* ThemedButton.swift */,
 				85E884C523994863004C3AE4 /* TitleLabel.swift */,
+				859A439824105F51001C4CC0 /* VerticalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				853C4B662393D30900300689 /* ThemedButton.swift in Sources */,
 				854CC10B2393302C000AD257 /* MKMapViewExtension.swift in Sources */,
 				854CC10923932F87000AD257 /* SeminarDetailViewController.swift in Sources */,
+				859A439924105F51001C4CC0 /* VerticalView.swift in Sources */,
 				85AA382C23F3E2FB007CD0A8 /* SimpleTextViewController.swift in Sources */,
 				853CC16C2360CB6300A3F4F3 /* FourthSetupPageViewController.swift in Sources */,
 				851141D6239A58050062438E /* EditorsDelegate.swift in Sources */,

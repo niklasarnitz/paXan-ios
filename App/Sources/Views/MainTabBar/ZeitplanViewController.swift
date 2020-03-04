@@ -8,7 +8,15 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
 
     // Thursday
     private lazy var thursdayCaptionLabel = EventLabel(text: config.thursdayCaptionLabel)
-    private lazy var thursdayEventLabel = EventBody(text: config.thursdayEventLabel)
+    private lazy var thursdayEventLabelOne = EventBody(text: config.thursdayEventLabel)
+    private lazy var thursdayEventLabelTwo = EventBody(text: "22:00 Uhr")
+    private lazy var thursdayEventButton = ThemedButton(text: "Darum Feiern")
+    private lazy var thursdayHorizontalStackView = UIStackView(
+        arrangedSubviews: [
+            thursdayEventLabelTwo,
+            thursdayEventButton
+        ]
+    )
 
     // Friday
     private lazy var fridayCaptionLabel = EventLabel(text: config.fridayCaptionLabel)
@@ -24,7 +32,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     private lazy var saturdaySeminarButton = ThemedButton(text: Defaults.seminarThree.title)
     private lazy var saturdayEventTwoLabel = EventBody(text: config.saturdayEventTwoLabel)
     private lazy var saturdayEventTwoButton = ThemedButton(text: "#DANKBAR")
-    private lazy var horizontalStackView = UIStackView(
+    private lazy var saturdayHorizontalStackView = UIStackView(
         arrangedSubviews: [
             saturdayEventTwoLabel,
             saturdayEventTwoButton
@@ -46,7 +54,8 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     private lazy var stackView = UIStackView(
         arrangedSubviews: [
             thursdayCaptionLabel,
-            thursdayEventLabel,
+            thursdayEventLabelOne,
+            thursdayHorizontalStackView,
             fridayCaptionLabel,
             fridayEventLabelOne,
             fridaySeminarOneButton,
@@ -56,7 +65,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
             saturdayCaptionLabel,
             saturdayEventOneLabel,
             saturdaySeminarButton,
-            horizontalStackView,
+            saturdayHorizontalStackView,
             sundayCaptionLabel,
             sundayCaptionButton,
             sundayEventLabel,
@@ -99,11 +108,17 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
             make.width.equalToSuperview()
         }
 
-        horizontalStackView.alignment = .leading
-        horizontalStackView.axis = .horizontal
-        horizontalStackView.distribution = .fill
-        horizontalStackView.spacing = 5
-        horizontalStackView.contentMode = .center
+        thursdayHorizontalStackView.alignment = .leading
+        thursdayHorizontalStackView.axis = .horizontal
+        thursdayHorizontalStackView.distribution = .fill
+        thursdayHorizontalStackView.spacing = 5
+        thursdayHorizontalStackView.contentMode = .center
+
+        saturdayHorizontalStackView.alignment = .leading
+        saturdayHorizontalStackView.axis = .horizontal
+        saturdayHorizontalStackView.distribution = .fill
+        saturdayHorizontalStackView.spacing = 5
+        saturdayHorizontalStackView.contentMode = .center
 
         saturdayEventTwoButton.addTarget(self, action: #selector(didPressSaturdayEventTwoButton), for: .touchUpInside)
 
@@ -112,7 +127,13 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         stackView.distribution = .fill
         stackView.spacing = 15
 
-        horizontalStackView.arrangedSubviews.forEach { view in
+        thursdayHorizontalStackView.arrangedSubviews.forEach { view in
+            view.snp.makeConstraints { make in
+                make.centerY.equalToSuperview()
+            }
+        }
+
+        saturdayHorizontalStackView.arrangedSubviews.forEach { view in
             view.snp.makeConstraints { make in
                 make.centerY.equalToSuperview()
             }
@@ -125,11 +146,23 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
             }
         }
 
+        thursdayEventButton.addTarget(self, action: #selector(didPressThursdayEventButton), for: .touchUpInside)
         fridaySeminarOneButton.addTarget(self, action: #selector(didPressSeminarOneButton), for: .touchUpInside)
         fridaySeminarTwoButton.addTarget(self, action: #selector(didPressSeminarTwoButton), for: .touchUpInside)
         saturdaySeminarButton.addTarget(self, action: #selector(didPressSeminarThreeButton), for: .touchUpInside)
         sundayEveningEventButton.addTarget(self, action: #selector(didPressDeltaMapButton), for: .touchUpInside)
         sundayCaptionButton.addTarget(self, action: #selector(didPressSundayCaptionButton), for: .touchUpInside)
+    }
+
+    @objc private func didPressThursdayEventButton() {
+        thursdayEventButton.pulsate()
+
+        let viewController = SimpleTextViewController(
+            title: "Darum Feiern",
+            text: "Halle: Nachtcafe/Talk mit Klaus Dieter Mauer\nZelthalle: Worship"
+        )
+
+        present(viewController, animated: true)
     }
 
     @objc private func didPressSeminarOneButton() {

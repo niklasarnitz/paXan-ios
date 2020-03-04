@@ -4,11 +4,7 @@ import ImageScrollView
 import UIKit
 
 class DeltaMapViewController: UIViewController {
-    private lazy var imageScrollView: ImageScrollView = {
-        let view = ImageScrollView()
-
-        return view
-    }()
+    private lazy var imageScrollView = ImageScrollView()
 
     private lazy var doneButton = ThemedButton(text: "Fertig")
 

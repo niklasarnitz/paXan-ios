@@ -11,7 +11,7 @@ class MassQuarterViewController: UIViewController {
     private lazy var kindergartendobelButton = ThemedButton(text: "MÄDELS | Kindergarten Dobel")
     private lazy var schuledobelButton = ThemedButton(text: "MÄDELS | Schule Dobel")
 
-    private lazy var stackView = UIStackView(
+    private lazy var verticalView = VerticalViewController(
         arrangedSubviews: [
             descriptionLabel,
             dobeltalschuleButton,
@@ -20,9 +20,6 @@ class MassQuarterViewController: UIViewController {
             schuledobelButton
         ]
     )
-
-    private lazy var scrollView = UIScrollView()
-
     private lazy var doneButton = SetupButton(text: "Fertig")
 
     override func viewDidLoad() {
@@ -33,30 +30,12 @@ class MassQuarterViewController: UIViewController {
         setupTitleLabel()
         setupDoneButton()
 
-        view.addSubview(scrollView)
-        scrollView.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottomMargin).offset(15)
+        view.addSubview(verticalView.view)
+        verticalView.view.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.bottom.equalTo(doneButton.snp.topMargin).offset(-15)
-        }
-
-        scrollView.addSubview(stackView)
-        stackView.bindEdgesToSuperview()
-        stackView.snp.makeConstraints { make in
-            make.width.equalToSuperview()
-        }
-
-        stackView.alignment = .leading
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.spacing = 15
-
-        stackView.arrangedSubviews.forEach { view in
-            view.snp.makeConstraints { make in
-                make.leading.equalToSuperview().offset(20)
-                make.trailing.equalToSuperview().offset(-20)
-            }
+            make.bottom.equalTo(doneButton.snp.topMargin).offset(-20)
         }
 
         dobeltalschuleButton.addTarget(self, action: #selector(navigateToDobeltalschule), for: .touchUpInside)

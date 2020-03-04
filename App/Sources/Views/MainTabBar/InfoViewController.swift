@@ -9,7 +9,7 @@ class InfoViewController: UIViewController {
     private lazy var bandsButton = ThemedButton(text: "Bands")
     private lazy var seminarsButton = ThemedButton(text: "Seminare")
     private lazy var spendenButton = ThemedButton(text: "Spenden")
-    private lazy var massquarterButton = ThemedButton(text: "Massenquartiere")
+    private lazy var massquarterButton = ThemedButton(text: "Navigation Massenquartiere")
     private lazy var aboutButton = ThemedButton(text: "Über")
 
     private lazy var stackView = UIStackView(

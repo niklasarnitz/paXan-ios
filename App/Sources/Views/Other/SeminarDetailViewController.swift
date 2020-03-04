@@ -7,42 +7,18 @@ class SeminarDetailViewController: UIViewController {
     private var seminar: Seminar
 
     private lazy var titleLabel = TitleLabel(text: "")
-
     private lazy var subtitleLabel = SubtitleLabel(text: "")
-
-    private lazy var referentLabel: UILabel = {
-        let label = UILabel()
-
-        label.textColor = .white
-        label.numberOfLines = 0
-
-        return label
-    }()
-
-    private lazy var roomNameLabel: UILabel = {
-        let label = UILabel()
-
-        label.textColor = .white
-        label.numberOfLines = 0
-
-        return label
-    }()
-
-    private lazy var navigateButton: ThemedButton = {
-        let button = ThemedButton()
-
-        button.titleText = "Navigieren"
-
-        return button
-    }()
-
-    private lazy var doneButton: ThemedButton = {
-        let button = ThemedButton()
-
-        button.titleText = "Fertig"
-
-        return button
-    }()
+    private lazy var referentLabel = TextLabel(text: "")
+    private lazy var roomNameLabel = TextLabel(text: "")
+    private lazy var navigateButton = ThemedButton(text: "Navigieren")
+    private lazy var doneButton = ThemedButton(text: "Fertig")
+    private lazy var verticalView = VerticalViewController(
+        arrangedSubviews: [
+            subtitleLabel,
+            referentLabel,
+            roomNameLabel
+        ]
+    )
 
     init?(seminar: Seminar) {
         self.seminar = seminar
@@ -65,46 +41,22 @@ class SeminarDetailViewController: UIViewController {
         view.backgroundColor = Colors.ecGreen
 
         setupTitleLabel()
-        setupSubtitleLabel()
-        setupReferentLabel()
-        setupRoomNameLabel()
         setupDoneButton()
         setupNavigateButton()
+
+        view.addSubview(verticalView.view)
+        verticalView.view.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottomMargin).offset(20)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalTo(doneButton.snp.topMargin).offset(-20)
+        }
     }
 
     private func setupTitleLabel() {
         view.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-        }
-    }
-
-    private func setupSubtitleLabel() {
-        view.addSubview(subtitleLabel)
-        subtitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-        }
-
-        subtitleLabel.textAlignment = .natural
-    }
-
-    private func setupReferentLabel() {
-        view.addSubview(referentLabel)
-        referentLabel.snp.makeConstraints { make in
-            make.top.equalTo(subtitleLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-        }
-    }
-
-    private func setupRoomNameLabel() {
-        view.addSubview(roomNameLabel)
-        roomNameLabel.snp.makeConstraints { make in
-            make.top.equalTo(referentLabel.snp.bottomMargin).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
         }
@@ -125,7 +77,7 @@ class SeminarDetailViewController: UIViewController {
     private func setupNavigateButton() {
         view.addSubview(navigateButton)
         navigateButton.snp.makeConstraints { make in
-            make.bottom.equalTo(doneButton.snp.topMargin).offset(-40)
+            make.bottom.equalTo(doneButton.snp.topMargin).offset(-30)
             make.height.equalTo(40)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
@@ -134,14 +86,13 @@ class SeminarDetailViewController: UIViewController {
         navigateButton.addTarget(self, action: #selector(navigateButtonPressed), for: .touchUpInside)
     }
 
-    @objc
-    private func doneButtonPressed() {
+    @objc private func doneButtonPressed() {
         doneButton.pulsate()
+
         self.dismiss(animated: true)
     }
 
-    @objc
-    private func navigateButtonPressed() {
+    @objc private func navigateButtonPressed() {
         navigateButton.pulsate()
         let regionDistance: CLLocationDistance = 10000
         let coordinates = CLLocationCoordinate2DMake(seminar.lat, seminar.long)
