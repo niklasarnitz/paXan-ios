@@ -40,7 +40,8 @@ extension DefaultsKeys {
                 roomname: "",
                 lat: 0,
                 long: 0,
-                time: ""
+                time: "",
+                url: ""
             )
         )
     }
@@ -57,7 +58,8 @@ extension DefaultsKeys {
                 roomname: "",
                 lat: 0,
                 long: 0,
-                time: ""
+                time: "",
+                url: ""
             )
         )
     }
@@ -74,7 +76,8 @@ extension DefaultsKeys {
                 roomname: "",
                 lat: 0,
                 long: 0,
-                time: ""
+                time: "",
+                url: ""
             )
         )
     }

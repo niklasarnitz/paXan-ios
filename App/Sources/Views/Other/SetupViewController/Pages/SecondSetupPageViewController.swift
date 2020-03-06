@@ -24,6 +24,8 @@ class SecondSetupPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        _ = DataManager()
+
         setupView()
         setupTitleLabel()
         setupSubTitleLabel()

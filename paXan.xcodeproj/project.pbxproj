@@ -53,7 +53,7 @@
 		85939C08231406A60009A009 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85939C07231406A60009A009 /* Images.xcassets */; };
 		85939C0B231406A60009A009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85939C09231406A60009A009 /* LaunchScreen.storyboard */; };
 		85939C152314075F0009A009 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85939C142314075F0009A009 /* Colors.xcassets */; };
-		859A439924105F51001C4CC0 /* VerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859A439824105F51001C4CC0 /* VerticalView.swift */; };
+		859A439924105F51001C4CC0 /* VerticalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859A439824105F51001C4CC0 /* VerticalViewController.swift */; };
 		85A3F82423463C29006A9473 /* Seminar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A3F82323463C29006A9473 /* Seminar.swift */; };
 		85A3F82723463CAA006A9473 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 85A3F82623463CAA006A9473 /* .swiftlint.yml */; };
 		85AA382C23F3E2FB007CD0A8 /* SimpleTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA382B23F3E2FB007CD0A8 /* SimpleTextViewController.swift */; };
@@ -62,6 +62,7 @@
 		85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */; };
 		85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */; };
 		85B4ACC72395D6A1001F282C /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B4ACB82395D6A1001F282C /* Nunito-Regular.ttf */; };
+		85B6955D24122883006A07BB /* SeminarWithLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6955C24122883006A07BB /* SeminarWithLinkViewController.swift */; };
 		85B6C5AA239FE565000C33E4 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6C5A9239FE565000C33E4 /* UIFontExtension.swift */; };
 		85C9BDE2240AB4780032CE2F /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9BDE1240AB4780032CE2F /* UIImageExtension.swift */; };
 		85CC8C1023F1DC1400F47B25 /* StilleZeitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CC8C0F23F1DC1400F47B25 /* StilleZeitViewController.swift */; };
@@ -147,7 +148,7 @@
 		85939C0A231406A60009A009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85939C0C231406A60009A009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85939C142314075F0009A009 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		859A439824105F51001C4CC0 /* VerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalView.swift; sourceTree = "<group>"; };
+		859A439824105F51001C4CC0 /* VerticalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalViewController.swift; sourceTree = "<group>"; };
 		85A3F82323463C29006A9473 /* Seminar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seminar.swift; sourceTree = "<group>"; };
 		85A3F82623463CAA006A9473 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		85AA382B23F3E2FB007CD0A8 /* SimpleTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 		85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonDetailViewController.swift; sourceTree = "<group>"; };
 		85B4ACB82395D6A1001F282C /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		85B6955C24122883006A07BB /* SeminarWithLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeminarWithLinkViewController.swift; sourceTree = "<group>"; };
 		85B6C5A9239FE565000C33E4 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		85C9BDE1240AB4780032CE2F /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		85CC8C0F23F1DC1400F47B25 /* StilleZeitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StilleZeitViewController.swift; sourceTree = "<group>"; };
@@ -369,7 +371,7 @@
 				858745DA23F2DD16004EBF96 /* TextLabel.swift */,
 				853C4B652393D30900300689 /* ThemedButton.swift */,
 				85E884C523994863004C3AE4 /* TitleLabel.swift */,
-				859A439824105F51001C4CC0 /* VerticalView.swift */,
+				859A439824105F51001C4CC0 /* VerticalViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,6 +404,7 @@
 				85707EF923B7A1B700D2AF34 /* MassQuarterViewController.swift */,
 				851BE4DD23F1D639002E1EA5 /* OpenSourceLicenseViewController.swift */,
 				854CC10823932F87000AD257 /* SeminarDetailViewController.swift */,
+				85B6955C24122883006A07BB /* SeminarWithLinkViewController.swift */,
 				851E6BB723636C68002F0168 /* SeminarsEditViewController.swift */,
 				851141D9239A68150062438E /* SeminarTableViewController.swift */,
 				85AA382B23F3E2FB007CD0A8 /* SimpleTextViewController.swift */,
@@ -616,6 +619,7 @@
 				85A3F82423463C29006A9473 /* Seminar.swift in Sources */,
 				85AAD040231ACC7600C0F813 /* Style.swift in Sources */,
 				851141DF239A6D3B0062438E /* ProfilePictureImageView.swift in Sources */,
+				85B6955D24122883006A07BB /* SeminarWithLinkViewController.swift in Sources */,
 				85D1187123A400A500EC3D88 /* EventBody.swift in Sources */,
 				85B6C5AA239FE565000C33E4 /* UIFontExtension.swift in Sources */,
 				85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */,
@@ -631,7 +635,7 @@
 				853C4B662393D30900300689 /* ThemedButton.swift in Sources */,
 				854CC10B2393302C000AD257 /* MKMapViewExtension.swift in Sources */,
 				854CC10923932F87000AD257 /* SeminarDetailViewController.swift in Sources */,
-				859A439924105F51001C4CC0 /* VerticalView.swift in Sources */,
+				859A439924105F51001C4CC0 /* VerticalViewController.swift in Sources */,
 				85AA382C23F3E2FB007CD0A8 /* SimpleTextViewController.swift in Sources */,
 				853CC16C2360CB6300A3F4F3 /* FourthSetupPageViewController.swift in Sources */,
 				851141D6239A58050062438E /* EditorsDelegate.swift in Sources */,

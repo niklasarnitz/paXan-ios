@@ -29,6 +29,9 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
     /// Number of the seminar unit
     var time: String
 
+    /// Optional url that may be associated with the Seminar
+    var url: String
+
     // MARK: Initializer
     init(
         title: String,
@@ -37,7 +40,8 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
         roomname: String,
         lat: Double,
         long: Double,
-        time: String
+        time: String,
+        url: String
     ) {
         self.title = title
         self.subtitle = subtitle
@@ -46,6 +50,7 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
         self.lat = lat
         self.long = long
         self.time = time
+        self.url = url
     }
 
     init() {
@@ -56,6 +61,7 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
         self.lat = 0
         self.long = 0
         self.time = ""
+        self.url = ""
     }
 
     init?(map: Map) {
@@ -66,6 +72,7 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
         self.lat = 0
         self.long = 0
         self.time = ""
+        self.url = ""
     }
 
     mutating func mapping(map: Map) {
@@ -76,5 +83,6 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
         lat <- map["lat"]
         long <- map["long"]
         time <- map["time"]
+        url <- map["url"]
     }
 }

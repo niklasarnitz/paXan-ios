@@ -82,12 +82,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
 
         fixNavigationBar()
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "Bearbeiten",
-            style: .plain,
-            target: self,
-            action: #selector(didPressEdit)
-        )
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Bearbeiten", style: .plain, target: self, action: #selector(didPressEdit))
 
         navigationItem.rightBarButtonItem?.tintColor = .white
         navigationItem.rightBarButtonItem?.setTitleTextAttributes(
@@ -108,17 +103,20 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
             make.width.equalToSuperview()
         }
 
-        thursdayHorizontalStackView.alignment = .leading
-        thursdayHorizontalStackView.axis = .horizontal
-        thursdayHorizontalStackView.distribution = .fill
-        thursdayHorizontalStackView.spacing = 5
-        thursdayHorizontalStackView.contentMode = .center
+        let horizontalStackviews = [ thursdayHorizontalStackView, saturdayHorizontalStackView ]
+        horizontalStackviews.forEach { stackView in
+            stackView.alignment = .leading
+            stackView.axis = .horizontal
+            stackView.distribution = .fill
+            stackView.spacing = 5
+            stackView.contentMode = .center
 
-        saturdayHorizontalStackView.alignment = .leading
-        saturdayHorizontalStackView.axis = .horizontal
-        saturdayHorizontalStackView.distribution = .fill
-        saturdayHorizontalStackView.spacing = 5
-        saturdayHorizontalStackView.contentMode = .center
+            stackView.arrangedSubviews.forEach { view in
+                view.snp.makeConstraints { make in
+                    make.centerY.equalToSuperview()
+                }
+            }
+        }
 
         saturdayEventTwoButton.addTarget(self, action: #selector(didPressSaturdayEventTwoButton), for: .touchUpInside)
 
@@ -126,18 +124,6 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.spacing = 15
-
-        thursdayHorizontalStackView.arrangedSubviews.forEach { view in
-            view.snp.makeConstraints { make in
-                make.centerY.equalToSuperview()
-            }
-        }
-
-        saturdayHorizontalStackView.arrangedSubviews.forEach { view in
-            view.snp.makeConstraints { make in
-                make.centerY.equalToSuperview()
-            }
-        }
 
         stackView.arrangedSubviews.forEach { view in
             view.snp.makeConstraints { make in
@@ -168,21 +154,42 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     @objc private func didPressSeminarOneButton() {
         fridaySeminarOneButton.pulsate()
 
-        let viewController = SeminarDetailViewController(seminar: Defaults.seminarOne)!
+        var viewController = UIViewController(nibName: nil, bundle: nil)
+
+        if !Defaults.seminarOne.url.isEmpty {
+            viewController = SeminarWithLinkViewController(seminar: Defaults.seminarOne, url: Defaults.seminarOne.url)!
+        } else {
+            viewController = SeminarDetailViewController(seminar: Defaults.seminarOne)!
+        }
+
         present(viewController, animated: true)
     }
 
     @objc private func didPressSeminarTwoButton() {
         fridaySeminarTwoButton.pulsate()
 
-        let viewController = SeminarDetailViewController(seminar: Defaults.seminarTwo)!
+        var viewController = UIViewController(nibName: nil, bundle: nil)
+
+        if !Defaults.seminarOne.url.isEmpty {
+            viewController = SeminarWithLinkViewController(seminar: Defaults.seminarTwo, url: Defaults.seminarTwo.url)!
+        } else {
+            viewController = SeminarDetailViewController(seminar: Defaults.seminarTwo)!
+        }
+
         present(viewController, animated: true)
     }
 
     @objc private func didPressSeminarThreeButton() {
         saturdaySeminarButton.pulsate()
 
-        let viewController = SeminarDetailViewController(seminar: Defaults.seminarThree)!
+        var viewController = UIViewController(nibName: nil, bundle: nil)
+
+        if !Defaults.seminarOne.url.isEmpty {
+            viewController = SeminarWithLinkViewController(seminar: Defaults.seminarThree, url: Defaults.seminarThree.url)!
+        } else {
+            viewController = SeminarDetailViewController(seminar: Defaults.seminarThree)!
+        }
+
         present(viewController, animated: true)
     }
 

@@ -14,14 +14,14 @@ let dateFormatter: DateFormatter = {
 
 // MARK: - Seminars
 var backupSeminars: [Seminar] = [
-    Seminar(title: "", subtitle: "", referent: "", roomname: "", lat: 0.0, long: 0.0, time: "2020-01-01 01:01:01")
+    Seminar(title: "", subtitle: "", referent: "", roomname: "", lat: 0.0, long: 0.0, time: "2020-01-01 01:01:01", url: "")
 ]
 
 
 // MARK: - Lexikon Entries
 let backupLexikonEntries: [LexikonEntry] = [
     LexikonEntry(
-        title: "BBistro",
+        title: "Bistro",
         description: "Natürlich ist für deine Verpflegung bei den Hauptmahlzeiten bestens gesorgt. Es geht aber nichts über einen leckeren Snack zu später Stunde. Wenn dein Magen nach den Abendveranstaltungen wieder knurrt, dann laden wir dich herzlich in unser Bistro im kleinen Verpflegungszelt 1 ein. Den kleinen Abendsnack gibt es dort zwischen 21:30 Uhr und 23:30 Uhr: Crepes, Flammkuchen und andere Leckereien. Eis und kalte Getränke gibt es den ganzen Tag über im Foyer und abends auch im Bistro."
     ),
     LexikonEntry(
