@@ -2,7 +2,7 @@
 
 import UIKit
 
-class DescriptionTextView: UITextView {
+class DescriptionTextView: UILabel {
     // MARK: UI Layout
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -14,7 +14,13 @@ class DescriptionTextView: UITextView {
         layer.borderWidth = 0.5
         layer.cornerRadius = 5
         layer.opacity = 15
-        font = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .body), size: 15)
-        isEditable = false
+        lineBreakMode = .byWordWrapping
+        numberOfLines = 0
+        font = UIFont.buttonBody
+    }
+
+    override func drawText(in rect: CGRect) {
+        let insets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        super.drawText(in: rect.inset(by: insets))
     }
 }

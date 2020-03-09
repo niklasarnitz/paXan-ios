@@ -51,7 +51,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     private lazy var mondayCaptionLabel = EventLabel(text: "Montag, 13. April 2020\n#heimatgeber")
     private lazy var mondayEventLabel = EventBody(text: "09:30 Uhr Abschluss-Session /\npaX an Finale")
 
-    private lazy var stackView = UIStackView(
+    private lazy var verticalView = VerticalViewController(
         arrangedSubviews: [
             thursdayCaptionLabel,
             thursdayEventLabelOne,
@@ -75,63 +75,49 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         ]
     )
 
-    private lazy var scrollView = UIScrollView()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fixNavigationBar()
-
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Bearbeiten", style: .plain, target: self, action: #selector(didPressEdit))
-
-        navigationItem.rightBarButtonItem?.tintColor = .white
-        navigationItem.rightBarButtonItem?.setTitleTextAttributes(
-            [ .font: UIFont.eventTitle.withSize(18) ], for: .normal
-        )
+        configureNavigationBar()
+        title = "Zeitplan"
+        if #available(iOS 11, *) {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Bearbeiten", style: .plain, target: self, action: #selector(didPressEdit))
+            navigationItem.rightBarButtonItem?.tintColor = .white
+            navigationItem.rightBarButtonItem?.setTitleTextAttributes(
+                [ .font: UIFont.eventTitle.withSize(18) ], for: .normal
+            )
+        }
+        if #available(iOS 10, *) {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Bearbeiten", style: .plain, target: self, action: #selector(didPressEdit))
+            navigationItem.rightBarButtonItem?.tintColor = .black
+            navigationItem.rightBarButtonItem?.setTitleTextAttributes(
+                [ .font: UIFont.eventTitle.withSize(18) ], for: .normal
+            )
+        }
 
         view.backgroundColor = .white
 
-        view.addSubview(scrollView)
-        scrollView.bindEdgesToSuperview()
-        scrollView.snp.makeConstraints { make in
-            make.top.equalTo(super.view.snp.topMargin).offset(20)
-        }
-
-        scrollView.addSubview(stackView)
-        stackView.bindEdgesToSuperview()
-        stackView.snp.makeConstraints { make in
-            make.width.equalToSuperview()
+        view.addSubview(verticalView.view)
+        verticalView.view.snp.makeConstraints { make in
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.top.equalTo(topLayoutGuide.snp.bottom).offset(20)
+            make.bottom.equalTo(bottomLayoutGuide.snp.top).offset(-20)
         }
 
         let horizontalStackviews = [ thursdayHorizontalStackView, saturdayHorizontalStackView ]
         horizontalStackviews.forEach { stackView in
-            stackView.alignment = .leading
-            stackView.axis = .horizontal
-            stackView.distribution = .fill
-            stackView.spacing = 5
-            stackView.contentMode = .center
-
-            stackView.arrangedSubviews.forEach { view in
-                view.snp.makeConstraints { make in
-                    make.centerY.equalToSuperview()
-                }
+            stackView.arrangedSubviews[0].snp.makeConstraints { make in
+                make.leading.equalToSuperview()
             }
+            stackView.arrangedSubviews[1].snp.makeConstraints { make in
+                make.trailing.equalToSuperview()
+                make.width.equalTo(150)
+            }
+            stackView.axis = .horizontal
         }
 
         saturdayEventTwoButton.addTarget(self, action: #selector(didPressSaturdayEventTwoButton), for: .touchUpInside)
-
-        stackView.alignment = .center
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.spacing = 15
-
-        stackView.arrangedSubviews.forEach { view in
-            view.snp.makeConstraints { make in
-                make.leading.equalToSuperview().offset(20)
-                make.trailing.equalToSuperview().offset(-20)
-            }
-        }
-
         thursdayEventButton.addTarget(self, action: #selector(didPressThursdayEventButton), for: .touchUpInside)
         fridaySeminarOneButton.addTarget(self, action: #selector(didPressSeminarOneButton), for: .touchUpInside)
         fridaySeminarTwoButton.addTarget(self, action: #selector(didPressSeminarTwoButton), for: .touchUpInside)
@@ -143,9 +129,9 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
     @objc private func didPressThursdayEventButton() {
         thursdayEventButton.pulsate()
 
-        let viewController = SimpleTextViewController(
+        let viewController = LexikonDetailViewController(
             title: "Darum Feiern",
-            text: "Halle: Nachtcafe/Talk mit Klaus Dieter Mauer\nZelthalle: Worship"
+            description: "Halle: Nachtcafe/Talk mit Klaus Dieter Mauer\nZelthalle: Worship"
         )
 
         present(viewController, animated: true)
@@ -156,10 +142,10 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
 
         var viewController = UIViewController(nibName: nil, bundle: nil)
 
-        if !Defaults.seminarOne.url.isEmpty {
-            viewController = SeminarWithLinkViewController(seminar: Defaults.seminarOne, url: Defaults.seminarOne.url)!
-        } else {
+        if Defaults.seminarOne.url.isEmpty {
             viewController = SeminarDetailViewController(seminar: Defaults.seminarOne)!
+        } else {
+            viewController = SeminarWithLinkViewController(seminar: Defaults.seminarOne, url: Defaults.seminarOne.url)!
         }
 
         present(viewController, animated: true)
@@ -170,7 +156,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
 
         var viewController = UIViewController(nibName: nil, bundle: nil)
 
-        if !Defaults.seminarOne.url.isEmpty {
+        if !Defaults.seminarTwo.url.isEmpty {
             viewController = SeminarWithLinkViewController(seminar: Defaults.seminarTwo, url: Defaults.seminarTwo.url)!
         } else {
             viewController = SeminarDetailViewController(seminar: Defaults.seminarTwo)!
@@ -184,7 +170,7 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
 
         var viewController = UIViewController(nibName: nil, bundle: nil)
 
-        if !Defaults.seminarOne.url.isEmpty {
+        if !Defaults.seminarThree.url.isEmpty {
             viewController = SeminarWithLinkViewController(seminar: Defaults.seminarThree, url: Defaults.seminarThree.url)!
         } else {
             viewController = SeminarDetailViewController(seminar: Defaults.seminarThree)!
@@ -197,9 +183,9 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         saturdayEventTwoButton.pulsate()
 
         // swiftlint:disable line_length
-        let viewController = SimpleTextViewController(
+        let viewController = LexikonDetailViewController(
             title: "#dankbar",
-            text: "Der Samstagabend steht unter dem Titel dankBAR. Wir sind dankBAR für unsere vielen Mitarbeiter, die sich in ihren Orten für ihre Kinder/Teens/junge Erwachsenen einsetzen.\nAn dem Abend wollen wir euch diese dankBARkeit etwas zeigen.\nWir werden den Abend innerhalb der KVs verbringen. Immer die zusammen, die zu einem Landesjugendreferenten gehören.\nEs soll ein entspannter Abend in entspannter Atmosphäre werden… wir freuen uns drauf!"
+            description: "Der Samstagabend steht unter dem Titel dankBAR. Wir sind dankBAR für unsere vielen Mitarbeiter, die sich in ihren Orten für ihre Kinder/Teens/junge Erwachsenen einsetzen.\nAn dem Abend wollen wir euch diese dankBARkeit etwas zeigen.\nWir werden den Abend innerhalb der KVs verbringen. Immer die zusammen, die zu einem Landesjugendreferenten gehören.\nEs soll ein entspannter Abend in entspannter Atmosphäre werden… wir freuen uns drauf!"
         )
         present(viewController, animated: true)
     }
@@ -215,9 +201,9 @@ class ZeitplanViewController: UIViewController, EditorsDelegate {
         saturdayEventTwoButton.pulsate()
 
         // swiftlint:disable line_length
-        let viewController = SimpleTextViewController(
+        let viewController = LexikonDetailViewController(
             title: "#heimweg",
-            text: "Der Herr ist auferstanden! – Er ist wahrhaftig auferstanden!\nWir wollen Maria und die Frauen begleiten, wie sie am 3. Tag nach Jesu Tod zum Grab gingen, und sehen, was sie dort erlebt haben. Sehr früh – vor dem Frühstück – haben sie sich aufgemacht. Genau das werden wir auch tun. Zwischen 7.30 Uhr und 9.00 Uhr könnt ihr euch auf den Weg machen und den Weg von ca. 45 Minuten mit den unterschiedlichen Stationen und Erlebnissen bestreiten. Im Anschluss könnt ihr euch bei einem ausgiebigen Frühstück stärken und dabei eure Stille Zeit machen.\nUm 10:30 Uhr feiern wir gemeinsam einen Oster-Gottesdienst, wo die Auferstehung Jesu im Mittelpunkt steht."
+            description: "Der Herr ist auferstanden! – Er ist wahrhaftig auferstanden!\nWir wollen Maria und die Frauen begleiten, wie sie am 3. Tag nach Jesu Tod zum Grab gingen, und sehen, was sie dort erlebt haben. Sehr früh – vor dem Frühstück – haben sie sich aufgemacht. Genau das werden wir auch tun. Zwischen 7.30 Uhr und 9.00 Uhr könnt ihr euch auf den Weg machen und den Weg von ca. 45 Minuten mit den unterschiedlichen Stationen und Erlebnissen bestreiten. Im Anschluss könnt ihr euch bei einem ausgiebigen Frühstück stärken und dabei eure Stille Zeit machen.\nUm 10:30 Uhr feiern wir gemeinsam einen Oster-Gottesdienst, wo die Auferstehung Jesu im Mittelpunkt steht."
         )
         present(viewController, animated: true)
     }

@@ -10,18 +10,18 @@ internal typealias Images = Asset.Images
 internal enum Asset {
     internal enum Colors {
         // MARK: - Branding
-        internal static let ecGreen = UIColor(named: "ecGreen", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
-        internal static let ecRed = UIColor(named: "ecRed", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let ecGreen = #colorLiteral(red: 0.6823529412, green: 0.7960784314, blue: 0.2156862745, alpha: 1)
+        internal static let ecRed = #colorLiteral(red: 0.8274509804, green: 0, blue: 0.2901960784, alpha: 1)
 
         // MARK: - Text
-        internal static let body = UIColor(named: "body", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
-        internal static let bodyDescription = UIColor(named: "bodyDescription", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
-        internal static let bodyHighlight = UIColor(named: "bodyHighlight", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
-        internal static let caption = UIColor(named: "caption", in: Bundle(for: BundleToken.self), compatibleWith: nil)
-        internal static let shadow = UIColor(named: "shadow", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
-        internal static let background = UIColor(named: "background", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
-        internal static let secondaryBackground = UIColor(named: "secondaryBackground", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
-        internal static let stylishGrey = UIColor(named: "stylishGrey", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let body = #colorLiteral(red: 0.3176470588, green: 0.3137254902, blue: 0.3215686275, alpha: 1)
+        internal static let bodyDescription = #colorLiteral(red: 0.6862745098, green: 0.6823529412, blue: 0.6862745098, alpha: 1)
+        internal static let bodyHighlight = #colorLiteral(red: 0.3176470588, green: 0.3137254902, blue: 0.3215686275, alpha: 1)
+        internal static let caption = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)
+        internal static let shadow = #colorLiteral(red: 0.1058823529, green: 0.1058823529, blue: 0.1176470588, alpha: 1)
+        internal static let background = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        internal static let secondaryBackground = #colorLiteral(red: 0.9098039216, green: 0.9058823529, blue: 0.9098039216, alpha: 1)
+        internal static let stylishGrey = #colorLiteral(red: 0.2862745098, green: 0.2862745098, blue: 0.2862745098, alpha: 1)
     }
 
     internal enum Images {
@@ -34,7 +34,11 @@ internal enum Asset {
         internal static let chevronRight = UIImage(named: "chevronRight", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
         internal static let deltaMap = UIImage(named: "deltaMap", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
         internal static let map = UIImage(named: "map", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let info = UIImage(named: "info", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+        internal static let book = UIImage(named: "book", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     }
+    
+    
 }
 
 // MARK: - Implementation Details

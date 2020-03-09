@@ -1,22 +1,37 @@
-// swiftlint:disable file_types_order empty_type 
 // Copyright © 2019 SWDEC. All rights reserved.
 
 import UIKit
 
 class ReferentDetailViewController: UIViewController {
+    private lazy var referentImages: [UIImage] = [
+        #imageLiteral(resourceName: "göttler.png"),
+        #imageLiteral(resourceName: "böker"),
+        #imageLiteral(resourceName: "gäckle")
+    ]
+
     private lazy var nameLabel = TitleLabel()
     private lazy var roundImageView = ProfilePictureImageView()
     private lazy var connectionCaptionLabel = SubtitleLabel(text: "Organisation: ")
     private lazy var websiteCaptionLabel = SubtitleLabel(text: "Website: ")
     private lazy var descriptionLabel = SubtitleLabel(text: "")
     private lazy var doneButton = SetupButton(text: "Fertig")
+    private lazy var verticalViewController = VerticalViewController(
+        arrangedSubviews: [
+            nameLabel,
+            roundImageView,
+            connectionCaptionLabel,
+            websiteCaptionLabel,
+            descriptionLabel
+        ]
+    )
 
     init(referent: Referent) {
         super.init(nibName: nil, bundle: nil)
 
-        let image = UIImage(named: referent.picture, in: Bundle(for: BundleToken.self), compatibleWith: nil)
-
-        roundImageView.image = maskRoundedImage(image: image!, radius: image!.size.height / 2)
+        roundImageView.image = maskRoundedImage(
+            image: referentImages[Int(referent.picture)!],
+            radius: referentImages[Int(referent.picture)!].size.height / 2
+        )
 
         nameLabel.text = referent.name
         connectionCaptionLabel.text = "Organisation: " + referent.connection
@@ -34,12 +49,20 @@ class ReferentDetailViewController: UIViewController {
 
         view.backgroundColor = Colors.ecGreen
 
-        setupImageView()
         setupNameLabel()
-        setupConnectionCaptionLabel()
-        setupWebsiteCaptionLabel()
-        setupDescriptionLabel()
         setupDoneButton()
+
+        roundImageView.snp.makeConstraints { make in
+            make.size.equalTo(view.bounds.width - 40)
+        }
+
+        view.addSubview(verticalViewController.view)
+        verticalViewController.view.snp.makeConstraints { make in
+            make.top.equalTo(view.snp.topMargin).offset(20)
+            make.bottom.equalTo(doneButton.snp.topMargin).offset(-20)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+        }
     }
 
     private func setupImageView() {
@@ -52,45 +75,8 @@ class ReferentDetailViewController: UIViewController {
     }
 
     private func setupNameLabel() {
-        view.addSubview(nameLabel)
-        nameLabel.snp.makeConstraints { make in
-            make.top.equalTo(roundImageView.snp.bottomMargin).offset(20)
-            make.centerX.equalToSuperview()
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-        }
-
         nameLabel.contentMode = .center
         nameLabel.textAlignment = .center
-    }
-
-    private func setupConnectionCaptionLabel() {
-        view.addSubview(connectionCaptionLabel)
-        connectionCaptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(nameLabel.snp.bottomMargin).offset(20)
-            make.centerX.equalToSuperview()
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-        }
-    }
-
-    private func setupWebsiteCaptionLabel() {
-        view.addSubview(websiteCaptionLabel)
-        websiteCaptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(connectionCaptionLabel.snp.bottomMargin).offset(20)
-            make.centerX.equalToSuperview()
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-        }
-    }
-
-    private func setupDescriptionLabel() {
-        view.addSubview(descriptionLabel)
-        descriptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(websiteCaptionLabel.snp.bottomMargin).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-        }
     }
 
     private func setupDoneButton() {
@@ -117,11 +103,8 @@ class ReferentDetailViewController: UIViewController {
         return roundedImage!
     }
 
-    @objc
-    private func doneButtonPressed() {
+    @objc private func doneButtonPressed() {
         doneButton.pulsate()
         dismiss(animated: true)
     }
 }
-
-private final class BundleToken {}

@@ -12,7 +12,9 @@ class ThirdSetupPageViewController: UIViewController {
 
     private lazy var continueButton = SetupButton(text: config.setupContinueButtonTitle)
 
-    private lazy var heimatlosTitleLabel = TitleLabel(text: "#heimatlos")
+    private lazy var seminarBlockALabel = TitleLabel(text: "Seminarblock A")
+    private lazy var seminarBlockBLabel = TitleLabel(text: "Seminarblock B")
+    private lazy var seminarBlockCLabel = TitleLabel(text: "Seminarblock C")
 
     private lazy var seminarOnePickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -36,8 +38,6 @@ class ThirdSetupPageViewController: UIViewController {
         pickerView: seminarTwoPickerView
     )
 
-    private lazy var heimwehTitleLabel = TitleLabel(text: "#heimweh")
-
     private lazy var seminarThreePickerView: UIPickerView = {
         let pickerView = UIPickerView()
 
@@ -53,10 +53,11 @@ class ThirdSetupPageViewController: UIViewController {
 
     private lazy var stackView = UIStackView(
         arrangedSubviews: [
-            heimatlosTitleLabel,
+            seminarBlockALabel,
             seminarOnePickerViewTextField,
+            seminarBlockBLabel,
             seminarTwoPickerViewTextField,
-            heimwehTitleLabel,
+            seminarBlockCLabel,
             seminarThreePickerViewTextField
         ]
     )

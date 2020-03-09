@@ -10,10 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var dataManager = DataManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        if CommandLine.arguments.contains("--uitesting") {
-            Defaults.didLaunchBefore = false
-        }
-
+        window = UIWindow(frame: UIScreen.main.bounds)
         // Enable IQKeyboardManager
         IQKeyboardManager.shared.enable = true
 
@@ -21,9 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Defaults.didLaunchBefore = false
         dataManager = DataManager()
         if Defaults.didLaunchBefore {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewController = storyboard.instantiateInitialViewController()
-            self.window?.rootViewController = initialViewController
+            window?.rootViewController = MainTabBar()
         } else {
             if let window = self.window {
                 window.rootViewController = FirstSetupPageViewController()

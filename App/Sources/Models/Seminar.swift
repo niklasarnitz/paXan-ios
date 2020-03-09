@@ -83,6 +83,6 @@ struct Seminar: Codable, Mappable, DefaultsSerializable {
         lat <- map["lat"]
         long <- map["long"]
         time <- map["time"]
-        url <- map["url"]
+        url <- map["link"]
     }
 }

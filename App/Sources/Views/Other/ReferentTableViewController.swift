@@ -90,7 +90,7 @@ private class ReferentsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let referentData = Defaults.referents[indexPath.row]
-        present(
+        super.present(
             ReferentDetailViewController(referent: referentData),
             animated: true
         )

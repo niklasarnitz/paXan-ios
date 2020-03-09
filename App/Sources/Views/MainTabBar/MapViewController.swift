@@ -13,7 +13,9 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fixNavigationBar()
+        configureNavigationBar()
+
+        title = "Karte"
 
         view.backgroundColor = .white
 

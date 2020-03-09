@@ -49,15 +49,17 @@
 		858ECD7823A23B9D0055B9FB /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858ECD6D23A23B920055B9FB /* SnapshotHelper.swift */; };
 		858ECD7A23A243ED0055B9FB /* createScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858ECD7923A243ED0055B9FB /* createScreenshots.swift */; };
 		85939C01231406A50009A009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85939C00231406A50009A009 /* AppDelegate.swift */; };
-		85939C06231406A50009A009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85939C04231406A50009A009 /* Main.storyboard */; };
 		85939C08231406A60009A009 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85939C07231406A60009A009 /* Images.xcassets */; };
 		85939C0B231406A60009A009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85939C09231406A60009A009 /* LaunchScreen.storyboard */; };
 		85939C152314075F0009A009 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85939C142314075F0009A009 /* Colors.xcassets */; };
+		8599953F2416B8C2006784F2 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8599953E2416B8C2006784F2 /* MainTabBar.swift */; };
+		859995422416C2B3006784F2 /* LexikonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859995402416C24E006784F2 /* LexikonViewController.swift */; };
+		859995442416C64F006784F2 /* LexikonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859995432416C64F006784F2 /* LexikonTableViewCell.swift */; };
+		859995462416CD23006784F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859995452416CD23006784F2 /* Main.storyboard */; };
 		859A439924105F51001C4CC0 /* VerticalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859A439824105F51001C4CC0 /* VerticalViewController.swift */; };
 		85A3F82423463C29006A9473 /* Seminar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A3F82323463C29006A9473 /* Seminar.swift */; };
 		85A3F82723463CAA006A9473 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 85A3F82623463CAA006A9473 /* .swiftlint.yml */; };
 		85AA382C23F3E2FB007CD0A8 /* SimpleTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA382B23F3E2FB007CD0A8 /* SimpleTextViewController.swift */; };
-		85AAD03A231ABCC900C0F813 /* LexikonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */; };
 		85AAD040231ACC7600C0F813 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD03F231ACC7600C0F813 /* Style.swift */; };
 		85AAD043231ACCBA00C0F813 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */; };
 		85AAD046231ACD3B00C0F813 /* LexikonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */; };
@@ -141,18 +143,20 @@
 		858ECD7023A23B920055B9FB /* report.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
 		858ECD7123A23B920055B9FB /* Snapfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
 		858ECD7923A243ED0055B9FB /* createScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createScreenshots.swift; sourceTree = "<group>"; };
-		85939BFD231406A50009A009 /* paXan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paXan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85939BFD231406A50009A009 /* paX an.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "paX an.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85939C00231406A50009A009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85939C05231406A50009A009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85939C07231406A60009A009 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		85939C0A231406A60009A009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85939C0C231406A60009A009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85939C142314075F0009A009 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		8599953E2416B8C2006784F2 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		859995402416C24E006784F2 /* LexikonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonViewController.swift; sourceTree = "<group>"; };
+		859995432416C64F006784F2 /* LexikonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonTableViewCell.swift; sourceTree = "<group>"; };
+		859995452416CD23006784F2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		859A439824105F51001C4CC0 /* VerticalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalViewController.swift; sourceTree = "<group>"; };
 		85A3F82323463C29006A9473 /* Seminar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seminar.swift; sourceTree = "<group>"; };
 		85A3F82623463CAA006A9473 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		85AA382B23F3E2FB007CD0A8 /* SimpleTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextViewController.swift; sourceTree = "<group>"; };
-		85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonTableViewController.swift; sourceTree = "<group>"; };
 		85AAD03F231ACC7600C0F813 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		85AAD042231ACCBA00C0F813 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		85AAD045231ACD3B00C0F813 /* LexikonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexikonDetailViewController.swift; sourceTree = "<group>"; };
@@ -226,11 +230,12 @@
 		851141DB239A6C720062438E /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				8599953E2416B8C2006784F2 /* MainTabBar.swift */,
 				850FA2B423F1575000661135 /* ZeitplanViewController.swift */,
 				85E3F2F5231409F000E6B845 /* MapViewController.swift */,
-				85AAD039231ABCC900C0F813 /* LexikonTableViewController.swift */,
-				851141D7239A62C90062438E /* InfoViewController.swift */,
 				85CC8C0F23F1DC1400F47B25 /* StilleZeitViewController.swift */,
+				859995402416C24E006784F2 /* LexikonViewController.swift */,
+				851141D7239A62C90062438E /* InfoViewController.swift */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -302,7 +307,7 @@
 		85939BFE231406A50009A009 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85939BFD231406A50009A009 /* paXan.app */,
+				85939BFD231406A50009A009 /* paX an.app */,
 				858ECD6123A23B800055B9FB /* paXanUITests.xctest */,
 			);
 			name = Products;
@@ -317,7 +322,7 @@
 				85939C00231406A50009A009 /* AppDelegate.swift */,
 				8539E59B237C790400EBC1DB /* BackupData.swift */,
 				850DC89C23A13C700097C927 /* DataManager.swift */,
-				85939C04231406A50009A009 /* Main.storyboard */,
+				859995452416CD23006784F2 /* Main.storyboard */,
 				85939C09231406A60009A009 /* LaunchScreen.storyboard */,
 				85939C0C231406A60009A009 /* Info.plist */,
 				8566826F23B4F26800CE94CC /* Config.plist */,
@@ -410,6 +415,7 @@
 				85AA382B23F3E2FB007CD0A8 /* SimpleTextViewController.swift */,
 				851141DC239A6C870062438E /* ReferentDetailViewController.swift */,
 				850BA45D239A81FE0098196D /* ReferentTableViewController.swift */,
+				859995432416C64F006784F2 /* LexikonTableViewCell.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -479,7 +485,7 @@
 			);
 			name = paXan;
 			productName = paXan;
-			productReference = 85939BFD231406A50009A009 /* paXan.app */;
+			productReference = 85939BFD231406A50009A009 /* paX an.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -535,11 +541,11 @@
 				8566827023B4F26800CE94CC /* Config.plist in Resources */,
 				85B4ACC72395D6A1001F282C /* Nunito-Regular.ttf in Resources */,
 				85A3F82723463CAA006A9473 /* .swiftlint.yml in Resources */,
+				859995462416CD23006784F2 /* Main.storyboard in Resources */,
 				85939C0B231406A60009A009 /* LaunchScreen.storyboard in Resources */,
 				85939C152314075F0009A009 /* Colors.xcassets in Resources */,
 				85939C08231406A60009A009 /* Images.xcassets in Resources */,
 				851141E3239A6F570062438E /* Media.xcassets in Resources */,
-				85939C06231406A50009A009 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +617,7 @@
 			files = (
 				858220302405767F00E53B21 /* BandsViewController.swift in Sources */,
 				851E6BB823636C68002F0168 /* SeminarsEditViewController.swift in Sources */,
+				8599953F2416B8C2006784F2 /* MainTabBar.swift in Sources */,
 				85707EFA23B7A1B700D2AF34 /* MassQuarterViewController.swift in Sources */,
 				85E884CE23995AF3004C3AE4 /* Referent.swift in Sources */,
 				853C4B682393D41D00300689 /* SetupButton.swift in Sources */,
@@ -639,6 +646,8 @@
 				85AA382C23F3E2FB007CD0A8 /* SimpleTextViewController.swift in Sources */,
 				853CC16C2360CB6300A3F4F3 /* FourthSetupPageViewController.swift in Sources */,
 				851141D6239A58050062438E /* EditorsDelegate.swift in Sources */,
+				859995442416C64F006784F2 /* LexikonTableViewCell.swift in Sources */,
+				859995422416C2B3006784F2 /* LexikonViewController.swift in Sources */,
 				851141D8239A62C90062438E /* InfoViewController.swift in Sources */,
 				85D1187323A44BFC00EC3D88 /* DeltaMapViewController.swift in Sources */,
 				85257B392362CA5600E84CC5 /* UIButtonExtension.swift in Sources */,
@@ -660,7 +669,6 @@
 				8539E59C237C790400EBC1DB /* BackupData.swift in Sources */,
 				858745DB23F2DD16004EBF96 /* TextLabel.swift in Sources */,
 				85E3F2F6231409F000E6B845 /* MapViewController.swift in Sources */,
-				85AAD03A231ABCC900C0F813 /* LexikonTableViewController.swift in Sources */,
 				850BA45C239A7C250098196D /* AboutViewController.swift in Sources */,
 				853CC1682360CB3E00A3F4F3 /* SecondSetupPageViewController.swift in Sources */,
 			);
@@ -677,14 +685,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		85939C04231406A50009A009 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				85939C05231406A50009A009 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		85939C09231406A60009A009 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -865,14 +865,14 @@
 					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.swdec.paxan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "paX an";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -892,14 +892,14 @@
 					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.swdec.paxan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "paX an";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

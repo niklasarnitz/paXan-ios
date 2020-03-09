@@ -4,7 +4,7 @@ import UIKit
 
 extension UIViewController {
     /// A iOS 13 specific fix for the NavigationBar Background
-    func fixNavigationBar() {
+    func configureNavigationBar() {
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()
@@ -19,6 +19,12 @@ extension UIViewController {
             navBarAppearance.backgroundColor = Colors.ecGreen
             navigationController?.navigationBar.standardAppearance = navBarAppearance
             navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        } else {
+            navigationController?.navigationBar.backgroundColor = Colors.ecGreen
+            navigationController?.navigationBar.tintColor = Colors.ecGreen
+        }
+        if #available(iOS 11, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
         }
     }
 }

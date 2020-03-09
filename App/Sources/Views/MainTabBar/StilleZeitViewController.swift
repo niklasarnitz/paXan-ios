@@ -36,9 +36,11 @@ class StilleZeitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Bible & Breakfast"
+
         view.backgroundColor = .white
 
-        fixNavigationBar()
+        configureNavigationBar()
 
         descriptionLabel.textColor = .black
 

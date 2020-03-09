@@ -12,7 +12,7 @@ class InfoViewController: UIViewController {
     private lazy var massquarterButton = ThemedButton(text: "Navigation Massenquartiere")
     private lazy var aboutButton = ThemedButton(text: "Über")
 
-    private lazy var stackView = UIStackView(
+    private lazy var verticalViewController = VerticalViewController(
         arrangedSubviews: [
             referentButton,
             bandsButton,
@@ -22,42 +22,24 @@ class InfoViewController: UIViewController {
         ]
     )
 
-    private lazy var scrollView = UIScrollView()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
 
-        fixNavigationBar()
+        title = "Info"
 
-        view.addSubview(scrollView)
-        scrollView.snp.makeConstraints { make in
-            make.top.equalTo(super.view.snp.topMargin).offset(20)
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
-        }
-
-        scrollView.addSubview(stackView)
-        stackView.bindEdgesToSuperview()
-        stackView.snp.makeConstraints { make in
-            make.width.equalToSuperview()
-        }
-
-        stackView.alignment = .leading
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.spacing = 15
-
-        stackView.arrangedSubviews.forEach { view in
-            view.snp.makeConstraints { make in
-                make.leading.equalToSuperview().offset(20)
-                make.trailing.equalToSuperview().offset(-20)
-            }
-        }
+        configureNavigationBar()
 
         setupAboutButton()
+
+        view.addSubview(verticalViewController.view)
+        verticalViewController.view.snp.makeConstraints { make in
+            make.top.equalTo(topLayoutGuide.snp.bottom).offset(20)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalTo(aboutButton.snp.topMargin).offset(-20)
+        }
 
         referentButton.addTarget(self, action: #selector(referentButtonPressed), for: .touchUpInside)
         seminarsButton.addTarget(self, action: #selector(seminarsButtonPressed), for: .touchUpInside)
@@ -69,7 +51,7 @@ class InfoViewController: UIViewController {
     private func setupAboutButton() {
         view.addSubview(aboutButton)
         aboutButton.snp.makeConstraints({ make in
-            make.bottom.equalTo(super.view.snp.bottomMargin).offset(-30)
+            make.bottom.equalTo(bottomLayoutGuide.snp.top).offset(-30)
             make.leading.equalToSuperview().offset(26)
             make.trailing.equalToSuperview().offset(-26)
             make.height.equalTo(40)
